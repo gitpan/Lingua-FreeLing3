@@ -1,0 +1,44 @@
+
+ Needing a new and deeper look for FreeLing3:
+  - ChartParser (still needed that hack?)
+  - Deptxala (same, hack still needed?)
+  - Nec (what was its state on FreeLing2?)
+
+ 
+ Almost complete modules:
+  - Word::Analysis                             (missing sense support)
+  - Word                          (missing a lot of setters/selectors)
+  - Sentence    (missing some selectors, and vector inherited methods)
+  - Paragraph                                        (mostly complete)
+  - MorphAnalyzer                                 (needs more testing)
+  - RelaxTagger                                   (needs more testing)
+
+ Incomplete modules:
+  - Document
+  - ParseTree (node)    (Problems when accessing leafs from parseTree)
+  - ChartParser           (Complete if ParseTree would work correctly)
+  - dep_txala
+
+ Missing modules:
+  - dep_tree  <-- not possible
+  - fex
+  - traces
+  - nec
+  - senses
+  - disambiguator
+  - sense_info
+  - semanticDB
+
+ Probably not needed:
+  - VectorWord
+  - ListWord
+  - ListAnalysis
+  - ListSentence
+  - ListParagraph
+  - ListString
+  - ListInt
+  - VectorListInt
+  - VectorListString
+  - TreeNode
+  - TreeDepnode
+  - dependency_parser

@@ -1,0 +1,203 @@
+---
+abstract: 'a library for language analysis.'
+author:
+  - 'Alberto SimÃµes <ambs@cpan.org>'
+build_requires:
+  ExtUtils::CBuilder: 0
+  Test::Warn: 0
+configure_requires:
+  ExtUtils::Mkbootstrap: 0
+  ExtUtils::PkgConfig: 1.12
+  File::Which: 0
+  Module::Build: 0.36
+dynamic_config: 1
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.120351'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Lingua-FreeLing3
+provides:
+  Lingua::FreeLing3:
+    file: lib/Lingua/FreeLing3.pm
+    version: 0.01_01
+  Lingua::FreeLing3::Bindings:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::GenericIteratorDepnode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::GenericIteratorNode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::ListAnalysis:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::ListInt:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::ListParagraph:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::ListSentence:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::ListString:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::ListWord:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::PreorderIteratorDepnode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::PreorderIteratorNode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::SiblingIteratorDepnode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::SiblingIteratorNode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::TreeDepnode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::TreeNode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::VectorListInt:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::VectorListString:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::VectorWord:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::analysis:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::chart_parser:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::dep_tree:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::dep_txala:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::dependency_parser:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::depnode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::document:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::hmm_tagger:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::maco:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::maco_options:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::nec:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::node:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::paragraph:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::parse_tree:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::relax_tagger:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::semanticDB:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::sense_info:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::senses:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::sentence:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::splitter:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::tokenizer:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::traces:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::ukb_wrap:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::util:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::word:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindingsc:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::ChartParser:
+    file: lib/Lingua/FreeLing3/ChartParser.pm
+    version: 0.01
+  Lingua::FreeLing3::DepTxala:
+    file: lib/Lingua/FreeLing3/DepTxala.pm
+    version: 0.01
+  Lingua::FreeLing3::Document:
+    file: lib/Lingua/FreeLing3/Document.pm
+    version: 0.01
+  Lingua::FreeLing3::HMMTagger:
+    file: lib/Lingua/FreeLing3/HMMTagger.pm
+    version: 0.02
+  Lingua::FreeLing3::MorphAnalyzer:
+    file: lib/Lingua/FreeLing3/MorphAnalyzer.pm
+    version: 0.01
+  Lingua::FreeLing3::NEC:
+    file: lib/Lingua/FreeLing3/NEC.pm
+    version: 0.01
+  Lingua::FreeLing3::Paragraph:
+    file: lib/Lingua/FreeLing3/Paragraph.pm
+    version: 0.01
+  Lingua::FreeLing3::ParseTree:
+    file: lib/Lingua/FreeLing3/ParseTree.pm
+    version: 0.01
+  Lingua::FreeLing3::RelaxTagger:
+    file: lib/Lingua/FreeLing3/RelaxTagger.pm
+    version: 0.01
+  Lingua::FreeLing3::Sentence:
+    file: lib/Lingua/FreeLing3/Sentence.pm
+    version: 0.02
+  Lingua::FreeLing3::Splitter:
+    file: lib/Lingua/FreeLing3/Splitter.pm
+    version: 0.02
+  Lingua::FreeLing3::Tokenizer:
+    file: lib/Lingua/FreeLing3/Tokenizer.pm
+    version: 0.01
+  Lingua::FreeLing3::Word:
+    file: lib/Lingua/FreeLing3/Word.pm
+    version: 0.02
+  Lingua::FreeLing3::Word::Analysis:
+    file: lib/Lingua/FreeLing3/Word/Analysis.pm
+    version: 0.02
+requires:
+  Carp: 0
+  Try::Tiny: 0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.01_01
