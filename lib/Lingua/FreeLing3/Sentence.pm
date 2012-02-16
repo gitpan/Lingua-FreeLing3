@@ -104,7 +104,7 @@ Returns the current dependency tree, if there is any.
 
 sub dep_tree {
     my $self = shift;
-    return $self->{dep_tree};
+    return Lingua::FreeLing3::DepTree->_new_from_binding($self->SUPER::get_dep_tree());
 }
 
 =item C<parse_tree>

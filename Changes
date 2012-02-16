@@ -1,2 +1,26 @@
 Revision history for Lingua-FreeLing3
 
+0.01_02 Thu Feb 16 17:10:25 WET 2012
+        - Added a new shortcut module, FL3, including:
+          - splitter/tokenizer
+        - Added
+          - Lingua::FreeLing2::DepTree            (kind of OK)
+
+0.01_01 Wed Feb 15 16:09:54 WET 2012
+        - First version, from Lingua::FreeLing2 version 0.01_03
+        - Includes:
+          - Lingua::FreeLing2::NEC               (not working)
+          - Lingua::FreeLing2::DepTxala       (not functional)
+          - Lingua::FreeLing2::ChartParser        (kind of OK)
+          - Lingua::FreeLing2::ParseTree          (kind of OK)
+          - Lingua::FreeLing2::Paragraph           (mostly OK)
+          - Lingua::FreeLing2::Document            (mostly OK)
+          - Lingua::FreeLing2::RelaxTagger         (mostly OK)
+          - Lingua::FreeLing2::Tokenizer                  (OK)
+          - Lingua::FreeLing2::Splitter                   (OK)
+          - Lingua::FreeLing2::HMMTagger           (mostly OK)
+          - Lingua::FreeLing2::MorphAnalyzer       (mostly OK)
+          - Lingua::FreeLing2::Word::Analysis      (mostly OK)
+          - Lingua::FreeLing2::Word                (mostly OK)
+          - Lingua::FreeLing2::Sentence            (mostly OK)
+

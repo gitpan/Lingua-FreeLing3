@@ -9,6 +9,7 @@ use File::Spec::Functions 'catfile';
 use Lingua::FreeLing3::Bindings;
 use Lingua::FreeLing3::Sentence;
 use Lingua::FreeLing3::ChartParser;
+use Lingua::FreeLing3::DepTree;
 
 use parent -norequire, 'Lingua::FreeLing3::Bindings::dep_txala';
 

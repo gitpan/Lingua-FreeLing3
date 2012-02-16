@@ -1,11 +1,11 @@
-package Lingua::FreeLing3::ParseTree;
+package Lingua::FreeLing3::DepTree;
 
 use warnings;
 use strict;
 use Try::Tiny;
 
 use Lingua::FreeLing3::Bindings;
-use parent -norequire, 'Lingua::FreeLing3::Bindings::parse_tree';
+use parent -norequire, 'Lingua::FreeLing3::Bindings::dep_tree';
 
 our $VERSION = "0.01";
 
@@ -13,15 +13,13 @@ our $VERSION = "0.01";
 
 =head1 NAME
 
-Lingua::FreeLing3::ParseTree - Interface to FreeLing3 ParseTree object
+Lingua::FreeLing3::DepTree - Interface to FreeLing3 DepTree object
 
 =head1 SYNOPSIS
 
-   use Lingua::FreeLing3::ParseTree;
+   use Lingua::FreeLing3::DepTree;
 
-   $ptree = $sentence->parse_tree;
-
-   $node_info = $ptree->info;
+   $ptree = $sentence->dep_tree;
 
 
 =head1 DESCRIPTION
@@ -36,21 +34,6 @@ sub _new_from_binding {
 =head2 ACCESSORS
 
 =over 4
-
-=item C<word>
-
-Returns the word in that parse tree node, if any.
-
-=cut
-
-sub word {
-    my $self = shift;
-    my $word = $self->SUPER::get_info->get_word;
-    if ($word) {
-        return Lingua::FreeLing3::Word->_new_from_binding($word);
-    }
-    return $word;
-}
 
 =item C<num_children>
 
@@ -102,7 +85,7 @@ Returns the nth child.
 
 sub nth_child {
     my ($self, $n) = @_;
-    return Lingua::FreeLing3::ParseTree->_new_from_binding($self->SUPER::nth_child_ref($n));
+    return Lingua::FreeLing3::DepTree->_new_from_binding($self->SUPER::nth_child_ref($n));
 }
 
 =item C<dump>
@@ -114,16 +97,17 @@ Dumps the tree in a textual format, useful for debug purposes.
 sub dump {
     my $tree = shift;
 
-    my $label = $tree->label;
-    $label .= " (". $tree->word->form. ")" unless $tree->num_children;
-
-    $label .= "\n";
-
     my $indent = sub {
         my $str = shift;
         $str =~ s/^/  /mg;
         return $str;
     };
+
+    my $info = $tree->SUPER::get_info();
+
+    my $label = $info->get_label();
+    $label .= " (". $tree->get_info->get_word->get_form. ")";
+    $label .= "\n";
 
     for my $child (0..$tree->num_children - 1) {
         $label .= $indent->($tree->nth_child($child)->dump);

@@ -1,5 +1,5 @@
 {
-   "abstract" : "a library for language analysis.",
+   "abstract" : "a library for language analysis with FreeLing3.",
    "author" : [
       "Alberto SimÃµes <ambs@cpan.org>"
    ],
@@ -36,9 +36,13 @@
       }
    },
    "provides" : {
+      "FL3" : {
+         "file" : "lib/FL3.pm",
+         "version" : "0.01"
+      },
       "Lingua::FreeLing3" : {
          "file" : "lib/Lingua/FreeLing3.pm",
-         "version" : "0.01_01"
+         "version" : "0.01_02"
       },
       "Lingua::FreeLing3::Bindings" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
@@ -220,6 +224,10 @@
          "file" : "lib/Lingua/FreeLing3/ChartParser.pm",
          "version" : "0.01"
       },
+      "Lingua::FreeLing3::DepTree" : {
+         "file" : "lib/Lingua/FreeLing3/DepTree.pm",
+         "version" : "0.01"
+      },
       "Lingua::FreeLing3::DepTxala" : {
          "file" : "lib/Lingua/FreeLing3/DepTxala.pm",
          "version" : "0.01"
@@ -279,5 +287,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.01_01"
+   "version" : "0.01_02"
 }

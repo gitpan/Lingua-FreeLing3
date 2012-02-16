@@ -7,7 +7,7 @@ use utf8;
 
 use Data::Dumper;
 
-use Test::More tests => 19;
+use Test::More tests => 21;
 use Test::Warn;
 
 use Lingua::FreeLing3::DepTxala;
@@ -101,9 +101,11 @@ isa_ok $sentences->[0] => 'Lingua::FreeLing3::Sentence';
 ok $sentences->[0]->is_parsed => 'Now the sentence is parsed';
 ok $sentences->[0]->is_dep_parsed => 'Now the sentence is parsed';
 
-# my $deptree = $sentences->[0]->dep_tree;
+my $deptree = $sentences->[0]->dep_tree;
+isa_ok $deptree => 'Lingua::FreeLing3::DepTree';
+isa_ok $deptree => 'Lingua::FreeLing3::Bindings::dep_tree';
 
-# _dump($deptree);
+# print STDERR $deptree->dump;
 
 # sub _dump {
 #     my $dt = shift;

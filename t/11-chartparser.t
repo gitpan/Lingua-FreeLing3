@@ -7,7 +7,7 @@ use utf8;
 
 use Data::Dumper;
 
-use Test::More tests => 18;
+use Test::More tests => 19;
 use Test::Warn;
 use Lingua::FreeLing3::ChartParser;
 use Lingua::FreeLing3::MorphAnalyzer;
@@ -96,6 +96,7 @@ ok $sentences->[0]->is_parsed => 'The sentence is parsed';
 
 my $ptree = $sentences->[0]->parse_tree;
 isa_ok $ptree => 'Lingua::FreeLing3::ParseTree';
+isa_ok $ptree => 'Lingua::FreeLing3::Bindings::parse_tree';
 
 # print STDERR $ptree->dump;
 

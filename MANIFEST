@@ -55,3 +55,6 @@ META.json
 
 
 
+lib/Lingua/FreeLing3/DepTree.pm
+lib/FL3.pm
+t/99-FL3.t

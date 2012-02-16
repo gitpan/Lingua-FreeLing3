@@ -18,6 +18,7 @@ BEGIN {
                   Lingua::FreeLing3::HMMTagger
                   Lingua::FreeLing3::Tokenizer
                   Lingua::FreeLing3::ParseTree
+                  Lingua::FreeLing3::DepTree
                   Lingua::FreeLing3::ChartParser
                   Lingua::FreeLing3::RelaxTagger
                   Lingua::FreeLing3::MorphAnalyzer
@@ -30,8 +31,6 @@ BEGIN {
 
 
 }
-
-diag( "Testing Lingua::FreeLing3 $Lingua::FreeLing3::VERSION" );
 
 ok("${_}::VERSION" => "version defined for $_") for @modules;
 

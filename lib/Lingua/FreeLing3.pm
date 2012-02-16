@@ -11,7 +11,7 @@ use Lingua::FreeLing3::ConfigData;
 use Lingua::FreeLing3::Bindings;
 use File::Spec::Functions 'catfile';
 
-our $VERSION = "0.01_01";
+our $VERSION = "0.01_02";
 
 BEGIN {
     Lingua::FreeLing3::Bindings::util::init_locale('default');
@@ -107,7 +107,7 @@ __END__
 
 =head1 NAME
 
-Lingua::FreeLing3 - a library for language analysis.
+Lingua::FreeLing3 - a library for language analysis with FreeLing3.
 
 =head1 DESCRIPTION
 
@@ -126,6 +126,10 @@ L<Lingua::FreeLing3::Splitter>
 
 L<Lingua::FreeLing3::Sentence>
 
+L<Lingua::FreeLing3::Paragraph>
+
+L<Lingua::FreeLing3::Document>
+
 L<Lingua::FreeLing3::Tokenizer>
 
 L<Lingua::FreeLing3::Word::Analysis>
@@ -133,6 +137,16 @@ L<Lingua::FreeLing3::Word::Analysis>
 L<Lingua::FreeLing3::HMMTagger>
 
 L<Lingua::FreeLing3::MorphAnalyzer>
+
+L<Lingua::FreeLing3::RelaxTagger>
+
+L<Lingua::FreeLing3::ChartParser>
+
+L<Lingua::FreeLing3::ParseTree>
+
+L<Lingua::FreeLing3::DepTxala>
+
+L<Lingua::FreeLing3::NEC>
 
 =cut
 
