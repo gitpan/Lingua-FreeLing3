@@ -28,6 +28,7 @@ my $builder = MyBuilder->new
    requires             => {
                             'Try::Tiny' => '0',
                             'Carp' => '0',
+                            'Scalar::Util' => '0',
                            },
    add_to_cleanup       => [
                             'FreeLing.o',

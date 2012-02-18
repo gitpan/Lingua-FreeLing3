@@ -70,14 +70,12 @@ my $analyzer  = Lingua::FreeLing3::MorphAnalyzer->new("es",
                                                      PunctuationDetection => 1,
                                                      DictionarySearch => 1,
                                                      ProbabilityAssignment => 1,
-                                                     QuantitiesDetection => 0,
                                                      NERecognition   => 'NER_BASIC',
                                                      PunctuationFile => '../common/punct.dat',
                                                      LocutionsFile   => 'locucions.dat',
                                                      ProbabilityFile => 'probabilitats.dat',
                                                      DictionaryFile  => 'dicc.src',
                                                      NPdataFile      => 'np.dat',
-                                                     QuantitiesFile  => "",
                                                );
 ok($analyzer  => "we have an analyzer");
 

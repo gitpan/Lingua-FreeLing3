@@ -45,7 +45,7 @@ sub new {
 
     if ($lang =~ /^[a-z][a-z]$/i) {
         my $dir = Lingua::FreeLing3::_search_language_dir($lang);
-        $lang = catfile($dir, "nec/nec-ab.dat") if $dir;
+        $lang = catfile($dir, "nec/nec-svm.dat") if $dir;
     }
 
     unless (-f $lang) {

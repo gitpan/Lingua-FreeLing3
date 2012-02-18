@@ -1,5 +1,9 @@
 Revision history for Lingua-FreeLing3
 
+0.01_03 Sat Feb 18 17:32:57 WET 2012
+        - FL3 now also includes:
+          - morph/hmm/relax/chart/txala/nec
+
 0.01_02 Thu Feb 16 17:10:25 WET 2012
         - Added a new shortcut module, FL3, including:
           - splitter/tokenizer

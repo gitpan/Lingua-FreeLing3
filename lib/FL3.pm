@@ -6,9 +6,46 @@ use strict;
 use Lingua::FreeLing3;
 use Lingua::FreeLing3::Tokenizer;
 use Lingua::FreeLing3::Splitter;
+use Lingua::FreeLing3::MorphAnalyzer;
+use Lingua::FreeLing3::HMMTagger;
+use Lingua::FreeLing3::RelaxTagger;
+use Lingua::FreeLing3::ChartParser;
+use Lingua::FreeLing3::DepTxala;
+use Lingua::FreeLing3::NEC;
+use Carp;
 
 use parent 'Exporter';
-our @EXPORT = (qw{&splitter &tokenizer});
+
+my %map = (
+           'Tokenizer'     => { method_name => 'tokenizer' },
+           'Splitter'      => { method_name => 'splitter'  },
+           'MorphAnalyzer' => { method_name => 'morph'     },
+           'HMMTagger'     => { method_name => 'hmm'       },
+           'NEC'           => { method_name => 'nec'       },
+           'RelaxTagger'   => { method_name => 'relax'     },
+           'ChartParser'   => { method_name => 'chart'     },
+           'DepTxala'      => { method_name => 'txala',
+                                before => sub {
+                                    my @args;
+                                    if (@_ > 1) {
+                                        push @args, shift(@_) if @_ % 1;
+                                        my %ops = @_;
+                                        if (!$ops{ChartParser} && !$ops{StartSymbol}) {
+                                            ## XXX - This works when invoked with a language,
+                                            ##       doesn't when invoked with a filepath.
+                                            $ops{ChartParser} = chart(@args);
+                                        }
+                                        push @args, %ops;
+                                    } else {
+                                        @args = @_;
+                                    }
+                                    return @args;
+                                }
+                              },
+          );
+
+our @EXPORT = ('set_language', 'release_language',
+               map { $map{$_}{method_name} } keys %map);
 
 our $VERSION = '0.01';
 
@@ -23,47 +60,141 @@ FL3 - A shortcut module for Lingua::FreeLing3.
 
   use FL3 'en';
 
-  splitter->split($text);
+  $tokens = tokenizer->tokenize($text);
+  $atomos = tokenizer('pt')->tokenize($texto);
 
-  splitter('pt')->split($texto);
+  $sentences = splitter->split($tokens);
+  $frases = splitter('pt')->split($atomos);
+
+  $sentences = morph->analyze($sentences);
+  $frases = morph('pt')->analyze($frases);
+
+  $sentences = hmm->analyze($sentences);
+  $frases = relax('pt')->tag($sentences);
+
+  $sentences = chart->parse($sentences);
+  $ptree = $sentences->[0]->parse_tree;)
 
 =head1 DESCRIPTION
 
+Implements a set of utility functions to access C<Lingua::FreeLing3>
+objects.
+
+Everytime one of the accessors is used just with the language
+code/language data file (or using the default language), the cached
+processor is returned if it exists. If any other arguments are used, a
+new processor is created. This means that if you want to use the
+morphological analyzer more than once, with different arguments, you
+should first initialize it, using:
+
+    morph( en => (AffixFile => 'myAfixes.dat',
+                  DictionaryFile => 'myFile.src'));
+
+And then, when analyzing sentences, use:
+
+    morph('en')->analyze($sentences);
+
+This way, the processor initialized before will be used without
+reinitialziation.
+
+=head2 C<set_language>
+
+Sets the current language for subsequent methods calls. Returns the
+old set language, if any.
+
 =cut
 
+sub set_language {
+    my $v = $selected_language;
+    $selected_language = shift;
+    return $v;
+}
 
-=head2 C<splitter>
+=head2 C<release_language>
 
-Creates a new Splitter object.
+Some resources take too much space on memory. Use this method to
+release the resources for a specific language. If you need them again,
+they will be recreated.
+
+Only one argument is mandatory: the name of the language. Unlike the
+other method, this method B<requires> that you supply the language
+name. It B<does not> use the default language.
+
+Extra arguments are the name of the modules to be released (same names
+as their accessor methods).
 
 =cut
 
-sub splitter {
-    my $l = $_[0] || $selected_language;
-
-    return undef unless $l;
-
-    unless (exists($tools_cache->{$l}{splitter})) {
-        $tools_cache->{$l}{splitter} = Lingua::FreeLing3::Splitter->new($l);
+sub release_language {
+    if (@_ < 1) {
+        carp "One argument (language name) is mandatory for 'release_langauge'";
+        return;
     }
-    return $tools_cache->{$l}{splitter}
+
+    my $language = shift;
+    if (@_) {
+        for my $module (@_) {
+            delete $tools_cache->{$language}{$module} if (exists($tools_cache->{$language}) and
+                                                          exists($tools_cache->{$language}{$module}));
+        }
+    } else {
+        delete $tools_cache->{$language} if exists $tools_cache->{$language};
+    }
 }
 
 =head2 C<tokenizer>
 
-Creates a new Tokenizer object.
+Accesses a tokenizer (L<Lingua::FreeLing3::Tokenizer>).
+
+=head2 C<splitter>
+
+Accesses a splitter (L<Lingua::FreeLing3::Splitter>).
+
+=head2 C<morph>
+
+Accesses a morphological analyzer (L<Lingua::FreeLing3::MorphAnalyzer>)..
+
+=head2 C<hmm>
+
+Accesses a HMM-based tagger (L<Lingua::FreeLing3::HMMTagger>).
+
+=head2 C<relax>
+
+Accesses a Relax-based tagger (L<Lingua::FreeLing3::RelaxTagger>).
+
+=head2 C<chart>
+
+Accesses a Chart-based parser (L<Lingua::FreeLing3::ChartParser>).
+
+=head2 C<txala>
+
+Accesses a Txala-based dependency parser (L<Lingua::FreeLing3::DepTxala>).
+
+=head2 C<nec>
+
+Accesses a Name Entity parser (L<Lingua::FreeLing3::NEC>).
 
 =cut
 
-sub tokenizer {
-    my $l = $_[0] || $selected_language;
-
-    return undef unless $l;
-
-    unless (exists($tools_cache->{$l}{tokenizer})) {
-        $tools_cache->{$l}{tokenizer} = Lingua::FreeLing3::Tokenizer->new($l);
-    }
-    return $tools_cache->{$l}{tokenizer}
+for my $accessor (keys %map) {
+    my $lc = $map{$accessor}{method_name};
+    my $before = exists($map{$accessor}{before}) ? $map{$accessor}{before} : sub { @_ };
+    no strict 'refs';
+    *{"FL3::$lc"} = sub {
+        my $l;
+        my @a = $before->(@_);
+        if (@a <= 1) {
+            $l = shift || $selected_language;
+            unless (exists($tools_cache->{$l}{$accessor})) {
+                $tools_cache->{$l}{$accessor} = "Lingua::FreeLing3::$accessor"->new($l);
+            }
+        } else {
+            $l = $selected_language;
+            $l = shift @a if @a % 2;
+            $tools_cache->{$l}{$accessor} = "Lingua::FreeLing3::$accessor"->new($l => @a);
+        }
+        return $tools_cache->{$l}{$accessor}
+    };
 }
 
 sub import {

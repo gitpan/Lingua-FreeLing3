@@ -82,7 +82,6 @@ my $analyzer  = Lingua::FreeLing3::MorphAnalyzer->new("es",
                                                      ProbabilityFile => 'probabilitats.dat',
                                                      DictionaryFile  => 'dicc.src',
                                                      NPdataFile      => 'np.dat',
-                                                     QuantitiesFile  => "",
                                                );
 ok($analyzer  => "we have an analyzer");
 

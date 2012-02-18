@@ -30,6 +30,7 @@ Lingua::FreeLing3::MorphAnalyzer - Interface to FreeLing3 Morphological Analyzer
     DatesDetection        => 1,
     DictionarySearch      => 1, DictionaryFile  => 'dicc.src',
     ProbabilityAssignment => 1, ProbabilityFile => 'probabilitats.dat',
+    OrthographicCorrection => 1, CorrectorFile => 'corrector/corrector.dat',
     NERecognition => 'NER_BASIC', NPdataFile => 'np.dat',
   );
 
@@ -77,6 +78,10 @@ NER_BASIC / NER_BIO / NER_NONE
 
 =item C<LocutionsFile> (file)
 
+=item C<InverseDict> (boolean)
+
+=item C<RetokContractions> (boolean)
+
 =item C<QuantitiesFile> (file)
 
 =item C<AffixFile> (file)
@@ -91,33 +96,47 @@ NER_BASIC / NER_BIO / NER_NONE
 
 =item C<ProbabilityThreshold> (real)
 
+=item C<UserMap> (boolean)
+
+=item C<OrthographicCorrection> (boolean)
+
+=item C<CorrectorFile> (file)
+
+=item C<UserMapFile> (file)
+
 =back
 
 =cut
 
 my %maco_valid_option = (
-                         AffixAnalysis         => 'BOOLEAN',
-                         MultiwordsDetection   => 'BOOLEAN',
-                         NumbersDetection      => 'BOOLEAN',
-                         PunctuationDetection  => 'BOOLEAN',
-                         DatesDetection        => 'BOOLEAN',
-                         QuantitiesDetection   => 'BOOLEAN',
-                         DictionarySearch      => 'BOOLEAN',
-                         ProbabilityAssignment => 'BOOLEAN',
-                         NERecognition         => { 'NER_BASIC' => 0,
-                                                    'NER_BIO'   => 1,
-                                                    'NER_NONE'  => 2 },
-                         Decimal               => 'STRING',
-                         Thousand              => 'STRING',
-                         LocutionsFile         => 'FILE',
-                         QuantitiesFile        => 'FILE',
-                         AffixFile             => 'FILE',
-                         ProbabilityFile       => 'FILE',
-                         DictionaryFile        => 'FILE',
-                         NPdataFile            => 'FILE',
-                         PunctuationFile       => 'FILE',
-                         ProbabilityThreshold  => 'REAL',
-                         );
+                         UserMap                => 'BOOLEAN',
+                         UserMapFile            => 'FILE',
+                         RetokContractions      => 'BOOLEAN',
+                         InverseDict            => 'BOOLEAN',
+                         AffixAnalysis          => 'BOOLEAN',
+                         MultiwordsDetection    => 'BOOLEAN',
+                         NumbersDetection       => 'BOOLEAN',
+                         OrthographicCorrection => 'BOOLEAN',
+                         PunctuationDetection   => 'BOOLEAN',
+                         DatesDetection         => 'BOOLEAN',
+                         QuantitiesDetection    => 'BOOLEAN',
+                         DictionarySearch       => 'BOOLEAN',
+                         ProbabilityAssignment  => 'BOOLEAN',
+                         NERecognition          => { 'NER_BASIC' => 0,
+                                                     'NER_BIO'   => 1,
+                                                     'NER_NONE'  => 2 },
+                         Decimal                => 'STRING',
+                         Thousand               => 'STRING',
+                         LocutionsFile          => 'FILE',
+                         QuantitiesFile         => 'FILE',
+                         AffixFile              => 'FILE',
+                         ProbabilityFile        => 'FILE',
+                         DictionaryFile         => 'FILE',
+                         NPdataFile             => 'FILE',
+                         PunctuationFile        => 'FILE',
+                         CorrectorFile          => 'FILE',
+                         ProbabilityThreshold   => 'REAL',
+                        );
 
 sub _check_option {
     my ($self, $value, $type) = @_;
@@ -134,10 +153,12 @@ sub _check_option {
             return '"'.$value.'"';
         }
         when ("FILE") {
-            return "" if $value eq "";
-            return '"'.$value.'"' if -f $value;
+            $value    || return undef;
+            -f $value && return '"'.$value.'"';
+
             my $ofile = catfile($self->{prefix} => $value);
-            return '"'.$ofile.'"' if -f $ofile;
+            -f $ofile && return '"'.$ofile.'"';
+
             return undef;
         }
         when (qr/NER/) {
@@ -152,15 +173,35 @@ sub _check_option {
 sub new {
     my ($class, $lang, %maco_op) = @_;
 
+    # It might make sense to make this language-dependent
+    my %default_ops = (
+                       UserMap                => 0,
+                       UserMapFile            => undef,
+                       AffixAnalysis          => 1,
+                       AffixFile              => 'afixos.dat',
+                       QuantitiesDetection    => 0,
+                       QuantitiesFile         => undef,
+                       MultiwordsDetection    => 1,
+                       LocutionsFile          => 'locucions.dat',
+                       NumbersDetection       => 1,
+                       PunctuationDetection   => 1,
+                       PunctuationFile        => '../common/punct.dat',
+                       DatesDetection         => 1,
+                       DictionarySearch       => 1,
+                       DictionaryFile         => 'dicc.src',
+                       ProbabilityAssignment  => 1,
+                       ProbabilityFile        => 'probabilitats.dat',
+                       NERecognition          => 'NER_BASIC',
+                       NPdataFile             => 'np.dat',
+                       OrthographicCorrection => 1,
+                       CorrectorFile          => 'corrector/corrector.dat',
+                      );
+
+    my @keys = keys %{{ %maco_op, %default_ops }}; # as BingOS called it, hash shaving
+
     my $dir;
     if ($lang =~ /^[a-z][a-z]$/i) {
         $dir = Lingua::FreeLing3::_search_language_dir($lang);
-        $lang = catfile($dir, "tokenizer.dat") if $dir;
-    }
-
-    unless (-f $lang) {
-        carp "Cannot find tokenizer data file. Tried [$lang]\n";
-        return undef;
     }
 
     my $self = bless {
@@ -168,17 +209,39 @@ sub new {
                       maco_options => Lingua::FreeLing3::Bindings::maco_options->new($lang),
                      } => $class;
 
-    for my $op (keys %maco_op) {
+    my @to_deactivate = ();
+    for my $op (@keys) {
         if ($maco_valid_option{$op}) {
-            my $option = $maco_op{$op};
+            my $option = exists($maco_op{$op}) ? $maco_op{$op} : $default_ops{$op};
             if (defined($option = $self->_check_option($option, $maco_valid_option{$op}))) {
-                my $code = "\$self->{maco_options}->swig_${op}_set($option);";
-                eval "$code";
+                eval "\$self->{maco_options}->swig_${op}_set($option);";
             } else {
-                carp "Option $op with invalid value: '$maco_op{$op}'.";
+                push @to_deactivate, $op if $op =~ /File$/;
+
+                exists($maco_op{$op}) and carp "Option $op with invalid value: '$maco_op{$op}'.";
             }
         } else {
             carp "Option '$op' not recognized for MorphAnalyzer object."
+        }
+    }
+
+    my %map = (AffixFile       => 'AffixAnalysis',
+               QuantitiesFile  => 'QuantitiesDetection',
+               LocutionsFile   => 'MultiwordsDetection',
+               PunctuationFile => 'PunctuationDetection',
+               DictionaryFile  => 'DictionarySearch',
+               CorrectorFile   => 'OrthographicCorrection',
+               ProbabilityFile => 'ProbabilityAssignment',
+               NTPdataFile     => 'NERecognition'         );
+
+    for my $op (@to_deactivate) {
+        my $target = $map{$op};
+        next unless $target && ($maco_op{$target} || $default_ops{$target});
+
+        if ($target eq "NERecognition") {
+            eval "\$self->{maco_options}->swig_${target}_set(2);"; # NER_NONE
+        } else {
+            eval "\$self->{maco_options}->swig_${target}_set(0);";
         }
     }
 

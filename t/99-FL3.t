@@ -3,23 +3,29 @@
 use strict;
 use warnings;
 
-use Test::More tests => 16;
+use Test::More tests => 46;
 
-use FL3 'pt';
+use FL3 'es';
 ok 1 => 'Loaded ok';
 
 my $text = <<EOT;
-A Assembleia Constituinte afirma a decisão do povo português de
-defender a independência nacional, de garantir os direitos
-fundamentais dos cidadãos, de estabelecer os princípios basilares da
-democracia, de assegurar o primado do Estado de Direito democrático e
-de abrir caminho para uma sociedade socialista, no respeito da vontade
-do povo português, tendo em vista a construção de um país mais livre,
-mais justo e mais fraterno.
+Los partidos políticos expresan el pluralismo político, concurren a la
+formación y manifestación de la voluntad popular y son instrumento
+fundamental para la participación política. Su creación y el ejercicio
+de su actividad son libres dentro del respeto a la Constitución y a la
+Ley. Su estructura interna y funcionamiento deberán ser democráticos.
 EOT
 
 isa_ok splitter()  => 'Lingua::FreeLing3::Splitter';
 isa_ok tokenizer() => 'Lingua::FreeLing3::Tokenizer';
+
+# faster... just one init of morph for 'pt'
+isa_ok morph(RetokContractions => 0) => 'Lingua::FreeLing3::MorphAnalyzer';
+isa_ok hmm()       => 'Lingua::FreeLing3::HMMTagger';
+isa_ok relax()     => 'Lingua::FreeLing3::RelaxTagger';
+isa_ok chart()     => 'Lingua::FreeLing3::ChartParser';
+isa_ok txala()     => 'Lingua::FreeLing3::DepTxala';
+isa_ok nec()       => 'Lingua::FreeLing3::NEC';
 
 ok ((splitter('en') eq splitter('en')) => "cache works");
 
@@ -31,7 +37,43 @@ isa_ok $words->[0], 'Lingua::FreeLing3::Word' => 'Tokenizers result first elemen
 my $sentences = splitter->split($words);
 ok $sentences => 'Splitter returns something';
 isa_ok $sentences, 'ARRAY' => 'Spliter result';
-isa_ok $sentences->[0], 'Lingua::FreeLing3::Sentence' => 'Spliters result first element';
+isa_ok $sentences->[0], 'Lingua::FreeLing3::Sentence'
+  => 'Spliters result first element';
+
+$sentences = morph()->analyze($sentences);
+ok $sentences => 'MorphAnalyzer returns something';
+isa_ok $sentences, 'ARRAY' => 'MorphAnalyzer result';
+isa_ok $sentences->[0], 'Lingua::FreeLing3::Sentence'
+  => 'MorphAnalyzer result first element';
+
+$sentences = relax->analyze($sentences);
+ok $sentences => 'RelaxTagger returns something';
+isa_ok $sentences, 'ARRAY' => 'RelaxTagger result';
+isa_ok $sentences->[0], 'Lingua::FreeLing3::Sentence'
+  => 'RelaxTagger result first element';
+
+ok !$sentences->[0]->is_parsed, 'Sentence is not yet parsed';
+$sentences = chart->parse($sentences);
+ok $sentences => 'ChartParser returns something';
+isa_ok $sentences, 'ARRAY' => 'ChartParser result';
+isa_ok $sentences->[0], 'Lingua::FreeLing3::Sentence'
+  => 'ChartParser result first element';
+ok $sentences->[0]->is_parsed, 'Sentence is parsed';
+isa_ok $sentences->[0]->parse_tree => 'Lingua::FreeLing3::ParseTree';
+
+ok !$sentences->[0]->is_dep_parsed, 'Sentence is not dep parsed yet';
+$sentences = txala->parse($sentences);
+ok $sentences => 'Txala returns something';
+isa_ok $sentences, 'ARRAY' => 'Txala result';
+isa_ok $sentences->[0], 'Lingua::FreeLing3::Sentence'
+  => 'Txala result first element';
+ok $sentences->[0]->is_dep_parsed, 'Sentence is dep parsed';
+isa_ok $sentences->[0]->dep_tree => 'Lingua::FreeLing3::DepTree';
+
+# release some memory;
+release_language('es');
+undef $sentences;
+undef $words;
 
 my $more_text = <<EOT;
 О ранних годах жизни Амундсена известно немногое. Детство его прошло в
@@ -52,3 +94,13 @@ my $more_sentences = splitter('ru')->split($more_words);
 ok $more_sentences => 'Splitter(ru) returns something';
 isa_ok $more_sentences, 'ARRAY' => 'Spliter(ru) result';
 isa_ok $more_sentences->[0], 'Lingua::FreeLing3::Sentence' => 'Spliter(ru) result first element';
+
+$more_sentences = morph('ru')->analyze($more_sentences);
+ok $more_sentences => 'Morph(ru) returns something';
+isa_ok $more_sentences, 'ARRAY' => 'Morph(ru) result';
+isa_ok $more_sentences->[0], 'Lingua::FreeLing3::Sentence' => 'Morph(ru) result first element';
+
+$more_sentences = hmm('ru')->tag($more_sentences);
+ok $more_sentences => 'HMM(ru) returns something';
+isa_ok $more_sentences, 'ARRAY' => 'HMM(ru) result';
+isa_ok $more_sentences->[0], 'Lingua::FreeLing3::Sentence' => 'HMM(ru) result first element';

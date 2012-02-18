@@ -26,7 +26,6 @@ my %options = (
                ProbabilityFile       => 'probabilitats.dat',
                DictionaryFile        => 'dicc.src',
                NPdataFile            => 'np.dat',
-               QuantitiesFile        => "",
               );
 
 

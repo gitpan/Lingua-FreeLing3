@@ -125,6 +125,14 @@ sub new {
 }
 
 
+=head2 C<tag>
+
+Alias to C<analyze>.
+
+=cut
+
+sub tag { &analyze }
+
 =head2 C<analyze>
 
 Receives a list of sentences, and returns that same list of sentences

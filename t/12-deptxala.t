@@ -16,7 +16,7 @@ use Lingua::FreeLing3::Tokenizer;
 use Lingua::FreeLing3::Splitter;
 
 my $chart = Lingua::FreeLing3::ChartParser->new("es");
-my $txala = Lingua::FreeLing3::DepTxala->new("es", $chart);
+my $txala = Lingua::FreeLing3::DepTxala->new("es", ChartParser => $chart);
 
 # defined
 ok     $txala => "We have a dependency parser";
@@ -77,14 +77,12 @@ my $analyzer  = Lingua::FreeLing3::MorphAnalyzer->new("es",
                                                       PunctuationDetection => 1,
                                                       DictionarySearch => 1,
                                                       ProbabilityAssignment => 1,
-                                                      QuantitiesDetection => 0,
                                                       NERecognition   => 'NER_BASIC',
                                                       PunctuationFile => '../common/punct.dat',
                                                       LocutionsFile   => 'locucions.dat',
                                                       ProbabilityFile => 'probabilitats.dat',
                                                       DictionaryFile  => 'dicc.src',
                                                       NPdataFile      => 'np.dat',
-                                                      QuantitiesFile  => "",
                                                      );
 ok($analyzer  => "we have an analyzer");
 

@@ -31,6 +31,7 @@
       "runtime" : {
          "requires" : {
             "Carp" : "0",
+            "Scalar::Util" : "0",
             "Try::Tiny" : "0"
          }
       }
@@ -42,7 +43,7 @@
       },
       "Lingua::FreeLing3" : {
          "file" : "lib/Lingua/FreeLing3.pm",
-         "version" : "0.01_02"
+         "version" : "0.01_03"
       },
       "Lingua::FreeLing3::Bindings" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
@@ -287,5 +288,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.01_02"
+   "version" : "0.01_03"
 }

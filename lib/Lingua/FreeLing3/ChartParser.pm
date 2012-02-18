@@ -59,6 +59,13 @@ sub new {
     return bless $self => $class
 }
 
+=head2 C<parse>
+
+Alias to C<analyze>.
+
+=cut
+
+sub parse { &analyze }
 
 =head2 C<analyze>
 
