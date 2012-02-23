@@ -438,6 +438,7 @@ class dep_tree :  public tree<depnode> {
 class sentence : public std::list<word> {
  public:
   sentence();
+  sentence(const std::list< word >&);
   
   void set_parse_tree(const parse_tree &);
   parse_tree & get_parse_tree(void);

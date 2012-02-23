@@ -1910,7 +1910,7 @@ SWIGINTERN word &std_list_Sl_word_Sg__get(std::list< word > *self,int i){
                 int size = int(self->size());
                 if (i>=0 && i<size) {
                     list<word>::iterator it = self->begin();
-                    while(i) { it++; }
+                    while(i) { it++; i--; }
                     return *it;
                 }
                 else
@@ -1923,7 +1923,7 @@ SWIGINTERN analysis &std_list_Sl_analysis_Sg__get(std::list< analysis > *self,in
                 int size = int(self->size());
                 if (i>=0 && i<size) {
                     list<analysis>::iterator it = self->begin();
-                    while(i) { it++; }
+                    while(i) { it++; i--; }
                     return *it;
                 }
                 else
@@ -1936,7 +1936,7 @@ SWIGINTERN sentence &std_list_Sl_sentence_Sg__get(std::list< sentence > *self,in
                 int size = int(self->size());
                 if (i>=0 && i<size) {
                     list<sentence>::iterator it = self->begin();
-                    while(i) { it++; }
+                    while(i) { it++; i--; }
                     return *it;
                 }
                 else
@@ -1949,7 +1949,7 @@ SWIGINTERN paragraph &std_list_Sl_paragraph_Sg__get(std::list< paragraph > *self
                 int size = int(self->size());
                 if (i>=0 && i<size) {
                     list<paragraph>::iterator it = self->begin();
-                    while(i) { it++; }
+                    while(i) { it++; i--; }
                     return *it;
                 }
                 else
@@ -2018,7 +2018,7 @@ SWIGINTERN std::wstring &std_list_Sl_std_wstring_Sg__get(std::list< std::wstring
                 int size = int(self->size());
                 if (i>=0 && i<size) {
                     list<std::wstring>::iterator it = self->begin();
-                    while(i) { it++; }
+                    while(i) { it++; i--; }
                     return *it;
                 }
                 else
@@ -2031,7 +2031,7 @@ SWIGINTERN int std_list_Sl_int_Sg__get(std::list< int > *self,int i){
                 int size = int(self->size());
                 if (i>=0 && i<size) {
                     list<int>::iterator it = self->begin();
-                    while(i) { it++; }
+                    while(i) { it++; i--; }
                     return *it;
                 }
                 else
@@ -15965,7 +15965,7 @@ XS(_wrap_delete_dep_tree) {
 }
 
 
-XS(_wrap_new_sentence) {
+XS(_wrap_new_sentence__SWIG_0) {
   {
     int argvi = 0;
     sentence *result = 0 ;
@@ -15980,6 +15980,136 @@ XS(_wrap_new_sentence) {
   fail:
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_new_sentence__SWIG_1) {
+  {
+    std::list< word > *arg1 = 0 ;
+    std::list< word > temp1 ;
+    std::list< word > *v1 ;
+    int argvi = 0;
+    sentence *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_sentence(std::list< word > const &);");
+    }
+    {
+      if (SWIG_ConvertPtr(ST(0),(void **) &v1, 
+          SWIGTYPE_p_std__listT_word_t,1) != -1) {
+        arg1 = v1;
+      } else if (SvROK(ST(0))) {
+        AV *av = (AV *)SvRV(ST(0));
+        if (SvTYPE(av) != SVt_PVAV)
+        SWIG_croak("Type error in argument 1 of new_sentence. "
+          "Expected an array of " "word");
+        SV **tv;
+        I32 len = av_len(av) + 1;
+        word* obj;
+        for (int i=0; i<len; i++) {
+          tv = av_fetch(av, i, 0);
+          if (SWIG_ConvertPtr(*tv, (void **)&obj, 
+              SWIGTYPE_p_word,0) != -1) {
+            temp1.push_back(*obj);
+          } else {
+            SWIG_croak("Type error in argument 1 of "
+              "new_sentence. "
+              "Expected an array of " "word");
+          }
+        }
+        arg1 = &temp1;
+      } else {
+        SWIG_croak("Type error in argument 1 of new_sentence. "
+          "Expected an array of " "word");
+      }
+    }
+    result = (sentence *)new sentence((std::list< word > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_sentence, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_sentence) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        {
+          {
+            /* wrapped list? */
+            std::list<word >* v;
+            if (SWIG_ConvertPtr(ST(0),(void **) &v, 
+                SWIGTYPE_p_std__listT_word_t,0) != -1) {
+              _v = 1;
+            } else if (SvROK(ST(0))) {
+              /* native sequence? */
+              AV *av = (AV *)SvRV(ST(0));
+              if (SvTYPE(av) == SVt_PVAV) {
+                SV **tv;
+                I32 len = av_len(av) + 1;
+                if (len == 0) {
+                  /* an empty sequence can be of any type */
+                  _v = 1;
+                } else {
+                  /* check the first element only */
+                  word* obj;
+                  tv = av_fetch(av, 0, 0);
+                  if (SWIG_ConvertPtr(*tv, (void **)&obj, 
+                      SWIGTYPE_p_word,0) != -1)
+                  _v = 1;
+                  else
+                  _v = 0;
+                }
+              }
+            } else {
+              _v = 0;
+            }
+          }
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_sentence__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_sentence__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_sentence'");
+  XSRETURN(0);
 }
 
 

@@ -3,11 +3,16 @@ package Lingua::FreeLing3::Paragraph;
 use Lingua::FreeLing3::Bindings;
 use parent -norequire, 'Lingua::FreeLing3::Bindings::paragraph';
 
+use Scalar::Util 'blessed';
 use Carp;
 use warnings;
 use strict;
 
-our $VERSION = "0.01";
+# XXX
+# *empty = *Lingua::FreeLing3::Bindingsc::ListSentence_empty;
+# *clear = *Lingua::FreeLing3::Bindingsc::ListSentence_clear;
+
+our $VERSION = "0.03";
 
 =encoding UTF-8
 
@@ -23,21 +28,11 @@ Lingua::FreeLing3::Paragraph - Interface to FreeLing3 Paragraph object
 
 This module is a wrapper to the FreeLing3 Paragraph object.
 
-=head2 CONSTRUCTOR
-
-=over 4
-
-=item C<new>
+=head2 C<new>
 
 The constructor returns a new Paragraph object: a list of sentences
 
 =cut
-
-
-# *size = *Lingua::FreeLing3::Bindingsc::ListSentence_size;
-# *empty = *Lingua::FreeLing3::Bindingsc::ListSentence_empty;
-# *clear = *Lingua::FreeLing3::Bindingsc::ListSentence_clear;
-# *push = *Lingua::FreeLing3::Bindingsc::ListSentence_push;
 
 sub new {
     my $class = shift;
@@ -45,18 +40,32 @@ sub new {
     return bless $self => $class #amen
 }
 
-=item C<push>
+sub _new_from_binding {
+    my ($class, $paragraph) = @_;
+    bless $paragraph => $class #amen
+}
+
+=head2 C<push>
+
+Adds one or more sentences to the paragraph.
 
 =cut
 
 sub push {
-    my ($self, $sentence) = @_;
-    carp "Can't push non-sentence object" unless ref($sentence) eq "Lingua::FreeLing3::Sentence";
+    my $self = shift;
 
-    $self->SUPER::push($sentence);
+    my $p;
+    while ($p = shift) {
+        if (blessed($p) && $p->isa('Lingua::FreeLing3::Bindings::sentence')) {
+            $self->SUPER::push($p);
+        } else {
+            carp "Ignoring push parameter: not a sentence."
+        }
+    }
+    return $self;
 }
 
-=item C<get>
+=head2 C<sentence>
 
 Gets a sentence from a paragraph. Note that this method is extremely
 slow, given that FreeLing paragraph is implemented as a
@@ -65,30 +74,29 @@ iterations on a linked list.
 
 =cut
 
-sub get {
-    my ($class, $n) = @_;
-    my $out = $class->SUPER::get($n);
-    return Lingua::FreeLing3::Sentence->_new_from_binding($out);
+sub sentence {
+    my ($self, $n) = @_;
+    $n >= $self->length() and return undef;
+    Lingua::FreeLing3::Sentence->_new_from_binding($self->SUPER::get($n));
 }
 
-=item C<sentences>
+=head2 C<sentences>
 
 Returns an array of sentences from a paragraph.
 
 =cut
 
 sub sentences {
-    my ($class) = @_;
-    my $out = $class->SUPER::elements();
-    return map { Lingua::FreeLing3::Sentence->_new_from_binding($_) } @$out;
+    map { Lingua::FreeLing3::Sentence->_new_from_binding($_) } @{ $_[0]->SUPER::elements() }
 }
 
+=head2 C<length>
 
-=pod
-
-=back
+Returns the number of sentences in the paragraph.
 
 =cut
+
+sub length { $_[0]->SUPER::size }
 
 1;
 
@@ -102,8 +110,6 @@ freeling library for extra information, or perl(1) itself.
 =head1 AUTHOR
 
 Alberto Manuel Brandão Simões, E<lt>ambs@cpan.orgE<gt>
-
-Jorge Cunha Mendes E<lt>jorgecunhamendes@gmail.comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 

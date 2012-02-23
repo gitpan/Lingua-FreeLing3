@@ -152,7 +152,7 @@ Accesses a splitter (L<Lingua::FreeLing3::Splitter>).
 
 =head2 C<morph>
 
-Accesses a morphological analyzer (L<Lingua::FreeLing3::MorphAnalyzer>)..
+Accesses a morphological analyzer (L<Lingua::FreeLing3::MorphAnalyzer>).
 
 =head2 C<hmm>
 

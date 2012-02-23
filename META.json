@@ -43,7 +43,7 @@
       },
       "Lingua::FreeLing3" : {
          "file" : "lib/Lingua/FreeLing3.pm",
-         "version" : "0.01_03"
+         "version" : "0.01_04"
       },
       "Lingua::FreeLing3::Bindings" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
@@ -251,7 +251,7 @@
       },
       "Lingua::FreeLing3::Paragraph" : {
          "file" : "lib/Lingua/FreeLing3/Paragraph.pm",
-         "version" : "0.01"
+         "version" : "0.03"
       },
       "Lingua::FreeLing3::ParseTree" : {
          "file" : "lib/Lingua/FreeLing3/ParseTree.pm",
@@ -263,7 +263,7 @@
       },
       "Lingua::FreeLing3::Sentence" : {
          "file" : "lib/Lingua/FreeLing3/Sentence.pm",
-         "version" : "0.02"
+         "version" : "0.03"
       },
       "Lingua::FreeLing3::Splitter" : {
          "file" : "lib/Lingua/FreeLing3/Splitter.pm",
@@ -288,5 +288,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.01_03"
+   "version" : "0.01_04"
 }

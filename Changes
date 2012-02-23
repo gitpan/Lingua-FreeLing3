@@ -1,5 +1,10 @@
 Revision history for Lingua-FreeLing3
 
+0.01_04 Thu Feb 23 12:42:18 WET 2012
+        - ::Sentence now has more constructor hypothesis.
+        - ::Document with push/length/paragraphs? methods.
+        - ::Paragraph with push/length/paragraphs? methods.
+
 0.01_03 Sat Feb 18 17:32:57 WET 2012
         - FL3 now also includes:
           - morph/hmm/relax/chart/txala/nec
@@ -8,23 +13,23 @@ Revision history for Lingua-FreeLing3
         - Added a new shortcut module, FL3, including:
           - splitter/tokenizer
         - Added
-          - Lingua::FreeLing2::DepTree            (kind of OK)
+          - Lingua::FreeLing3::DepTree            (kind of OK)
 
 0.01_01 Wed Feb 15 16:09:54 WET 2012
-        - First version, from Lingua::FreeLing2 version 0.01_03
+        - First version, from Lingua::FreeLing3 version 0.01_03
         - Includes:
-          - Lingua::FreeLing2::NEC               (not working)
-          - Lingua::FreeLing2::DepTxala       (not functional)
-          - Lingua::FreeLing2::ChartParser        (kind of OK)
-          - Lingua::FreeLing2::ParseTree          (kind of OK)
-          - Lingua::FreeLing2::Paragraph           (mostly OK)
-          - Lingua::FreeLing2::Document            (mostly OK)
-          - Lingua::FreeLing2::RelaxTagger         (mostly OK)
-          - Lingua::FreeLing2::Tokenizer                  (OK)
-          - Lingua::FreeLing2::Splitter                   (OK)
-          - Lingua::FreeLing2::HMMTagger           (mostly OK)
-          - Lingua::FreeLing2::MorphAnalyzer       (mostly OK)
-          - Lingua::FreeLing2::Word::Analysis      (mostly OK)
-          - Lingua::FreeLing2::Word                (mostly OK)
-          - Lingua::FreeLing2::Sentence            (mostly OK)
+          - Lingua::FreeLing3::NEC               (not working)
+          - Lingua::FreeLing3::DepTxala       (not functional)
+          - Lingua::FreeLing3::ChartParser        (kind of OK)
+          - Lingua::FreeLing3::ParseTree          (kind of OK)
+          - Lingua::FreeLing3::Paragraph           (mostly OK)
+          - Lingua::FreeLing3::Document            (mostly OK)
+          - Lingua::FreeLing3::RelaxTagger         (mostly OK)
+          - Lingua::FreeLing3::Tokenizer                  (OK)
+          - Lingua::FreeLing3::Splitter                   (OK)
+          - Lingua::FreeLing3::HMMTagger           (mostly OK)
+          - Lingua::FreeLing3::MorphAnalyzer       (mostly OK)
+          - Lingua::FreeLing3::Word::Analysis      (mostly OK)
+          - Lingua::FreeLing3::Word                (mostly OK)
+          - Lingua::FreeLing3::Sentence            (mostly OK)
 

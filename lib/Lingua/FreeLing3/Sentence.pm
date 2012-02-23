@@ -3,12 +3,17 @@ use Lingua::FreeLing3::Word;
 use Lingua::FreeLing3::ParseTree;
 use Lingua::FreeLing3::Bindings;
 
+use Scalar::Util 'blessed';
 use warnings;
 use strict;
 
 use parent -norequire, 'Lingua::FreeLing3::Bindings::sentence';
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
+
+# XXX - Missing
+#  *words_begin = *Lingua::FreeLing3::Bindingsc::sentence_words_begin;
+#  *words_end = *Lingua::FreeLing3::Bindingsc::sentence_words_end;
 
 =encoding UTF-8
 
@@ -20,33 +25,53 @@ Lingua::FreeLing3::Sentence - Interface to FreeLing3 Sentence object
 
    use Lingua::FreeLing3::Sentence;
 
-   my $words = $sentence->words;
+   # usually you don't need to construct sentences.
+   # the constructor also accepts a list of Lingua::FreeLing3::Word's
+   my $sentence = Lingua::FreeLing3::Sentence->new("some","sentence");
 
-   my $sentence = $sentence->to_text;
+   my $size = $sentence->length; # returns 2
+
+   # returns array of Lingua::FreeLing3::Word objects
+   my @words = $sentence->words;
+
+   # returns string with words separated by spaces
+   my $string = $sentence->to_text;
+
+   if ($sentence->is_parsed) {
+      # returns Lingua::FreeLing3::ParseTree
+      my $parse_tree = $sentence->parse_tree;
+   }
+
+   if ($sentence->is_dep_parsed) {
+      # returns Lingua::FreeLing3::DepTree
+      my $dep_tree = $sentence->dep_tree;
+   }
 
 =head1 DESCRIPTION
 
 This module is a wrapper to the FreeLing3 Sentence object (a list of
 words, that someone has validated as a complete sentence.
 
-=head2 CONSTRUCTOR
+=head2 C<new>
 
-=over 4
-
-=item C<new>
-
-The constructor returns a new Sentence object. As no setters are
-available (for now), it is not really relevant. Tests are being done
-to understand how to set/add words in the sentence.
-
-=back
+The constructor returns a new Sentence object. Can be initialized with
+an array of words (strings) or an array of L<Lingua::FreeLing3::Word>
+objects (or a mixture of them).
 
 =cut
 
-# XXX: make this a polymorphic new
 sub new {
     my $class = shift;
-    my $self = $class->SUPER::new();
+    my $self = $class->SUPER::new( [ map {
+        if (blessed($_) && $_->isa('Lingua::FreeLing3::Bindings::word')) {
+            $_
+        } elsif (not ref) {
+            Lingua::FreeLing3::Word->new($_);
+        } else {
+            die "Invalid parameter on Sentence constructor: $_"
+        }
+    } @_ ] );
+
     return bless $self => $class #amen
 }
 
@@ -55,89 +80,72 @@ sub _new_from_binding {
     return bless $sentence => $class #amen
 }
 
-=head2 ACESSORS
+=head2 C<length>
 
-Current sentence acessors are:
+Returns the sentence length (number of words/tokens).
 
-=over 4
+=cut
 
-=item C<words>
+sub length { $_[0]->SUPER::size }
+
+=head2 C<words>
 
 Returns a list of L<Lingua::FreeLing3::Word>.
 
 =cut
 
 sub words {
-    my $self = shift;
-    my $words = $self->SUPER::get_words;
-    return map {
+    map {
         Lingua::FreeLing3::Word->_new_from_binding($_)
-      } @$words;
+      } @{ $_[0]->SUPER::get_words };
 }
 
-=item C<to_text>
+=head2 C<to_text>
 
 Returns a string with words separated by a blank space.
 
 =cut
 
 sub to_text {
-    my $self = shift;
-    my $words = $self->SUPER::get_words;
-    return join(" " => map { $_->get_form } @$words);
+    join " " => map { $_->get_form } @{ $_[0]->SUPER::get_words };
 }
 
+=head2 C<is_parsed>
 
-# XXX - TODO
-# *set_parse_tree = *Lingua::FreeLing3::Bindingsc::sentence_set_parse_tree;
-# *get_parse_tree = *Lingua::FreeLing3::Bindingsc::sentence_get_parse_tree;
-# *get_dep_tree = *Lingua::FreeLing3::Bindingsc::sentence_get_dep_tree;
-# *set_dep_tree = *Lingua::FreeLing3::Bindingsc::sentence_set_dep_tree;
-# *words_begin = *Lingua::FreeLing3::Bindingsc::sentence_words_begin;
-# *words_end = *Lingua::FreeLing3::Bindingsc::sentence_words_end;
-
-=item C<dep_tree>
-
-Returns the current dependency tree, if there is any.
+Checks if the sentence has been parsed by a dependency parser.
 
 =cut
 
-sub dep_tree {
-    my $self = shift;
-    return Lingua::FreeLing3::DepTree->_new_from_binding($self->SUPER::get_dep_tree());
-}
+sub is_parsed { $_[0]->SUPER::is_parsed() }
 
-=item C<parse_tree>
+=head2 C<parse_tree>
 
 Returns the current parse tree, if there is any.
 
 =cut
 
 sub parse_tree {
-    my $self = shift;
-    return Lingua::FreeLing3::ParseTree->_new_from_binding($self->SUPER::get_parse_tree());
+    Lingua::FreeLing3::ParseTree->_new_from_binding($_[0]->SUPER::get_parse_tree());
 }
 
-=item C<is_dep_parsed>
+=head2 C<is_dep_parsed>
 
 Checks if the sentence has been parsed by a dependency parser.
 
 =cut
 
 sub is_dep_parsed {
-    my $self = shift;
-    return $self->SUPER::is_dep_parsed();
+    $_[0]->SUPER::is_dep_parsed();
 }
 
-=item C<is_parsed>
+=head2 C<dep_tree>
 
-Checks if the sentence has been parsed by a dependency parser.
+Returns the current dependency tree, if there is any.
 
 =cut
 
-sub is_parsed {
-    my $self = shift;
-    return $self->SUPER::is_parsed();
+sub dep_tree {
+    Lingua::FreeLing3::DepTree->_new_from_binding($_[0]->SUPER::get_dep_tree());
 }
 
 ## debug purposes
@@ -150,8 +158,6 @@ sub _dump {
 
 __END__
 
-=back
-
 =head1 SEE ALSO
 
 Lingua::FreeLing3(3) for the documentation table of contents. The
@@ -160,8 +166,6 @@ freeling library for extra information, or perl(1) itself.
 =head1 AUTHOR
 
 Alberto Manuel Brandão Simões, E<lt>ambs@cpan.orgE<gt>
-
-Jorge Cunha Mendes E<lt>jorgecunhamendes@gmail.comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
