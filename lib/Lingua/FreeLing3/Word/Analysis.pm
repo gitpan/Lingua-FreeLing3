@@ -1,5 +1,6 @@
 package Lingua::FreeLing3::Word::Analysis;
 
+use utf8;
 use warnings;
 use strict;
 
@@ -107,7 +108,9 @@ sub lemma {
     if ($_[0]) {
         $self->SUPER::set_lemma(@_);
     } else {
-        $self->SUPER::get_lemma;
+        my $l = $self->SUPER::get_lemma;
+        utf8::decode($l);
+        return $l;
     }
 }
 

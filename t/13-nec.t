@@ -7,7 +7,7 @@ use utf8;
 
 use Data::Dumper;
 
-use Test::More tests => 16;
+use Test::More tests => 17;
 use Test::Warn;
 
 use Lingua::FreeLing3::MorphAnalyzer;
@@ -76,7 +76,7 @@ my $analyzer  = Lingua::FreeLing3::MorphAnalyzer->new("es",
                                                       PunctuationDetection => 1,
                                                       DictionarySearch => 1,
                                                       ProbabilityAssignment => 1,
-                                                      NERecognition   => 'NER_BASIC',
+                                                      NERecognition   => 1,
                                                       PunctuationFile => '../common/punct.dat',
                                                       LocutionsFile   => 'locucions.dat',
                                                       ProbabilityFile => 'probabilitats.dat',
@@ -85,11 +85,12 @@ my $analyzer  = Lingua::FreeLing3::MorphAnalyzer->new("es",
                                                      );
 ok($analyzer  => "we have an analyzer");
 
+my $n = 0;
 $sentences = $analyzer->analyze($sentences);
 
-ok(1 => "--MARK--");
+is $sentences->[0]->word(25)->form => 'El_Cairo';
+is $sentences->[0]->word(25)->tag  => 'NP00000';
 
 $sentences = $nec->analyze($sentences);
-
-ok(1 => "--MARK--");
+is $sentences->[0]->word(25)->tag => 'NP00G00';
 

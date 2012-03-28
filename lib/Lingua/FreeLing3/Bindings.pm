@@ -1605,6 +1605,45 @@ sub ACQUIRE {
 }
 
 
+############# Class : Lingua::FreeLing3::Bindings::phonetics ##############
+
+package Lingua::FreeLing3::Bindings::phonetics;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_phonetics(@_);
+    bless $self, $pkg if defined($self);
+}
+
+*get_sound = *Lingua::FreeLing3::Bindingsc::phonetics_get_sound;
+*analyze = *Lingua::FreeLing3::Bindingsc::phonetics_analyze;
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_phonetics($self);
+        delete $OWNER{$self};
+    }
+}
+
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
 ############# Class : Lingua::FreeLing3::Bindings::nec ##############
 
 package Lingua::FreeLing3::Bindings::nec;
@@ -1682,43 +1721,11 @@ sub ACQUIRE {
 }
 
 
-############# Class : Lingua::FreeLing3::Bindings::dependency_parser ##############
-
-package Lingua::FreeLing3::Bindings::dependency_parser;
-use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
-@ISA = qw( Lingua::FreeLing3::Bindings );
-%OWNER = ();
-%ITERATORS = ();
-sub DESTROY {
-    return unless $_[0]->isa('HASH');
-    my $self = tied(%{$_[0]});
-    return unless defined $self;
-    delete $ITERATORS{$self};
-    if (exists $OWNER{$self}) {
-        Lingua::FreeLing3::Bindingsc::delete_dependency_parser($self);
-        delete $OWNER{$self};
-    }
-}
-
-*analyze = *Lingua::FreeLing3::Bindingsc::dependency_parser_analyze;
-sub DISOWN {
-    my $self = shift;
-    my $ptr = tied(%$self);
-    delete $OWNER{$ptr};
-}
-
-sub ACQUIRE {
-    my $self = shift;
-    my $ptr = tied(%$self);
-    $OWNER{$ptr} = 1;
-}
-
-
 ############# Class : Lingua::FreeLing3::Bindings::dep_txala ##############
 
 package Lingua::FreeLing3::Bindings::dep_txala;
 use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
-@ISA = qw( Lingua::FreeLing3::Bindings::dependency_parser Lingua::FreeLing3::Bindings );
+@ISA = qw( Lingua::FreeLing3::Bindings );
 %OWNER = ();
 %ITERATORS = ();
 sub new {

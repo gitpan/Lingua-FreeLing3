@@ -1533,20 +1533,20 @@ SWIG_Perl_SetModule(swig_module_info *module) {
 #define SWIGTYPE_p_chart_parser swig_types[3]
 #define SWIGTYPE_p_dep_tree swig_types[4]
 #define SWIGTYPE_p_dep_txala swig_types[5]
-#define SWIGTYPE_p_dependency_parser swig_types[6]
-#define SWIGTYPE_p_depnode swig_types[7]
-#define SWIGTYPE_p_document swig_types[8]
-#define SWIGTYPE_p_generic_iterator swig_types[9]
-#define SWIGTYPE_p_generic_iteratorT_depnode_t swig_types[10]
-#define SWIGTYPE_p_generic_iteratorT_node_t swig_types[11]
-#define SWIGTYPE_p_hmm_tagger swig_types[12]
-#define SWIGTYPE_p_iterator swig_types[13]
-#define SWIGTYPE_p_maco swig_types[14]
-#define SWIGTYPE_p_maco_options swig_types[15]
-#define SWIGTYPE_p_nec swig_types[16]
-#define SWIGTYPE_p_node swig_types[17]
-#define SWIGTYPE_p_paragraph swig_types[18]
-#define SWIGTYPE_p_parse_tree swig_types[19]
+#define SWIGTYPE_p_depnode swig_types[6]
+#define SWIGTYPE_p_document swig_types[7]
+#define SWIGTYPE_p_generic_iterator swig_types[8]
+#define SWIGTYPE_p_generic_iteratorT_depnode_t swig_types[9]
+#define SWIGTYPE_p_generic_iteratorT_node_t swig_types[10]
+#define SWIGTYPE_p_hmm_tagger swig_types[11]
+#define SWIGTYPE_p_iterator swig_types[12]
+#define SWIGTYPE_p_maco swig_types[13]
+#define SWIGTYPE_p_maco_options swig_types[14]
+#define SWIGTYPE_p_nec swig_types[15]
+#define SWIGTYPE_p_node swig_types[16]
+#define SWIGTYPE_p_paragraph swig_types[17]
+#define SWIGTYPE_p_parse_tree swig_types[18]
+#define SWIGTYPE_p_phonetics swig_types[19]
 #define SWIGTYPE_p_preorder_iterator swig_types[20]
 #define SWIGTYPE_p_preorder_iteratorT_depnode_t swig_types[21]
 #define SWIGTYPE_p_preorder_iteratorT_node_t swig_types[22]
@@ -19531,7 +19531,47 @@ XS(_wrap_new_maco) {
 }
 
 
-XS(_wrap_maco_analyze) {
+XS(_wrap_maco_analyze__SWIG_0) {
+  {
+    maco *arg1 = (maco *) 0 ;
+    std::list< sentence > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: maco_analyze(self,std::list< sentence > &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_maco, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "maco_analyze" "', argument " "1"" of type '" "maco *""'"); 
+    }
+    arg1 = reinterpret_cast< maco * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_std__listT_sentence_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "maco_analyze" "', argument " "2"" of type '" "std::list< sentence > &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "maco_analyze" "', argument " "2"" of type '" "std::list< sentence > &""'"); 
+    }
+    arg2 = reinterpret_cast< std::list< sentence > * >(argp2);
+    (arg1)->analyze(*arg2);
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_maco_analyze__SWIG_1) {
   {
     maco *arg1 = (maco *) 0 ;
     std::list< sentence > *arg2 = 0 ;
@@ -19606,6 +19646,115 @@ XS(_wrap_maco_analyze) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_maco_analyze) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_maco, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_std__listT_sentence_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_maco, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          {
+            /* wrapped list? */
+            std::list<sentence >* v;
+            if (SWIG_ConvertPtr(ST(1),(void **) &v, 
+                SWIGTYPE_p_std__listT_sentence_t,0) != -1) {
+              _v = 1;
+            } else if (SvROK(ST(1))) {
+              /* native sequence? */
+              AV *av = (AV *)SvRV(ST(1));
+              if (SvTYPE(av) == SVt_PVAV) {
+                SV **tv;
+                I32 len = av_len(av) + 1;
+                if (len == 0) {
+                  /* an empty sequence can be of any type */
+                  _v = 1;
+                } else {
+                  /* check the first element only */
+                  sentence* obj;
+                  tv = av_fetch(av, 0, 0);
+                  if (SWIG_ConvertPtr(*tv, (void **)&obj, 
+                      SWIGTYPE_p_sentence,0) != -1)
+                  _v = 1;
+                  else
+                  _v = 0;
+                }
+              }
+            } else {
+              _v = 0;
+            }
+          }
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_maco_analyze__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_maco_analyze__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'maco_analyze'");
+  XSRETURN(0);
 }
 
 
@@ -20277,6 +20426,330 @@ XS(_wrap_delete_relax_tagger) {
 }
 
 
+XS(_wrap_new_phonetics) {
+  {
+    std::wstring *arg1 = 0 ;
+    std::wstring wtemp1 ;
+    int argvi = 0;
+    phonetics *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_phonetics(std::wstring const &);");
+    }
+    {
+      std::string aux (SvPV(ST(0), PL_na));
+      wtemp1 = util::string2wstring(aux);
+      arg1 = &wtemp1;
+    }
+    result = (phonetics *)new phonetics((std::wstring const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_phonetics, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_phonetics_get_sound) {
+  {
+    phonetics *arg1 = (phonetics *) 0 ;
+    std::wstring *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    std::wstring wtemp2 ;
+    int argvi = 0;
+    std::wstring result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: phonetics_get_sound(self,std::wstring const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_phonetics, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "phonetics_get_sound" "', argument " "1"" of type '" "phonetics *""'"); 
+    }
+    arg1 = reinterpret_cast< phonetics * >(argp1);
+    {
+      std::string aux (SvPV(ST(1), PL_na));
+      wtemp2 = util::string2wstring(aux);
+      arg2 = &wtemp2;
+    }
+    result = (arg1)->get_sound((std::wstring const &)*arg2);
+    {
+      std::string temp;
+      temp = util::wstring2string(result);
+      ST(argvi) = newSVpv(temp.c_str(), 0);
+      argvi++;
+      SvUTF8_on (ST(argvi));
+    }
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_phonetics_analyze__SWIG_0) {
+  {
+    phonetics *arg1 = (phonetics *) 0 ;
+    std::list< sentence > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: phonetics_analyze(self,std::list< sentence > &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_phonetics, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "phonetics_analyze" "', argument " "1"" of type '" "phonetics *""'"); 
+    }
+    arg1 = reinterpret_cast< phonetics * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_std__listT_sentence_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "phonetics_analyze" "', argument " "2"" of type '" "std::list< sentence > &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "phonetics_analyze" "', argument " "2"" of type '" "std::list< sentence > &""'"); 
+    }
+    arg2 = reinterpret_cast< std::list< sentence > * >(argp2);
+    (arg1)->analyze(*arg2);
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_phonetics_analyze__SWIG_1) {
+  {
+    phonetics *arg1 = (phonetics *) 0 ;
+    std::list< sentence > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    std::list< sentence > temp2 ;
+    std::list< sentence > *v2 ;
+    int argvi = 0;
+    std::list< sentence > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: phonetics_analyze(self,std::list< sentence > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_phonetics, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "phonetics_analyze" "', argument " "1"" of type '" "phonetics *""'"); 
+    }
+    arg1 = reinterpret_cast< phonetics * >(argp1);
+    {
+      if (SWIG_ConvertPtr(ST(1),(void **) &v2, 
+          SWIGTYPE_p_std__listT_sentence_t,1) != -1) {
+        arg2 = v2;
+      } else if (SvROK(ST(1))) {
+        AV *av = (AV *)SvRV(ST(1));
+        if (SvTYPE(av) != SVt_PVAV)
+        SWIG_croak("Type error in argument 2 of phonetics_analyze. "
+          "Expected an array of " "sentence");
+        SV **tv;
+        I32 len = av_len(av) + 1;
+        sentence* obj;
+        for (int i=0; i<len; i++) {
+          tv = av_fetch(av, i, 0);
+          if (SWIG_ConvertPtr(*tv, (void **)&obj, 
+              SWIGTYPE_p_sentence,0) != -1) {
+            temp2.push_back(*obj);
+          } else {
+            SWIG_croak("Type error in argument 2 of "
+              "phonetics_analyze. "
+              "Expected an array of " "sentence");
+          }
+        }
+        arg2 = &temp2;
+      } else {
+        SWIG_croak("Type error in argument 2 of phonetics_analyze. "
+          "Expected an array of " "sentence");
+      }
+    }
+    result = (arg1)->analyze((std::list< sentence > const &)*arg2);
+    {
+      std::list<sentence>::const_iterator i;
+      unsigned int j;
+      int len = (&result)->size();
+      SV **svs = new SV*[len];
+      for (i=(&result)->begin(), j=0; i!=(&result)->end(); i++, j++) {
+        sentence* ptr = new sentence(*i);
+        svs[j] = sv_newmortal();
+        SWIG_MakePtr(svs[j], (void*) ptr, 
+          SWIGTYPE_p_sentence, SWIG_SHADOW|0);
+      }
+      AV *myav = av_make(len, svs);
+      delete[] svs;
+      ST(argvi) = newRV_noinc((SV*) myav);
+      sv_2mortal(ST(argvi));
+      argvi++;
+    }
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_phonetics_analyze) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_phonetics, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_std__listT_sentence_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_phonetics, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          {
+            /* wrapped list? */
+            std::list<sentence >* v;
+            if (SWIG_ConvertPtr(ST(1),(void **) &v, 
+                SWIGTYPE_p_std__listT_sentence_t,0) != -1) {
+              _v = 1;
+            } else if (SvROK(ST(1))) {
+              /* native sequence? */
+              AV *av = (AV *)SvRV(ST(1));
+              if (SvTYPE(av) == SVt_PVAV) {
+                SV **tv;
+                I32 len = av_len(av) + 1;
+                if (len == 0) {
+                  /* an empty sequence can be of any type */
+                  _v = 1;
+                } else {
+                  /* check the first element only */
+                  sentence* obj;
+                  tv = av_fetch(av, 0, 0);
+                  if (SWIG_ConvertPtr(*tv, (void **)&obj, 
+                      SWIGTYPE_p_sentence,0) != -1)
+                  _v = 1;
+                  else
+                  _v = 0;
+                }
+              }
+            } else {
+              _v = 0;
+            }
+          }
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_phonetics_analyze__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_phonetics_analyze__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'phonetics_analyze'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_phonetics) {
+  {
+    phonetics *arg1 = (phonetics *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_phonetics(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_phonetics, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_phonetics" "', argument " "1"" of type '" "phonetics *""'"); 
+    }
+    arg1 = reinterpret_cast< phonetics * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
 XS(_wrap_new_nec) {
   {
     std::wstring *arg1 = 0 ;
@@ -20873,73 +21346,6 @@ XS(_wrap_delete_chart_parser) {
 }
 
 
-XS(_wrap_delete_dependency_parser) {
-  {
-    dependency_parser *arg1 = (dependency_parser *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_dependency_parser(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_dependency_parser, SWIG_POINTER_DISOWN |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_dependency_parser" "', argument " "1"" of type '" "dependency_parser *""'"); 
-    }
-    arg1 = reinterpret_cast< dependency_parser * >(argp1);
-    delete arg1;
-    ST(argvi) = sv_newmortal();
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_dependency_parser_analyze) {
-  {
-    dependency_parser *arg1 = (dependency_parser *) 0 ;
-    std::list< sentence > *arg2 = 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: dependency_parser_analyze(self,std::list< sentence > &);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_dependency_parser, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "dependency_parser_analyze" "', argument " "1"" of type '" "dependency_parser *""'"); 
-    }
-    arg1 = reinterpret_cast< dependency_parser * >(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_std__listT_sentence_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "dependency_parser_analyze" "', argument " "2"" of type '" "std::list< sentence > &""'"); 
-    }
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "dependency_parser_analyze" "', argument " "2"" of type '" "std::list< sentence > &""'"); 
-    }
-    arg2 = reinterpret_cast< std::list< sentence > * >(argp2);
-    (arg1)->analyze(*arg2);
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
 XS(_wrap_new_dep_txala) {
   {
     std::wstring *arg1 = 0 ;
@@ -20979,6 +21385,46 @@ XS(_wrap_new_dep_txala) {
 XS(_wrap_dep_txala_analyze__SWIG_0) {
   {
     dep_txala *arg1 = (dep_txala *) 0 ;
+    sentence *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: dep_txala_analyze(self,sentence &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_dep_txala, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "dep_txala_analyze" "', argument " "1"" of type '" "dep_txala *""'"); 
+    }
+    arg1 = reinterpret_cast< dep_txala * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_sentence,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "dep_txala_analyze" "', argument " "2"" of type '" "sentence &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "dep_txala_analyze" "', argument " "2"" of type '" "sentence &""'"); 
+    }
+    arg2 = reinterpret_cast< sentence * >(argp2);
+    (arg1)->analyze(*arg2);
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_dep_txala_analyze__SWIG_1) {
+  {
+    dep_txala *arg1 = (dep_txala *) 0 ;
     std::list< sentence > *arg2 = 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
@@ -21016,7 +21462,48 @@ XS(_wrap_dep_txala_analyze__SWIG_0) {
 }
 
 
-XS(_wrap_dep_txala_analyze__SWIG_1) {
+XS(_wrap_dep_txala_analyze__SWIG_2) {
+  {
+    dep_txala *arg1 = (dep_txala *) 0 ;
+    sentence *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    sentence result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: dep_txala_analyze(self,sentence const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_dep_txala, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "dep_txala_analyze" "', argument " "1"" of type '" "dep_txala *""'"); 
+    }
+    arg1 = reinterpret_cast< dep_txala * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_sentence,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "dep_txala_analyze" "', argument " "2"" of type '" "sentence const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "dep_txala_analyze" "', argument " "2"" of type '" "sentence const &""'"); 
+    }
+    arg2 = reinterpret_cast< sentence * >(argp2);
+    result = (arg1)->analyze((sentence const &)*arg2);
+    ST(argvi) = SWIG_NewPointerObj((new sentence(static_cast< const sentence& >(result))), SWIGTYPE_p_sentence, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_dep_txala_analyze__SWIG_3) {
   {
     dep_txala *arg1 = (dep_txala *) 0 ;
     std::list< sentence > *arg2 = 0 ;
@@ -21116,7 +21603,7 @@ XS(_wrap_dep_txala_analyze) {
       _pi *= SWIG_MAXCASTRANK;
       {
         void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_std__listT_sentence_t, 0);
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_sentence, 0);
         _v = SWIG_CheckState(res);
       }
       if (!_v) goto check_1;
@@ -21141,6 +21628,66 @@ XS(_wrap_dep_txala_analyze) {
         _v = SWIG_CheckState(res);
       }
       if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_std__listT_sentence_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_dep_txala, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_sentence, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_dep_txala, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
       _ranki += _v*_pi;
       _rankm += _pi;
       _pi *= SWIG_MAXCASTRANK;
@@ -21178,16 +21725,16 @@ XS(_wrap_dep_txala_analyze) {
           }
         }
       }
-      if (!_v) goto check_2;
+      if (!_v) goto check_4;
       _ranki += _v*_pi;
       _rankm += _pi;
       _pi *= SWIG_MAXCASTRANK;
       if (!_index || (_ranki < _rank)) {
-        _rank = _ranki; _index = 2;
+        _rank = _ranki; _index = 4;
         if (_rank == _rankm) goto dispatch;
       }
     }
-  check_2:
+  check_4:
     
   dispatch:
     switch(_index) {
@@ -21195,6 +21742,10 @@ XS(_wrap_dep_txala_analyze) {
       ++PL_markstack_ptr; SWIG_CALLXS(_wrap_dep_txala_analyze__SWIG_0); return;
     case 2:
       ++PL_markstack_ptr; SWIG_CALLXS(_wrap_dep_txala_analyze__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_dep_txala_analyze__SWIG_2); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_dep_txala_analyze__SWIG_3); return;
     }
   }
   
@@ -22609,16 +23160,12 @@ static void *_p_sibling_iteratorT_node_tTo_p_generic_iteratorT_node_t(void *x, i
 static void *_p_paragraphTo_p_std__listT_sentence_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((std::list< sentence > *)  ((paragraph *) x));
 }
-static void *_p_dep_txalaTo_p_dependency_parser(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((dependency_parser *)  ((dep_txala *) x));
-}
 static swig_type_info _swigt__p_analysis = {"_p_analysis", "analysis *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::analysis", 0};
 static swig_type_info _swigt__p_boost__u32regex = {"_p_boost__u32regex", "boost::u32regex *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_chart_parser = {"_p_chart_parser", "chart_parser *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::chart_parser", 0};
 static swig_type_info _swigt__p_dep_tree = {"_p_dep_tree", "dep_tree *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::dep_tree", 0};
 static swig_type_info _swigt__p_dep_txala = {"_p_dep_txala", "dep_txala *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::dep_txala", 0};
-static swig_type_info _swigt__p_dependency_parser = {"_p_dependency_parser", "dependency_parser *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::dependency_parser", 0};
 static swig_type_info _swigt__p_depnode = {"_p_depnode", "depnode *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::depnode", 0};
 static swig_type_info _swigt__p_document = {"_p_document", "document *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::document", 0};
 static swig_type_info _swigt__p_generic_iterator = {"_p_generic_iterator", "generic_iterator *", 0, 0, (void*)0, 0};
@@ -22632,6 +23179,7 @@ static swig_type_info _swigt__p_nec = {"_p_nec", "nec *", 0, 0, (void*)"Lingua::
 static swig_type_info _swigt__p_node = {"_p_node", "node *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::node", 0};
 static swig_type_info _swigt__p_paragraph = {"_p_paragraph", "paragraph *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::paragraph", 0};
 static swig_type_info _swigt__p_parse_tree = {"_p_parse_tree", "parse_tree *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::parse_tree", 0};
+static swig_type_info _swigt__p_phonetics = {"_p_phonetics", "phonetics *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::phonetics", 0};
 static swig_type_info _swigt__p_preorder_iterator = {"_p_preorder_iterator", "preorder_iterator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_preorder_iteratorT_depnode_t = {"_p_preorder_iteratorT_depnode_t", "preorder_iterator< depnode > *|tree< depnode >::preorder_iterator *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::PreorderIteratorDepnode", 0};
 static swig_type_info _swigt__p_preorder_iteratorT_node_t = {"_p_preorder_iteratorT_node_t", "preorder_iterator< node > *|tree< node >::preorder_iterator *|parse_tree::iterator *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::PreorderIteratorNode", 0};
@@ -22680,7 +23228,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_chart_parser,
   &_swigt__p_dep_tree,
   &_swigt__p_dep_txala,
-  &_swigt__p_dependency_parser,
   &_swigt__p_depnode,
   &_swigt__p_document,
   &_swigt__p_generic_iterator,
@@ -22694,6 +23241,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_node,
   &_swigt__p_paragraph,
   &_swigt__p_parse_tree,
+  &_swigt__p_phonetics,
   &_swigt__p_preorder_iterator,
   &_swigt__p_preorder_iteratorT_depnode_t,
   &_swigt__p_preorder_iteratorT_node_t,
@@ -22742,7 +23290,6 @@ static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0,
 static swig_cast_info _swigc__p_chart_parser[] = {  {&_swigt__p_chart_parser, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_dep_tree[] = {  {&_swigt__p_dep_tree, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_dep_txala[] = {  {&_swigt__p_dep_txala, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_dependency_parser[] = {  {&_swigt__p_dependency_parser, 0, 0, 0},  {&_swigt__p_dep_txala, _p_dep_txalaTo_p_dependency_parser, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_depnode[] = {  {&_swigt__p_depnode, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_document[] = {  {&_swigt__p_document, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_generic_iterator[] = {  {&_swigt__p_generic_iterator, 0, 0, 0},{0, 0, 0, 0}};
@@ -22756,6 +23303,7 @@ static swig_cast_info _swigc__p_nec[] = {  {&_swigt__p_nec, 0, 0, 0},{0, 0, 0, 0
 static swig_cast_info _swigc__p_node[] = {  {&_swigt__p_depnode, _p_depnodeTo_p_node, 0, 0},  {&_swigt__p_node, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_paragraph[] = {  {&_swigt__p_paragraph, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_parse_tree[] = {  {&_swigt__p_parse_tree, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_phonetics[] = {  {&_swigt__p_phonetics, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_preorder_iterator[] = {  {&_swigt__p_preorder_iterator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_preorder_iteratorT_depnode_t[] = {  {&_swigt__p_preorder_iteratorT_depnode_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_preorder_iteratorT_node_t[] = {  {&_swigt__p_preorder_iteratorT_node_t, 0, 0, 0},{0, 0, 0, 0}};
@@ -22804,7 +23352,6 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_chart_parser,
   _swigc__p_dep_tree,
   _swigc__p_dep_txala,
-  _swigc__p_dependency_parser,
   _swigc__p_depnode,
   _swigc__p_document,
   _swigc__p_generic_iterator,
@@ -22818,6 +23365,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_node,
   _swigc__p_paragraph,
   _swigc__p_parse_tree,
+  _swigc__p_phonetics,
   _swigc__p_preorder_iterator,
   _swigc__p_preorder_iteratorT_depnode_t,
   _swigc__p_preorder_iteratorT_node_t,
@@ -23238,6 +23786,10 @@ static swig_command_info swig_commands[] = {
 {"Lingua::FreeLing3::Bindingsc::new_relax_tagger", _wrap_new_relax_tagger},
 {"Lingua::FreeLing3::Bindingsc::relax_tagger_analyze", _wrap_relax_tagger_analyze},
 {"Lingua::FreeLing3::Bindingsc::delete_relax_tagger", _wrap_delete_relax_tagger},
+{"Lingua::FreeLing3::Bindingsc::new_phonetics", _wrap_new_phonetics},
+{"Lingua::FreeLing3::Bindingsc::phonetics_get_sound", _wrap_phonetics_get_sound},
+{"Lingua::FreeLing3::Bindingsc::phonetics_analyze", _wrap_phonetics_analyze},
+{"Lingua::FreeLing3::Bindingsc::delete_phonetics", _wrap_delete_phonetics},
 {"Lingua::FreeLing3::Bindingsc::new_nec", _wrap_new_nec},
 {"Lingua::FreeLing3::Bindingsc::delete_nec", _wrap_delete_nec},
 {"Lingua::FreeLing3::Bindingsc::nec_analyze", _wrap_nec_analyze},
@@ -23245,8 +23797,6 @@ static swig_command_info swig_commands[] = {
 {"Lingua::FreeLing3::Bindingsc::chart_parser_get_start_symbol", _wrap_chart_parser_get_start_symbol},
 {"Lingua::FreeLing3::Bindingsc::chart_parser_analyze", _wrap_chart_parser_analyze},
 {"Lingua::FreeLing3::Bindingsc::delete_chart_parser", _wrap_delete_chart_parser},
-{"Lingua::FreeLing3::Bindingsc::delete_dependency_parser", _wrap_delete_dependency_parser},
-{"Lingua::FreeLing3::Bindingsc::dependency_parser_analyze", _wrap_dependency_parser_analyze},
 {"Lingua::FreeLing3::Bindingsc::new_dep_txala", _wrap_new_dep_txala},
 {"Lingua::FreeLing3::Bindingsc::dep_txala_analyze", _wrap_dep_txala_analyze},
 {"Lingua::FreeLing3::Bindingsc::delete_dep_txala", _wrap_delete_dep_txala},
@@ -23605,9 +24155,9 @@ XS(SWIG_init) {
   SWIG_TypeClientData(SWIGTYPE_p_maco, (void*) "Lingua::FreeLing3::Bindings::maco");
   SWIG_TypeClientData(SWIGTYPE_p_hmm_tagger, (void*) "Lingua::FreeLing3::Bindings::hmm_tagger");
   SWIG_TypeClientData(SWIGTYPE_p_relax_tagger, (void*) "Lingua::FreeLing3::Bindings::relax_tagger");
+  SWIG_TypeClientData(SWIGTYPE_p_phonetics, (void*) "Lingua::FreeLing3::Bindings::phonetics");
   SWIG_TypeClientData(SWIGTYPE_p_nec, (void*) "Lingua::FreeLing3::Bindings::nec");
   SWIG_TypeClientData(SWIGTYPE_p_chart_parser, (void*) "Lingua::FreeLing3::Bindings::chart_parser");
-  SWIG_TypeClientData(SWIGTYPE_p_dependency_parser, (void*) "Lingua::FreeLing3::Bindings::dependency_parser");
   SWIG_TypeClientData(SWIGTYPE_p_dep_txala, (void*) "Lingua::FreeLing3::Bindings::dep_txala");
   SWIG_TypeClientData(SWIGTYPE_p_senses, (void*) "Lingua::FreeLing3::Bindings::senses");
   SWIG_TypeClientData(SWIGTYPE_p_ukb_wrap, (void*) "Lingua::FreeLing3::Bindings::ukb_wrap");

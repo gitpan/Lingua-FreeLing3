@@ -47,6 +47,8 @@ Lingua::FreeLing3::Sentence - Interface to FreeLing3 Sentence object
       my $dep_tree = $sentence->dep_tree;
    }
 
+   my $iterator = $sentence->iterator;
+
 =head1 DESCRIPTION
 
 This module is a wrapper to the FreeLing3 Sentence object (a list of
@@ -100,6 +102,18 @@ sub words {
       } @{ $_[0]->SUPER::get_words };
 }
 
+=head2 C<word>
+
+Returns the nth word.
+
+=cut
+
+sub word {
+    my ($self, $n) = @_;
+    $n >= $self->length() and return undef;
+    Lingua::FreeLing3::Word->_new_from_binding($self->SUPER::get($n));
+}
+
 =head2 C<to_text>
 
 Returns a string with words separated by a blank space.
@@ -148,10 +162,26 @@ sub dep_tree {
     Lingua::FreeLing3::DepTree->_new_from_binding($_[0]->SUPER::get_dep_tree());
 }
 
+# =head2 C<iterator>
+
+# Returns a word iterator.
+
+# =cut
+
+# sub iterator {
+#     my $self = shift;
+#     return $self->SUPER::words_begin;
+# }
+
 ## debug purposes
 sub _dump {
     my $self = shift;
-    my @words = $self->SUPER::get_words();
+    my @words = $self->words;
+
+    for my $w (@words) {
+        my $h = $w->as_hash;
+        print "$h->{form}\t$h->{lemma}\t$h->{tag}\n";
+    }
 }
 
 1;

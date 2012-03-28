@@ -2,7 +2,7 @@
 
 use warnings;
 use strict;
-
+use utf8;
 use Test::More tests => 37;
 use Lingua::FreeLing3::Tokenizer;
 

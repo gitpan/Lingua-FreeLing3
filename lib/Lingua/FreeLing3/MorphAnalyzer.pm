@@ -31,7 +31,7 @@ Lingua::FreeLing3::MorphAnalyzer - Interface to FreeLing3 Morphological Analyzer
     DictionarySearch      => 1, DictionaryFile  => 'dicc.src',
     ProbabilityAssignment => 1, ProbabilityFile => 'probabilitats.dat',
     OrthographicCorrection => 1, CorrectorFile => 'corrector/corrector.dat',
-    NERecognition => 'NER_BASIC', NPdataFile => 'np.dat',
+    NERecognition => 1, NPdataFile => 'np.dat',
   );
 
   $sentence = $morph->analyze($sentence);
@@ -68,9 +68,7 @@ in case of failure.
 
 =item C<ProbabilityAssignment> (boolean)
 
-=item C<NERecognition> (option)
-
-NER_BASIC / NER_BIO / NER_NONE
+=item C<NERecognition> (boolean)
 
 =item C<Decimal> (string)
 
@@ -122,9 +120,7 @@ my %maco_valid_option = (
                          QuantitiesDetection    => 'BOOLEAN',
                          DictionarySearch       => 'BOOLEAN',
                          ProbabilityAssignment  => 'BOOLEAN',
-                         NERecognition          => { 'NER_BASIC' => 0,
-                                                     'NER_BIO'   => 1,
-                                                     'NER_NONE'  => 2 },
+                         NERecognition          => 'BOOLEAN',
                          Decimal                => 'STRING',
                          Thousand               => 'STRING',
                          LocutionsFile          => 'FILE',
@@ -153,16 +149,13 @@ sub _check_option {
             return '"'.$value.'"';
         }
         when ("FILE") {
-            $value    || return undef;
-            -f $value && return '"'.$value.'"';
+            $value    or return undef;
+            -f $value and return '"'.$value.'"';
 
             my $ofile = catfile($self->{prefix} => $value);
-            -f $ofile && return '"'.$ofile.'"';
+            -f $ofile and return '"'.$ofile.'"';
 
             return undef;
-        }
-        when (qr/NER/) {
-            return $type->{$value} // undef;
         }
         default {
             return undef;
@@ -191,7 +184,7 @@ sub new {
                        DictionaryFile         => 'dicc.src',
                        ProbabilityAssignment  => 1,
                        ProbabilityFile        => 'probabilitats.dat',
-                       NERecognition          => 'NER_BASIC',
+                       NERecognition          => 1,
                        NPdataFile             => 'np.dat',
                        OrthographicCorrection => 1,
                        CorrectorFile          => 'corrector/corrector.dat',
@@ -213,6 +206,8 @@ sub new {
     for my $op (@keys) {
         if ($maco_valid_option{$op}) {
             my $option = exists($maco_op{$op}) ? $maco_op{$op} : $default_ops{$op};
+
+
             if (defined($option = $self->_check_option($option, $maco_valid_option{$op}))) {
                 eval "\$self->{maco_options}->swig_${op}_set($option);";
             } else {
@@ -232,17 +227,13 @@ sub new {
                DictionaryFile  => 'DictionarySearch',
                CorrectorFile   => 'OrthographicCorrection',
                ProbabilityFile => 'ProbabilityAssignment',
-               NTPdataFile     => 'NERecognition'         );
+               NPdataFile      => 'NERecognition'         );
 
     for my $op (@to_deactivate) {
         my $target = $map{$op};
         next unless $target && ($maco_op{$target} || $default_ops{$target});
 
-        if ($target eq "NERecognition") {
-            eval "\$self->{maco_options}->swig_${target}_set(2);"; # NER_NONE
-        } else {
-            eval "\$self->{maco_options}->swig_${target}_set(0);";
-        }
+        eval "\$self->{maco_options}->swig_${target}_set(0);";
     }
 
     $self->{maco} = Lingua::FreeLing3::Bindings::maco->new($self->{maco_options});

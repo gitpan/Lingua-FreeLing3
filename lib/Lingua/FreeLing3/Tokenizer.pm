@@ -59,11 +59,6 @@ sub new {
         carp "Cannot find tokenizer data file. Tried [$lang]\n";
         return undef;
     }
-
-    # my $self = {
-    #             datafile  => $lang,
-    #             tokenizer => Lingua::FreeLing3::Bindings::tokenizer->new($lang),
-    #            };
     return bless $class->SUPER::new($lang), $class #amen
 }
 
@@ -90,6 +85,7 @@ sub tokenize {
     for my $w (@$result) {
         if ($opts{to_text}) {
             $w = $w->get_form;
+            utf8::decode($w);
         } else {
             $w = Lingua::FreeLing3::Word->_new_from_binding($w);
         }

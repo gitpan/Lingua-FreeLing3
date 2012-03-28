@@ -3,7 +3,7 @@
 use warnings;
 use strict;
 
-use Test::More tests => 14;
+use Test::More tests => 15;
 use Lingua::FreeLing3::Sentence;
 use Lingua::FreeLing3::Word;
 
@@ -23,7 +23,7 @@ my $other_sentence = Lingua::FreeLing3::Sentence->new(map {
 isa_ok $other_sentence => 'Lingua::FreeLing3::Sentence';
 isa_ok $other_sentence => 'Lingua::FreeLing3::Bindings::sentence';
 is $other_sentence->length => 5;
-
+is $other_sentence->word(0)->form, "Hello";
 is $other_sentence->to_text => 'Hello , cruel world !';
 
 my $yet_another = Lingua::FreeLing3::Sentence->new("Hey","my","old","friends");
@@ -33,3 +33,8 @@ isa_ok $yet_another => 'Lingua::FreeLing3::Bindings::sentence';
 is $yet_another->length => 4;
 
 is $yet_another->to_text => 'Hey my old friends';
+
+
+# my $it = $yet_another->iterator;
+# use Data::Dumper;
+# print Dumper $it;

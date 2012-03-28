@@ -11,7 +11,7 @@ configure_requires:
   File::Which: 0
   Module::Build: 0.36
 dynamic_config: 1
-generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.120351'
+generated_by: 'Module::Build version 0.4, CPAN::Meta::Converter version 2.120630'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -23,7 +23,7 @@ provides:
     version: 0.01
   Lingua::FreeLing3:
     file: lib/Lingua/FreeLing3.pm
-    version: 0.01_04
+    version: 0.01_05
   Lingua::FreeLing3::Bindings:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
@@ -90,9 +90,6 @@ provides:
   Lingua::FreeLing3::Bindings::dep_txala:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
-  Lingua::FreeLing3::Bindings::dependency_parser:
-    file: lib/Lingua/FreeLing3/Bindings.pm
-    version: 0
   Lingua::FreeLing3::Bindings::depnode:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
@@ -118,6 +115,9 @@ provides:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::parse_tree:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::phonetics:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::relax_tagger:
@@ -197,7 +197,7 @@ provides:
     version: 0.01
   Lingua::FreeLing3::Word:
     file: lib/Lingua/FreeLing3/Word.pm
-    version: 0.02
+    version: 0.03
   Lingua::FreeLing3::Word::Analysis:
     file: lib/Lingua/FreeLing3/Word/Analysis.pm
     version: 0.02
@@ -207,4 +207,4 @@ requires:
   Try::Tiny: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01_04
+version: 0.01_05

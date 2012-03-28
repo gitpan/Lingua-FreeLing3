@@ -1,9 +1,10 @@
 # -*- cperl -*-
 
+use utf8;
 use warnings;
 use strict;
 
-use Test::More tests => 35;
+use Test::More tests => 40;
 use Test::Warn;
 use Lingua::FreeLing3::MorphAnalyzer;
 use Lingua::FreeLing3::Tokenizer;
@@ -20,7 +21,7 @@ my %options = (
                DictionarySearch      => 1,
                ProbabilityAssignment => 1,
                QuantitiesDetection   => 0,
-               NERecognition         => 'NER_BASIC',
+               NERecognition         => 1,
                PunctuationFile       => '../common/punct.dat',
                LocutionsFile         => 'locucions.dat',
                ProbabilityFile       => 'probabilitats.dat',
@@ -116,7 +117,9 @@ ok !$analysis->[0]->retokenizable, "This analysis is not retokenizable";
 
 my $other_word = ($sentence->words)[7];
 is $other_word->form => "que", "Seventh word is 'que'";
-#XXX - ok $other_word->in_dict;
+
+## ok $other_word->in_dict;
+
 $analysis = $other_word->analysis;
 is scalar(@$analysis) => 2, "'que' has two possible analysis";
 
@@ -127,6 +130,14 @@ for my $a (@$analysis) {
 isnt $analysis->[0]->tag, $analysis->[1]->tag, "POS differ for the two analysis";
 
 ## -- QHFdjhfdfsD -- ##
-my $nonword = ($sentence->words)[19];
+my $nonword = $sentence->word(19);
 is $nonword->form => "QHFdjhfdfsD", "twentieth word is 'QHFdjhfdfsD'";
-#XXX - ok $nonword->in_dict;
+## ok $nonword->in_dict;
+
+ok $sentence->word(15)->is_multiword, "Is a multiword";
+
+my @mwWords = $sentence->word(15)->get_mw_words;
+is scalar(@mwWords) => 3, "Multiword has 3 words";
+for my $i (0..2) {
+    isa_ok $mwWords[$i] => 'Lingua::FreeLing3::Word';
+}

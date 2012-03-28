@@ -564,6 +564,8 @@ class maco {
       maco(const maco_options &);
 
       /// analyze sentences
+      void analyze(std::list<sentence> &);
+      /// analyze sentences, return copy
       std::list<sentence> analyze(const std::list<sentence> &);
 };
 
@@ -574,10 +576,10 @@ class hmm_tagger {
        /// Constructor
        hmm_tagger(const std::wstring &, const std::wstring &, bool, unsigned int);
 
-       /// analyze sentences
-       void analyze(std::list<sentence> &);
-       /// analyze sentences, return copy
-       std::list<sentence> analyze(const std::list<sentence> &);
+      /// analyze sentences
+      void analyze(std::list<sentence> &);
+      /// analyze sentences, return copy
+      std::list<sentence> analyze(const std::list<sentence> &);
 };
 
 
@@ -587,12 +589,26 @@ class relax_tagger {
        /// Constructor, given the constraints file and config parameters
        relax_tagger(const std::wstring &, int, double, double, bool, unsigned int);
 
-       /// analyze sentences
-       void analyze(std::list<sentence> &);
-       /// analyze sentences, return copy
-       std::list<sentence> analyze(const std::list<sentence> &);
+      /// analyze sentences
+      void analyze(std::list<sentence> &);
+      /// analyze sentences, return copy
+      std::list<sentence> analyze(const std::list<sentence> &);
 };
 
+/*------------------------------------------------------------------------*/
+class phonetics {  
+ public:
+  /// Constructor, given config file
+  phonetics(const std::wstring&);
+  
+  /// Returns the phonetic sound of the word
+  std::wstring get_sound(const std::wstring &);
+
+  /// analyze sentences
+  void analyze(std::list<sentence> &);
+  /// analyze sentences, return copy
+  std::list<sentence> analyze(const std::list<sentence> &);
+};
 
 /*------------------------------------------------------------------------*/
 class nec {
@@ -602,7 +618,7 @@ class nec {
       /// Destructor
       ~nec();
 
-      /// Classify NEs in given sentence
+      /// analyze sentences
       void analyze(std::list<sentence> &);
       /// analyze sentences, return copy
       std::list<sentence> analyze(const std::list<sentence> &);
@@ -616,18 +632,11 @@ class chart_parser {
    chart_parser(const std::wstring&);
    /// Get the start symbol of the grammar
    std::wstring get_start_symbol(void) const;
-   /// parse sentences in list
+
+   /// analyze sentences
    void analyze(std::list<sentence> &);
    /// analyze sentences, return copy
    std::list<sentence> analyze(const std::list<sentence> &);
-};
-
-/*------------------------------------------------------------------------*/
-class dependency_parser {
-  public: 
-   dependency_parser();
-   virtual ~dependency_parser() {};
-   virtual void analyze(std::list<sentence> &)=0;
 };
 
 
@@ -635,9 +644,15 @@ class dependency_parser {
 class dep_txala : public dependency_parser {
  public:   
    dep_txala(const std::wstring &, const std::wstring &);
-   void analyze(std::list<sentence> &);
-   /// analyze sentences, return copy
-   std::list<sentence> analyze(const std::list<sentence> &);
+
+  /// analyze given sentences
+  void analyze(sentence &);
+  /// analyze given sentences
+  void analyze(std::list<sentence> &);
+  /// analyze sentence, return analyzed copy
+  sentence analyze(const sentence &);
+  /// analyze sentences, return analyzed copy
+  std::list<sentence> analyze(const std::list<sentence> &);
 };
 
 
@@ -650,7 +665,7 @@ class senses {
       /// Destructor
       ~senses(); 
  
-      /// sense annotate selected analysis for each word in given sentences
+      /// analyze sentences
       void analyze(std::list<sentence> &);
       /// analyze sentences, return copy
       std::list<sentence> analyze(const std::list<sentence> &);
@@ -664,10 +679,11 @@ class ukb_wrap {
       ukb_wrap(const std::wstring &);
       /// Destructor
       ~ukb_wrap();
-      /// word sense disambiguation for each word in given sentences
+
+      /// analyze sentences
       void analyze(std::list<sentence> &);
-      /// Return annotated copy (useful for perl/python/java APIs)
-      std::list<sentence> analyze(const std::list<sentence> &);      
+      /// analyze sentences, return copy
+      std::list<sentence> analyze(const std::list<sentence> &);
 };
 
 
