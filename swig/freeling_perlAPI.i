@@ -61,7 +61,7 @@
 %typemap(out)  const std::wstring & {
   std::string temp;
   temp = util::wstring2string($1);
-  $result = newSVpv(temp.c_str(), 0);
+  $result = sv_2mortal(newSVpv(temp.c_str(), 0));
   argvi++;
   SvUTF8_on ($result);
 }

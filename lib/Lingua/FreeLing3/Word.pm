@@ -70,7 +70,7 @@ returned.
 sub new {
     my $class = shift;
     my $word = $class->SUPER::new(@_);
-    return $class->_new_from_binding($word);
+    return bless $word => $class #amen
 }
 
 sub _new_from_binding {
@@ -200,7 +200,10 @@ words.
 
 sub get_mw_words {
     return undef unless $_[0]->is_multiword;
-    map { Lingua::FreeLing3::Word->_new_from_binding($_) } @{ $_[0]->SUPER::get_words_mw }
+    map {
+        $_->ACQUIRE();
+        Lingua::FreeLing3::Word->_new_from_binding($_)
+      } @{ $_[0]->SUPER::get_words_mw };
 }
 
 # =head2 C<in_dict>

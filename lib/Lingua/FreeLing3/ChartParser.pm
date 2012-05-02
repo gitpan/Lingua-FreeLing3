@@ -5,6 +5,7 @@ use strict;
 
 use Carp;
 use Lingua::FreeLing3;
+use Lingua::FreeLing3::Config;
 use File::Spec::Functions 'catfile';
 use Lingua::FreeLing3::Bindings;
 use Lingua::FreeLing3::Sentence;
@@ -35,27 +36,22 @@ Interface to the FreeLing3 chart parser library.
 =head2 C<new>
 
 Object constructor. One argument is required: the languge code
-(C<Lingua::FreeLing3> will search for the tagger data file) or the full
-or relative path to the dependencies file.
+(C<Lingua::FreeLing3> will search for the tagger data file).
 
 =cut
 
 sub new {
-    my ($class, $lang, %ops) = @_;
+    my ($class, $lang) = @_;
 
-    my $language;
-    if ($lang =~ /^[a-z]{2}$/i) {
-        $language = lc($lang);
-        my $dir = Lingua::FreeLing3::_search_language_dir($lang);
-        $lang = catfile($dir, "grammar-dep.dat") if $dir;
-    }
+    my $config = Lingua::FreeLing3::Config->new($lang);
+    my $file = $config->config("GrammarFile");
 
-    unless (-f $lang) {
-        carp "Cannot find chart tagger data file. Tried [$lang]\n";
+    unless (-f $file) {
+        carp "Cannot find chart tagger data file. Tried [$file]\n";
         return undef;
     }
 
-    my $self = $class->SUPER::new($lang);
+    my $self = $class->SUPER::new($file);
     return bless $self => $class
 }
 

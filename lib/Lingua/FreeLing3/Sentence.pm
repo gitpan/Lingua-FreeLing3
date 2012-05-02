@@ -98,6 +98,7 @@ Returns a list of L<Lingua::FreeLing3::Word>.
 
 sub words {
     map {
+        $_->ACQUIRE();
         Lingua::FreeLing3::Word->_new_from_binding($_)
       } @{ $_[0]->SUPER::get_words };
 }

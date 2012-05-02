@@ -11,7 +11,7 @@ use Lingua::FreeLing3::ConfigData;
 use Lingua::FreeLing3::Bindings;
 use File::Spec::Functions 'catfile';
 
-our $VERSION = "0.01_05";
+our $VERSION = "0.01_06";
 
 BEGIN {
     Lingua::FreeLing3::Bindings::util::init_locale('default');
@@ -30,7 +30,9 @@ sub _validate_option {
 sub _validate_bool {
     my ($value, $default) = @_;
     if (defined($value)) {
-        return $value ? 1 : 0;
+        $value = 1 if $value =~ /^yes$/i;
+        $value = 1 if $value =~ /^true$/i;
+        return $value eq "1" ? 1 : 0;
     } else {
         return $default;
     }
@@ -64,13 +66,6 @@ sub _validate_prob {
         carp "Setting weird value as a probability value." if defined $value;
         return $default;
     }
-}
-
-sub _search_language_dir {
-    my $lang = lc(shift @_);
-    my $fl_datadir = Lingua::FreeLing3::ConfigData->config('fl_datadir');
-    my $supposed_dir = catfile($fl_datadir, $lang);
-    return (-d $supposed_dir) ? $supposed_dir : undef;
 }
 
 sub _is_word_list {

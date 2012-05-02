@@ -52,9 +52,11 @@ META.json
 
 
 
+lib/FL3.pm
+t/99-FL3.t
 
 
 
 lib/Lingua/FreeLing3/DepTree.pm
-lib/FL3.pm
-t/99-FL3.t
+lib/Lingua/FreeLing3/EAGLES.pm
+lib/Lingua/FreeLing3/Config.pm

@@ -9,6 +9,7 @@ use Data::Dumper;
 use File::Spec::Functions;
 use Lingua::FreeLing3;
 use Lingua::FreeLing3::Bindings;
+use Lingua::FreeLing3::Config;
 use parent -norequire, 'Lingua::FreeLing3::Bindings::nec';
 
 our $VERSION = "0.01";
@@ -43,17 +44,15 @@ The constructor returns a new NEC object.
 sub new {
     my ($class, $lang) = @_;
 
-    if ($lang =~ /^[a-z][a-z]$/i) {
-        my $dir = Lingua::FreeLing3::_search_language_dir($lang);
-        $lang = catfile($dir, "nec/nec-svm.dat") if $dir;
-    }
+    my $config = Lingua::FreeLing3::Config->new($lang);
+    my $file = $config->config("NECFile");
 
-    unless (-f $lang) {
-        carp "Cannot find NEC data file. Tried [$lang]\n";
+    unless (-f $file) {
+        carp "Cannot find NEC data file. Tried [$file]\n";
         return undef;
     }
 
-    my $self = $class->SUPER::new($lang);
+    my $self = $class->SUPER::new($file);
     return bless $self => $class
 }
 

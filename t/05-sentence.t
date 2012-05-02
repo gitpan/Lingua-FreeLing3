@@ -23,7 +23,7 @@ my $other_sentence = Lingua::FreeLing3::Sentence->new(map {
 isa_ok $other_sentence => 'Lingua::FreeLing3::Sentence';
 isa_ok $other_sentence => 'Lingua::FreeLing3::Bindings::sentence';
 is $other_sentence->length => 5;
-is $other_sentence->word(0)->form, "Hello";
+is $other_sentence->word(0)->form, "Hello", 'Checking first sentence word';
 is $other_sentence->to_text => 'Hello , cruel world !';
 
 my $yet_another = Lingua::FreeLing3::Sentence->new("Hey","my","old","friends");

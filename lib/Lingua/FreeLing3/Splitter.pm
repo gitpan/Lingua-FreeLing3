@@ -7,6 +7,7 @@ use strict;
 
 use Carp;
 use Lingua::FreeLing3;
+use Lingua::FreeLing3::Config;
 use File::Spec::Functions 'catfile';
 use Lingua::FreeLing3::Bindings;
 use Lingua::FreeLing3::Sentence;
@@ -40,8 +41,7 @@ Interface to the FreeLing3 splitter library.
 =head2 C<new>
 
 Object constructor. One argument is required: the languge code
-(C<Lingua::FreeLing3> will search for the splitter data file) or
-the full or relative path to the splitter data file.
+(C<Lingua::FreeLing3> will search for the splitter data file).
 
 Returns the splitter object for that language, or undef in case of
 failure.
@@ -51,21 +51,15 @@ failure.
 sub new {
     my ($class, $lang) = @_;
 
-    if ($lang =~ /^[a-z][a-z]$/i) {
-        my $dir = Lingua::FreeLing3::_search_language_dir($lang);
-        $lang = catfile($dir, "splitter.dat") if $dir;
-    }
+    my $config = Lingua::FreeLing3::Config->new($lang);
+    my $file = $config->config('SplitterFile');
 
-    unless (-f $lang) {
-        carp "Cannot find splitter data file. Tried [$lang]\n";
+    unless (-f $file) {
+        carp "Cannot find splitter data file. Tried [$file]\n";
         return undef;
     }
 
-    # my $self = {
-    #             datafile  => $lang,
-    #             splitter => Lingua::FreeLing3::Bindings::splitter->new($lang),
-    #            };
-    my $self = $class->SUPER::new($lang);
+    my $self = $class->SUPER::new($file);
     return bless $self => $class
 }
 
@@ -107,6 +101,7 @@ sub split {
     my $result = $self->SUPER::split($tokens, $buffered);
 
     for my $s (@$result) {
+        $s->ACQUIRE();
         $s = Lingua::FreeLing3::Sentence->_new_from_binding($s);
         $s = $s->to_text if $opts{to_text};
     }

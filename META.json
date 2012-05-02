@@ -4,7 +4,7 @@
       "Alberto SimÃµes <ambs@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.120630",
+   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -43,7 +43,7 @@
       },
       "Lingua::FreeLing3" : {
          "file" : "lib/Lingua/FreeLing3.pm",
-         "version" : "0.01_05"
+         "version" : "0.01_06"
       },
       "Lingua::FreeLing3::Bindings" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
@@ -225,6 +225,10 @@
          "file" : "lib/Lingua/FreeLing3/ChartParser.pm",
          "version" : "0.01"
       },
+      "Lingua::FreeLing3::Config" : {
+         "file" : "lib/Lingua/FreeLing3/Config.pm",
+         "version" : 0
+      },
       "Lingua::FreeLing3::DepTree" : {
          "file" : "lib/Lingua/FreeLing3/DepTree.pm",
          "version" : "0.01"
@@ -236,6 +240,10 @@
       "Lingua::FreeLing3::Document" : {
          "file" : "lib/Lingua/FreeLing3/Document.pm",
          "version" : "0.01"
+      },
+      "Lingua::FreeLing3::EAGLES" : {
+         "file" : "lib/Lingua/FreeLing3/EAGLES.pm",
+         "version" : 0
       },
       "Lingua::FreeLing3::HMMTagger" : {
          "file" : "lib/Lingua/FreeLing3/HMMTagger.pm",
@@ -288,5 +296,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.01_05"
+   "version" : "0.01_06"
 }

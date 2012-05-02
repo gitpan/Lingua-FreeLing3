@@ -8,6 +8,7 @@ use Lingua::FreeLing3;
 use File::Spec::Functions 'catfile';
 use Lingua::FreeLing3::Bindings;
 use Lingua::FreeLing3::Sentence;
+use Lingua::FreeLing3::Config;
 
 use parent -norequire, 'Lingua::FreeLing3::Bindings::hmm_tagger';
 
@@ -26,10 +27,6 @@ Lingua::FreeLing3::HMMTagger - Interface to FreeLing3 HMMTagger
 
    my $pt_tagger = Lingua::FreeLing3::HMMTagger->new("pt");
 
-   # alternativelly
-   my $pt_tagger = Lingua::FreeLing3::HMMTagger->new(
-                   "/path/to/tagger.dat", LanguageCode => 'pt');
-
    $taggedListOfSentences = $pt_tagger->analyze($listOfSentences);
 
 =head1 DESCRIPTION
@@ -39,8 +36,7 @@ Interface to the FreeLing3 hmm tagger library.
 =head2 C<new>
 
 Object constructor. One argument is required: the languge code
-(C<Lingua::FreeLing3> will search for the tagger data file) or the full
-or relative path to the tagger data file.
+(C<Lingua::FreeLing3> will search for the tagger data file).
 
 Returns the tagger object for that language, or undef in case of
 failure.
@@ -48,18 +44,6 @@ failure.
 It understands the following options:
 
 =over 4
-
-=item C<LanguageCode> (string)
-
-If you use the language code when telling where the data file is (as
-the first argument to the new constructor), you can safely ignore this
-option.
-
-If you supply a relative or absolute path to the data file, please use
-this option with the two code language name.
-
-The language code is used to determine if the language uses an EAGLES
-tagset, and to properly shorten the PoS tags in that case.
 
 =item C<Retokenize> (boolean)
 
@@ -83,30 +67,28 @@ retokenization.
 sub new {
     my ($class, $lang, %ops) = @_;
 
-    my $language;
-    if ($lang =~ /^[a-z][a-z]$/i) {
-        $language = lc($lang);
-        my $dir = Lingua::FreeLing3::_search_language_dir($lang);
-        $lang = catfile($dir, "tagger.dat") if $dir;
-    }
+    my $config = Lingua::FreeLing3::Config->new($lang);
+    my $file = $config->config("TaggerHMMFile");
 
-    unless (-f $lang) {
-        carp "Cannot find hmm_tagger data file. Tried [$lang]\n";
+    unless (-f $file) {
+        carp "Cannot find hmm_tagger data file. Tried [$file]\n";
         return undef;
     }
 
-    $language ||= lc($ops{LanguageCode});
-    die "Could not guess a language code!" unless $language;
-
-    my $retok = Lingua::FreeLing3::_validate_bool($ops{Retokenize} => 0); # bool
+    my $retok = Lingua::FreeLing3::_validate_bool($ops{Retokenize},
+                                                  $config->config('TaggerRetokenize')); # bool
+    my $ft = $config->config("TaggerForceSelect");
+    $ft = "FORCE_NONE"   if $ft eq "none";
+    $ft = "FORCE_TAGGER" if $ft eq "tagger";
+    $ft = "FORCE_RETOK"  if $ft eq "retok";
     my $amb   = Lingua::FreeLing3::_validate_option($ops{AmbiguityResolution},
                                                     {
                                                      FORCE_NONE   => 0,
                                                      FORCE_TAGGER => 1,
                                                      FORCE_RETOK  => 2,
-                                                    }, 'FORCE_NONE');
+                                                    }, $ft);
 
-    my $self = $class->SUPER::new($language, $lang, $retok, $amb);
+    my $self = $class->SUPER::new($lang, $file, $retok, $amb);
     return bless $self => $class
 }
 
@@ -138,6 +120,7 @@ sub analyze {
     $sentences = $self->SUPER::analyze($sentences);
 
     for my $s (@$sentences) {
+	$s->ACQUIRE();
         $s = Lingua::FreeLing3::Sentence->_new_from_binding($s);
     }
     return $sentences;

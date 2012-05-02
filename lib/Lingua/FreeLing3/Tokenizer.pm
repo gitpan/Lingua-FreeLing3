@@ -8,6 +8,7 @@ use Lingua::FreeLing3;
 use File::Spec::Functions 'catfile';
 use Lingua::FreeLing3::Bindings;
 use Lingua::FreeLing3::Word;
+use Lingua::FreeLing3::Config;
 use parent -norequire, 'Lingua::FreeLing3::Bindings::tokenizer';
 
 
@@ -39,8 +40,7 @@ Interface to the FreeLing3 tokenizer library.
 =head2 C<new>
 
 Object constructor. One argument is required: the languge code
-(C<Lingua::FreeLing3> will search for the tokenization data file) or
-the full or relative path to the tokenization data file.
+(C<Lingua::FreeLing3> will search for the tokenization data file).
 
 Returns the tokenizer object for that language, or undef in case of
 failure.
@@ -50,16 +50,14 @@ failure.
 sub new {
     my ($class, $lang) = @_;
 
-    if ($lang =~ /^[a-z][a-z]$/i) {
-        my $dir = Lingua::FreeLing3::_search_language_dir($lang);
-        $lang = catfile($dir, "tokenizer.dat") if $dir;
-    }
+    my $config = Lingua::FreeLing3::Config->new($lang);
+    my $file = $config->config("TokenizerFile");
 
-    unless (-f $lang) {
-        carp "Cannot find tokenizer data file. Tried [$lang]\n";
+    unless (-f $file) {
+        carp "Cannot find tokenizer data file. Tried [$file]\n";
         return undef;
     }
-    return bless $class->SUPER::new($lang), $class #amen
+    return bless $class->SUPER::new($file), $class #amen
 }
 
 
@@ -81,8 +79,10 @@ sub tokenize {
     return undef unless $string;
 
     my $result = $self->SUPER::tokenize($string);
+    return [] unless $result;
 
     for my $w (@$result) {
+        $w->ACQUIRE();
         if ($opts{to_text}) {
             $w = $w->get_form;
             utf8::decode($w);

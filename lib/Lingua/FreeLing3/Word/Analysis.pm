@@ -55,7 +55,7 @@ an C<Lingua::FreeLing3::Word::Analysis> object.
 sub new {
     my $class = shift;
     my $self = $class->SUPER::new();
-    return $class->_new_from_binding($self);
+    return bless $self => $class #amen
 }
 
 sub _new_from_binding {

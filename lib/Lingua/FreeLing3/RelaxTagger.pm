@@ -8,6 +8,7 @@ use Lingua::FreeLing3;
 use File::Spec::Functions 'catfile';
 use Lingua::FreeLing3::Bindings;
 use Lingua::FreeLing3::Sentence;
+use Lingua::FreeLing3::Config;
 
 use parent -norequire, 'Lingua::FreeLing3::Bindings::relax_tagger';
 
@@ -26,9 +27,6 @@ Lingua::FreeLing3::RelaxTagger - Interface to FreeLing3 RelaxTagger
 
    my $pt_tagger = Lingua::FreeLing3::RelaxTagger->new("pt");
 
-   # alternativelly
-   my $pt_tagger = Lingua::FreeLing3::RelaxTagger->new("/path/to/constr_gram.dat");
-
    $taggedListOfSentences = $pt_tagger->analyze($listOfSentences);
 
 =head1 DESCRIPTION
@@ -38,9 +36,7 @@ Interface to the FreeLing3 relax tagger library.
 =head2 C<new>
 
 Object constructor. One argument is required: the languge code
-(C<Lingua::FreeLing3> will search for the tagger data file) or the full
-or relative path to the tagger data file (constraint file).
-
+(C<Lingua::FreeLing3> will search for the tagger data file).
 
 The format of the constraint file is described in FreeLing
 documentation.  This file can be generated from a tagged corpus using
@@ -81,7 +77,7 @@ tagging. Defaults to a true value.
 
 =item C<ambiguityResolution>
 
- An options stating whether and when the tagger must select only one
+An options stating whether and when the tagger must select only one
 analysis in case of ambiguity. Possbile values are: C<FORCE_NONE>: no
 selection forced, words ambiguous after the tagger, remain
 ambiguous. C<FORCE_TAGGER>: force selection immediately after tagging,
@@ -95,31 +91,35 @@ retokenization. Default is C<FORCE_RETOK>.
 sub new {
     my ($class, $lang, %ops) = @_;
 
-    my $language;
-    if ($lang =~ /^[a-z]{2}$/i) {
-        $language = lc($lang);
-        my $dir = Lingua::FreeLing3::_search_language_dir($lang);
-        $lang = catfile($dir, "constr_gram.dat") if $dir;
-    }
+    my $config = Lingua::FreeLing3::Config->new($lang);
+    my $file = $config->config("TaggerRelaxFile");
 
-    unless (-f $lang) {
-        carp "Cannot find relax_tagger data file. Tried [$lang]\n";
+    unless (-f $file) {
+        carp "Cannot find relax_tagger data file. Tried [$file]\n";
         return undef;
     }
 
-    my $maxIterations = Lingua::FreeLing3::_validate_integer($ops{maxIterations} => 500);
-    my $scaleFactor   = Lingua::FreeLing3::_validate_real(   $ops{scaleFactor}   => 670);
-    my $threshold     = Lingua::FreeLing3::_validate_real(   $ops{threshold}     => 0.001);
-    my $retokenize    = Lingua::FreeLing3::_validate_bool(   $ops{retokenize}    => 1);
+    my $maxIterations = Lingua::FreeLing3::_validate_integer($ops{maxIterations},
+                                                             $config->config("TaggerRelaxMaxIter"));
+    my $scaleFactor = Lingua::FreeLing3::_validate_real($ops{scaleFactor},
+                                                        $config->config("TaggerRelaxScaleFactor"));
+    my $threshold = Lingua::FreeLing3::_validate_real($ops{threshold},
+                                                      $config->config("TaggerRelaxEpsilon"));
+    my $retokenize = Lingua::FreeLing3::_validate_bool($ops{retokenize},
+                                                       $config->config("TaggerRetokenize"));
+    my $ft = $config->config("TaggerForceSelect");
+    $ft = "FORCE_NONE"   if $ft eq "none";
+    $ft = "FORCE_TAGGER" if $ft eq "tagger";
+    $ft = "FORCE_RETOK"  if $ft eq "retok";
     my $ambiguityRes  = Lingua::FreeLing3::_validate_option( $ops{ambiguityResolution},
                                                              {
                                                               FORCE_NONE   => 0,
                                                               FORCE_TAGGER => 1,
                                                               FORCE_RETOK  => 2,
-                                                             }, 'FORCE_RETOK');
+                                                             }, $ft);
 
 
-    my $self = $class->SUPER::new($lang, $maxIterations, $scaleFactor, $threshold,
+    my $self = $class->SUPER::new($file, $maxIterations, $scaleFactor, $threshold,
                                   $retokenize, $ambiguityRes);
     return bless $self => $class
 }

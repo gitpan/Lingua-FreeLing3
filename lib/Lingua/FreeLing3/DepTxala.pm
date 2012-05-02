@@ -9,6 +9,7 @@ use File::Spec::Functions 'catfile';
 use Lingua::FreeLing3::Bindings;
 use Lingua::FreeLing3::Sentence;
 use Lingua::FreeLing3::ChartParser;
+use Lingua::FreeLing3::Config;
 use Lingua::FreeLing3::DepTree;
 use Scalar::Util 'blessed';
 
@@ -39,8 +40,7 @@ Interface to the FreeLing3 txala parser library.
 
 Object constructor. One argument is required: the languge code
 (C<Lingua::FreeLing3> will search for the parser and the txala data
-files) or the full or relative path to the dependencies file together
-with the full or relative path to the chart parser data file.
+files).
 
 =over 4
 
@@ -77,24 +77,15 @@ sub new {
         $start_symbol = $chartParser->start_symbol();
     }
 
-    my $dep_txala_file;
-    if ($lang =~ /^[a-z]{2}$/i) {
-        # lets guess everything
-        my $dir = Lingua::FreeLing3::_search_language_dir(lc $lang);
-        if ($dir) {
-            $dep_txala_file = catfile($dir, "dep", "dependences.dat");
-        }
-    } else {
-        $dep_txala_file = $lang;
-    }
+    my $config = Lingua::FreeLing3::Config->new($lang);
+    my $file = $config->config("DepTxalaFile");
 
-    unless (-f $dep_txala_file) {
-        carp "Cannot find txala data file. Tried [$dep_txala_file]\n";
+    unless (-f $file) {
+        carp "Cannot find txala data file. Tried [$file]\n";
         return undef;
     }
 
-    my $self = Lingua::FreeLing3::Bindings::dep_txala->new($dep_txala_file,
-                                                           $start_symbol);
+    my $self = Lingua::FreeLing3::Bindings::dep_txala->new($file, $start_symbol);
     return bless $self => $class #amen
 }
 

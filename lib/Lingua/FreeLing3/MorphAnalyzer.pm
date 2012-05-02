@@ -6,6 +6,7 @@ use strict;
 use 5.010;
 use Carp;
 use Lingua::FreeLing3;
+use Lingua::FreeLing3::Config;
 use File::Spec::Functions 'catfile';
 use Lingua::FreeLing3::Bindings;
 
@@ -43,9 +44,7 @@ Interface to the FreeLing3 Morphological Analyzer library.
 =head2 C<new>
 
 Object constructor. One argument is required: the languge code
-(C<Lingua::FreeLing3> will search for the data file) or the full or
-relative path to the data file. It also receives a lot of options that
-are explained below.
+(C<Lingua::FreeLing3> will search for the data file).
 
 Returns the morphological analyzer object for that language, or undef
 in case of failure.
@@ -70,9 +69,9 @@ in case of failure.
 
 =item C<NERecognition> (boolean)
 
-=item C<Decimal> (string)
+=item C<DecimalPoint> (string)
 
-=item C<Thousand> (string)
+=item C<ThousandPoint> (string)
 
 =item C<LocutionsFile> (file)
 
@@ -121,8 +120,8 @@ my %maco_valid_option = (
                          DictionarySearch       => 'BOOLEAN',
                          ProbabilityAssignment  => 'BOOLEAN',
                          NERecognition          => 'BOOLEAN',
-                         Decimal                => 'STRING',
-                         Thousand               => 'STRING',
+                         DecimalPoint           => 'STRING',
+                         ThousandPoint          => 'STRING',
                          LocutionsFile          => 'FILE',
                          QuantitiesFile         => 'FILE',
                          AffixFile              => 'FILE',
@@ -137,67 +136,72 @@ my %maco_valid_option = (
 sub _check_option {
     my ($self, $value, $type) = @_;
 
-    given ($type) {
-        when ("BOOLEAN") {
-            return $value ? 1 : 0;
-        }
-        when ("REAL") {
-            return $value =~ /(\d+(?:\.\d+))?/ ? $1 : undef;
-        }
-        when ("STRING") {
-            $value =~ s/(?<!\\)"/\\"/g;
-            return '"'.$value.'"';
-        }
-        when ("FILE") {
-            $value    or return undef;
-            -f $value and return '"'.$value.'"';
+    if ($type eq "BOOLEAN") {
+        $value = 1 if $value =~ /^yes$/i;
+        $value = 1 if $value =~ /^true$/i;
+        return $value eq "1" ? 1 : 0;
+    }
+    elsif ($type eq "REAL") {
+        return $value =~ /(\d+(?:\.\d+))?/ ? $1 : undef;
+    }
+    elsif ($type eq "STRING") {
+        $value =~ s/(?<!\\)"/\\"/g;
+        return '"'.$value.'"';
+    }
+    elsif ($type eq "FILE") {
+        $value    or return undef;
+        -f $value and return '"'.$value.'"';
 
-            my $ofile = catfile($self->{prefix} => $value);
-            -f $ofile and return '"'.$ofile.'"';
+        my $ofile = catfile($self->{prefix} => $value);
+        -f $ofile and return '"'.$ofile.'"';
 
-            return undef;
-        }
-        default {
-            return undef;
-        }
+        return undef;
+    }
+    else {
+        return undef;
     }
 }
 
 sub new {
     my ($class, $lang, %maco_op) = @_;
 
+    my $config = Lingua::FreeLing3::Config->new($lang);
+    ## HACK
+    my $dir = $config->config("TokenizerFile");
+    $dir =~ s!/[^/]+$!!;
+
     # It might make sense to make this language-dependent
     my %default_ops = (
                        UserMap                => 0,
                        UserMapFile            => undef,
-                       AffixAnalysis          => 1,
-                       AffixFile              => 'afixos.dat',
-                       QuantitiesDetection    => 0,
-                       QuantitiesFile         => undef,
-                       MultiwordsDetection    => 1,
-                       LocutionsFile          => 'locucions.dat',
-                       NumbersDetection       => 1,
-                       PunctuationDetection   => 1,
-                       PunctuationFile        => '../common/punct.dat',
-                       DatesDetection         => 1,
-                       DictionarySearch       => 1,
-                       DictionaryFile         => 'dicc.src',
-                       ProbabilityAssignment  => 1,
-                       ProbabilityFile        => 'probabilitats.dat',
-                       NERecognition          => 1,
-                       NPdataFile             => 'np.dat',
-                       OrthographicCorrection => 1,
-                       CorrectorFile          => 'corrector/corrector.dat',
+                       AffixAnalysis          => $config->config("AffixAnalysis"),
+                       AffixFile              => $config->config("AffixFile"),
+                       QuantitiesDetection    => $config->config("QuantitiesDetection"),
+                       QuantitiesFile         => $config->config("QuantitiesFile"),
+                       MultiwordsDetection    => $config->config("MultiwordsDetection"),
+                       LocutionsFile          => $config->config("LocutionsFile"),
+                       NumbersDetection       => $config->config("NumbersDetection"),
+                       PunctuationDetection   => $config->config("PunctuationDetection"),
+                       PunctuationFile        => $config->config("PunctuationFile"),
+                       DatesDetection         => $config->config("DatesDetection"),
+                       DictionarySearch       => $config->config("DictionarySearch"),
+                       DictionaryFile         => $config->config("DictionaryFile"),
+                       ProbabilityAssignment  => $config->config("ProbabilityAssignment"),
+                       ProbabilityFile        => $config->config("ProbabilityFile"),
+                       NERecognition          => $config->config("NERecognition"),
+                       NPdataFile             => $config->config("NPDataFile"),
+                       OrthographicCorrection => $config->config("OrthographicCorrection"),
+                       CorrectorFile          => $config->config("CorrectorFile"),
+                       RetokContractions      => 0,
+                       ProbabilityThreshold   => $config->config("ProbabilityThreshold"),
+                       DecimalPoint           => $config->config("DecimalPoint"),
+                       ThousandPoint          => $config->config("ThousandPoint"),
                       );
 
     my @keys = keys %{{ %maco_op, %default_ops }}; # as BingOS called it, hash shaving
 
-    my $dir;
-    if ($lang =~ /^[a-z][a-z]$/i) {
-        $dir = Lingua::FreeLing3::_search_language_dir($lang);
-    }
-
     my $self = bless {
+                      config => $config,
                       prefix => $dir,
                       maco_options => Lingua::FreeLing3::Bindings::maco_options->new($lang),
                      } => $class;
@@ -255,6 +259,7 @@ sub analyze {
     $sentences = $self->{maco}->analyze($sentences);
 
     for my $s (@$sentences) {
+        $s->ACQUIRE();
         $s = Lingua::FreeLing3::Sentence->_new_from_binding($s);
     }
 

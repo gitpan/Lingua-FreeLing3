@@ -11518,7 +11518,7 @@ XS(_wrap_analysis_get_lemma) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -11552,7 +11552,7 @@ XS(_wrap_analysis_get_tag) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -11586,7 +11586,7 @@ XS(_wrap_analysis_get_short_tag__SWIG_0) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -11627,7 +11627,7 @@ XS(_wrap_analysis_get_short_tag__SWIG_1) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -11929,7 +11929,7 @@ XS(_wrap_analysis_get_senses_string) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -12835,7 +12835,7 @@ XS(_wrap_word_get_form) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -12869,7 +12869,7 @@ XS(_wrap_word_get_lc_form) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -13375,7 +13375,7 @@ XS(_wrap_word_get_lemma) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -13409,7 +13409,7 @@ XS(_wrap_word_get_tag) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -13443,7 +13443,7 @@ XS(_wrap_word_get_short_tag__SWIG_0) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -13484,7 +13484,7 @@ XS(_wrap_word_get_short_tag__SWIG_1) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -13618,7 +13618,7 @@ XS(_wrap_word_get_senses_string) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -15036,7 +15036,7 @@ XS(_wrap_node_get_node_id) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -15106,7 +15106,7 @@ XS(_wrap_node_get_label) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -17374,7 +17374,7 @@ XS(_wrap_maco_options_Lang_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18157,7 +18157,7 @@ XS(_wrap_maco_options_LocutionsFile_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18225,7 +18225,7 @@ XS(_wrap_maco_options_QuantitiesFile_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18293,7 +18293,7 @@ XS(_wrap_maco_options_AffixFile_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18361,7 +18361,7 @@ XS(_wrap_maco_options_ProbabilityFile_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18429,7 +18429,7 @@ XS(_wrap_maco_options_DictionaryFile_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18497,7 +18497,7 @@ XS(_wrap_maco_options_NPdataFile_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18565,7 +18565,7 @@ XS(_wrap_maco_options_PunctuationFile_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18633,7 +18633,7 @@ XS(_wrap_maco_options_CorrectorFile_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18701,7 +18701,7 @@ XS(_wrap_maco_options_UserMapFile_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18769,7 +18769,7 @@ XS(_wrap_maco_options_Decimal_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -18837,7 +18837,7 @@ XS(_wrap_maco_options_Thousand_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -20481,7 +20481,7 @@ XS(_wrap_phonetics_get_sound) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -21079,7 +21079,7 @@ XS(_wrap_chart_parser_get_start_symbol) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -22398,7 +22398,7 @@ XS(_wrap_sense_info_sense_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -22531,7 +22531,7 @@ XS(_wrap_sense_info_semfile_get) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }
@@ -22731,7 +22731,7 @@ XS(_wrap_sense_info_get_parents_string) {
     {
       std::string temp;
       temp = util::wstring2string(result);
-      ST(argvi) = newSVpv(temp.c_str(), 0);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
       argvi++;
       SvUTF8_on (ST(argvi));
     }

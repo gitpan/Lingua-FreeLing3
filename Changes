@@ -1,9 +1,15 @@
 Revision history for Lingua-FreeLing3
 
+0.01_06 Wed May  2 14:21:19 WEST 2012
+        - ::EAGLES created, much to do.
+        - ::Config created for accessing config files.
+        - SWIG fixes
+
 0.01_05 Wed Mar 28 15:33:18 WEST 2012
         - ::DepTxala changed to match new FL API.
         - ::NEC tested and working.
         - ::Word with further methods.
+        - SWIG fixes
 
 0.01_04 Thu Feb 23 12:42:18 WET 2012
         - ::Sentence now has more constructor hypothesis.
