@@ -44,13 +44,15 @@ my %map = (
                               },
           );
 
-our @EXPORT = ('set_language', 'release_language',
+our @EXPORT = (qw(set_language release_language word sentence),
                map { $map{$_}{method_name} } keys %map);
 
 our $VERSION = '0.01';
 
 our $selected_language = undef;
 our $tools_cache = {};
+
+=encoding utf-8
 
 =head1 NAME
 
@@ -74,6 +76,11 @@ FL3 - A shortcut module for Lingua::FreeLing3.
 
   $sentences = chart->parse($sentences);
   $ptree = $sentences->[0]->parse_tree;)
+
+  $word = word("cavalo");
+  @words = word("cavalo", "alado");
+
+  $sentence = sentence(word(qw(gosto muito de ti)));
 
 =head1 DESCRIPTION
 
@@ -174,7 +181,29 @@ Accesses a Txala-based dependency parser (L<Lingua::FreeLing3::DepTxala>).
 
 Accesses a Name Entity parser (L<Lingua::FreeLing3::NEC>).
 
+=head2 C<word>
+
+C<Lingua::FreeLing3::Word> object constructor shortcut.
+
 =cut
+
+sub word {
+    return (wantarray) ?
+	map { Lingua::FreeLing3::Word->new($_) } @_
+	:
+	Lingua::FreeLing3::Word->new($_[0]);
+}
+
+=head2 C<sentence>
+
+C<Lingua::FreeLing3::Sentence> object constructor shortcut.
+
+=cut
+
+sub sentence {
+    Lingua::FreeLing3::Sentence->new( @_ );
+}
+
 
 for my $accessor (keys %map) {
     my $lc = $map{$accessor}{method_name};

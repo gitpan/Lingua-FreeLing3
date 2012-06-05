@@ -18,6 +18,7 @@ sub new {
     my ($fh, $config);
     open $fh, "<", $configfile or die "Can't open config file for language '$language'";
 
+    local $/ = "\n";
     while (<$fh>) {
         chomp;
         s/#.*//;
@@ -36,8 +37,13 @@ sub new {
 }
 
 sub config {
-    my $self = shift;
-    return $self->{shift()};
+    my ($self, $key) = @_;
+    if (exists($self->{$key})) {
+	return $self->{$key}
+    } else {
+	use Data::Dumper;
+	die "Queried for $key on a config file the doesn't include it\n", Dumper($self);
+    }
 }
 
 =encoding UTF-8

@@ -440,9 +440,9 @@ sub ACQUIRE {
 }
 
 
-############# Class : Lingua::FreeLing3::Bindings::GenericIteratorNode ##############
+############# Class : Lingua::FreeLing3::Bindings::TreeIteratorNode ##############
 
-package Lingua::FreeLing3::Bindings::GenericIteratorNode;
+package Lingua::FreeLing3::Bindings::TreeIteratorNode;
 use overload
     "!=" => sub { $_[0]->__ne__($_[1])},
     "==" => sub { $_[0]->__eq__($_[1])},
@@ -454,14 +454,125 @@ use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 %ITERATORS = ();
 sub new {
     my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_TreeIteratorNode(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_TreeIteratorNode($self);
+        delete $OWNER{$self};
+    }
+}
+
+*__ref__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode___ref__;
+*__deref__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode___deref__;
+*__eq__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode___eq__;
+*__ne__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode___ne__;
+*swig_info_get = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_info_get;
+*swig_info_set = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_info_set;
+*num_children = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_num_children;
+*nth_child = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_nth_child;
+*get_parent = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_get_parent;
+*nth_child_ref = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_nth_child_ref;
+*empty = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_empty;
+*sibling_begin = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_sibling_begin;
+*sibling_end = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_sibling_end;
+*sibling_rbegin = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_sibling_rbegin;
+*sibling_rend = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_sibling_rend;
+*begin = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_begin;
+*end = *Lingua::FreeLing3::Bindingsc::TreeIteratorNode_end;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Lingua::FreeLing3::Bindings::TreeIteratorConstNode ##############
+
+package Lingua::FreeLing3::Bindings::TreeIteratorConstNode;
+use overload
+    "!=" => sub { $_[0]->__ne__($_[1])},
+    "==" => sub { $_[0]->__eq__($_[1])},
+    "=" => sub { my $class = ref($_[0]); $class->new($_[0]) },
+    "fallback" => 1;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_TreeIteratorConstNode(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_TreeIteratorConstNode($self);
+        delete $OWNER{$self};
+    }
+}
+
+*__ref__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode___ref__;
+*__deref__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode___deref__;
+*__eq__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode___eq__;
+*__ne__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode___ne__;
+*swig_info_get = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_info_get;
+*swig_info_set = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_info_set;
+*num_children = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_num_children;
+*nth_child = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_nth_child;
+*get_parent = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_get_parent;
+*nth_child_ref = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_nth_child_ref;
+*empty = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_empty;
+*sibling_begin = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_sibling_begin;
+*sibling_end = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_sibling_end;
+*sibling_rbegin = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_sibling_rbegin;
+*sibling_rend = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_sibling_rend;
+*begin = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_begin;
+*end = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_end;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Lingua::FreeLing3::Bindings::GenericIteratorNode ##############
+
+package Lingua::FreeLing3::Bindings::GenericIteratorNode;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings::TreeIteratorNode Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
     my $self = Lingua::FreeLing3::Bindingsc::new_GenericIteratorNode(@_);
     bless $self, $pkg if defined($self);
 }
 
 *__ref__ = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode___ref__;
 *__deref__ = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode___deref__;
-*__eq__ = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode___eq__;
-*__ne__ = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode___ne__;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -475,8 +586,10 @@ sub DESTROY {
 
 *swig_info_get = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_info_get;
 *swig_info_set = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_info_set;
+*operator_assignment = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_operator_assignment;
 *num_children = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_num_children;
 *nth_child = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_nth_child;
+*get_parent = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_get_parent;
 *nth_child_ref = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_nth_child_ref;
 *get_info = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_get_info;
 *append_child = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_append_child;
@@ -485,8 +598,47 @@ sub DESTROY {
 *empty = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_empty;
 *sibling_begin = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_sibling_begin;
 *sibling_end = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_sibling_end;
+*sibling_rbegin = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_sibling_rbegin;
+*sibling_rend = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_sibling_rend;
 *begin = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_begin;
 *end = *Lingua::FreeLing3::Bindingsc::GenericIteratorNode_end;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Lingua::FreeLing3::Bindings::GenericConstIteratorNode ##############
+
+package Lingua::FreeLing3::Bindings::GenericConstIteratorNode;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings::TreeIteratorConstNode Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_GenericConstIteratorNode(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_GenericConstIteratorNode($self);
+        delete $OWNER{$self};
+    }
+}
+
 sub DISOWN {
     my $self = shift;
     my $ptr = tied(%$self);
@@ -518,10 +670,6 @@ sub new {
     bless $self, $pkg if defined($self);
 }
 
-*__plusplus__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorNode___plusplus__;
-*__minmin__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorNode___minmin__;
-*__iadd__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorNode___iadd__;
-*__isub__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorNode___isub__;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -533,6 +681,52 @@ sub DESTROY {
     }
 }
 
+*__plusplus__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorNode___plusplus__;
+*__minmin__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorNode___minmin__;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Lingua::FreeLing3::Bindings::ConstPreorderIteratorNode ##############
+
+package Lingua::FreeLing3::Bindings::ConstPreorderIteratorNode;
+use overload
+    "--" => sub { $_[0]->__minmin__()},
+    "++" => sub { $_[0]->__plusplus__()},
+    "=" => sub { my $class = ref($_[0]); $class->new($_[0]) },
+    "fallback" => 1;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings::GenericConstIteratorNode Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_ConstPreorderIteratorNode(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_ConstPreorderIteratorNode($self);
+        delete $OWNER{$self};
+    }
+}
+
+*__plusplus__ = *Lingua::FreeLing3::Bindingsc::ConstPreorderIteratorNode___plusplus__;
+*__minmin__ = *Lingua::FreeLing3::Bindingsc::ConstPreorderIteratorNode___minmin__;
 sub DISOWN {
     my $self = shift;
     my $ptr = tied(%$self);
@@ -564,10 +758,6 @@ sub new {
     bless $self, $pkg if defined($self);
 }
 
-*__plusplus__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorNode___plusplus__;
-*__minmin__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorNode___minmin__;
-*__iadd__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorNode___iadd__;
-*__isub__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorNode___isub__;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -579,6 +769,170 @@ sub DESTROY {
     }
 }
 
+*__plusplus__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorNode___plusplus__;
+*__minmin__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorNode___minmin__;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Lingua::FreeLing3::Bindings::ConstSiblingIteratorNode ##############
+
+package Lingua::FreeLing3::Bindings::ConstSiblingIteratorNode;
+use overload
+    "--" => sub { $_[0]->__minmin__()},
+    "++" => sub { $_[0]->__plusplus__()},
+    "=" => sub { my $class = ref($_[0]); $class->new($_[0]) },
+    "fallback" => 1;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings::GenericConstIteratorNode Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_ConstSiblingIteratorNode(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_ConstSiblingIteratorNode($self);
+        delete $OWNER{$self};
+    }
+}
+
+*__plusplus__ = *Lingua::FreeLing3::Bindingsc::ConstSiblingIteratorNode___plusplus__;
+*__minmin__ = *Lingua::FreeLing3::Bindingsc::ConstSiblingIteratorNode___minmin__;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Lingua::FreeLing3::Bindings::TreeIteratorDepnode ##############
+
+package Lingua::FreeLing3::Bindings::TreeIteratorDepnode;
+use overload
+    "!=" => sub { $_[0]->__ne__($_[1])},
+    "==" => sub { $_[0]->__eq__($_[1])},
+    "=" => sub { my $class = ref($_[0]); $class->new($_[0]) },
+    "fallback" => 1;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_TreeIteratorDepnode(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_TreeIteratorDepnode($self);
+        delete $OWNER{$self};
+    }
+}
+
+*__ref__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode___ref__;
+*__deref__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode___deref__;
+*__eq__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode___eq__;
+*__ne__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode___ne__;
+*swig_info_get = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_info_get;
+*swig_info_set = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_info_set;
+*num_children = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_num_children;
+*nth_child = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_nth_child;
+*get_parent = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_get_parent;
+*nth_child_ref = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_nth_child_ref;
+*empty = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_empty;
+*sibling_begin = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_sibling_begin;
+*sibling_end = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_sibling_end;
+*sibling_rbegin = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_sibling_rbegin;
+*sibling_rend = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_sibling_rend;
+*begin = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_begin;
+*end = *Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_end;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Lingua::FreeLing3::Bindings::TreeIteratorConstDepnode ##############
+
+package Lingua::FreeLing3::Bindings::TreeIteratorConstDepnode;
+use overload
+    "!=" => sub { $_[0]->__ne__($_[1])},
+    "==" => sub { $_[0]->__eq__($_[1])},
+    "=" => sub { my $class = ref($_[0]); $class->new($_[0]) },
+    "fallback" => 1;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_TreeIteratorConstDepnode(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_TreeIteratorConstDepnode($self);
+        delete $OWNER{$self};
+    }
+}
+
+*__ref__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode___ref__;
+*__deref__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode___deref__;
+*__eq__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode___eq__;
+*__ne__ = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode___ne__;
+*swig_info_get = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_info_get;
+*swig_info_set = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_info_set;
+*num_children = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_num_children;
+*nth_child = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_nth_child;
+*get_parent = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_get_parent;
+*nth_child_ref = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_nth_child_ref;
+*empty = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_empty;
+*sibling_begin = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_sibling_begin;
+*sibling_end = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_sibling_end;
+*sibling_rbegin = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_sibling_rbegin;
+*sibling_rend = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_sibling_rend;
+*begin = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_begin;
+*end = *Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_end;
 sub DISOWN {
     my $self = shift;
     my $ptr = tied(%$self);
@@ -595,13 +949,8 @@ sub ACQUIRE {
 ############# Class : Lingua::FreeLing3::Bindings::GenericIteratorDepnode ##############
 
 package Lingua::FreeLing3::Bindings::GenericIteratorDepnode;
-use overload
-    "!=" => sub { $_[0]->__ne__($_[1])},
-    "==" => sub { $_[0]->__eq__($_[1])},
-    "=" => sub { my $class = ref($_[0]); $class->new($_[0]) },
-    "fallback" => 1;
 use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
-@ISA = qw( Lingua::FreeLing3::Bindings );
+@ISA = qw( Lingua::FreeLing3::Bindings::TreeIteratorDepnode Lingua::FreeLing3::Bindings );
 %OWNER = ();
 %ITERATORS = ();
 sub new {
@@ -612,8 +961,6 @@ sub new {
 
 *__ref__ = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode___ref__;
 *__deref__ = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode___deref__;
-*__eq__ = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode___eq__;
-*__ne__ = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode___ne__;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -627,8 +974,10 @@ sub DESTROY {
 
 *swig_info_get = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_info_get;
 *swig_info_set = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_info_set;
+*operator_assignment = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_operator_assignment;
 *num_children = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_num_children;
 *nth_child = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_nth_child;
+*get_parent = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_get_parent;
 *nth_child_ref = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_nth_child_ref;
 *get_info = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_get_info;
 *append_child = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_append_child;
@@ -637,8 +986,47 @@ sub DESTROY {
 *empty = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_empty;
 *sibling_begin = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_sibling_begin;
 *sibling_end = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_sibling_end;
+*sibling_rbegin = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_sibling_rbegin;
+*sibling_rend = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_sibling_rend;
 *begin = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_begin;
 *end = *Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_end;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Lingua::FreeLing3::Bindings::GenericConstIteratorDepnode ##############
+
+package Lingua::FreeLing3::Bindings::GenericConstIteratorDepnode;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings::TreeIteratorConstDepnode Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_GenericConstIteratorDepnode(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_GenericConstIteratorDepnode($self);
+        delete $OWNER{$self};
+    }
+}
+
 sub DISOWN {
     my $self = shift;
     my $ptr = tied(%$self);
@@ -670,10 +1058,6 @@ sub new {
     bless $self, $pkg if defined($self);
 }
 
-*__plusplus__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorDepnode___plusplus__;
-*__minmin__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorDepnode___minmin__;
-*__iadd__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorDepnode___iadd__;
-*__isub__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorDepnode___isub__;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -685,6 +1069,52 @@ sub DESTROY {
     }
 }
 
+*__plusplus__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorDepnode___plusplus__;
+*__minmin__ = *Lingua::FreeLing3::Bindingsc::PreorderIteratorDepnode___minmin__;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Lingua::FreeLing3::Bindings::ConstPreorderIteratorDepnode ##############
+
+package Lingua::FreeLing3::Bindings::ConstPreorderIteratorDepnode;
+use overload
+    "--" => sub { $_[0]->__minmin__()},
+    "++" => sub { $_[0]->__plusplus__()},
+    "=" => sub { my $class = ref($_[0]); $class->new($_[0]) },
+    "fallback" => 1;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings::GenericConstIteratorDepnode Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_ConstPreorderIteratorDepnode(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_ConstPreorderIteratorDepnode($self);
+        delete $OWNER{$self};
+    }
+}
+
+*__plusplus__ = *Lingua::FreeLing3::Bindingsc::ConstPreorderIteratorDepnode___plusplus__;
+*__minmin__ = *Lingua::FreeLing3::Bindingsc::ConstPreorderIteratorDepnode___minmin__;
 sub DISOWN {
     my $self = shift;
     my $ptr = tied(%$self);
@@ -716,10 +1146,6 @@ sub new {
     bless $self, $pkg if defined($self);
 }
 
-*__plusplus__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorDepnode___plusplus__;
-*__minmin__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorDepnode___minmin__;
-*__iadd__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorDepnode___iadd__;
-*__isub__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorDepnode___isub__;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});
@@ -731,6 +1157,52 @@ sub DESTROY {
     }
 }
 
+*__plusplus__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorDepnode___plusplus__;
+*__minmin__ = *Lingua::FreeLing3::Bindingsc::SiblingIteratorDepnode___minmin__;
+sub DISOWN {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    delete $OWNER{$ptr};
+}
+
+sub ACQUIRE {
+    my $self = shift;
+    my $ptr = tied(%$self);
+    $OWNER{$ptr} = 1;
+}
+
+
+############# Class : Lingua::FreeLing3::Bindings::ConstSiblingIteratorDepnode ##############
+
+package Lingua::FreeLing3::Bindings::ConstSiblingIteratorDepnode;
+use overload
+    "--" => sub { $_[0]->__minmin__()},
+    "++" => sub { $_[0]->__plusplus__()},
+    "=" => sub { my $class = ref($_[0]); $class->new($_[0]) },
+    "fallback" => 1;
+use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
+@ISA = qw( Lingua::FreeLing3::Bindings::GenericConstIteratorDepnode Lingua::FreeLing3::Bindings );
+%OWNER = ();
+%ITERATORS = ();
+sub new {
+    my $pkg = shift;
+    my $self = Lingua::FreeLing3::Bindingsc::new_ConstSiblingIteratorDepnode(@_);
+    bless $self, $pkg if defined($self);
+}
+
+sub DESTROY {
+    return unless $_[0]->isa('HASH');
+    my $self = tied(%{$_[0]});
+    return unless defined $self;
+    delete $ITERATORS{$self};
+    if (exists $OWNER{$self}) {
+        Lingua::FreeLing3::Bindingsc::delete_ConstSiblingIteratorDepnode($self);
+        delete $OWNER{$self};
+    }
+}
+
+*__plusplus__ = *Lingua::FreeLing3::Bindingsc::ConstSiblingIteratorDepnode___plusplus__;
+*__minmin__ = *Lingua::FreeLing3::Bindingsc::ConstSiblingIteratorDepnode___minmin__;
 sub DISOWN {
     my $self = shift;
     my $ptr = tied(%$self);
@@ -770,8 +1242,10 @@ sub DESTROY {
     }
 }
 
+*operator_assignment = *Lingua::FreeLing3::Bindingsc::TreeNode_operator_assignment;
 *num_children = *Lingua::FreeLing3::Bindingsc::TreeNode_num_children;
 *nth_child = *Lingua::FreeLing3::Bindingsc::TreeNode_nth_child;
+*get_parent = *Lingua::FreeLing3::Bindingsc::TreeNode_get_parent;
 *nth_child_ref = *Lingua::FreeLing3::Bindingsc::TreeNode_nth_child_ref;
 *get_info = *Lingua::FreeLing3::Bindingsc::TreeNode_get_info;
 *append_child = *Lingua::FreeLing3::Bindingsc::TreeNode_append_child;
@@ -780,6 +1254,8 @@ sub DESTROY {
 *empty = *Lingua::FreeLing3::Bindingsc::TreeNode_empty;
 *sibling_begin = *Lingua::FreeLing3::Bindingsc::TreeNode_sibling_begin;
 *sibling_end = *Lingua::FreeLing3::Bindingsc::TreeNode_sibling_end;
+*sibling_rbegin = *Lingua::FreeLing3::Bindingsc::TreeNode_sibling_rbegin;
+*sibling_rend = *Lingua::FreeLing3::Bindingsc::TreeNode_sibling_rend;
 *begin = *Lingua::FreeLing3::Bindingsc::TreeNode_begin;
 *end = *Lingua::FreeLing3::Bindingsc::TreeNode_end;
 sub DISOWN {
@@ -821,8 +1297,10 @@ sub DESTROY {
     }
 }
 
+*operator_assignment = *Lingua::FreeLing3::Bindingsc::TreeDepnode_operator_assignment;
 *num_children = *Lingua::FreeLing3::Bindingsc::TreeDepnode_num_children;
 *nth_child = *Lingua::FreeLing3::Bindingsc::TreeDepnode_nth_child;
+*get_parent = *Lingua::FreeLing3::Bindingsc::TreeDepnode_get_parent;
 *nth_child_ref = *Lingua::FreeLing3::Bindingsc::TreeDepnode_nth_child_ref;
 *get_info = *Lingua::FreeLing3::Bindingsc::TreeDepnode_get_info;
 *append_child = *Lingua::FreeLing3::Bindingsc::TreeDepnode_append_child;
@@ -831,6 +1309,8 @@ sub DESTROY {
 *empty = *Lingua::FreeLing3::Bindingsc::TreeDepnode_empty;
 *sibling_begin = *Lingua::FreeLing3::Bindingsc::TreeDepnode_sibling_begin;
 *sibling_end = *Lingua::FreeLing3::Bindingsc::TreeDepnode_sibling_end;
+*sibling_rbegin = *Lingua::FreeLing3::Bindingsc::TreeDepnode_sibling_rbegin;
+*sibling_rend = *Lingua::FreeLing3::Bindingsc::TreeDepnode_sibling_rend;
 *begin = *Lingua::FreeLing3::Bindingsc::TreeDepnode_begin;
 *end = *Lingua::FreeLing3::Bindingsc::TreeDepnode_end;
 sub DISOWN {
@@ -886,6 +1366,9 @@ sub new {
 *get_senses_string = *Lingua::FreeLing3::Bindingsc::analysis_get_senses_string;
 *__lt__ = *Lingua::FreeLing3::Bindingsc::analysis___lt__;
 *__eq__ = *Lingua::FreeLing3::Bindingsc::analysis___eq__;
+*is_selected = *Lingua::FreeLing3::Bindingsc::analysis_is_selected;
+*mark_selected = *Lingua::FreeLing3::Bindingsc::analysis_mark_selected;
+*unmark_selected = *Lingua::FreeLing3::Bindingsc::analysis_unmark_selected;
 sub DESTROY {
     return unless $_[0]->isa('HASH');
     my $self = tied(%{$_[0]});

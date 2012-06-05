@@ -29,7 +29,7 @@ Lingua::FreeLing3::Word::Analysis - Interface to FreeLing3 Analysis object
    # create empty analysis object
    my $analysis = Lingua::FreeLing3::Analysis->new();
 
-   my $data = $analysis->to_hash;
+   my $data = $analysis->as_hash;
 
 =head1 DESCRIPTION
 
@@ -80,10 +80,11 @@ tag (POS) and probability.
 
 sub as_hash {
     my $self = shift;
+    my $prob = $self->prob;
     return +{
              lemma  => $self->lemma,
              tag    => $self->tag,
-             prob   => $self->prob,
+             defined($prob) ? (prob   => $prob): ()
             };
 }
 

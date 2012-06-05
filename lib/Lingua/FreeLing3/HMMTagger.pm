@@ -89,6 +89,7 @@ sub new {
                                                     }, $ft);
 
     my $self = $class->SUPER::new($lang, $file, $retok, $amb);
+
     return bless $self => $class
 }
 

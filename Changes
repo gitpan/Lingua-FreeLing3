@@ -1,5 +1,9 @@
 Revision history for Lingua-FreeLing3
 
+0.01_07 Tue Jun  5 14:11:56 WEST 2012
+         - ::EAGLES supports portuguese and spanish.
+	 - FL3 includes word and sentence constructors.
+
 0.01_06 Wed May  2 14:21:19 WEST 2012
         - ::EAGLES created, much to do.
         - ::Config created for accessing config files.

@@ -1531,64 +1531,78 @@ SWIG_Perl_SetModule(swig_module_info *module) {
 #define SWIGTYPE_p_boost__u32regex swig_types[1]
 #define SWIGTYPE_p_char swig_types[2]
 #define SWIGTYPE_p_chart_parser swig_types[3]
-#define SWIGTYPE_p_dep_tree swig_types[4]
-#define SWIGTYPE_p_dep_txala swig_types[5]
-#define SWIGTYPE_p_depnode swig_types[6]
-#define SWIGTYPE_p_document swig_types[7]
-#define SWIGTYPE_p_generic_iterator swig_types[8]
-#define SWIGTYPE_p_generic_iteratorT_depnode_t swig_types[9]
-#define SWIGTYPE_p_generic_iteratorT_node_t swig_types[10]
-#define SWIGTYPE_p_hmm_tagger swig_types[11]
-#define SWIGTYPE_p_iterator swig_types[12]
-#define SWIGTYPE_p_maco swig_types[13]
-#define SWIGTYPE_p_maco_options swig_types[14]
-#define SWIGTYPE_p_nec swig_types[15]
-#define SWIGTYPE_p_node swig_types[16]
-#define SWIGTYPE_p_paragraph swig_types[17]
-#define SWIGTYPE_p_parse_tree swig_types[18]
-#define SWIGTYPE_p_phonetics swig_types[19]
-#define SWIGTYPE_p_preorder_iterator swig_types[20]
-#define SWIGTYPE_p_preorder_iteratorT_depnode_t swig_types[21]
-#define SWIGTYPE_p_preorder_iteratorT_node_t swig_types[22]
-#define SWIGTYPE_p_relax_tagger swig_types[23]
-#define SWIGTYPE_p_semanticDB swig_types[24]
-#define SWIGTYPE_p_sense_info swig_types[25]
-#define SWIGTYPE_p_senses swig_types[26]
-#define SWIGTYPE_p_sentence swig_types[27]
-#define SWIGTYPE_p_sentence__const_iterator swig_types[28]
-#define SWIGTYPE_p_sentence__iterator swig_types[29]
-#define SWIGTYPE_p_sibling_iterator swig_types[30]
-#define SWIGTYPE_p_sibling_iteratorT_depnode_t swig_types[31]
-#define SWIGTYPE_p_sibling_iteratorT_node_t swig_types[32]
-#define SWIGTYPE_p_splitter swig_types[33]
-#define SWIGTYPE_p_std__listT_analysis_t swig_types[34]
-#define SWIGTYPE_p_std__listT_int_t swig_types[35]
-#define SWIGTYPE_p_std__listT_paragraph_t swig_types[36]
-#define SWIGTYPE_p_std__listT_sentence_t swig_types[37]
-#define SWIGTYPE_p_std__listT_std__pairT_std__wstring_double_t_t swig_types[38]
-#define SWIGTYPE_p_std__listT_std__pairT_std__wstring_std__wstring_t_t swig_types[39]
-#define SWIGTYPE_p_std__listT_std__pairT_word_double_t_t swig_types[40]
-#define SWIGTYPE_p_std__listT_std__pairT_word_double_t_t__iterator swig_types[41]
-#define SWIGTYPE_p_std__listT_std__wstring_t swig_types[42]
-#define SWIGTYPE_p_std__listT_word_t swig_types[43]
-#define SWIGTYPE_p_std__out_of_range swig_types[44]
-#define SWIGTYPE_p_std__vectorT_std__listT_int_t_t swig_types[45]
-#define SWIGTYPE_p_std__vectorT_std__listT_std__wstring_t_t swig_types[46]
-#define SWIGTYPE_p_std__vectorT_std__wstring_t swig_types[47]
-#define SWIGTYPE_p_std__vectorT_word_t swig_types[48]
-#define SWIGTYPE_p_std__wstring swig_types[49]
-#define SWIGTYPE_p_tokenizer swig_types[50]
-#define SWIGTYPE_p_traces swig_types[51]
-#define SWIGTYPE_p_treeT_depnode_t swig_types[52]
-#define SWIGTYPE_p_treeT_node_t swig_types[53]
-#define SWIGTYPE_p_ukb_wrap swig_types[54]
-#define SWIGTYPE_p_unsigned_long swig_types[55]
-#define SWIGTYPE_p_util swig_types[56]
-#define SWIGTYPE_p_word swig_types[57]
-#define SWIGTYPE_p_word__const_iterator swig_types[58]
-#define SWIGTYPE_p_word__iterator swig_types[59]
-static swig_type_info *swig_types[61];
-static swig_module_info swig_module = {swig_types, 60, 0, 0, 0, 0};
+#define SWIGTYPE_p_const_iterator swig_types[4]
+#define SWIGTYPE_p_const_preorder_iterator swig_types[5]
+#define SWIGTYPE_p_const_preorder_iteratorT_depnode_t swig_types[6]
+#define SWIGTYPE_p_const_preorder_iteratorT_node_t swig_types[7]
+#define SWIGTYPE_p_const_sibling_iterator swig_types[8]
+#define SWIGTYPE_p_const_sibling_iteratorT_depnode_t swig_types[9]
+#define SWIGTYPE_p_const_sibling_iteratorT_node_t swig_types[10]
+#define SWIGTYPE_p_dep_tree swig_types[11]
+#define SWIGTYPE_p_dep_txala swig_types[12]
+#define SWIGTYPE_p_depnode swig_types[13]
+#define SWIGTYPE_p_document swig_types[14]
+#define SWIGTYPE_p_generic_const_iterator swig_types[15]
+#define SWIGTYPE_p_generic_const_iteratorT_depnode_t swig_types[16]
+#define SWIGTYPE_p_generic_const_iteratorT_node_t swig_types[17]
+#define SWIGTYPE_p_generic_iterator swig_types[18]
+#define SWIGTYPE_p_generic_iteratorT_depnode_t swig_types[19]
+#define SWIGTYPE_p_generic_iteratorT_node_t swig_types[20]
+#define SWIGTYPE_p_hmm_tagger swig_types[21]
+#define SWIGTYPE_p_iterator swig_types[22]
+#define SWIGTYPE_p_maco swig_types[23]
+#define SWIGTYPE_p_maco_options swig_types[24]
+#define SWIGTYPE_p_nec swig_types[25]
+#define SWIGTYPE_p_node swig_types[26]
+#define SWIGTYPE_p_paragraph swig_types[27]
+#define SWIGTYPE_p_parse_tree swig_types[28]
+#define SWIGTYPE_p_phonetics swig_types[29]
+#define SWIGTYPE_p_preorder_iterator swig_types[30]
+#define SWIGTYPE_p_preorder_iteratorT_depnode_t swig_types[31]
+#define SWIGTYPE_p_preorder_iteratorT_node_t swig_types[32]
+#define SWIGTYPE_p_relax_tagger swig_types[33]
+#define SWIGTYPE_p_semanticDB swig_types[34]
+#define SWIGTYPE_p_sense_info swig_types[35]
+#define SWIGTYPE_p_senses swig_types[36]
+#define SWIGTYPE_p_sentence swig_types[37]
+#define SWIGTYPE_p_sentence__const_iterator swig_types[38]
+#define SWIGTYPE_p_sentence__iterator swig_types[39]
+#define SWIGTYPE_p_sibling_iterator swig_types[40]
+#define SWIGTYPE_p_sibling_iteratorT_depnode_t swig_types[41]
+#define SWIGTYPE_p_sibling_iteratorT_node_t swig_types[42]
+#define SWIGTYPE_p_splitter swig_types[43]
+#define SWIGTYPE_p_std__listT_analysis_t swig_types[44]
+#define SWIGTYPE_p_std__listT_int_t swig_types[45]
+#define SWIGTYPE_p_std__listT_paragraph_t swig_types[46]
+#define SWIGTYPE_p_std__listT_sentence_t swig_types[47]
+#define SWIGTYPE_p_std__listT_std__pairT_std__wstring_double_t_t swig_types[48]
+#define SWIGTYPE_p_std__listT_std__pairT_std__wstring_std__wstring_t_t swig_types[49]
+#define SWIGTYPE_p_std__listT_std__pairT_word_double_t_t swig_types[50]
+#define SWIGTYPE_p_std__listT_std__pairT_word_double_t_t__iterator swig_types[51]
+#define SWIGTYPE_p_std__listT_std__wstring_t swig_types[52]
+#define SWIGTYPE_p_std__listT_word_t swig_types[53]
+#define SWIGTYPE_p_std__out_of_range swig_types[54]
+#define SWIGTYPE_p_std__vectorT_std__listT_int_t_t swig_types[55]
+#define SWIGTYPE_p_std__vectorT_std__listT_std__wstring_t_t swig_types[56]
+#define SWIGTYPE_p_std__vectorT_std__wstring_t swig_types[57]
+#define SWIGTYPE_p_std__vectorT_word_t swig_types[58]
+#define SWIGTYPE_p_std__wstring swig_types[59]
+#define SWIGTYPE_p_tokenizer swig_types[60]
+#define SWIGTYPE_p_traces swig_types[61]
+#define SWIGTYPE_p_treeT_depnode_t swig_types[62]
+#define SWIGTYPE_p_treeT_node_t swig_types[63]
+#define SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t swig_types[64]
+#define SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t swig_types[65]
+#define SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t swig_types[66]
+#define SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t swig_types[67]
+#define SWIGTYPE_p_ukb_wrap swig_types[68]
+#define SWIGTYPE_p_unsigned_long swig_types[69]
+#define SWIGTYPE_p_util swig_types[70]
+#define SWIGTYPE_p_word swig_types[71]
+#define SWIGTYPE_p_word__const_iterator swig_types[72]
+#define SWIGTYPE_p_word__iterator swig_types[73]
+static swig_type_info *swig_types[75];
+static swig_module_info swig_module = {swig_types, 74, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -2096,15 +2110,6 @@ SWIGINTERN void std_vector_Sl_std_list_Sl_std_wstring_Sg__Sg__set(std::vector< s
                     throw std::out_of_range("vector index out of range");
             }
 
-SWIGINTERNINLINE SV *
-SWIG_From_double  SWIG_PERL_DECL_ARGS_1(double value)
-{    
-  SV *obj = sv_newmortal();
-  sv_setnv(obj, value);
-  return obj;
-}
-
-
 SWIGINTERN int
 SWIG_AsVal_bool SWIG_PERL_DECL_ARGS_2(SV *obj, bool* val)
 {
@@ -2119,6 +2124,15 @@ SWIG_AsVal_bool SWIG_PERL_DECL_ARGS_2(SV *obj, bool* val)
     return SWIG_AddCast(SWIG_OK);    
   }
   return SWIG_TypeError;
+}
+
+
+SWIGINTERNINLINE SV *
+SWIG_From_double  SWIG_PERL_DECL_ARGS_1(double value)
+{    
+  SV *obj = sv_newmortal();
+  sv_setnv(obj, value);
+  return obj;
 }
 
 #ifdef __cplusplus
@@ -6808,6 +6822,1814 @@ XS(_wrap_delete_VectorListString) {
 }
 
 
+XS(_wrap_new_TreeIteratorNode__SWIG_0) {
+  {
+    int argvi = 0;
+    tree_iterator< node,tree< node > > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_TreeIteratorNode();");
+    }
+    result = (tree_iterator< node,tree< node > > *)new tree_iterator< node,tree< node > >();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorNode__SWIG_1) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree_iterator< node,tree< node > > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_TreeIteratorNode(tree< node > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TreeIteratorNode" "', argument " "1"" of type '" "tree< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = (tree_iterator< node,tree< node > > *)new tree_iterator< node,tree< node > >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorNode__SWIG_2) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree_iterator< node,tree< node > > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_TreeIteratorNode(tree_iterator< node,tree< node > > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TreeIteratorNode" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TreeIteratorNode" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const &""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (tree_iterator< node,tree< node > > *)new tree_iterator< node,tree< node > >((tree_iterator< node,tree< node > > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorNode) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorNode__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorNode__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorNode__SWIG_2); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_TreeIteratorNode'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_TreeIteratorNode) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_TreeIteratorNode(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TreeIteratorNode" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode___ref__) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode___ref__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode___ref__" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (tree< node > *) &((tree_iterator< node,tree< node > > const *)arg1)->operator *();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode___deref__) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode___deref__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode___deref__" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (tree< node > *)((tree_iterator< node,tree< node > > const *)arg1)->operator ->();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode___eq__) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    tree_iterator< node,tree< node > > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorNode___eq__(self,tree_iterator< node,tree< node > > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode___eq__" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeIteratorNode___eq__" "', argument " "2"" of type '" "tree_iterator< node,tree< node > > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeIteratorNode___eq__" "', argument " "2"" of type '" "tree_iterator< node,tree< node > > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp2);
+    result = (bool)((tree_iterator< node,tree< node > > const *)arg1)->operator ==((tree_iterator< node,tree< node > > const &)*arg2);
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode___ne__) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    tree_iterator< node,tree< node > > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorNode___ne__(self,tree_iterator< node,tree< node > > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode___ne__" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeIteratorNode___ne__" "', argument " "2"" of type '" "tree_iterator< node,tree< node > > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeIteratorNode___ne__" "', argument " "2"" of type '" "tree_iterator< node,tree< node > > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp2);
+    result = (bool)((tree_iterator< node,tree< node > > const *)arg1)->operator !=((tree_iterator< node,tree< node > > const &)*arg2);
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_info_get) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    node *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode_info_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_info_get" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (node *)& ((*arg1)->info);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_node, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_num_children) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    unsigned int result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode_num_children(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_num_children" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (unsigned int)(*arg1)->num_children();
+    ST(argvi) = SWIG_From_unsigned_SS_int  SWIG_PERL_CALL_ARGS_1(static_cast< unsigned int >(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_nth_child) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    unsigned int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    tree< node >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorNode_nth_child(self,unsigned int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_nth_child" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TreeIteratorNode_nth_child" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = static_cast< unsigned int >(val2);
+    result = (*arg1)->nth_child(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::sibling_iterator(static_cast< const tree< node >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_get_parent) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode_get_parent(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_get_parent" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (*arg1)->get_parent();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::iterator(static_cast< const tree< node >::iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_nth_child_ref) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    unsigned int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    tree< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorNode_nth_child_ref(self,unsigned int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_nth_child_ref" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TreeIteratorNode_nth_child_ref" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = static_cast< unsigned int >(val2);
+    result = (tree< node > *) &(*arg1)->nth_child_ref(arg2);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_empty) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode_empty(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_empty" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (bool)(*arg1)->empty();
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_sibling_begin__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode_sibling_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_sibling_begin" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (*arg1)->sibling_begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_sibling_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorNode_sibling_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorNode_sibling_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorNode_sibling_end__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode_sibling_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_sibling_end" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (*arg1)->sibling_end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_sibling_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorNode_sibling_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorNode_sibling_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorNode_sibling_rbegin__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_sibling_rbegin" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (*arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_sibling_rbegin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorNode_sibling_rbegin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorNode_sibling_rbegin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorNode_sibling_rend__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_sibling_rend" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (*arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_sibling_rend) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorNode_sibling_rend__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorNode_sibling_rend'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorNode_begin__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_begin" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (*arg1)->begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_preorder_iterator(static_cast< const tree< node >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorNode_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorNode_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorNode_end__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > > *arg1 = (tree_iterator< node,tree< node > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorNode_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorNode_end" "', argument " "1"" of type '" "tree_iterator< node,tree< node > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > > * >(argp1);
+    result = (*arg1)->end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_preorder_iterator(static_cast< const tree< node >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorNode_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorNode_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorNode_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_new_TreeIteratorConstNode__SWIG_0) {
+  {
+    int argvi = 0;
+    tree_iterator< node,tree< node > const > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_TreeIteratorConstNode();");
+    }
+    result = (tree_iterator< node,tree< node > const > *)new tree_iterator< node,tree< node > const >();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorConstNode__SWIG_1) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree_iterator< node,tree< node > const > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_TreeIteratorConstNode(tree< node > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TreeIteratorConstNode" "', argument " "1"" of type '" "tree< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = (tree_iterator< node,tree< node > const > *)new tree_iterator< node,tree< node > const >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorConstNode__SWIG_2) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree_iterator< node,tree< node > const > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_TreeIteratorConstNode(tree_iterator< node,tree< node > const > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TreeIteratorConstNode" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TreeIteratorConstNode" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const &""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (tree_iterator< node,tree< node > const > *)new tree_iterator< node,tree< node > const >((tree_iterator< node,tree< node > const > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorConstNode) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorConstNode__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorConstNode__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorConstNode__SWIG_2); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_TreeIteratorConstNode'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_TreeIteratorConstNode) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_TreeIteratorConstNode(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TreeIteratorConstNode" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode___ref__) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode___ref__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode___ref__" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (tree< node > *) &((tree_iterator< node,tree< node > const > const *)arg1)->operator *();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode___deref__) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode___deref__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode___deref__" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (tree< node > *)((tree_iterator< node,tree< node > const > const *)arg1)->operator ->();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode___eq__) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    tree_iterator< node,tree< node > const > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorConstNode___eq__(self,tree_iterator< node,tree< node > const > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode___eq__" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeIteratorConstNode___eq__" "', argument " "2"" of type '" "tree_iterator< node,tree< node > const > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeIteratorConstNode___eq__" "', argument " "2"" of type '" "tree_iterator< node,tree< node > const > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp2);
+    result = (bool)((tree_iterator< node,tree< node > const > const *)arg1)->operator ==((tree_iterator< node,tree< node > const > const &)*arg2);
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode___ne__) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    tree_iterator< node,tree< node > const > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorConstNode___ne__(self,tree_iterator< node,tree< node > const > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode___ne__" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeIteratorConstNode___ne__" "', argument " "2"" of type '" "tree_iterator< node,tree< node > const > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeIteratorConstNode___ne__" "', argument " "2"" of type '" "tree_iterator< node,tree< node > const > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp2);
+    result = (bool)((tree_iterator< node,tree< node > const > const *)arg1)->operator !=((tree_iterator< node,tree< node > const > const &)*arg2);
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_info_get) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    node *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_info_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_info_get" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (node *)& ((*arg1)->info);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_node, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_num_children) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    unsigned int result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_num_children(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_num_children" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (unsigned int)(*arg1)->num_children();
+    ST(argvi) = SWIG_From_unsigned_SS_int  SWIG_PERL_CALL_ARGS_1(static_cast< unsigned int >(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_nth_child) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    unsigned int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    tree< node >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_nth_child(self,unsigned int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_nth_child" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TreeIteratorConstNode_nth_child" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = static_cast< unsigned int >(val2);
+    result = (*arg1)->nth_child(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::sibling_iterator(static_cast< const tree< node >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_get_parent) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_get_parent(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_get_parent" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (*arg1)->get_parent();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::iterator(static_cast< const tree< node >::iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_nth_child_ref) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    unsigned int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    tree< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_nth_child_ref(self,unsigned int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_nth_child_ref" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TreeIteratorConstNode_nth_child_ref" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = static_cast< unsigned int >(val2);
+    result = (tree< node > *) &(*arg1)->nth_child_ref(arg2);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_empty) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_empty(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_empty" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (bool)(*arg1)->empty();
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_sibling_begin__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_sibling_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_sibling_begin" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (*arg1)->sibling_begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_sibling_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstNode_sibling_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstNode_sibling_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorConstNode_sibling_end__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_sibling_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_sibling_end" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (*arg1)->sibling_end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_sibling_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstNode_sibling_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstNode_sibling_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorConstNode_sibling_rbegin__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_sibling_rbegin" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (*arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_sibling_rbegin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstNode_sibling_rbegin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstNode_sibling_rbegin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorConstNode_sibling_rend__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_sibling_rend" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (*arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_sibling_rend) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstNode_sibling_rend__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstNode_sibling_rend'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorConstNode_begin__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_begin" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (*arg1)->begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_preorder_iterator(static_cast< const tree< node >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstNode_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstNode_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorConstNode_end__SWIG_1) {
+  {
+    tree_iterator< node,tree< node > const > *arg1 = (tree_iterator< node,tree< node > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstNode_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstNode_end" "', argument " "1"" of type '" "tree_iterator< node,tree< node > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< node,tree< node > const > * >(argp1);
+    result = (*arg1)->end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_preorder_iterator(static_cast< const tree< node >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstNode_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstNode_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstNode_end'");
+  XSRETURN(0);
+}
+
+
 XS(_wrap_new_GenericIteratorNode__SWIG_0) {
   {
     int argvi = 0;
@@ -6828,6 +8650,34 @@ XS(_wrap_new_GenericIteratorNode__SWIG_0) {
 
 XS(_wrap_new_GenericIteratorNode__SWIG_1) {
   {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    generic_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_GenericIteratorNode(tree< node > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GenericIteratorNode" "', argument " "1"" of type '" "tree< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = (generic_iterator< node > *)new generic_iterator< node >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_GenericIteratorNode__SWIG_2) {
+  {
     generic_iterator< node > *arg1 = 0 ;
     void *argp1 ;
     int res1 = 0 ;
@@ -6847,34 +8697,6 @@ XS(_wrap_new_GenericIteratorNode__SWIG_1) {
     }
     arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
     result = (generic_iterator< node > *)new generic_iterator< node >((generic_iterator< node > const &)*arg1);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_GenericIteratorNode__SWIG_2) {
-  {
-    tree< node > *arg1 = (tree< node > *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    generic_iterator< node > *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: new_GenericIteratorNode(tree< node > *);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GenericIteratorNode" "', argument " "1"" of type '" "tree< node > *""'"); 
-    }
-    arg1 = reinterpret_cast< tree< node > * >(argp1);
-    result = (generic_iterator< node > *)new generic_iterator< node >(arg1);
     ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
@@ -6906,7 +8728,7 @@ XS(_wrap_new_GenericIteratorNode) {
       int _v = 0;
       {
         void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
         _v = SWIG_CheckState(res);
       }
       if (!_v) goto check_2;
@@ -6927,7 +8749,7 @@ XS(_wrap_new_GenericIteratorNode) {
       int _v = 0;
       {
         void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
         _v = SWIG_CheckState(res);
       }
       if (!_v) goto check_3;
@@ -7007,88 +8829,6 @@ XS(_wrap_GenericIteratorNode___deref__) {
     
     XSRETURN(argvi);
   fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_GenericIteratorNode___eq__) {
-  {
-    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
-    generic_iterator< node > *arg2 = 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    bool result;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: GenericIteratorNode___eq__(self,generic_iterator< node > const &);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode___eq__" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
-    }
-    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_generic_iteratorT_node_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GenericIteratorNode___eq__" "', argument " "2"" of type '" "generic_iterator< node > const &""'"); 
-    }
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GenericIteratorNode___eq__" "', argument " "2"" of type '" "generic_iterator< node > const &""'"); 
-    }
-    arg2 = reinterpret_cast< generic_iterator< node > * >(argp2);
-    result = (bool)((generic_iterator< node > const *)arg1)->operator ==((generic_iterator< node > const &)*arg2);
-    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_GenericIteratorNode___ne__) {
-  {
-    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
-    generic_iterator< node > *arg2 = 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    bool result;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: GenericIteratorNode___ne__(self,generic_iterator< node > const &);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode___ne__" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
-    }
-    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_generic_iteratorT_node_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GenericIteratorNode___ne__" "', argument " "2"" of type '" "generic_iterator< node > const &""'"); 
-    }
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GenericIteratorNode___ne__" "', argument " "2"" of type '" "generic_iterator< node > const &""'"); 
-    }
-    arg2 = reinterpret_cast< generic_iterator< node > * >(argp2);
-    result = (bool)((generic_iterator< node > const *)arg1)->operator !=((generic_iterator< node > const &)*arg2);
-    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
     
     SWIG_croak_null();
   }
@@ -7187,6 +8927,47 @@ XS(_wrap_GenericIteratorNode_info_get) {
 }
 
 
+XS(_wrap_GenericIteratorNode_operator_assignment) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    tree< node > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    tree< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: GenericIteratorNode_operator_assignment(self,tree< node > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_operator_assignment" "', argument " "1"" of type '" "generic_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_treeT_node_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GenericIteratorNode_operator_assignment" "', argument " "2"" of type '" "tree< node > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GenericIteratorNode_operator_assignment" "', argument " "2"" of type '" "tree< node > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree< node > * >(argp2);
+    result = (tree< node > *) &(*arg1)->operator =((tree< node > const &)*arg2);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
 XS(_wrap_GenericIteratorNode_num_children) {
   {
     generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
@@ -7247,6 +9028,34 @@ XS(_wrap_GenericIteratorNode_nth_child) {
     XSRETURN(argvi);
   fail:
     
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_get_parent) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorNode_get_parent(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_get_parent" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    result = (*arg1)->get_parent();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::iterator(static_cast< const tree< node >::iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
     
     SWIG_croak_null();
   }
@@ -7359,7 +9168,57 @@ XS(_wrap_GenericIteratorNode_append_child) {
 }
 
 
-XS(_wrap_GenericIteratorNode_hang_child) {
+XS(_wrap_GenericIteratorNode_hang_child__SWIG_0) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    tree< node > *arg2 = 0 ;
+    bool arg3 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    bool val3 ;
+    int ecode3 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: GenericIteratorNode_hang_child(self,tree< node > &,bool);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_hang_child" "', argument " "1"" of type '" "generic_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_treeT_node_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GenericIteratorNode_hang_child" "', argument " "2"" of type '" "tree< node > &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GenericIteratorNode_hang_child" "', argument " "2"" of type '" "tree< node > &""'"); 
+    }
+    arg2 = reinterpret_cast< tree< node > * >(argp2);
+    ecode3 = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "GenericIteratorNode_hang_child" "', argument " "3"" of type '" "bool""'");
+    } 
+    arg3 = static_cast< bool >(val3);
+    (*arg1)->hang_child(*arg2,arg3);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_hang_child__SWIG_1) {
   {
     generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
     tree< node > *arg2 = 0 ;
@@ -7396,6 +9255,96 @@ XS(_wrap_GenericIteratorNode_hang_child) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_GenericIteratorNode_hang_child) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 3) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_hang_child__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_hang_child__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorNode_hang_child'");
+  XSRETURN(0);
 }
 
 
@@ -7454,7 +9403,7 @@ XS(_wrap_GenericIteratorNode_empty) {
 }
 
 
-XS(_wrap_GenericIteratorNode_sibling_begin) {
+XS(_wrap_GenericIteratorNode_sibling_begin__SWIG_0) {
   {
     generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
     void *argp1 = 0 ;
@@ -7482,7 +9431,97 @@ XS(_wrap_GenericIteratorNode_sibling_begin) {
 }
 
 
-XS(_wrap_GenericIteratorNode_sibling_end) {
+XS(_wrap_GenericIteratorNode_sibling_begin__SWIG_1) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorNode_sibling_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_sibling_begin" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    result = (*arg1)->sibling_begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_sibling_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_sibling_begin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_sibling_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorNode_sibling_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_GenericIteratorNode_sibling_end__SWIG_0) {
   {
     generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
     void *argp1 = 0 ;
@@ -7496,7 +9535,7 @@ XS(_wrap_GenericIteratorNode_sibling_end) {
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_sibling_end" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_sibling_end" "', argument " "1"" of type '" "generic_iterator< node > *""'"); 
     }
     arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
     result = (*arg1)->sibling_end();
@@ -7510,7 +9549,333 @@ XS(_wrap_GenericIteratorNode_sibling_end) {
 }
 
 
-XS(_wrap_GenericIteratorNode_begin) {
+XS(_wrap_GenericIteratorNode_sibling_end__SWIG_1) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorNode_sibling_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_sibling_end" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    result = (*arg1)->sibling_end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_sibling_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_sibling_end__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_sibling_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorNode_sibling_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_GenericIteratorNode_sibling_rbegin__SWIG_0) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorNode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_sibling_rbegin" "', argument " "1"" of type '" "generic_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    result = (*arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::sibling_iterator(static_cast< const tree< node >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_sibling_rbegin__SWIG_1) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorNode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_sibling_rbegin" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    result = (*arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_sibling_rbegin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_sibling_rbegin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_sibling_rbegin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorNode_sibling_rbegin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_GenericIteratorNode_sibling_rend__SWIG_0) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorNode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_sibling_rend" "', argument " "1"" of type '" "generic_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    result = (*arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::sibling_iterator(static_cast< const tree< node >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_sibling_rend__SWIG_1) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorNode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_sibling_rend" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    result = (*arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_sibling_rend) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_sibling_rend__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_sibling_rend__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorNode_sibling_rend'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_GenericIteratorNode_begin__SWIG_0) {
   {
     generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
     void *argp1 = 0 ;
@@ -7538,7 +9903,97 @@ XS(_wrap_GenericIteratorNode_begin) {
 }
 
 
-XS(_wrap_GenericIteratorNode_end) {
+XS(_wrap_GenericIteratorNode_begin__SWIG_1) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorNode_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_begin" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    result = (*arg1)->begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_preorder_iterator(static_cast< const tree< node >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_begin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorNode_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_GenericIteratorNode_end__SWIG_0) {
   {
     generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
     void *argp1 = 0 ;
@@ -7552,11 +10007,331 @@ XS(_wrap_GenericIteratorNode_end) {
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_end" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_end" "', argument " "1"" of type '" "generic_iterator< node > *""'"); 
     }
     arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
     result = (*arg1)->end();
     ST(argvi) = SWIG_NewPointerObj((new tree< node >::preorder_iterator(static_cast< const tree< node >::preorder_iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_end__SWIG_1) {
+  {
+    generic_iterator< node > *arg1 = (generic_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorNode_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorNode_end" "', argument " "1"" of type '" "generic_iterator< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    result = (*arg1)->end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_preorder_iterator(static_cast< const tree< node >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorNode_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_end__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorNode_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorNode_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_new_GenericConstIteratorNode__SWIG_0) {
+  {
+    int argvi = 0;
+    generic_const_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_GenericConstIteratorNode();");
+    }
+    result = (generic_const_iterator< node > *)new generic_const_iterator< node >();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_const_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_GenericConstIteratorNode__SWIG_1) {
+  {
+    generic_iterator< node > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    generic_const_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_GenericConstIteratorNode(generic_iterator< node > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_generic_iteratorT_node_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GenericConstIteratorNode" "', argument " "1"" of type '" "generic_iterator< node > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_GenericConstIteratorNode" "', argument " "1"" of type '" "generic_iterator< node > const &""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< node > * >(argp1);
+    result = (generic_const_iterator< node > *)new generic_const_iterator< node >((generic_iterator< node > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_const_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_GenericConstIteratorNode__SWIG_2) {
+  {
+    generic_const_iterator< node > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    generic_const_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_GenericConstIteratorNode(generic_const_iterator< node > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_generic_const_iteratorT_node_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GenericConstIteratorNode" "', argument " "1"" of type '" "generic_const_iterator< node > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_GenericConstIteratorNode" "', argument " "1"" of type '" "generic_const_iterator< node > const &""'"); 
+    }
+    arg1 = reinterpret_cast< generic_const_iterator< node > * >(argp1);
+    result = (generic_const_iterator< node > *)new generic_const_iterator< node >((generic_const_iterator< node > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_const_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_GenericConstIteratorNode__SWIG_3) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    generic_const_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_GenericConstIteratorNode(tree< node > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GenericConstIteratorNode" "', argument " "1"" of type '" "tree< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = (generic_const_iterator< node > *)new generic_const_iterator< node >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_const_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_GenericConstIteratorNode) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_const_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_GenericConstIteratorNode__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_GenericConstIteratorNode__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_GenericConstIteratorNode__SWIG_2); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_GenericConstIteratorNode__SWIG_3); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_GenericConstIteratorNode'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_GenericConstIteratorNode) {
+  {
+    generic_const_iterator< node > *arg1 = (generic_const_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_GenericConstIteratorNode(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_const_iteratorT_node_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_GenericConstIteratorNode" "', argument " "1"" of type '" "generic_const_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_const_iterator< node > * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
     
     XSRETURN(argvi);
   fail:
@@ -7646,24 +10421,24 @@ XS(_wrap_new_PreorderIteratorNode__SWIG_2) {
 XS(_wrap_new_PreorderIteratorNode__SWIG_3) {
   {
     sibling_iterator< node > *arg1 = 0 ;
-    void *argp1 = 0 ;
+    void *argp1 ;
     int res1 = 0 ;
     int argvi = 0;
     preorder_iterator< node > *result = 0 ;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: new_PreorderIteratorNode(sibling_iterator< node > &);");
+      SWIG_croak("Usage: new_PreorderIteratorNode(sibling_iterator< node > const &);");
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_sibling_iteratorT_node_t,  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_PreorderIteratorNode" "', argument " "1"" of type '" "sibling_iterator< node > &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_PreorderIteratorNode" "', argument " "1"" of type '" "sibling_iterator< node > const &""'"); 
     }
     if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_PreorderIteratorNode" "', argument " "1"" of type '" "sibling_iterator< node > &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_PreorderIteratorNode" "', argument " "1"" of type '" "sibling_iterator< node > const &""'"); 
     }
     arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
-    result = (preorder_iterator< node > *)new preorder_iterator< node >(*arg1);
+    result = (preorder_iterator< node > *)new preorder_iterator< node >((sibling_iterator< node > const &)*arg1);
     ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
@@ -7769,7 +10544,34 @@ XS(_wrap_new_PreorderIteratorNode) {
 }
 
 
-XS(_wrap_PreorderIteratorNode___plusplus__) {
+XS(_wrap_delete_PreorderIteratorNode) {
+  {
+    preorder_iterator< node > *arg1 = (preorder_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_PreorderIteratorNode(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_PreorderIteratorNode" "', argument " "1"" of type '" "preorder_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< preorder_iterator< node > * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PreorderIteratorNode___plusplus____SWIG_0) {
   {
     preorder_iterator< node > *arg1 = (preorder_iterator< node > *) 0 ;
     void *argp1 = 0 ;
@@ -7797,7 +10599,7 @@ XS(_wrap_PreorderIteratorNode___plusplus__) {
 }
 
 
-XS(_wrap_PreorderIteratorNode___minmin__) {
+XS(_wrap_PreorderIteratorNode___minmin____SWIG_0) {
   {
     preorder_iterator< node > *arg1 = (preorder_iterator< node > *) 0 ;
     void *argp1 = 0 ;
@@ -7825,33 +10627,33 @@ XS(_wrap_PreorderIteratorNode___minmin__) {
 }
 
 
-XS(_wrap_PreorderIteratorNode___iadd__) {
+XS(_wrap_PreorderIteratorNode___plusplus____SWIG_1) {
   {
     preorder_iterator< node > *arg1 = (preorder_iterator< node > *) 0 ;
-    unsigned int arg2 ;
+    int arg2 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    unsigned int val2 ;
+    int val2 ;
     int ecode2 = 0 ;
     int argvi = 0;
-    preorder_iterator< node > *result = 0 ;
+    preorder_iterator< node > result;
     dXSARGS;
     
     if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: PreorderIteratorNode___iadd__(self,unsigned int);");
+      SWIG_croak("Usage: PreorderIteratorNode___plusplus__(self,int);");
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_preorder_iteratorT_node_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PreorderIteratorNode___iadd__" "', argument " "1"" of type '" "preorder_iterator< node > *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PreorderIteratorNode___plusplus__" "', argument " "1"" of type '" "preorder_iterator< node > *""'"); 
     }
     arg1 = reinterpret_cast< preorder_iterator< node > * >(argp1);
-    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
     if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PreorderIteratorNode___iadd__" "', argument " "2"" of type '" "unsigned int""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PreorderIteratorNode___plusplus__" "', argument " "2"" of type '" "int""'");
     } 
-    arg2 = static_cast< unsigned int >(val2);
-    result = (preorder_iterator< node > *) &(arg1)->operator +=(arg2);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_preorder_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator ++(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new preorder_iterator< node >(static_cast< const preorder_iterator< node >& >(result))), SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
     
     
     XSRETURN(argvi);
@@ -7863,33 +10665,105 @@ XS(_wrap_PreorderIteratorNode___iadd__) {
 }
 
 
-XS(_wrap_PreorderIteratorNode___isub__) {
+XS(_wrap_PreorderIteratorNode___plusplus__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_preorder_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_preorder_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_PreorderIteratorNode___plusplus____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_PreorderIteratorNode___plusplus____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'PreorderIteratorNode___plusplus__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_PreorderIteratorNode___minmin____SWIG_1) {
   {
     preorder_iterator< node > *arg1 = (preorder_iterator< node > *) 0 ;
-    unsigned int arg2 ;
+    int arg2 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    unsigned int val2 ;
+    int val2 ;
     int ecode2 = 0 ;
     int argvi = 0;
-    preorder_iterator< node > *result = 0 ;
+    preorder_iterator< node > result;
     dXSARGS;
     
     if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: PreorderIteratorNode___isub__(self,unsigned int);");
+      SWIG_croak("Usage: PreorderIteratorNode___minmin__(self,int);");
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_preorder_iteratorT_node_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PreorderIteratorNode___isub__" "', argument " "1"" of type '" "preorder_iterator< node > *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PreorderIteratorNode___minmin__" "', argument " "1"" of type '" "preorder_iterator< node > *""'"); 
     }
     arg1 = reinterpret_cast< preorder_iterator< node > * >(argp1);
-    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
     if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PreorderIteratorNode___isub__" "', argument " "2"" of type '" "unsigned int""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PreorderIteratorNode___minmin__" "', argument " "2"" of type '" "int""'");
     } 
-    arg2 = static_cast< unsigned int >(val2);
-    result = (preorder_iterator< node > *) &(arg1)->operator -=(arg2);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_preorder_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator --(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new preorder_iterator< node >(static_cast< const preorder_iterator< node >& >(result))), SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
     
     
     XSRETURN(argvi);
@@ -7901,22 +10775,405 @@ XS(_wrap_PreorderIteratorNode___isub__) {
 }
 
 
-XS(_wrap_delete_PreorderIteratorNode) {
+XS(_wrap_PreorderIteratorNode___minmin__) {
+  dXSARGS;
+  
   {
-    preorder_iterator< node > *arg1 = (preorder_iterator< node > *) 0 ;
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_preorder_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_preorder_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_PreorderIteratorNode___minmin____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_PreorderIteratorNode___minmin____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'PreorderIteratorNode___minmin__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorNode__SWIG_0) {
+  {
+    int argvi = 0;
+    const_preorder_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorNode();");
+    }
+    result = (const_preorder_iterator< node > *)new const_preorder_iterator< node >();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorNode__SWIG_1) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorNode(tree< node > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstPreorderIteratorNode" "', argument " "1"" of type '" "tree< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = (const_preorder_iterator< node > *)new const_preorder_iterator< node >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorNode__SWIG_2) {
+  {
+    const_preorder_iterator< node > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorNode(const_preorder_iterator< node > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_const_preorder_iteratorT_node_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstPreorderIteratorNode" "', argument " "1"" of type '" "const_preorder_iterator< node > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstPreorderIteratorNode" "', argument " "1"" of type '" "const_preorder_iterator< node > const &""'"); 
+    }
+    arg1 = reinterpret_cast< const_preorder_iterator< node > * >(argp1);
+    result = (const_preorder_iterator< node > *)new const_preorder_iterator< node >((const_preorder_iterator< node > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorNode__SWIG_3) {
+  {
+    preorder_iterator< node > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorNode(preorder_iterator< node > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_preorder_iteratorT_node_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstPreorderIteratorNode" "', argument " "1"" of type '" "preorder_iterator< node > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstPreorderIteratorNode" "', argument " "1"" of type '" "preorder_iterator< node > const &""'"); 
+    }
+    arg1 = reinterpret_cast< preorder_iterator< node > * >(argp1);
+    result = (const_preorder_iterator< node > *)new const_preorder_iterator< node >((preorder_iterator< node > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorNode__SWIG_4) {
+  {
+    const_sibling_iterator< node > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorNode(const_sibling_iterator< node > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_const_sibling_iteratorT_node_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstPreorderIteratorNode" "', argument " "1"" of type '" "const_sibling_iterator< node > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstPreorderIteratorNode" "', argument " "1"" of type '" "const_sibling_iterator< node > const &""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< node > * >(argp1);
+    result = (const_preorder_iterator< node > *)new const_preorder_iterator< node >((const_sibling_iterator< node > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorNode__SWIG_5) {
+  {
+    sibling_iterator< node > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorNode(sibling_iterator< node > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_sibling_iteratorT_node_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstPreorderIteratorNode" "', argument " "1"" of type '" "sibling_iterator< node > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstPreorderIteratorNode" "', argument " "1"" of type '" "sibling_iterator< node > const &""'"); 
+    }
+    arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
+    result = (const_preorder_iterator< node > *)new const_preorder_iterator< node >((sibling_iterator< node > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorNode) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_preorder_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_preorder_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_5;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 5;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_5:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 6;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_6:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorNode__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorNode__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorNode__SWIG_2); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorNode__SWIG_3); return;
+    case 5:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorNode__SWIG_4); return;
+    case 6:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorNode__SWIG_5); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_ConstPreorderIteratorNode'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_ConstPreorderIteratorNode) {
+  {
+    const_preorder_iterator< node > *arg1 = (const_preorder_iterator< node > *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_PreorderIteratorNode(self);");
+      SWIG_croak("Usage: delete_ConstPreorderIteratorNode(self);");
     }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_POINTER_DISOWN |  0 );
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_DISOWN |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_PreorderIteratorNode" "', argument " "1"" of type '" "preorder_iterator< node > *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ConstPreorderIteratorNode" "', argument " "1"" of type '" "const_preorder_iterator< node > *""'"); 
     }
-    arg1 = reinterpret_cast< preorder_iterator< node > * >(argp1);
+    arg1 = reinterpret_cast< const_preorder_iterator< node > * >(argp1);
     delete arg1;
     ST(argvi) = sv_newmortal();
     
@@ -7925,6 +11182,282 @@ XS(_wrap_delete_PreorderIteratorNode) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_ConstPreorderIteratorNode___plusplus____SWIG_0) {
+  {
+    const_preorder_iterator< node > *arg1 = (const_preorder_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ConstPreorderIteratorNode___plusplus__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_preorder_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstPreorderIteratorNode___plusplus__" "', argument " "1"" of type '" "const_preorder_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_preorder_iterator< node > * >(argp1);
+    result = (const_preorder_iterator< node > *) &(arg1)->operator ++();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstPreorderIteratorNode___minmin____SWIG_0) {
+  {
+    const_preorder_iterator< node > *arg1 = (const_preorder_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ConstPreorderIteratorNode___minmin__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_preorder_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstPreorderIteratorNode___minmin__" "', argument " "1"" of type '" "const_preorder_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_preorder_iterator< node > * >(argp1);
+    result = (const_preorder_iterator< node > *) &(arg1)->operator --();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstPreorderIteratorNode___plusplus____SWIG_1) {
+  {
+    const_preorder_iterator< node > *arg1 = (const_preorder_iterator< node > *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< node > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ConstPreorderIteratorNode___plusplus__(self,int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_preorder_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstPreorderIteratorNode___plusplus__" "', argument " "1"" of type '" "const_preorder_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_preorder_iterator< node > * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ConstPreorderIteratorNode___plusplus__" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator ++(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new const_preorder_iterator< node >(static_cast< const const_preorder_iterator< node >& >(result))), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstPreorderIteratorNode___plusplus__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_preorder_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_preorder_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstPreorderIteratorNode___plusplus____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstPreorderIteratorNode___plusplus____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'ConstPreorderIteratorNode___plusplus__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_ConstPreorderIteratorNode___minmin____SWIG_1) {
+  {
+    const_preorder_iterator< node > *arg1 = (const_preorder_iterator< node > *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< node > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ConstPreorderIteratorNode___minmin__(self,int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_preorder_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstPreorderIteratorNode___minmin__" "', argument " "1"" of type '" "const_preorder_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_preorder_iterator< node > * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ConstPreorderIteratorNode___minmin__" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator --(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new const_preorder_iterator< node >(static_cast< const const_preorder_iterator< node >& >(result))), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstPreorderIteratorNode___minmin__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_preorder_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_preorder_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstPreorderIteratorNode___minmin____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstPreorderIteratorNode___minmin____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'ConstPreorderIteratorNode___minmin__'");
+  XSRETURN(0);
 }
 
 
@@ -8077,138 +11610,6 @@ XS(_wrap_new_SiblingIteratorNode) {
 }
 
 
-XS(_wrap_SiblingIteratorNode___plusplus__) {
-  {
-    sibling_iterator< node > *arg1 = (sibling_iterator< node > *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    sibling_iterator< node > *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SiblingIteratorNode___plusplus__(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_node_t, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorNode___plusplus__" "', argument " "1"" of type '" "sibling_iterator< node > *""'"); 
-    }
-    arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
-    result = (sibling_iterator< node > *) &(arg1)->operator ++();
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_sibling_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SiblingIteratorNode___minmin__) {
-  {
-    sibling_iterator< node > *arg1 = (sibling_iterator< node > *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    sibling_iterator< node > *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: SiblingIteratorNode___minmin__(self);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_node_t, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorNode___minmin__" "', argument " "1"" of type '" "sibling_iterator< node > *""'"); 
-    }
-    arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
-    result = (sibling_iterator< node > *) &(arg1)->operator --();
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_sibling_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SiblingIteratorNode___iadd__) {
-  {
-    sibling_iterator< node > *arg1 = (sibling_iterator< node > *) 0 ;
-    unsigned int arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    unsigned int val2 ;
-    int ecode2 = 0 ;
-    int argvi = 0;
-    sibling_iterator< node > *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SiblingIteratorNode___iadd__(self,unsigned int);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_node_t, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorNode___iadd__" "', argument " "1"" of type '" "sibling_iterator< node > *""'"); 
-    }
-    arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
-    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
-    if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SiblingIteratorNode___iadd__" "', argument " "2"" of type '" "unsigned int""'");
-    } 
-    arg2 = static_cast< unsigned int >(val2);
-    result = (sibling_iterator< node > *) &(arg1)->operator +=(arg2);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_sibling_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_SiblingIteratorNode___isub__) {
-  {
-    sibling_iterator< node > *arg1 = (sibling_iterator< node > *) 0 ;
-    unsigned int arg2 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    unsigned int val2 ;
-    int ecode2 = 0 ;
-    int argvi = 0;
-    sibling_iterator< node > *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SiblingIteratorNode___isub__(self,unsigned int);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_node_t, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorNode___isub__" "', argument " "1"" of type '" "sibling_iterator< node > *""'"); 
-    }
-    arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
-    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
-    if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SiblingIteratorNode___isub__" "', argument " "2"" of type '" "unsigned int""'");
-    } 
-    arg2 = static_cast< unsigned int >(val2);
-    result = (sibling_iterator< node > *) &(arg1)->operator -=(arg2);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_sibling_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
 XS(_wrap_delete_SiblingIteratorNode) {
   {
     sibling_iterator< node > *arg1 = (sibling_iterator< node > *) 0 ;
@@ -8236,6 +11637,2596 @@ XS(_wrap_delete_SiblingIteratorNode) {
 }
 
 
+XS(_wrap_SiblingIteratorNode___plusplus____SWIG_0) {
+  {
+    sibling_iterator< node > *arg1 = (sibling_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    sibling_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SiblingIteratorNode___plusplus__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorNode___plusplus__" "', argument " "1"" of type '" "sibling_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
+    result = (sibling_iterator< node > *) &(arg1)->operator ++();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_sibling_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SiblingIteratorNode___minmin____SWIG_0) {
+  {
+    sibling_iterator< node > *arg1 = (sibling_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    sibling_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: SiblingIteratorNode___minmin__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorNode___minmin__" "', argument " "1"" of type '" "sibling_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
+    result = (sibling_iterator< node > *) &(arg1)->operator --();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_sibling_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SiblingIteratorNode___plusplus____SWIG_1) {
+  {
+    sibling_iterator< node > *arg1 = (sibling_iterator< node > *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    sibling_iterator< node > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SiblingIteratorNode___plusplus__(self,int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorNode___plusplus__" "', argument " "1"" of type '" "sibling_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SiblingIteratorNode___plusplus__" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator ++(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new sibling_iterator< node >(static_cast< const sibling_iterator< node >& >(result))), SWIGTYPE_p_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SiblingIteratorNode___plusplus__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_SiblingIteratorNode___plusplus____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_SiblingIteratorNode___plusplus____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'SiblingIteratorNode___plusplus__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_SiblingIteratorNode___minmin____SWIG_1) {
+  {
+    sibling_iterator< node > *arg1 = (sibling_iterator< node > *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    sibling_iterator< node > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: SiblingIteratorNode___minmin__(self,int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorNode___minmin__" "', argument " "1"" of type '" "sibling_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SiblingIteratorNode___minmin__" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator --(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new sibling_iterator< node >(static_cast< const sibling_iterator< node >& >(result))), SWIGTYPE_p_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SiblingIteratorNode___minmin__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_SiblingIteratorNode___minmin____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_SiblingIteratorNode___minmin____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'SiblingIteratorNode___minmin__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_new_ConstSiblingIteratorNode__SWIG_0) {
+  {
+    int argvi = 0;
+    const_sibling_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_ConstSiblingIteratorNode();");
+    }
+    result = (const_sibling_iterator< node > *)new const_sibling_iterator< node >();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstSiblingIteratorNode__SWIG_1) {
+  {
+    const_sibling_iterator< node > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstSiblingIteratorNode(const_sibling_iterator< node > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_const_sibling_iteratorT_node_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstSiblingIteratorNode" "', argument " "1"" of type '" "const_sibling_iterator< node > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstSiblingIteratorNode" "', argument " "1"" of type '" "const_sibling_iterator< node > const &""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< node > * >(argp1);
+    result = (const_sibling_iterator< node > *)new const_sibling_iterator< node >((const_sibling_iterator< node > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstSiblingIteratorNode__SWIG_2) {
+  {
+    sibling_iterator< node > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstSiblingIteratorNode(sibling_iterator< node > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_sibling_iteratorT_node_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstSiblingIteratorNode" "', argument " "1"" of type '" "sibling_iterator< node > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstSiblingIteratorNode" "', argument " "1"" of type '" "sibling_iterator< node > const &""'"); 
+    }
+    arg1 = reinterpret_cast< sibling_iterator< node > * >(argp1);
+    result = (const_sibling_iterator< node > *)new const_sibling_iterator< node >((sibling_iterator< node > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstSiblingIteratorNode__SWIG_3) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstSiblingIteratorNode(tree< node > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstSiblingIteratorNode" "', argument " "1"" of type '" "tree< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = (const_sibling_iterator< node > *)new const_sibling_iterator< node >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstSiblingIteratorNode) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstSiblingIteratorNode__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstSiblingIteratorNode__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstSiblingIteratorNode__SWIG_2); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstSiblingIteratorNode__SWIG_3); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_ConstSiblingIteratorNode'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_ConstSiblingIteratorNode) {
+  {
+    const_sibling_iterator< node > *arg1 = (const_sibling_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_ConstSiblingIteratorNode(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ConstSiblingIteratorNode" "', argument " "1"" of type '" "const_sibling_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< node > * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstSiblingIteratorNode___plusplus____SWIG_0) {
+  {
+    const_sibling_iterator< node > *arg1 = (const_sibling_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ConstSiblingIteratorNode___plusplus__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_sibling_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstSiblingIteratorNode___plusplus__" "', argument " "1"" of type '" "const_sibling_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< node > * >(argp1);
+    result = (const_sibling_iterator< node > *) &(arg1)->operator ++();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstSiblingIteratorNode___minmin____SWIG_0) {
+  {
+    const_sibling_iterator< node > *arg1 = (const_sibling_iterator< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ConstSiblingIteratorNode___minmin__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_sibling_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstSiblingIteratorNode___minmin__" "', argument " "1"" of type '" "const_sibling_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< node > * >(argp1);
+    result = (const_sibling_iterator< node > *) &(arg1)->operator --();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstSiblingIteratorNode___plusplus____SWIG_1) {
+  {
+    const_sibling_iterator< node > *arg1 = (const_sibling_iterator< node > *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< node > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ConstSiblingIteratorNode___plusplus__(self,int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_sibling_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstSiblingIteratorNode___plusplus__" "', argument " "1"" of type '" "const_sibling_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< node > * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ConstSiblingIteratorNode___plusplus__" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator ++(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new const_sibling_iterator< node >(static_cast< const const_sibling_iterator< node >& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstSiblingIteratorNode___plusplus__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstSiblingIteratorNode___plusplus____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstSiblingIteratorNode___plusplus____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'ConstSiblingIteratorNode___plusplus__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_ConstSiblingIteratorNode___minmin____SWIG_1) {
+  {
+    const_sibling_iterator< node > *arg1 = (const_sibling_iterator< node > *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< node > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ConstSiblingIteratorNode___minmin__(self,int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_sibling_iteratorT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstSiblingIteratorNode___minmin__" "', argument " "1"" of type '" "const_sibling_iterator< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< node > * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ConstSiblingIteratorNode___minmin__" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator --(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new const_sibling_iterator< node >(static_cast< const const_sibling_iterator< node >& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstSiblingIteratorNode___minmin__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstSiblingIteratorNode___minmin____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstSiblingIteratorNode___minmin____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'ConstSiblingIteratorNode___minmin__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_new_TreeIteratorDepnode__SWIG_0) {
+  {
+    int argvi = 0;
+    tree_iterator< depnode,tree< depnode > > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_TreeIteratorDepnode();");
+    }
+    result = (tree_iterator< depnode,tree< depnode > > *)new tree_iterator< depnode,tree< depnode > >();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorDepnode__SWIG_1) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree_iterator< depnode,tree< depnode > > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_TreeIteratorDepnode(tree< depnode > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TreeIteratorDepnode" "', argument " "1"" of type '" "tree< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = (tree_iterator< depnode,tree< depnode > > *)new tree_iterator< depnode,tree< depnode > >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorDepnode__SWIG_2) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree_iterator< depnode,tree< depnode > > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_TreeIteratorDepnode(tree_iterator< depnode,tree< depnode > > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TreeIteratorDepnode" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TreeIteratorDepnode" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const &""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (tree_iterator< depnode,tree< depnode > > *)new tree_iterator< depnode,tree< depnode > >((tree_iterator< depnode,tree< depnode > > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorDepnode) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorDepnode__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorDepnode__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorDepnode__SWIG_2); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_TreeIteratorDepnode'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_TreeIteratorDepnode) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_TreeIteratorDepnode(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TreeIteratorDepnode" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode___ref__) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode___ref__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode___ref__" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (tree< depnode > *) &((tree_iterator< depnode,tree< depnode > > const *)arg1)->operator *();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode___deref__) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode___deref__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode___deref__" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (tree< depnode > *)((tree_iterator< depnode,tree< depnode > > const *)arg1)->operator ->();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode___eq__) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    tree_iterator< depnode,tree< depnode > > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorDepnode___eq__(self,tree_iterator< depnode,tree< depnode > > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode___eq__" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeIteratorDepnode___eq__" "', argument " "2"" of type '" "tree_iterator< depnode,tree< depnode > > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeIteratorDepnode___eq__" "', argument " "2"" of type '" "tree_iterator< depnode,tree< depnode > > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp2);
+    result = (bool)((tree_iterator< depnode,tree< depnode > > const *)arg1)->operator ==((tree_iterator< depnode,tree< depnode > > const &)*arg2);
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode___ne__) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    tree_iterator< depnode,tree< depnode > > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorDepnode___ne__(self,tree_iterator< depnode,tree< depnode > > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode___ne__" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeIteratorDepnode___ne__" "', argument " "2"" of type '" "tree_iterator< depnode,tree< depnode > > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeIteratorDepnode___ne__" "', argument " "2"" of type '" "tree_iterator< depnode,tree< depnode > > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp2);
+    result = (bool)((tree_iterator< depnode,tree< depnode > > const *)arg1)->operator !=((tree_iterator< depnode,tree< depnode > > const &)*arg2);
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_info_get) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    depnode *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_info_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_info_get" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (depnode *)& ((*arg1)->info);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_depnode, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_num_children) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    unsigned int result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_num_children(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_num_children" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (unsigned int)(*arg1)->num_children();
+    ST(argvi) = SWIG_From_unsigned_SS_int  SWIG_PERL_CALL_ARGS_1(static_cast< unsigned int >(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_nth_child) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    unsigned int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    tree< depnode >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_nth_child(self,unsigned int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_nth_child" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TreeIteratorDepnode_nth_child" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = static_cast< unsigned int >(val2);
+    result = (*arg1)->nth_child(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::sibling_iterator(static_cast< const tree< depnode >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_get_parent) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_get_parent(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_get_parent" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (*arg1)->get_parent();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::iterator(static_cast< const tree< depnode >::iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_nth_child_ref) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    unsigned int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    tree< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_nth_child_ref(self,unsigned int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_nth_child_ref" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TreeIteratorDepnode_nth_child_ref" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = static_cast< unsigned int >(val2);
+    result = (tree< depnode > *) &(*arg1)->nth_child_ref(arg2);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_empty) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_empty(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_empty" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (bool)(*arg1)->empty();
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_sibling_begin__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_sibling_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_sibling_begin" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (*arg1)->sibling_begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_sibling_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorDepnode_sibling_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorDepnode_sibling_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorDepnode_sibling_end__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_sibling_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_sibling_end" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (*arg1)->sibling_end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_sibling_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorDepnode_sibling_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorDepnode_sibling_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorDepnode_sibling_rbegin__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_sibling_rbegin" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (*arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_sibling_rbegin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorDepnode_sibling_rbegin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorDepnode_sibling_rbegin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorDepnode_sibling_rend__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_sibling_rend" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (*arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_sibling_rend) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorDepnode_sibling_rend__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorDepnode_sibling_rend'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorDepnode_begin__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_begin" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (*arg1)->begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_preorder_iterator(static_cast< const tree< depnode >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorDepnode_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorDepnode_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorDepnode_end__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > > *arg1 = (tree_iterator< depnode,tree< depnode > > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorDepnode_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorDepnode_end" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > > * >(argp1);
+    result = (*arg1)->end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_preorder_iterator(static_cast< const tree< depnode >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorDepnode_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorDepnode_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorDepnode_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_new_TreeIteratorConstDepnode__SWIG_0) {
+  {
+    int argvi = 0;
+    tree_iterator< depnode,tree< depnode > const > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_TreeIteratorConstDepnode();");
+    }
+    result = (tree_iterator< depnode,tree< depnode > const > *)new tree_iterator< depnode,tree< depnode > const >();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorConstDepnode__SWIG_1) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree_iterator< depnode,tree< depnode > const > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_TreeIteratorConstDepnode(tree< depnode > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TreeIteratorConstDepnode" "', argument " "1"" of type '" "tree< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = (tree_iterator< depnode,tree< depnode > const > *)new tree_iterator< depnode,tree< depnode > const >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorConstDepnode__SWIG_2) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree_iterator< depnode,tree< depnode > const > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_TreeIteratorConstDepnode(tree_iterator< depnode,tree< depnode > const > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_TreeIteratorConstDepnode" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_TreeIteratorConstDepnode" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const &""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (tree_iterator< depnode,tree< depnode > const > *)new tree_iterator< depnode,tree< depnode > const >((tree_iterator< depnode,tree< depnode > const > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_TreeIteratorConstDepnode) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorConstDepnode__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorConstDepnode__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_TreeIteratorConstDepnode__SWIG_2); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_TreeIteratorConstDepnode'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_TreeIteratorConstDepnode) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_TreeIteratorConstDepnode(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_TreeIteratorConstDepnode" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode___ref__) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode___ref__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode___ref__" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (tree< depnode > *) &((tree_iterator< depnode,tree< depnode > const > const *)arg1)->operator *();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode___deref__) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode___deref__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode___deref__" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (tree< depnode > *)((tree_iterator< depnode,tree< depnode > const > const *)arg1)->operator ->();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode___eq__) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    tree_iterator< depnode,tree< depnode > const > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode___eq__(self,tree_iterator< depnode,tree< depnode > const > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode___eq__" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeIteratorConstDepnode___eq__" "', argument " "2"" of type '" "tree_iterator< depnode,tree< depnode > const > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeIteratorConstDepnode___eq__" "', argument " "2"" of type '" "tree_iterator< depnode,tree< depnode > const > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp2);
+    result = (bool)((tree_iterator< depnode,tree< depnode > const > const *)arg1)->operator ==((tree_iterator< depnode,tree< depnode > const > const &)*arg2);
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode___ne__) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    tree_iterator< depnode,tree< depnode > const > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode___ne__(self,tree_iterator< depnode,tree< depnode > const > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode___ne__" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeIteratorConstDepnode___ne__" "', argument " "2"" of type '" "tree_iterator< depnode,tree< depnode > const > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeIteratorConstDepnode___ne__" "', argument " "2"" of type '" "tree_iterator< depnode,tree< depnode > const > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp2);
+    result = (bool)((tree_iterator< depnode,tree< depnode > const > const *)arg1)->operator !=((tree_iterator< depnode,tree< depnode > const > const &)*arg2);
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_info_get) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    depnode *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_info_get(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_info_get" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (depnode *)& ((*arg1)->info);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_depnode, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_num_children) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    unsigned int result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_num_children(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_num_children" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (unsigned int)(*arg1)->num_children();
+    ST(argvi) = SWIG_From_unsigned_SS_int  SWIG_PERL_CALL_ARGS_1(static_cast< unsigned int >(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_nth_child) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    unsigned int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    tree< depnode >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_nth_child(self,unsigned int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_nth_child" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TreeIteratorConstDepnode_nth_child" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = static_cast< unsigned int >(val2);
+    result = (*arg1)->nth_child(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::sibling_iterator(static_cast< const tree< depnode >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_get_parent) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_get_parent(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_get_parent" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (*arg1)->get_parent();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::iterator(static_cast< const tree< depnode >::iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_nth_child_ref) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    unsigned int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    unsigned int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    tree< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_nth_child_ref(self,unsigned int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_nth_child_ref" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "TreeIteratorConstDepnode_nth_child_ref" "', argument " "2"" of type '" "unsigned int""'");
+    } 
+    arg2 = static_cast< unsigned int >(val2);
+    result = (tree< depnode > *) &(*arg1)->nth_child_ref(arg2);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_empty) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_empty(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_empty" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (bool)(*arg1)->empty();
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_sibling_begin__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_sibling_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_sibling_begin" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (*arg1)->sibling_begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_sibling_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstDepnode_sibling_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstDepnode_sibling_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_sibling_end__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_sibling_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_sibling_end" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (*arg1)->sibling_end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_sibling_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstDepnode_sibling_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstDepnode_sibling_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_sibling_rbegin__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_sibling_rbegin" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (*arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_sibling_rbegin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstDepnode_sibling_rbegin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstDepnode_sibling_rbegin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_sibling_rend__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_sibling_rend" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (*arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_sibling_rend) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstDepnode_sibling_rend__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstDepnode_sibling_rend'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_begin__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_begin" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (*arg1)->begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_preorder_iterator(static_cast< const tree< depnode >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstDepnode_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstDepnode_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_end__SWIG_1) {
+  {
+    tree_iterator< depnode,tree< depnode > const > *arg1 = (tree_iterator< depnode,tree< depnode > const > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeIteratorConstDepnode_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeIteratorConstDepnode_end" "', argument " "1"" of type '" "tree_iterator< depnode,tree< depnode > const > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree_iterator< depnode,tree< depnode > const > * >(argp1);
+    result = (*arg1)->end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_preorder_iterator(static_cast< const tree< depnode >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeIteratorConstDepnode_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeIteratorConstDepnode_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeIteratorConstDepnode_end'");
+  XSRETURN(0);
+}
+
+
 XS(_wrap_new_GenericIteratorDepnode__SWIG_0) {
   {
     int argvi = 0;
@@ -8256,6 +14247,34 @@ XS(_wrap_new_GenericIteratorDepnode__SWIG_0) {
 
 XS(_wrap_new_GenericIteratorDepnode__SWIG_1) {
   {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    generic_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_GenericIteratorDepnode(tree< depnode > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GenericIteratorDepnode" "', argument " "1"" of type '" "tree< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = (generic_iterator< depnode > *)new generic_iterator< depnode >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_GenericIteratorDepnode__SWIG_2) {
+  {
     generic_iterator< depnode > *arg1 = 0 ;
     void *argp1 ;
     int res1 = 0 ;
@@ -8275,34 +14294,6 @@ XS(_wrap_new_GenericIteratorDepnode__SWIG_1) {
     }
     arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
     result = (generic_iterator< depnode > *)new generic_iterator< depnode >((generic_iterator< depnode > const &)*arg1);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
-    
-    XSRETURN(argvi);
-  fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_new_GenericIteratorDepnode__SWIG_2) {
-  {
-    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    int argvi = 0;
-    generic_iterator< depnode > *result = 0 ;
-    dXSARGS;
-    
-    if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: new_GenericIteratorDepnode(tree< depnode > *);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GenericIteratorDepnode" "', argument " "1"" of type '" "tree< depnode > *""'"); 
-    }
-    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
-    result = (generic_iterator< depnode > *)new generic_iterator< depnode >(arg1);
     ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
@@ -8334,7 +14325,7 @@ XS(_wrap_new_GenericIteratorDepnode) {
       int _v = 0;
       {
         void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
         _v = SWIG_CheckState(res);
       }
       if (!_v) goto check_2;
@@ -8355,7 +14346,7 @@ XS(_wrap_new_GenericIteratorDepnode) {
       int _v = 0;
       {
         void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
         _v = SWIG_CheckState(res);
       }
       if (!_v) goto check_3;
@@ -8435,88 +14426,6 @@ XS(_wrap_GenericIteratorDepnode___deref__) {
     
     XSRETURN(argvi);
   fail:
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_GenericIteratorDepnode___eq__) {
-  {
-    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
-    generic_iterator< depnode > *arg2 = 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    bool result;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: GenericIteratorDepnode___eq__(self,generic_iterator< depnode > const &);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode___eq__" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
-    }
-    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_generic_iteratorT_depnode_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GenericIteratorDepnode___eq__" "', argument " "2"" of type '" "generic_iterator< depnode > const &""'"); 
-    }
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GenericIteratorDepnode___eq__" "', argument " "2"" of type '" "generic_iterator< depnode > const &""'"); 
-    }
-    arg2 = reinterpret_cast< generic_iterator< depnode > * >(argp2);
-    result = (bool)((generic_iterator< depnode > const *)arg1)->operator ==((generic_iterator< depnode > const &)*arg2);
-    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_GenericIteratorDepnode___ne__) {
-  {
-    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
-    generic_iterator< depnode > *arg2 = 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    bool result;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: GenericIteratorDepnode___ne__(self,generic_iterator< depnode > const &);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode___ne__" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
-    }
-    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_generic_iteratorT_depnode_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GenericIteratorDepnode___ne__" "', argument " "2"" of type '" "generic_iterator< depnode > const &""'"); 
-    }
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GenericIteratorDepnode___ne__" "', argument " "2"" of type '" "generic_iterator< depnode > const &""'"); 
-    }
-    arg2 = reinterpret_cast< generic_iterator< depnode > * >(argp2);
-    result = (bool)((generic_iterator< depnode > const *)arg1)->operator !=((generic_iterator< depnode > const &)*arg2);
-    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
     
     SWIG_croak_null();
   }
@@ -8615,6 +14524,47 @@ XS(_wrap_GenericIteratorDepnode_info_get) {
 }
 
 
+XS(_wrap_GenericIteratorDepnode_operator_assignment) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    tree< depnode > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    tree< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_operator_assignment(self,tree< depnode > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_operator_assignment" "', argument " "1"" of type '" "generic_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_treeT_depnode_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GenericIteratorDepnode_operator_assignment" "', argument " "2"" of type '" "tree< depnode > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GenericIteratorDepnode_operator_assignment" "', argument " "2"" of type '" "tree< depnode > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree< depnode > * >(argp2);
+    result = (tree< depnode > *) &(*arg1)->operator =((tree< depnode > const &)*arg2);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
 XS(_wrap_GenericIteratorDepnode_num_children) {
   {
     generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
@@ -8675,6 +14625,34 @@ XS(_wrap_GenericIteratorDepnode_nth_child) {
     XSRETURN(argvi);
   fail:
     
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_get_parent) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_get_parent(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_get_parent" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    result = (*arg1)->get_parent();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::iterator(static_cast< const tree< depnode >::iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
     
     SWIG_croak_null();
   }
@@ -8787,7 +14765,57 @@ XS(_wrap_GenericIteratorDepnode_append_child) {
 }
 
 
-XS(_wrap_GenericIteratorDepnode_hang_child) {
+XS(_wrap_GenericIteratorDepnode_hang_child__SWIG_0) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    tree< depnode > *arg2 = 0 ;
+    bool arg3 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    bool val3 ;
+    int ecode3 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_hang_child(self,tree< depnode > &,bool);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_hang_child" "', argument " "1"" of type '" "generic_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_treeT_depnode_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "GenericIteratorDepnode_hang_child" "', argument " "2"" of type '" "tree< depnode > &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "GenericIteratorDepnode_hang_child" "', argument " "2"" of type '" "tree< depnode > &""'"); 
+    }
+    arg2 = reinterpret_cast< tree< depnode > * >(argp2);
+    ecode3 = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "GenericIteratorDepnode_hang_child" "', argument " "3"" of type '" "bool""'");
+    } 
+    arg3 = static_cast< bool >(val3);
+    (*arg1)->hang_child(*arg2,arg3);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_hang_child__SWIG_1) {
   {
     generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
     tree< depnode > *arg2 = 0 ;
@@ -8824,6 +14852,96 @@ XS(_wrap_GenericIteratorDepnode_hang_child) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_hang_child) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 3) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_hang_child__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_hang_child__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorDepnode_hang_child'");
+  XSRETURN(0);
 }
 
 
@@ -8882,7 +15000,7 @@ XS(_wrap_GenericIteratorDepnode_empty) {
 }
 
 
-XS(_wrap_GenericIteratorDepnode_sibling_begin) {
+XS(_wrap_GenericIteratorDepnode_sibling_begin__SWIG_0) {
   {
     generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -8910,7 +15028,97 @@ XS(_wrap_GenericIteratorDepnode_sibling_begin) {
 }
 
 
-XS(_wrap_GenericIteratorDepnode_sibling_end) {
+XS(_wrap_GenericIteratorDepnode_sibling_begin__SWIG_1) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_sibling_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_sibling_begin" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    result = (*arg1)->sibling_begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_sibling_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_sibling_begin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_sibling_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorDepnode_sibling_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_GenericIteratorDepnode_sibling_end__SWIG_0) {
   {
     generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -8924,7 +15132,7 @@ XS(_wrap_GenericIteratorDepnode_sibling_end) {
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_sibling_end" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_sibling_end" "', argument " "1"" of type '" "generic_iterator< depnode > *""'"); 
     }
     arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
     result = (*arg1)->sibling_end();
@@ -8938,7 +15146,333 @@ XS(_wrap_GenericIteratorDepnode_sibling_end) {
 }
 
 
-XS(_wrap_GenericIteratorDepnode_begin) {
+XS(_wrap_GenericIteratorDepnode_sibling_end__SWIG_1) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_sibling_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_sibling_end" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    result = (*arg1)->sibling_end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_sibling_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_sibling_end__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_sibling_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorDepnode_sibling_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_GenericIteratorDepnode_sibling_rbegin__SWIG_0) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_sibling_rbegin" "', argument " "1"" of type '" "generic_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    result = (*arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::sibling_iterator(static_cast< const tree< depnode >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_sibling_rbegin__SWIG_1) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_sibling_rbegin" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    result = (*arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_sibling_rbegin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_sibling_rbegin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_sibling_rbegin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorDepnode_sibling_rbegin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_GenericIteratorDepnode_sibling_rend__SWIG_0) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_sibling_rend" "', argument " "1"" of type '" "generic_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    result = (*arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::sibling_iterator(static_cast< const tree< depnode >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_sibling_rend__SWIG_1) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_sibling_rend" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    result = (*arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_sibling_rend) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_sibling_rend__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_sibling_rend__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorDepnode_sibling_rend'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_GenericIteratorDepnode_begin__SWIG_0) {
   {
     generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -8966,7 +15500,97 @@ XS(_wrap_GenericIteratorDepnode_begin) {
 }
 
 
-XS(_wrap_GenericIteratorDepnode_end) {
+XS(_wrap_GenericIteratorDepnode_begin__SWIG_1) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_begin" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    result = (*arg1)->begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_preorder_iterator(static_cast< const tree< depnode >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_begin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorDepnode_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_GenericIteratorDepnode_end__SWIG_0) {
   {
     generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -8980,11 +15604,331 @@ XS(_wrap_GenericIteratorDepnode_end) {
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_end" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_end" "', argument " "1"" of type '" "generic_iterator< depnode > *""'"); 
     }
     arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
     result = (*arg1)->end();
     ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::preorder_iterator(static_cast< const tree< depnode >::preorder_iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_end__SWIG_1) {
+  {
+    generic_iterator< depnode > *arg1 = (generic_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: GenericIteratorDepnode_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "GenericIteratorDepnode_end" "', argument " "1"" of type '" "generic_iterator< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    result = (*arg1)->end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_preorder_iterator(static_cast< const tree< depnode >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_GenericIteratorDepnode_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_end__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_GenericIteratorDepnode_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'GenericIteratorDepnode_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_new_GenericConstIteratorDepnode__SWIG_0) {
+  {
+    int argvi = 0;
+    generic_const_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_GenericConstIteratorDepnode();");
+    }
+    result = (generic_const_iterator< depnode > *)new generic_const_iterator< depnode >();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_const_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_GenericConstIteratorDepnode__SWIG_1) {
+  {
+    generic_iterator< depnode > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    generic_const_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_GenericConstIteratorDepnode(generic_iterator< depnode > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_generic_iteratorT_depnode_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GenericConstIteratorDepnode" "', argument " "1"" of type '" "generic_iterator< depnode > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_GenericConstIteratorDepnode" "', argument " "1"" of type '" "generic_iterator< depnode > const &""'"); 
+    }
+    arg1 = reinterpret_cast< generic_iterator< depnode > * >(argp1);
+    result = (generic_const_iterator< depnode > *)new generic_const_iterator< depnode >((generic_iterator< depnode > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_const_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_GenericConstIteratorDepnode__SWIG_2) {
+  {
+    generic_const_iterator< depnode > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    generic_const_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_GenericConstIteratorDepnode(generic_const_iterator< depnode > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_generic_const_iteratorT_depnode_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GenericConstIteratorDepnode" "', argument " "1"" of type '" "generic_const_iterator< depnode > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_GenericConstIteratorDepnode" "', argument " "1"" of type '" "generic_const_iterator< depnode > const &""'"); 
+    }
+    arg1 = reinterpret_cast< generic_const_iterator< depnode > * >(argp1);
+    result = (generic_const_iterator< depnode > *)new generic_const_iterator< depnode >((generic_const_iterator< depnode > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_const_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_GenericConstIteratorDepnode__SWIG_3) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    generic_const_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_GenericConstIteratorDepnode(tree< depnode > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_GenericConstIteratorDepnode" "', argument " "1"" of type '" "tree< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = (generic_const_iterator< depnode > *)new generic_const_iterator< depnode >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_generic_const_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_GenericConstIteratorDepnode) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_generic_const_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_GenericConstIteratorDepnode__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_GenericConstIteratorDepnode__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_GenericConstIteratorDepnode__SWIG_2); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_GenericConstIteratorDepnode__SWIG_3); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_GenericConstIteratorDepnode'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_GenericConstIteratorDepnode) {
+  {
+    generic_const_iterator< depnode > *arg1 = (generic_const_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_GenericConstIteratorDepnode(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_generic_const_iteratorT_depnode_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_GenericConstIteratorDepnode" "', argument " "1"" of type '" "generic_const_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< generic_const_iterator< depnode > * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
     
     XSRETURN(argvi);
   fail:
@@ -9074,24 +16018,24 @@ XS(_wrap_new_PreorderIteratorDepnode__SWIG_2) {
 XS(_wrap_new_PreorderIteratorDepnode__SWIG_3) {
   {
     sibling_iterator< depnode > *arg1 = 0 ;
-    void *argp1 = 0 ;
+    void *argp1 ;
     int res1 = 0 ;
     int argvi = 0;
     preorder_iterator< depnode > *result = 0 ;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: new_PreorderIteratorDepnode(sibling_iterator< depnode > &);");
+      SWIG_croak("Usage: new_PreorderIteratorDepnode(sibling_iterator< depnode > const &);");
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_sibling_iteratorT_depnode_t,  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_PreorderIteratorDepnode" "', argument " "1"" of type '" "sibling_iterator< depnode > &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_PreorderIteratorDepnode" "', argument " "1"" of type '" "sibling_iterator< depnode > const &""'"); 
     }
     if (!argp1) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_PreorderIteratorDepnode" "', argument " "1"" of type '" "sibling_iterator< depnode > &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_PreorderIteratorDepnode" "', argument " "1"" of type '" "sibling_iterator< depnode > const &""'"); 
     }
     arg1 = reinterpret_cast< sibling_iterator< depnode > * >(argp1);
-    result = (preorder_iterator< depnode > *)new preorder_iterator< depnode >(*arg1);
+    result = (preorder_iterator< depnode > *)new preorder_iterator< depnode >((sibling_iterator< depnode > const &)*arg1);
     ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
@@ -9197,7 +16141,34 @@ XS(_wrap_new_PreorderIteratorDepnode) {
 }
 
 
-XS(_wrap_PreorderIteratorDepnode___plusplus__) {
+XS(_wrap_delete_PreorderIteratorDepnode) {
+  {
+    preorder_iterator< depnode > *arg1 = (preorder_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_PreorderIteratorDepnode(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_PreorderIteratorDepnode" "', argument " "1"" of type '" "preorder_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< preorder_iterator< depnode > * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_PreorderIteratorDepnode___plusplus____SWIG_0) {
   {
     preorder_iterator< depnode > *arg1 = (preorder_iterator< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -9225,7 +16196,7 @@ XS(_wrap_PreorderIteratorDepnode___plusplus__) {
 }
 
 
-XS(_wrap_PreorderIteratorDepnode___minmin__) {
+XS(_wrap_PreorderIteratorDepnode___minmin____SWIG_0) {
   {
     preorder_iterator< depnode > *arg1 = (preorder_iterator< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -9253,33 +16224,33 @@ XS(_wrap_PreorderIteratorDepnode___minmin__) {
 }
 
 
-XS(_wrap_PreorderIteratorDepnode___iadd__) {
+XS(_wrap_PreorderIteratorDepnode___plusplus____SWIG_1) {
   {
     preorder_iterator< depnode > *arg1 = (preorder_iterator< depnode > *) 0 ;
-    unsigned int arg2 ;
+    int arg2 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    unsigned int val2 ;
+    int val2 ;
     int ecode2 = 0 ;
     int argvi = 0;
-    preorder_iterator< depnode > *result = 0 ;
+    preorder_iterator< depnode > result;
     dXSARGS;
     
     if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: PreorderIteratorDepnode___iadd__(self,unsigned int);");
+      SWIG_croak("Usage: PreorderIteratorDepnode___plusplus__(self,int);");
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_preorder_iteratorT_depnode_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PreorderIteratorDepnode___iadd__" "', argument " "1"" of type '" "preorder_iterator< depnode > *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PreorderIteratorDepnode___plusplus__" "', argument " "1"" of type '" "preorder_iterator< depnode > *""'"); 
     }
     arg1 = reinterpret_cast< preorder_iterator< depnode > * >(argp1);
-    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
     if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PreorderIteratorDepnode___iadd__" "', argument " "2"" of type '" "unsigned int""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PreorderIteratorDepnode___plusplus__" "', argument " "2"" of type '" "int""'");
     } 
-    arg2 = static_cast< unsigned int >(val2);
-    result = (preorder_iterator< depnode > *) &(arg1)->operator +=(arg2);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_preorder_iteratorT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator ++(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new preorder_iterator< depnode >(static_cast< const preorder_iterator< depnode >& >(result))), SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
     
     
     XSRETURN(argvi);
@@ -9291,33 +16262,105 @@ XS(_wrap_PreorderIteratorDepnode___iadd__) {
 }
 
 
-XS(_wrap_PreorderIteratorDepnode___isub__) {
+XS(_wrap_PreorderIteratorDepnode___plusplus__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_preorder_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_preorder_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_PreorderIteratorDepnode___plusplus____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_PreorderIteratorDepnode___plusplus____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'PreorderIteratorDepnode___plusplus__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_PreorderIteratorDepnode___minmin____SWIG_1) {
   {
     preorder_iterator< depnode > *arg1 = (preorder_iterator< depnode > *) 0 ;
-    unsigned int arg2 ;
+    int arg2 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    unsigned int val2 ;
+    int val2 ;
     int ecode2 = 0 ;
     int argvi = 0;
-    preorder_iterator< depnode > *result = 0 ;
+    preorder_iterator< depnode > result;
     dXSARGS;
     
     if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: PreorderIteratorDepnode___isub__(self,unsigned int);");
+      SWIG_croak("Usage: PreorderIteratorDepnode___minmin__(self,int);");
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_preorder_iteratorT_depnode_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PreorderIteratorDepnode___isub__" "', argument " "1"" of type '" "preorder_iterator< depnode > *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "PreorderIteratorDepnode___minmin__" "', argument " "1"" of type '" "preorder_iterator< depnode > *""'"); 
     }
     arg1 = reinterpret_cast< preorder_iterator< depnode > * >(argp1);
-    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
     if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PreorderIteratorDepnode___isub__" "', argument " "2"" of type '" "unsigned int""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "PreorderIteratorDepnode___minmin__" "', argument " "2"" of type '" "int""'");
     } 
-    arg2 = static_cast< unsigned int >(val2);
-    result = (preorder_iterator< depnode > *) &(arg1)->operator -=(arg2);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_preorder_iteratorT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator --(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new preorder_iterator< depnode >(static_cast< const preorder_iterator< depnode >& >(result))), SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
     
     
     XSRETURN(argvi);
@@ -9329,22 +16372,405 @@ XS(_wrap_PreorderIteratorDepnode___isub__) {
 }
 
 
-XS(_wrap_delete_PreorderIteratorDepnode) {
+XS(_wrap_PreorderIteratorDepnode___minmin__) {
+  dXSARGS;
+  
   {
-    preorder_iterator< depnode > *arg1 = (preorder_iterator< depnode > *) 0 ;
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_preorder_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_preorder_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_PreorderIteratorDepnode___minmin____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_PreorderIteratorDepnode___minmin____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'PreorderIteratorDepnode___minmin__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_0) {
+  {
+    int argvi = 0;
+    const_preorder_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorDepnode();");
+    }
+    result = (const_preorder_iterator< depnode > *)new const_preorder_iterator< depnode >();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_1) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorDepnode(tree< depnode > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstPreorderIteratorDepnode" "', argument " "1"" of type '" "tree< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = (const_preorder_iterator< depnode > *)new const_preorder_iterator< depnode >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_2) {
+  {
+    const_preorder_iterator< depnode > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorDepnode(const_preorder_iterator< depnode > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_const_preorder_iteratorT_depnode_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstPreorderIteratorDepnode" "', argument " "1"" of type '" "const_preorder_iterator< depnode > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstPreorderIteratorDepnode" "', argument " "1"" of type '" "const_preorder_iterator< depnode > const &""'"); 
+    }
+    arg1 = reinterpret_cast< const_preorder_iterator< depnode > * >(argp1);
+    result = (const_preorder_iterator< depnode > *)new const_preorder_iterator< depnode >((const_preorder_iterator< depnode > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_3) {
+  {
+    preorder_iterator< depnode > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorDepnode(preorder_iterator< depnode > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_preorder_iteratorT_depnode_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstPreorderIteratorDepnode" "', argument " "1"" of type '" "preorder_iterator< depnode > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstPreorderIteratorDepnode" "', argument " "1"" of type '" "preorder_iterator< depnode > const &""'"); 
+    }
+    arg1 = reinterpret_cast< preorder_iterator< depnode > * >(argp1);
+    result = (const_preorder_iterator< depnode > *)new const_preorder_iterator< depnode >((preorder_iterator< depnode > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_4) {
+  {
+    const_sibling_iterator< depnode > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorDepnode(const_sibling_iterator< depnode > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_const_sibling_iteratorT_depnode_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstPreorderIteratorDepnode" "', argument " "1"" of type '" "const_sibling_iterator< depnode > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstPreorderIteratorDepnode" "', argument " "1"" of type '" "const_sibling_iterator< depnode > const &""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< depnode > * >(argp1);
+    result = (const_preorder_iterator< depnode > *)new const_preorder_iterator< depnode >((const_sibling_iterator< depnode > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_5) {
+  {
+    sibling_iterator< depnode > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstPreorderIteratorDepnode(sibling_iterator< depnode > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_sibling_iteratorT_depnode_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstPreorderIteratorDepnode" "', argument " "1"" of type '" "sibling_iterator< depnode > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstPreorderIteratorDepnode" "', argument " "1"" of type '" "sibling_iterator< depnode > const &""'"); 
+    }
+    arg1 = reinterpret_cast< sibling_iterator< depnode > * >(argp1);
+    result = (const_preorder_iterator< depnode > *)new const_preorder_iterator< depnode >((sibling_iterator< depnode > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstPreorderIteratorDepnode) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_preorder_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_5;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 5;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_5:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_6;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 6;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_6:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_2); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_3); return;
+    case 5:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_4); return;
+    case 6:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstPreorderIteratorDepnode__SWIG_5); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_ConstPreorderIteratorDepnode'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_ConstPreorderIteratorDepnode) {
+  {
+    const_preorder_iterator< depnode > *arg1 = (const_preorder_iterator< depnode > *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_PreorderIteratorDepnode(self);");
+      SWIG_croak("Usage: delete_ConstPreorderIteratorDepnode(self);");
     }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_POINTER_DISOWN |  0 );
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_DISOWN |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_PreorderIteratorDepnode" "', argument " "1"" of type '" "preorder_iterator< depnode > *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ConstPreorderIteratorDepnode" "', argument " "1"" of type '" "const_preorder_iterator< depnode > *""'"); 
     }
-    arg1 = reinterpret_cast< preorder_iterator< depnode > * >(argp1);
+    arg1 = reinterpret_cast< const_preorder_iterator< depnode > * >(argp1);
     delete arg1;
     ST(argvi) = sv_newmortal();
     
@@ -9353,6 +16779,282 @@ XS(_wrap_delete_PreorderIteratorDepnode) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_ConstPreorderIteratorDepnode___plusplus____SWIG_0) {
+  {
+    const_preorder_iterator< depnode > *arg1 = (const_preorder_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ConstPreorderIteratorDepnode___plusplus__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstPreorderIteratorDepnode___plusplus__" "', argument " "1"" of type '" "const_preorder_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_preorder_iterator< depnode > * >(argp1);
+    result = (const_preorder_iterator< depnode > *) &(arg1)->operator ++();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstPreorderIteratorDepnode___minmin____SWIG_0) {
+  {
+    const_preorder_iterator< depnode > *arg1 = (const_preorder_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ConstPreorderIteratorDepnode___minmin__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstPreorderIteratorDepnode___minmin__" "', argument " "1"" of type '" "const_preorder_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_preorder_iterator< depnode > * >(argp1);
+    result = (const_preorder_iterator< depnode > *) &(arg1)->operator --();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstPreorderIteratorDepnode___plusplus____SWIG_1) {
+  {
+    const_preorder_iterator< depnode > *arg1 = (const_preorder_iterator< depnode > *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< depnode > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ConstPreorderIteratorDepnode___plusplus__(self,int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstPreorderIteratorDepnode___plusplus__" "', argument " "1"" of type '" "const_preorder_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_preorder_iterator< depnode > * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ConstPreorderIteratorDepnode___plusplus__" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator ++(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new const_preorder_iterator< depnode >(static_cast< const const_preorder_iterator< depnode >& >(result))), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstPreorderIteratorDepnode___plusplus__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstPreorderIteratorDepnode___plusplus____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstPreorderIteratorDepnode___plusplus____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'ConstPreorderIteratorDepnode___plusplus__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_ConstPreorderIteratorDepnode___minmin____SWIG_1) {
+  {
+    const_preorder_iterator< depnode > *arg1 = (const_preorder_iterator< depnode > *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    const_preorder_iterator< depnode > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ConstPreorderIteratorDepnode___minmin__(self,int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstPreorderIteratorDepnode___minmin__" "', argument " "1"" of type '" "const_preorder_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_preorder_iterator< depnode > * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ConstPreorderIteratorDepnode___minmin__" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator --(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new const_preorder_iterator< depnode >(static_cast< const const_preorder_iterator< depnode >& >(result))), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstPreorderIteratorDepnode___minmin__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_preorder_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstPreorderIteratorDepnode___minmin____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstPreorderIteratorDepnode___minmin____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'ConstPreorderIteratorDepnode___minmin__'");
+  XSRETURN(0);
 }
 
 
@@ -9505,7 +17207,34 @@ XS(_wrap_new_SiblingIteratorDepnode) {
 }
 
 
-XS(_wrap_SiblingIteratorDepnode___plusplus__) {
+XS(_wrap_delete_SiblingIteratorDepnode) {
+  {
+    sibling_iterator< depnode > *arg1 = (sibling_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: delete_SiblingIteratorDepnode(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_DISOWN |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SiblingIteratorDepnode" "', argument " "1"" of type '" "sibling_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< sibling_iterator< depnode > * >(argp1);
+    delete arg1;
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_SiblingIteratorDepnode___plusplus____SWIG_0) {
   {
     sibling_iterator< depnode > *arg1 = (sibling_iterator< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -9533,7 +17262,7 @@ XS(_wrap_SiblingIteratorDepnode___plusplus__) {
 }
 
 
-XS(_wrap_SiblingIteratorDepnode___minmin__) {
+XS(_wrap_SiblingIteratorDepnode___minmin____SWIG_0) {
   {
     sibling_iterator< depnode > *arg1 = (sibling_iterator< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -9561,33 +17290,33 @@ XS(_wrap_SiblingIteratorDepnode___minmin__) {
 }
 
 
-XS(_wrap_SiblingIteratorDepnode___iadd__) {
+XS(_wrap_SiblingIteratorDepnode___plusplus____SWIG_1) {
   {
     sibling_iterator< depnode > *arg1 = (sibling_iterator< depnode > *) 0 ;
-    unsigned int arg2 ;
+    int arg2 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    unsigned int val2 ;
+    int val2 ;
     int ecode2 = 0 ;
     int argvi = 0;
-    sibling_iterator< depnode > *result = 0 ;
+    sibling_iterator< depnode > result;
     dXSARGS;
     
     if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SiblingIteratorDepnode___iadd__(self,unsigned int);");
+      SWIG_croak("Usage: SiblingIteratorDepnode___plusplus__(self,int);");
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_depnode_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorDepnode___iadd__" "', argument " "1"" of type '" "sibling_iterator< depnode > *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorDepnode___plusplus__" "', argument " "1"" of type '" "sibling_iterator< depnode > *""'"); 
     }
     arg1 = reinterpret_cast< sibling_iterator< depnode > * >(argp1);
-    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
     if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SiblingIteratorDepnode___iadd__" "', argument " "2"" of type '" "unsigned int""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SiblingIteratorDepnode___plusplus__" "', argument " "2"" of type '" "int""'");
     } 
-    arg2 = static_cast< unsigned int >(val2);
-    result = (sibling_iterator< depnode > *) &(arg1)->operator +=(arg2);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_sibling_iteratorT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator ++(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new sibling_iterator< depnode >(static_cast< const sibling_iterator< depnode >& >(result))), SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
     
     
     XSRETURN(argvi);
@@ -9599,33 +17328,105 @@ XS(_wrap_SiblingIteratorDepnode___iadd__) {
 }
 
 
-XS(_wrap_SiblingIteratorDepnode___isub__) {
+XS(_wrap_SiblingIteratorDepnode___plusplus__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_SiblingIteratorDepnode___plusplus____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_SiblingIteratorDepnode___plusplus____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'SiblingIteratorDepnode___plusplus__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_SiblingIteratorDepnode___minmin____SWIG_1) {
   {
     sibling_iterator< depnode > *arg1 = (sibling_iterator< depnode > *) 0 ;
-    unsigned int arg2 ;
+    int arg2 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    unsigned int val2 ;
+    int val2 ;
     int ecode2 = 0 ;
     int argvi = 0;
-    sibling_iterator< depnode > *result = 0 ;
+    sibling_iterator< depnode > result;
     dXSARGS;
     
     if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: SiblingIteratorDepnode___isub__(self,unsigned int);");
+      SWIG_croak("Usage: SiblingIteratorDepnode___minmin__(self,int);");
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_depnode_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorDepnode___isub__" "', argument " "1"" of type '" "sibling_iterator< depnode > *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "SiblingIteratorDepnode___minmin__" "', argument " "1"" of type '" "sibling_iterator< depnode > *""'"); 
     }
     arg1 = reinterpret_cast< sibling_iterator< depnode > * >(argp1);
-    ecode2 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
     if (!SWIG_IsOK(ecode2)) {
-      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SiblingIteratorDepnode___isub__" "', argument " "2"" of type '" "unsigned int""'");
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "SiblingIteratorDepnode___minmin__" "', argument " "2"" of type '" "int""'");
     } 
-    arg2 = static_cast< unsigned int >(val2);
-    result = (sibling_iterator< depnode > *) &(arg1)->operator -=(arg2);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_sibling_iteratorT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator --(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new sibling_iterator< depnode >(static_cast< const sibling_iterator< depnode >& >(result))), SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
     
     
     XSRETURN(argvi);
@@ -9637,22 +17438,297 @@ XS(_wrap_SiblingIteratorDepnode___isub__) {
 }
 
 
-XS(_wrap_delete_SiblingIteratorDepnode) {
+XS(_wrap_SiblingIteratorDepnode___minmin__) {
+  dXSARGS;
+  
   {
-    sibling_iterator< depnode > *arg1 = (sibling_iterator< depnode > *) 0 ;
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_SiblingIteratorDepnode___minmin____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_SiblingIteratorDepnode___minmin____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'SiblingIteratorDepnode___minmin__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_new_ConstSiblingIteratorDepnode__SWIG_0) {
+  {
+    int argvi = 0;
+    const_sibling_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 0) || (items > 0)) {
+      SWIG_croak("Usage: new_ConstSiblingIteratorDepnode();");
+    }
+    result = (const_sibling_iterator< depnode > *)new const_sibling_iterator< depnode >();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    XSRETURN(argvi);
+  fail:
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstSiblingIteratorDepnode__SWIG_1) {
+  {
+    const_sibling_iterator< depnode > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstSiblingIteratorDepnode(const_sibling_iterator< depnode > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_const_sibling_iteratorT_depnode_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstSiblingIteratorDepnode" "', argument " "1"" of type '" "const_sibling_iterator< depnode > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstSiblingIteratorDepnode" "', argument " "1"" of type '" "const_sibling_iterator< depnode > const &""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< depnode > * >(argp1);
+    result = (const_sibling_iterator< depnode > *)new const_sibling_iterator< depnode >((const_sibling_iterator< depnode > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstSiblingIteratorDepnode__SWIG_2) {
+  {
+    sibling_iterator< depnode > *arg1 = 0 ;
+    void *argp1 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstSiblingIteratorDepnode(sibling_iterator< depnode > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1, SWIGTYPE_p_sibling_iteratorT_depnode_t,  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstSiblingIteratorDepnode" "', argument " "1"" of type '" "sibling_iterator< depnode > const &""'"); 
+    }
+    if (!argp1) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "new_ConstSiblingIteratorDepnode" "', argument " "1"" of type '" "sibling_iterator< depnode > const &""'"); 
+    }
+    arg1 = reinterpret_cast< sibling_iterator< depnode > * >(argp1);
+    result = (const_sibling_iterator< depnode > *)new const_sibling_iterator< depnode >((sibling_iterator< depnode > const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstSiblingIteratorDepnode__SWIG_3) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: new_ConstSiblingIteratorDepnode(tree< depnode > *);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "new_ConstSiblingIteratorDepnode" "', argument " "1"" of type '" "tree< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = (const_sibling_iterator< depnode > *)new const_sibling_iterator< depnode >(arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_ConstSiblingIteratorDepnode) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 0) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstSiblingIteratorDepnode__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstSiblingIteratorDepnode__SWIG_1); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstSiblingIteratorDepnode__SWIG_2); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_ConstSiblingIteratorDepnode__SWIG_3); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_ConstSiblingIteratorDepnode'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_delete_ConstSiblingIteratorDepnode) {
+  {
+    const_sibling_iterator< depnode > *arg1 = (const_sibling_iterator< depnode > *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_SiblingIteratorDepnode(self);");
+      SWIG_croak("Usage: delete_ConstSiblingIteratorDepnode(self);");
     }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_DISOWN |  0 );
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_DISOWN |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_SiblingIteratorDepnode" "', argument " "1"" of type '" "sibling_iterator< depnode > *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ConstSiblingIteratorDepnode" "', argument " "1"" of type '" "const_sibling_iterator< depnode > *""'"); 
     }
-    arg1 = reinterpret_cast< sibling_iterator< depnode > * >(argp1);
+    arg1 = reinterpret_cast< const_sibling_iterator< depnode > * >(argp1);
     delete arg1;
     ST(argvi) = sv_newmortal();
     
@@ -9661,6 +17737,282 @@ XS(_wrap_delete_SiblingIteratorDepnode) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_ConstSiblingIteratorDepnode___plusplus____SWIG_0) {
+  {
+    const_sibling_iterator< depnode > *arg1 = (const_sibling_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ConstSiblingIteratorDepnode___plusplus__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstSiblingIteratorDepnode___plusplus__" "', argument " "1"" of type '" "const_sibling_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< depnode > * >(argp1);
+    result = (const_sibling_iterator< depnode > *) &(arg1)->operator ++();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstSiblingIteratorDepnode___minmin____SWIG_0) {
+  {
+    const_sibling_iterator< depnode > *arg1 = (const_sibling_iterator< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: ConstSiblingIteratorDepnode___minmin__(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstSiblingIteratorDepnode___minmin__" "', argument " "1"" of type '" "const_sibling_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< depnode > * >(argp1);
+    result = (const_sibling_iterator< depnode > *) &(arg1)->operator --();
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstSiblingIteratorDepnode___plusplus____SWIG_1) {
+  {
+    const_sibling_iterator< depnode > *arg1 = (const_sibling_iterator< depnode > *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< depnode > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ConstSiblingIteratorDepnode___plusplus__(self,int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstSiblingIteratorDepnode___plusplus__" "', argument " "1"" of type '" "const_sibling_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< depnode > * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ConstSiblingIteratorDepnode___plusplus__" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator ++(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new const_sibling_iterator< depnode >(static_cast< const const_sibling_iterator< depnode >& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstSiblingIteratorDepnode___plusplus__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstSiblingIteratorDepnode___plusplus____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstSiblingIteratorDepnode___plusplus____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'ConstSiblingIteratorDepnode___plusplus__'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_ConstSiblingIteratorDepnode___minmin____SWIG_1) {
+  {
+    const_sibling_iterator< depnode > *arg1 = (const_sibling_iterator< depnode > *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    const_sibling_iterator< depnode > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: ConstSiblingIteratorDepnode___minmin__(self,int);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ConstSiblingIteratorDepnode___minmin__" "', argument " "1"" of type '" "const_sibling_iterator< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< const_sibling_iterator< depnode > * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "ConstSiblingIteratorDepnode___minmin__" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->operator --(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new const_sibling_iterator< depnode >(static_cast< const const_sibling_iterator< depnode >& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_ConstSiblingIteratorDepnode___minmin__) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_const_sibling_iteratorT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstSiblingIteratorDepnode___minmin____SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_ConstSiblingIteratorDepnode___minmin____SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'ConstSiblingIteratorDepnode___minmin__'");
+  XSRETURN(0);
 }
 
 
@@ -9962,6 +18314,47 @@ XS(_wrap_delete_TreeNode) {
 }
 
 
+XS(_wrap_TreeNode_operator_assignment) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    tree< node > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    tree< node > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeNode_operator_assignment(self,tree< node > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_operator_assignment" "', argument " "1"" of type '" "tree< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_treeT_node_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeNode_operator_assignment" "', argument " "2"" of type '" "tree< node > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeNode_operator_assignment" "', argument " "2"" of type '" "tree< node > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree< node > * >(argp2);
+    result = (tree< node > *) &(arg1)->operator =((tree< node > const &)*arg2);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_node_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
 XS(_wrap_TreeNode_num_children) {
   {
     tree< node > *arg1 = (tree< node > *) 0 ;
@@ -10022,6 +18415,34 @@ XS(_wrap_TreeNode_nth_child) {
     XSRETURN(argvi);
   fail:
     
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeNode_get_parent) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeNode_get_parent(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_get_parent" "', argument " "1"" of type '" "tree< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = ((tree< node > const *)arg1)->get_parent();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::iterator(static_cast< const tree< node >::iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
     
     SWIG_croak_null();
   }
@@ -10134,7 +18555,57 @@ XS(_wrap_TreeNode_append_child) {
 }
 
 
-XS(_wrap_TreeNode_hang_child) {
+XS(_wrap_TreeNode_hang_child__SWIG_0) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    tree< node > *arg2 = 0 ;
+    bool arg3 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    bool val3 ;
+    int ecode3 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: TreeNode_hang_child(self,tree< node > &,bool);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_hang_child" "', argument " "1"" of type '" "tree< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_treeT_node_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeNode_hang_child" "', argument " "2"" of type '" "tree< node > &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeNode_hang_child" "', argument " "2"" of type '" "tree< node > &""'"); 
+    }
+    arg2 = reinterpret_cast< tree< node > * >(argp2);
+    ecode3 = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TreeNode_hang_child" "', argument " "3"" of type '" "bool""'");
+    } 
+    arg3 = static_cast< bool >(val3);
+    (arg1)->hang_child(*arg2,arg3);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeNode_hang_child__SWIG_1) {
   {
     tree< node > *arg1 = (tree< node > *) 0 ;
     tree< node > *arg2 = 0 ;
@@ -10171,6 +18642,96 @@ XS(_wrap_TreeNode_hang_child) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_TreeNode_hang_child) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 3) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_hang_child__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_hang_child__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeNode_hang_child'");
+  XSRETURN(0);
 }
 
 
@@ -10229,7 +18790,7 @@ XS(_wrap_TreeNode_empty) {
 }
 
 
-XS(_wrap_TreeNode_sibling_begin) {
+XS(_wrap_TreeNode_sibling_begin__SWIG_0) {
   {
     tree< node > *arg1 = (tree< node > *) 0 ;
     void *argp1 = 0 ;
@@ -10257,7 +18818,97 @@ XS(_wrap_TreeNode_sibling_begin) {
 }
 
 
-XS(_wrap_TreeNode_sibling_end) {
+XS(_wrap_TreeNode_sibling_begin__SWIG_1) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeNode_sibling_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_sibling_begin" "', argument " "1"" of type '" "tree< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = ((tree< node > const *)arg1)->sibling_begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeNode_sibling_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_sibling_begin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_sibling_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeNode_sibling_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeNode_sibling_end__SWIG_0) {
   {
     tree< node > *arg1 = (tree< node > *) 0 ;
     void *argp1 = 0 ;
@@ -10271,10 +18922,10 @@ XS(_wrap_TreeNode_sibling_end) {
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_sibling_end" "', argument " "1"" of type '" "tree< node > const *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_sibling_end" "', argument " "1"" of type '" "tree< node > *""'"); 
     }
     arg1 = reinterpret_cast< tree< node > * >(argp1);
-    result = ((tree< node > const *)arg1)->sibling_end();
+    result = (arg1)->sibling_end();
     ST(argvi) = SWIG_NewPointerObj((new tree< node >::sibling_iterator(static_cast< const tree< node >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
@@ -10285,7 +18936,333 @@ XS(_wrap_TreeNode_sibling_end) {
 }
 
 
-XS(_wrap_TreeNode_begin) {
+XS(_wrap_TreeNode_sibling_end__SWIG_1) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeNode_sibling_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_sibling_end" "', argument " "1"" of type '" "tree< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = ((tree< node > const *)arg1)->sibling_end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeNode_sibling_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_sibling_end__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_sibling_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeNode_sibling_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeNode_sibling_rbegin__SWIG_0) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeNode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_sibling_rbegin" "', argument " "1"" of type '" "tree< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = (arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::sibling_iterator(static_cast< const tree< node >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeNode_sibling_rbegin__SWIG_1) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeNode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_sibling_rbegin" "', argument " "1"" of type '" "tree< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = ((tree< node > const *)arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeNode_sibling_rbegin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_sibling_rbegin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_sibling_rbegin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeNode_sibling_rbegin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeNode_sibling_rend__SWIG_0) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeNode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_sibling_rend" "', argument " "1"" of type '" "tree< node > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = (arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::sibling_iterator(static_cast< const tree< node >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeNode_sibling_rend__SWIG_1) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeNode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_sibling_rend" "', argument " "1"" of type '" "tree< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = ((tree< node > const *)arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_sibling_iterator(static_cast< const tree< node >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeNode_sibling_rend) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_sibling_rend__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_sibling_rend__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeNode_sibling_rend'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeNode_begin__SWIG_0) {
   {
     tree< node > *arg1 = (tree< node > *) 0 ;
     void *argp1 = 0 ;
@@ -10313,7 +19290,97 @@ XS(_wrap_TreeNode_begin) {
 }
 
 
-XS(_wrap_TreeNode_end) {
+XS(_wrap_TreeNode_begin__SWIG_1) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeNode_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_begin" "', argument " "1"" of type '" "tree< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = ((tree< node > const *)arg1)->begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_preorder_iterator(static_cast< const tree< node >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeNode_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_begin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeNode_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeNode_end__SWIG_0) {
   {
     tree< node > *arg1 = (tree< node > *) 0 ;
     void *argp1 = 0 ;
@@ -10327,10 +19394,10 @@ XS(_wrap_TreeNode_end) {
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_end" "', argument " "1"" of type '" "tree< node > const *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_end" "', argument " "1"" of type '" "tree< node > *""'"); 
     }
     arg1 = reinterpret_cast< tree< node > * >(argp1);
-    result = ((tree< node > const *)arg1)->end();
+    result = (arg1)->end();
     ST(argvi) = SWIG_NewPointerObj((new tree< node >::preorder_iterator(static_cast< const tree< node >::preorder_iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
@@ -10338,6 +19405,96 @@ XS(_wrap_TreeNode_end) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_TreeNode_end__SWIG_1) {
+  {
+    tree< node > *arg1 = (tree< node > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< node >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeNode_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_node_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeNode_end" "', argument " "1"" of type '" "tree< node > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< node > * >(argp1);
+    result = ((tree< node > const *)arg1)->end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< node >::const_preorder_iterator(static_cast< const tree< node >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_node_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeNode_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_node_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_end__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeNode_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeNode_end'");
+  XSRETURN(0);
 }
 
 
@@ -10639,6 +19796,47 @@ XS(_wrap_delete_TreeDepnode) {
 }
 
 
+XS(_wrap_TreeDepnode_operator_assignment) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    tree< depnode > *arg2 = 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int argvi = 0;
+    tree< depnode > *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: TreeDepnode_operator_assignment(self,tree< depnode > const &);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_operator_assignment" "', argument " "1"" of type '" "tree< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_treeT_depnode_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeDepnode_operator_assignment" "', argument " "2"" of type '" "tree< depnode > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeDepnode_operator_assignment" "', argument " "2"" of type '" "tree< depnode > const &""'"); 
+    }
+    arg2 = reinterpret_cast< tree< depnode > * >(argp2);
+    result = (tree< depnode > *) &(arg1)->operator =((tree< depnode > const &)*arg2);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_treeT_depnode_t, 0 | SWIG_SHADOW); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
 XS(_wrap_TreeDepnode_num_children) {
   {
     tree< depnode > *arg1 = (tree< depnode > *) 0 ;
@@ -10699,6 +19897,34 @@ XS(_wrap_TreeDepnode_nth_child) {
     XSRETURN(argvi);
   fail:
     
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeDepnode_get_parent) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeDepnode_get_parent(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_get_parent" "', argument " "1"" of type '" "tree< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = ((tree< depnode > const *)arg1)->get_parent();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::iterator(static_cast< const tree< depnode >::iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
     
     SWIG_croak_null();
   }
@@ -10811,7 +20037,57 @@ XS(_wrap_TreeDepnode_append_child) {
 }
 
 
-XS(_wrap_TreeDepnode_hang_child) {
+XS(_wrap_TreeDepnode_hang_child__SWIG_0) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    tree< depnode > *arg2 = 0 ;
+    bool arg3 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 = 0 ;
+    int res2 = 0 ;
+    bool val3 ;
+    int ecode3 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: TreeDepnode_hang_child(self,tree< depnode > &,bool);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_hang_child" "', argument " "1"" of type '" "tree< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_treeT_depnode_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "TreeDepnode_hang_child" "', argument " "2"" of type '" "tree< depnode > &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "TreeDepnode_hang_child" "', argument " "2"" of type '" "tree< depnode > &""'"); 
+    }
+    arg2 = reinterpret_cast< tree< depnode > * >(argp2);
+    ecode3 = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "TreeDepnode_hang_child" "', argument " "3"" of type '" "bool""'");
+    } 
+    arg3 = static_cast< bool >(val3);
+    (arg1)->hang_child(*arg2,arg3);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeDepnode_hang_child__SWIG_1) {
   {
     tree< depnode > *arg1 = (tree< depnode > *) 0 ;
     tree< depnode > *arg2 = 0 ;
@@ -10848,6 +20124,96 @@ XS(_wrap_TreeDepnode_hang_child) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_TreeDepnode_hang_child) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 3) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_hang_child__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_hang_child__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeDepnode_hang_child'");
+  XSRETURN(0);
 }
 
 
@@ -10906,7 +20272,7 @@ XS(_wrap_TreeDepnode_empty) {
 }
 
 
-XS(_wrap_TreeDepnode_sibling_begin) {
+XS(_wrap_TreeDepnode_sibling_begin__SWIG_0) {
   {
     tree< depnode > *arg1 = (tree< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -10934,7 +20300,97 @@ XS(_wrap_TreeDepnode_sibling_begin) {
 }
 
 
-XS(_wrap_TreeDepnode_sibling_end) {
+XS(_wrap_TreeDepnode_sibling_begin__SWIG_1) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeDepnode_sibling_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_sibling_begin" "', argument " "1"" of type '" "tree< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = ((tree< depnode > const *)arg1)->sibling_begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeDepnode_sibling_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_sibling_begin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_sibling_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeDepnode_sibling_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeDepnode_sibling_end__SWIG_0) {
   {
     tree< depnode > *arg1 = (tree< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -10948,10 +20404,10 @@ XS(_wrap_TreeDepnode_sibling_end) {
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_sibling_end" "', argument " "1"" of type '" "tree< depnode > const *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_sibling_end" "', argument " "1"" of type '" "tree< depnode > *""'"); 
     }
     arg1 = reinterpret_cast< tree< depnode > * >(argp1);
-    result = ((tree< depnode > const *)arg1)->sibling_end();
+    result = (arg1)->sibling_end();
     ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::sibling_iterator(static_cast< const tree< depnode >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
@@ -10962,7 +20418,333 @@ XS(_wrap_TreeDepnode_sibling_end) {
 }
 
 
-XS(_wrap_TreeDepnode_begin) {
+XS(_wrap_TreeDepnode_sibling_end__SWIG_1) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeDepnode_sibling_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_sibling_end" "', argument " "1"" of type '" "tree< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = ((tree< depnode > const *)arg1)->sibling_end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeDepnode_sibling_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_sibling_end__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_sibling_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeDepnode_sibling_end'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeDepnode_sibling_rbegin__SWIG_0) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeDepnode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_sibling_rbegin" "', argument " "1"" of type '" "tree< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = (arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::sibling_iterator(static_cast< const tree< depnode >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeDepnode_sibling_rbegin__SWIG_1) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeDepnode_sibling_rbegin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_sibling_rbegin" "', argument " "1"" of type '" "tree< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = ((tree< depnode > const *)arg1)->sibling_rbegin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeDepnode_sibling_rbegin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_sibling_rbegin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_sibling_rbegin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeDepnode_sibling_rbegin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeDepnode_sibling_rend__SWIG_0) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeDepnode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_sibling_rend" "', argument " "1"" of type '" "tree< depnode > *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = (arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::sibling_iterator(static_cast< const tree< depnode >::sibling_iterator& >(result))), SWIGTYPE_p_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeDepnode_sibling_rend__SWIG_1) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_sibling_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeDepnode_sibling_rend(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_sibling_rend" "', argument " "1"" of type '" "tree< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = ((tree< depnode > const *)arg1)->sibling_rend();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_sibling_iterator(static_cast< const tree< depnode >::const_sibling_iterator& >(result))), SWIGTYPE_p_const_sibling_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeDepnode_sibling_rend) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_sibling_rend__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_sibling_rend__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeDepnode_sibling_rend'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeDepnode_begin__SWIG_0) {
   {
     tree< depnode > *arg1 = (tree< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -10990,7 +20772,97 @@ XS(_wrap_TreeDepnode_begin) {
 }
 
 
-XS(_wrap_TreeDepnode_end) {
+XS(_wrap_TreeDepnode_begin__SWIG_1) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeDepnode_begin(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_begin" "', argument " "1"" of type '" "tree< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = ((tree< depnode > const *)arg1)->begin();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_preorder_iterator(static_cast< const tree< depnode >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeDepnode_begin) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_begin__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_begin__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeDepnode_begin'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_TreeDepnode_end__SWIG_0) {
   {
     tree< depnode > *arg1 = (tree< depnode > *) 0 ;
     void *argp1 = 0 ;
@@ -11004,10 +20876,10 @@ XS(_wrap_TreeDepnode_end) {
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_end" "', argument " "1"" of type '" "tree< depnode > const *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_end" "', argument " "1"" of type '" "tree< depnode > *""'"); 
     }
     arg1 = reinterpret_cast< tree< depnode > * >(argp1);
-    result = ((tree< depnode > const *)arg1)->end();
+    result = (arg1)->end();
     ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::preorder_iterator(static_cast< const tree< depnode >::preorder_iterator& >(result))), SWIGTYPE_p_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
@@ -11015,6 +20887,96 @@ XS(_wrap_TreeDepnode_end) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_TreeDepnode_end__SWIG_1) {
+  {
+    tree< depnode > *arg1 = (tree< depnode > *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    tree< depnode >::const_preorder_iterator result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: TreeDepnode_end(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_treeT_depnode_t, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "TreeDepnode_end" "', argument " "1"" of type '" "tree< depnode > const *""'"); 
+    }
+    arg1 = reinterpret_cast< tree< depnode > * >(argp1);
+    result = ((tree< depnode > const *)arg1)->end();
+    ST(argvi) = SWIG_NewPointerObj((new tree< depnode >::const_preorder_iterator(static_cast< const tree< depnode >::const_preorder_iterator& >(result))), SWIGTYPE_p_const_preorder_iteratorT_depnode_t, SWIG_POINTER_OWN | SWIG_SHADOW); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_TreeDepnode_end) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_treeT_depnode_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_end__SWIG_0); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_TreeDepnode_end__SWIG_1); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'TreeDepnode_end'");
+  XSRETURN(0);
 }
 
 
@@ -12024,6 +21986,416 @@ XS(_wrap_analysis___eq__) {
 }
 
 
+XS(_wrap_analysis_is_selected__SWIG_0) {
+  {
+    analysis *arg1 = (analysis *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: analysis_is_selected(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_analysis, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "analysis_is_selected" "', argument " "1"" of type '" "analysis const *""'"); 
+    }
+    arg1 = reinterpret_cast< analysis * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "analysis_is_selected" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (bool)((analysis const *)arg1)->is_selected(arg2);
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_analysis_is_selected__SWIG_1) {
+  {
+    analysis *arg1 = (analysis *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    bool result;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: analysis_is_selected(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_analysis, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "analysis_is_selected" "', argument " "1"" of type '" "analysis const *""'"); 
+    }
+    arg1 = reinterpret_cast< analysis * >(argp1);
+    result = (bool)((analysis const *)arg1)->is_selected();
+    ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_analysis_is_selected) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_analysis, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_analysis, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_analysis_is_selected__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_analysis_is_selected__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'analysis_is_selected'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_analysis_mark_selected__SWIG_0) {
+  {
+    analysis *arg1 = (analysis *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: analysis_mark_selected(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_analysis, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "analysis_mark_selected" "', argument " "1"" of type '" "analysis *""'"); 
+    }
+    arg1 = reinterpret_cast< analysis * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "analysis_mark_selected" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    (arg1)->mark_selected(arg2);
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_analysis_mark_selected__SWIG_1) {
+  {
+    analysis *arg1 = (analysis *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: analysis_mark_selected(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_analysis, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "analysis_mark_selected" "', argument " "1"" of type '" "analysis *""'"); 
+    }
+    arg1 = reinterpret_cast< analysis * >(argp1);
+    (arg1)->mark_selected();
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_analysis_mark_selected) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_analysis, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_analysis, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_analysis_mark_selected__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_analysis_mark_selected__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'analysis_mark_selected'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_analysis_unmark_selected__SWIG_0) {
+  {
+    analysis *arg1 = (analysis *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: analysis_unmark_selected(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_analysis, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "analysis_unmark_selected" "', argument " "1"" of type '" "analysis *""'"); 
+    }
+    arg1 = reinterpret_cast< analysis * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "analysis_unmark_selected" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    (arg1)->unmark_selected(arg2);
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_analysis_unmark_selected__SWIG_1) {
+  {
+    analysis *arg1 = (analysis *) 0 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 1) || (items > 1)) {
+      SWIG_croak("Usage: analysis_unmark_selected(self);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_analysis, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "analysis_unmark_selected" "', argument " "1"" of type '" "analysis *""'"); 
+    }
+    arg1 = reinterpret_cast< analysis * >(argp1);
+    (arg1)->unmark_selected();
+    ST(argvi) = sv_newmortal();
+    
+    XSRETURN(argvi);
+  fail:
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_analysis_unmark_selected) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_analysis, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_analysis, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_analysis_unmark_selected__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_analysis_unmark_selected__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'analysis_unmark_selected'");
+  XSRETURN(0);
+}
+
+
 XS(_wrap_delete_analysis) {
   {
     analysis *arg1 = (analysis *) 0 ;
@@ -12885,6 +23257,44 @@ XS(_wrap_word_get_lc_form) {
 XS(_wrap_word_selected_begin__SWIG_0) {
   {
     word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    word::iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_selected_begin(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_selected_begin" "', argument " "1"" of type '" "word *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_selected_begin" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->selected_begin(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new word::iterator(static_cast< const word::iterator& >(result))), SWIGTYPE_p_word__iterator, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_selected_begin__SWIG_1) {
+  {
+    word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
@@ -12910,7 +23320,45 @@ XS(_wrap_word_selected_begin__SWIG_0) {
 }
 
 
-XS(_wrap_word_selected_begin__SWIG_1) {
+XS(_wrap_word_selected_begin__SWIG_2) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    word::const_iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_selected_begin(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_selected_begin" "', argument " "1"" of type '" "word const *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_selected_begin" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = ((word const *)arg1)->selected_begin(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new word::const_iterator(static_cast< const word::const_iterator& >(result))), SWIGTYPE_p_word__const_iterator, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_selected_begin__SWIG_3) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -12986,12 +23434,78 @@ XS(_wrap_word_selected_begin) {
     }
   check_2:
     
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
   dispatch:
     switch(_index) {
     case 1:
-      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_selected_begin__SWIG_0); return;
-    case 2:
       ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_selected_begin__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_selected_begin__SWIG_3); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_selected_begin__SWIG_0); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_selected_begin__SWIG_2); return;
     }
   }
   
@@ -13001,6 +23515,44 @@ XS(_wrap_word_selected_begin) {
 
 
 XS(_wrap_word_selected_end__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    word::iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_selected_end(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_selected_end" "', argument " "1"" of type '" "word *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_selected_end" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->selected_end(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new word::iterator(static_cast< const word::iterator& >(result))), SWIGTYPE_p_word__iterator, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_selected_end__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13028,7 +23580,45 @@ XS(_wrap_word_selected_end__SWIG_0) {
 }
 
 
-XS(_wrap_word_selected_end__SWIG_1) {
+XS(_wrap_word_selected_end__SWIG_2) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    word::const_iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_selected_end(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_selected_end" "', argument " "1"" of type '" "word const *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_selected_end" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = ((word const *)arg1)->selected_end(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new word::const_iterator(static_cast< const word::const_iterator& >(result))), SWIGTYPE_p_word__const_iterator, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_selected_end__SWIG_3) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13104,12 +23694,78 @@ XS(_wrap_word_selected_end) {
     }
   check_2:
     
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
   dispatch:
     switch(_index) {
     case 1:
-      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_selected_end__SWIG_0); return;
-    case 2:
       ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_selected_end__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_selected_end__SWIG_3); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_selected_end__SWIG_0); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_selected_end__SWIG_2); return;
     }
   }
   
@@ -13119,6 +23775,44 @@ XS(_wrap_word_selected_end) {
 
 
 XS(_wrap_word_unselected_begin__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    word::iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_unselected_begin(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_unselected_begin" "', argument " "1"" of type '" "word *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_unselected_begin" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->unselected_begin(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new word::iterator(static_cast< const word::iterator& >(result))), SWIGTYPE_p_word__iterator, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_unselected_begin__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13146,7 +23840,45 @@ XS(_wrap_word_unselected_begin__SWIG_0) {
 }
 
 
-XS(_wrap_word_unselected_begin__SWIG_1) {
+XS(_wrap_word_unselected_begin__SWIG_2) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    word::const_iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_unselected_begin(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_unselected_begin" "', argument " "1"" of type '" "word const *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_unselected_begin" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = ((word const *)arg1)->unselected_begin(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new word::const_iterator(static_cast< const word::const_iterator& >(result))), SWIGTYPE_p_word__const_iterator, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_unselected_begin__SWIG_3) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13222,12 +23954,78 @@ XS(_wrap_word_unselected_begin) {
     }
   check_2:
     
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
   dispatch:
     switch(_index) {
     case 1:
-      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselected_begin__SWIG_0); return;
-    case 2:
       ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselected_begin__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselected_begin__SWIG_3); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselected_begin__SWIG_0); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselected_begin__SWIG_2); return;
     }
   }
   
@@ -13237,6 +24035,44 @@ XS(_wrap_word_unselected_begin) {
 
 
 XS(_wrap_word_unselected_end__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    word::iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_unselected_end(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_unselected_end" "', argument " "1"" of type '" "word *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_unselected_end" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = (arg1)->unselected_end(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new word::iterator(static_cast< const word::iterator& >(result))), SWIGTYPE_p_word__iterator, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_unselected_end__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13264,7 +24100,45 @@ XS(_wrap_word_unselected_end__SWIG_0) {
 }
 
 
-XS(_wrap_word_unselected_end__SWIG_1) {
+XS(_wrap_word_unselected_end__SWIG_2) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    word::const_iterator result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_unselected_end(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_unselected_end" "', argument " "1"" of type '" "word const *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_unselected_end" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = ((word const *)arg1)->unselected_end(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new word::const_iterator(static_cast< const word::const_iterator& >(result))), SWIGTYPE_p_word__const_iterator, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_unselected_end__SWIG_3) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13340,12 +24214,78 @@ XS(_wrap_word_unselected_end) {
     }
   check_2:
     
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
   dispatch:
     switch(_index) {
     case 1:
-      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselected_end__SWIG_0); return;
-    case 2:
       ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselected_end__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselected_end__SWIG_3); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselected_end__SWIG_0); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselected_end__SWIG_2); return;
     }
   }
   
@@ -13354,7 +24294,51 @@ XS(_wrap_word_unselected_end) {
 }
 
 
-XS(_wrap_word_get_lemma) {
+XS(_wrap_word_get_lemma__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    std::wstring result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_get_lemma(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_get_lemma" "', argument " "1"" of type '" "word const *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_get_lemma" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = ((word const *)arg1)->get_lemma(arg2);
+    {
+      std::string temp;
+      temp = util::wstring2string(result);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
+      argvi++;
+      SvUTF8_on (ST(argvi));
+    }
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_get_lemma__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13388,7 +24372,123 @@ XS(_wrap_word_get_lemma) {
 }
 
 
-XS(_wrap_word_get_tag) {
+XS(_wrap_word_get_lemma) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_lemma__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_lemma__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'word_get_lemma'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_word_get_tag__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    std::wstring result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_get_tag(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_get_tag" "', argument " "1"" of type '" "word const *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_get_tag" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = ((word const *)arg1)->get_tag(arg2);
+    {
+      std::string temp;
+      temp = util::wstring2string(result);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
+      argvi++;
+      SvUTF8_on (ST(argvi));
+    }
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_get_tag__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13422,7 +24522,123 @@ XS(_wrap_word_get_tag) {
 }
 
 
+XS(_wrap_word_get_tag) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_tag__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_tag__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'word_get_tag'");
+  XSRETURN(0);
+}
+
+
 XS(_wrap_word_get_short_tag__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    std::wstring result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_get_short_tag(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_get_short_tag" "', argument " "1"" of type '" "word const *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_get_short_tag" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = ((word const *)arg1)->get_short_tag(arg2);
+    {
+      std::string temp;
+      temp = util::wstring2string(result);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
+      argvi++;
+      SvUTF8_on (ST(argvi));
+    }
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_get_short_tag__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13456,7 +24672,60 @@ XS(_wrap_word_get_short_tag__SWIG_0) {
 }
 
 
-XS(_wrap_word_get_short_tag__SWIG_1) {
+XS(_wrap_word_get_short_tag__SWIG_2) {
+  {
+    word *arg1 = (word *) 0 ;
+    std::wstring *arg2 = 0 ;
+    int arg3 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    std::wstring wtemp2 ;
+    int val3 ;
+    int ecode3 = 0 ;
+    int argvi = 0;
+    std::wstring result;
+    dXSARGS;
+    
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: word_get_short_tag(self,std::wstring const &,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_get_short_tag" "', argument " "1"" of type '" "word const *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    {
+      std::string aux (SvPV(ST(1), PL_na));
+      wtemp2 = util::string2wstring(aux);
+      arg2 = &wtemp2;
+    }
+    ecode3 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "word_get_short_tag" "', argument " "3"" of type '" "int""'");
+    } 
+    arg3 = static_cast< int >(val3);
+    result = ((word const *)arg1)->get_short_tag((std::wstring const &)*arg2,arg3);
+    {
+      std::string temp;
+      temp = util::wstring2string(result);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
+      argvi++;
+      SvUTF8_on (ST(argvi));
+    }
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_get_short_tag__SWIG_3) {
   {
     word *arg1 = (word *) 0 ;
     std::wstring *arg2 = 0 ;
@@ -13541,8 +24810,10 @@ XS(_wrap_word_get_short_tag) {
       _rankm += _pi;
       _pi *= SWIG_MAXCASTRANK;
       {
-        int res = SWIG_AsCharPtrAndSize(ST(1), 0, NULL, 0);
-        _v = SWIG_CheckState(res);
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
       }
       if (!_v) goto check_2;
       _ranki += _v*_pi;
@@ -13555,12 +24826,84 @@ XS(_wrap_word_get_short_tag) {
     }
   check_2:
     
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        int res = SWIG_AsCharPtrAndSize(ST(1), 0, NULL, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_3;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 3;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_3:
+    
+    if (items == 3) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        int res = SWIG_AsCharPtrAndSize(ST(1), 0, NULL, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_4;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 4;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_4:
+    
   dispatch:
     switch(_index) {
     case 1:
-      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_short_tag__SWIG_0); return;
-    case 2:
       ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_short_tag__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_short_tag__SWIG_0); return;
+    case 3:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_short_tag__SWIG_3); return;
+    case 4:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_short_tag__SWIG_2); return;
     }
   }
   
@@ -13569,7 +24912,45 @@ XS(_wrap_word_get_short_tag) {
 }
 
 
-XS(_wrap_word_get_senses) {
+XS(_wrap_word_get_senses__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    SwigValueWrapper< std::list< std::pair< std::wstring,double > > > result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_get_senses(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_get_senses" "', argument " "1"" of type '" "word const *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_get_senses" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = ((word const *)arg1)->get_senses(arg2);
+    ST(argvi) = SWIG_NewPointerObj((new std::list< std::pair< std::wstring,double > >(static_cast< const std::list< std::pair< std::wstring,double > >& >(result))), SWIGTYPE_p_std__listT_std__pairT_std__wstring_double_t_t, SWIG_POINTER_OWN | 0); argvi++ ;
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_get_senses__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13597,7 +24978,123 @@ XS(_wrap_word_get_senses) {
 }
 
 
-XS(_wrap_word_get_senses_string) {
+XS(_wrap_word_get_senses) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_senses__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_senses__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'word_get_senses'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_word_get_senses_string__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    std::wstring result;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_get_senses_string(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_get_senses_string" "', argument " "1"" of type '" "word const *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_get_senses_string" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    result = ((word const *)arg1)->get_senses_string(arg2);
+    {
+      std::string temp;
+      temp = util::wstring2string(result);
+      ST(argvi) = sv_2mortal(newSVpv(temp.c_str(), 0));
+      argvi++;
+      SvUTF8_on (ST(argvi));
+    }
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_get_senses_string__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -13631,7 +25128,129 @@ XS(_wrap_word_get_senses_string) {
 }
 
 
-XS(_wrap_word_set_senses) {
+XS(_wrap_word_get_senses_string) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_senses_string__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_get_senses_string__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'word_get_senses_string'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_word_set_senses__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    std::list< std::pair< std::wstring,double > > *arg2 = 0 ;
+    int arg3 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int val3 ;
+    int ecode3 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: word_set_senses(self,std::list< std::pair< std::wstring,double > > const &,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_set_senses" "', argument " "1"" of type '" "word *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_std__listT_std__pairT_std__wstring_double_t_t,  0 );
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "word_set_senses" "', argument " "2"" of type '" "std::list< std::pair< std::wstring,double > > const &""'"); 
+    }
+    if (!argp2) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "word_set_senses" "', argument " "2"" of type '" "std::list< std::pair< std::wstring,double > > const &""'"); 
+    }
+    arg2 = reinterpret_cast< std::list< std::pair< std::wstring,double > > * >(argp2);
+    ecode3 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "word_set_senses" "', argument " "3"" of type '" "int""'");
+    } 
+    arg3 = static_cast< int >(val3);
+    (arg1)->set_senses((std::list< std::pair< std::wstring,double > > const &)*arg2,arg3);
+    ST(argvi) = sv_newmortal();
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_set_senses__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     std::list< std::pair< std::wstring,double > > *arg2 = 0 ;
@@ -13668,6 +25287,96 @@ XS(_wrap_word_set_senses) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_word_set_senses) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_std__listT_std__pairT_std__wstring_double_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 3) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_std__listT_std__pairT_std__wstring_double_t_t, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_set_senses__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_set_senses__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'word_set_senses'");
+  XSRETURN(0);
 }
 
 
@@ -14479,7 +26188,44 @@ XS(_wrap_word_get_n_analysis) {
 }
 
 
-XS(_wrap_word_unselect_all_analysis) {
+XS(_wrap_word_unselect_all_analysis__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_unselect_all_analysis(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_unselect_all_analysis" "', argument " "1"" of type '" "word *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_unselect_all_analysis" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    (arg1)->unselect_all_analysis(arg2);
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_unselect_all_analysis__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -14506,7 +26252,116 @@ XS(_wrap_word_unselect_all_analysis) {
 }
 
 
-XS(_wrap_word_select_all_analysis) {
+XS(_wrap_word_unselect_all_analysis) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselect_all_analysis__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselect_all_analysis__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'word_unselect_all_analysis'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_word_select_all_analysis__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    int arg2 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    int val2 ;
+    int ecode2 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 2) || (items > 2)) {
+      SWIG_croak("Usage: word_select_all_analysis(self,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_select_all_analysis" "', argument " "1"" of type '" "word *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    ecode2 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), &val2);
+    if (!SWIG_IsOK(ecode2)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "word_select_all_analysis" "', argument " "2"" of type '" "int""'");
+    } 
+    arg2 = static_cast< int >(val2);
+    (arg1)->select_all_analysis(arg2);
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_select_all_analysis__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     void *argp1 = 0 ;
@@ -14533,7 +26388,130 @@ XS(_wrap_word_select_all_analysis) {
 }
 
 
-XS(_wrap_word_select_analysis) {
+XS(_wrap_word_select_all_analysis) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 1) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(1), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_select_all_analysis__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_select_all_analysis__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'word_select_all_analysis'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_word_select_analysis__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    word::iterator arg2 ;
+    int arg3 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int val3 ;
+    int ecode3 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: word_select_analysis(self,word::iterator,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_select_analysis" "', argument " "1"" of type '" "word *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_word__iterator,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "word_select_analysis" "', argument " "2"" of type '" "word::iterator""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "word_select_analysis" "', argument " "2"" of type '" "word::iterator""'");
+      } else {
+        arg2 = *(reinterpret_cast< word::iterator * >(argp2));
+      }
+    }
+    ecode3 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "word_select_analysis" "', argument " "3"" of type '" "int""'");
+    } 
+    arg3 = static_cast< int >(val3);
+    (arg1)->select_analysis(arg2,arg3);
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_select_analysis__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     word::iterator arg2 ;
@@ -14574,7 +26552,148 @@ XS(_wrap_word_select_analysis) {
 }
 
 
-XS(_wrap_word_unselect_analysis) {
+XS(_wrap_word_select_analysis) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_word__iterator, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 3) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_word__iterator, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_select_analysis__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_select_analysis__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'word_select_analysis'");
+  XSRETURN(0);
+}
+
+
+XS(_wrap_word_unselect_analysis__SWIG_0) {
+  {
+    word *arg1 = (word *) 0 ;
+    word::iterator arg2 ;
+    int arg3 ;
+    void *argp1 = 0 ;
+    int res1 = 0 ;
+    void *argp2 ;
+    int res2 = 0 ;
+    int val3 ;
+    int ecode3 = 0 ;
+    int argvi = 0;
+    dXSARGS;
+    
+    if ((items < 3) || (items > 3)) {
+      SWIG_croak("Usage: word_unselect_analysis(self,word::iterator,k);");
+    }
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_word, 0 |  0 );
+    if (!SWIG_IsOK(res1)) {
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_unselect_analysis" "', argument " "1"" of type '" "word *""'"); 
+    }
+    arg1 = reinterpret_cast< word * >(argp1);
+    {
+      res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_word__iterator,  0 );
+      if (!SWIG_IsOK(res2)) {
+        SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "word_unselect_analysis" "', argument " "2"" of type '" "word::iterator""'"); 
+      }  
+      if (!argp2) {
+        SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "word_unselect_analysis" "', argument " "2"" of type '" "word::iterator""'");
+      } else {
+        arg2 = *(reinterpret_cast< word::iterator * >(argp2));
+      }
+    }
+    ecode3 = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "word_unselect_analysis" "', argument " "3"" of type '" "int""'");
+    } 
+    arg3 = static_cast< int >(val3);
+    (arg1)->unselect_analysis(arg2,arg3);
+    ST(argvi) = sv_newmortal();
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_word_unselect_analysis__SWIG_1) {
   {
     word *arg1 = (word *) 0 ;
     word::iterator arg2 ;
@@ -14612,6 +26731,96 @@ XS(_wrap_word_unselect_analysis) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_word_unselect_analysis) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 2) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_word__iterator, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 3) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_word, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        void *vptr = 0;
+        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_word__iterator, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_int SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselect_analysis__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_word_unselect_analysis__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'word_unselect_analysis'");
+  XSRETURN(0);
 }
 
 
@@ -19785,7 +31994,73 @@ XS(_wrap_delete_maco) {
 }
 
 
-XS(_wrap_new_hmm_tagger) {
+XS(_wrap_new_hmm_tagger__SWIG_0) {
+  {
+    std::wstring *arg1 = 0 ;
+    std::wstring *arg2 = 0 ;
+    bool arg3 ;
+    unsigned int arg4 ;
+    unsigned int arg5 ;
+    std::wstring wtemp1 ;
+    std::wstring wtemp2 ;
+    bool val3 ;
+    int ecode3 = 0 ;
+    unsigned int val4 ;
+    int ecode4 = 0 ;
+    unsigned int val5 ;
+    int ecode5 = 0 ;
+    int argvi = 0;
+    hmm_tagger *result = 0 ;
+    dXSARGS;
+    
+    if ((items < 5) || (items > 5)) {
+      SWIG_croak("Usage: new_hmm_tagger(std::wstring const &,std::wstring const &,bool,unsigned int,kb);");
+    }
+    {
+      std::string aux (SvPV(ST(0), PL_na));
+      wtemp1 = util::string2wstring(aux);
+      arg1 = &wtemp1;
+    }
+    {
+      std::string aux (SvPV(ST(1), PL_na));
+      wtemp2 = util::string2wstring(aux);
+      arg2 = &wtemp2;
+    }
+    ecode3 = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), &val3);
+    if (!SWIG_IsOK(ecode3)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode3), "in method '" "new_hmm_tagger" "', argument " "3"" of type '" "bool""'");
+    } 
+    arg3 = static_cast< bool >(val3);
+    ecode4 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), &val4);
+    if (!SWIG_IsOK(ecode4)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode4), "in method '" "new_hmm_tagger" "', argument " "4"" of type '" "unsigned int""'");
+    } 
+    arg4 = static_cast< unsigned int >(val4);
+    ecode5 = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(4), &val5);
+    if (!SWIG_IsOK(ecode5)) {
+      SWIG_exception_fail(SWIG_ArgError(ecode5), "in method '" "new_hmm_tagger" "', argument " "5"" of type '" "unsigned int""'");
+    } 
+    arg5 = static_cast< unsigned int >(val5);
+    result = (hmm_tagger *)new hmm_tagger((std::wstring const &)*arg1,(std::wstring const &)*arg2,arg3,arg4,arg5);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_hmm_tagger, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    
+    
+    
+    
+    
+    XSRETURN(argvi);
+  fail:
+    
+    
+    
+    
+    
+    SWIG_croak_null();
+  }
+}
+
+
+XS(_wrap_new_hmm_tagger__SWIG_1) {
   {
     std::wstring *arg1 = 0 ;
     std::wstring *arg2 = 0 ;
@@ -19838,6 +32113,132 @@ XS(_wrap_new_hmm_tagger) {
     
     SWIG_croak_null();
   }
+}
+
+
+XS(_wrap_new_hmm_tagger) {
+  dXSARGS;
+  
+  {
+    unsigned long _index = 0;
+    SWIG_TypeRank _rank = 0; 
+    if (items == 4) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        int res = SWIG_AsCharPtrAndSize(ST(0), 0, NULL, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        int res = SWIG_AsCharPtrAndSize(ST(1), 0, NULL, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_1;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 1;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_1:
+    
+    if (items == 5) {
+      SWIG_TypeRank _ranki = 0;
+      SWIG_TypeRank _rankm = 0;
+      SWIG_TypeRank _pi = 1;
+      int _v = 0;
+      {
+        int res = SWIG_AsCharPtrAndSize(ST(0), 0, NULL, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        int res = SWIG_AsCharPtrAndSize(ST(1), 0, NULL, 0);
+        _v = SWIG_CheckState(res);
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_bool SWIG_PERL_CALL_ARGS_2(ST(2), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(3), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      {
+        {
+          int res = SWIG_AsVal_unsigned_SS_int SWIG_PERL_CALL_ARGS_2(ST(4), NULL);
+          _v = SWIG_CheckState(res);
+        }
+      }
+      if (!_v) goto check_2;
+      _ranki += _v*_pi;
+      _rankm += _pi;
+      _pi *= SWIG_MAXCASTRANK;
+      if (!_index || (_ranki < _rank)) {
+        _rank = _ranki; _index = 2;
+        if (_rank == _rankm) goto dispatch;
+      }
+    }
+  check_2:
+    
+  dispatch:
+    switch(_index) {
+    case 1:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_hmm_tagger__SWIG_1); return;
+    case 2:
+      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_new_hmm_tagger__SWIG_0); return;
+    }
+  }
+  
+  croak("No matching function for overloaded 'new_hmm_tagger'");
+  XSRETURN(0);
 }
 
 
@@ -21388,86 +33789,6 @@ XS(_wrap_dep_txala_analyze__SWIG_0) {
     sentence *arg2 = 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: dep_txala_analyze(self,sentence &);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_dep_txala, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "dep_txala_analyze" "', argument " "1"" of type '" "dep_txala *""'"); 
-    }
-    arg1 = reinterpret_cast< dep_txala * >(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_sentence,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "dep_txala_analyze" "', argument " "2"" of type '" "sentence &""'"); 
-    }
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "dep_txala_analyze" "', argument " "2"" of type '" "sentence &""'"); 
-    }
-    arg2 = reinterpret_cast< sentence * >(argp2);
-    (arg1)->analyze(*arg2);
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_dep_txala_analyze__SWIG_1) {
-  {
-    dep_txala *arg1 = (dep_txala *) 0 ;
-    std::list< sentence > *arg2 = 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
-    void *argp2 = 0 ;
-    int res2 = 0 ;
-    int argvi = 0;
-    dXSARGS;
-    
-    if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: dep_txala_analyze(self,std::list< sentence > &);");
-    }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_dep_txala, 0 |  0 );
-    if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "dep_txala_analyze" "', argument " "1"" of type '" "dep_txala *""'"); 
-    }
-    arg1 = reinterpret_cast< dep_txala * >(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_std__listT_sentence_t,  0 );
-    if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "dep_txala_analyze" "', argument " "2"" of type '" "std::list< sentence > &""'"); 
-    }
-    if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "dep_txala_analyze" "', argument " "2"" of type '" "std::list< sentence > &""'"); 
-    }
-    arg2 = reinterpret_cast< std::list< sentence > * >(argp2);
-    (arg1)->analyze(*arg2);
-    ST(argvi) = sv_newmortal();
-    
-    
-    XSRETURN(argvi);
-  fail:
-    
-    
-    SWIG_croak_null();
-  }
-}
-
-
-XS(_wrap_dep_txala_analyze__SWIG_2) {
-  {
-    dep_txala *arg1 = (dep_txala *) 0 ;
-    sentence *arg2 = 0 ;
-    void *argp1 = 0 ;
-    int res1 = 0 ;
     void *argp2 ;
     int res2 = 0 ;
     int argvi = 0;
@@ -21503,7 +33824,7 @@ XS(_wrap_dep_txala_analyze__SWIG_2) {
 }
 
 
-XS(_wrap_dep_txala_analyze__SWIG_3) {
+XS(_wrap_dep_txala_analyze__SWIG_1) {
   {
     dep_txala *arg1 = (dep_txala *) 0 ;
     std::list< sentence > *arg2 = 0 ;
@@ -21632,66 +33953,6 @@ XS(_wrap_dep_txala_analyze) {
       _rankm += _pi;
       _pi *= SWIG_MAXCASTRANK;
       {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_std__listT_sentence_t, 0);
-        _v = SWIG_CheckState(res);
-      }
-      if (!_v) goto check_2;
-      _ranki += _v*_pi;
-      _rankm += _pi;
-      _pi *= SWIG_MAXCASTRANK;
-      if (!_index || (_ranki < _rank)) {
-        _rank = _ranki; _index = 2;
-        if (_rank == _rankm) goto dispatch;
-      }
-    }
-  check_2:
-    
-    if (items == 2) {
-      SWIG_TypeRank _ranki = 0;
-      SWIG_TypeRank _rankm = 0;
-      SWIG_TypeRank _pi = 1;
-      int _v = 0;
-      {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_dep_txala, 0);
-        _v = SWIG_CheckState(res);
-      }
-      if (!_v) goto check_3;
-      _ranki += _v*_pi;
-      _rankm += _pi;
-      _pi *= SWIG_MAXCASTRANK;
-      {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(1), &vptr, SWIGTYPE_p_sentence, 0);
-        _v = SWIG_CheckState(res);
-      }
-      if (!_v) goto check_3;
-      _ranki += _v*_pi;
-      _rankm += _pi;
-      _pi *= SWIG_MAXCASTRANK;
-      if (!_index || (_ranki < _rank)) {
-        _rank = _ranki; _index = 3;
-        if (_rank == _rankm) goto dispatch;
-      }
-    }
-  check_3:
-    
-    if (items == 2) {
-      SWIG_TypeRank _ranki = 0;
-      SWIG_TypeRank _rankm = 0;
-      SWIG_TypeRank _pi = 1;
-      int _v = 0;
-      {
-        void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_dep_txala, 0);
-        _v = SWIG_CheckState(res);
-      }
-      if (!_v) goto check_4;
-      _ranki += _v*_pi;
-      _rankm += _pi;
-      _pi *= SWIG_MAXCASTRANK;
-      {
         {
           {
             /* wrapped list? */
@@ -21725,16 +33986,16 @@ XS(_wrap_dep_txala_analyze) {
           }
         }
       }
-      if (!_v) goto check_4;
+      if (!_v) goto check_2;
       _ranki += _v*_pi;
       _rankm += _pi;
       _pi *= SWIG_MAXCASTRANK;
       if (!_index || (_ranki < _rank)) {
-        _rank = _ranki; _index = 4;
+        _rank = _ranki; _index = 2;
         if (_rank == _rankm) goto dispatch;
       }
     }
-  check_4:
+  check_2:
     
   dispatch:
     switch(_index) {
@@ -21742,10 +34003,6 @@ XS(_wrap_dep_txala_analyze) {
       ++PL_markstack_ptr; SWIG_CALLXS(_wrap_dep_txala_analyze__SWIG_0); return;
     case 2:
       ++PL_markstack_ptr; SWIG_CALLXS(_wrap_dep_txala_analyze__SWIG_1); return;
-    case 3:
-      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_dep_txala_analyze__SWIG_2); return;
-    case 4:
-      ++PL_markstack_ptr; SWIG_CALLXS(_wrap_dep_txala_analyze__SWIG_3); return;
     }
   }
   
@@ -23130,17 +35387,56 @@ XS(_wrap_delete_util) {
 static void *_p_documentTo_p_std__listT_paragraph_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((std::list< paragraph > *)  ((document *) x));
 }
+static void *_p_generic_const_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_const_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< depnode,tree< depnode > const > *)  ((generic_const_iterator< depnode > *) x));
+}
+static void *_p_const_preorder_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_const_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< depnode,tree< depnode > const > *) (generic_const_iterator< depnode > *) ((const_preorder_iterator< depnode > *) x));
+}
+static void *_p_const_sibling_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_const_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< depnode,tree< depnode > const > *) (generic_const_iterator< depnode > *) ((const_sibling_iterator< depnode > *) x));
+}
 static void *_p_depnodeTo_p_node(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((node *)  ((depnode *) x));
 }
 static void *_p_sentenceTo_p_std__listT_word_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((std::list< word > *)  ((sentence *) x));
 }
+static void *_p_generic_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< depnode,tree< depnode > > *)  ((generic_iterator< depnode > *) x));
+}
+static void *_p_preorder_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< depnode,tree< depnode > > *) (generic_iterator< depnode > *) ((preorder_iterator< depnode > *) x));
+}
+static void *_p_sibling_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< depnode,tree< depnode > > *) (generic_iterator< depnode > *) ((sibling_iterator< depnode > *) x));
+}
+static void *_p_generic_const_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_const_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< node,tree< node > const > *)  ((generic_const_iterator< node > *) x));
+}
+static void *_p_const_preorder_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_const_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< node,tree< node > const > *) (generic_const_iterator< node > *) ((const_preorder_iterator< node > *) x));
+}
+static void *_p_const_sibling_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_const_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< node,tree< node > const > *) (generic_const_iterator< node > *) ((const_sibling_iterator< node > *) x));
+}
+static void *_p_generic_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< node,tree< node > > *)  ((generic_iterator< node > *) x));
+}
+static void *_p_preorder_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< node,tree< node > > *) (generic_iterator< node > *) ((preorder_iterator< node > *) x));
+}
+static void *_p_sibling_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree_iterator< node,tree< node > > *) (generic_iterator< node > *) ((sibling_iterator< node > *) x));
+}
 static void *_p_wordTo_p_std__listT_analysis_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((std::list< analysis > *)  ((word *) x));
 }
-static void *_p_dep_treeTo_p_treeT_depnode_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((tree< depnode > *)  ((dep_tree *) x));
+static void *_p_const_preorder_iteratorT_depnode_tTo_p_generic_const_iteratorT_depnode_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((generic_const_iterator< depnode > *)  ((const_preorder_iterator< depnode > *) x));
+}
+static void *_p_const_sibling_iteratorT_depnode_tTo_p_generic_const_iteratorT_depnode_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((generic_const_iterator< depnode > *)  ((const_sibling_iterator< depnode > *) x));
 }
 static void *_p_preorder_iteratorT_depnode_tTo_p_generic_iteratorT_depnode_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((generic_iterator< depnode > *)  ((preorder_iterator< depnode > *) x));
@@ -23148,14 +35444,23 @@ static void *_p_preorder_iteratorT_depnode_tTo_p_generic_iteratorT_depnode_t(voi
 static void *_p_sibling_iteratorT_depnode_tTo_p_generic_iteratorT_depnode_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((generic_iterator< depnode > *)  ((sibling_iterator< depnode > *) x));
 }
-static void *_p_parse_treeTo_p_treeT_node_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
-    return (void *)((tree< node > *)  ((parse_tree *) x));
+static void *_p_dep_treeTo_p_treeT_depnode_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree< depnode > *)  ((dep_tree *) x));
+}
+static void *_p_const_preorder_iteratorT_node_tTo_p_generic_const_iteratorT_node_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((generic_const_iterator< node > *)  ((const_preorder_iterator< node > *) x));
+}
+static void *_p_const_sibling_iteratorT_node_tTo_p_generic_const_iteratorT_node_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((generic_const_iterator< node > *)  ((const_sibling_iterator< node > *) x));
 }
 static void *_p_preorder_iteratorT_node_tTo_p_generic_iteratorT_node_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((generic_iterator< node > *)  ((preorder_iterator< node > *) x));
 }
 static void *_p_sibling_iteratorT_node_tTo_p_generic_iteratorT_node_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((generic_iterator< node > *)  ((sibling_iterator< node > *) x));
+}
+static void *_p_parse_treeTo_p_treeT_node_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((tree< node > *)  ((parse_tree *) x));
 }
 static void *_p_paragraphTo_p_std__listT_sentence_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((std::list< sentence > *)  ((paragraph *) x));
@@ -23164,10 +35469,20 @@ static swig_type_info _swigt__p_analysis = {"_p_analysis", "analysis *", 0, 0, (
 static swig_type_info _swigt__p_boost__u32regex = {"_p_boost__u32regex", "boost::u32regex *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_chart_parser = {"_p_chart_parser", "chart_parser *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::chart_parser", 0};
+static swig_type_info _swigt__p_const_iterator = {"_p_const_iterator", "const_iterator *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_const_preorder_iterator = {"_p_const_preorder_iterator", "const_preorder_iterator *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_const_preorder_iteratorT_depnode_t = {"_p_const_preorder_iteratorT_depnode_t", "const_preorder_iterator< depnode > *|tree< depnode >::const_preorder_iterator *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::ConstPreorderIteratorDepnode", 0};
+static swig_type_info _swigt__p_const_preorder_iteratorT_node_t = {"_p_const_preorder_iteratorT_node_t", "const_preorder_iterator< node > *|tree< node >::const_preorder_iterator *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::ConstPreorderIteratorNode", 0};
+static swig_type_info _swigt__p_const_sibling_iterator = {"_p_const_sibling_iterator", "const_sibling_iterator *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_const_sibling_iteratorT_depnode_t = {"_p_const_sibling_iteratorT_depnode_t", "const_sibling_iterator< depnode > *|tree< depnode >::const_sibling_iterator *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::ConstSiblingIteratorDepnode", 0};
+static swig_type_info _swigt__p_const_sibling_iteratorT_node_t = {"_p_const_sibling_iteratorT_node_t", "const_sibling_iterator< node > *|tree< node >::const_sibling_iterator *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::ConstSiblingIteratorNode", 0};
 static swig_type_info _swigt__p_dep_tree = {"_p_dep_tree", "dep_tree *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::dep_tree", 0};
 static swig_type_info _swigt__p_dep_txala = {"_p_dep_txala", "dep_txala *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::dep_txala", 0};
 static swig_type_info _swigt__p_depnode = {"_p_depnode", "depnode *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::depnode", 0};
 static swig_type_info _swigt__p_document = {"_p_document", "document *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::document", 0};
+static swig_type_info _swigt__p_generic_const_iterator = {"_p_generic_const_iterator", "generic_const_iterator *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_generic_const_iteratorT_depnode_t = {"_p_generic_const_iteratorT_depnode_t", "generic_const_iterator< depnode > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::GenericConstIteratorDepnode", 0};
+static swig_type_info _swigt__p_generic_const_iteratorT_node_t = {"_p_generic_const_iteratorT_node_t", "generic_const_iterator< node > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::GenericConstIteratorNode", 0};
 static swig_type_info _swigt__p_generic_iterator = {"_p_generic_iterator", "generic_iterator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_generic_iteratorT_depnode_t = {"_p_generic_iteratorT_depnode_t", "generic_iterator< depnode > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::GenericIteratorDepnode", 0};
 static swig_type_info _swigt__p_generic_iteratorT_node_t = {"_p_generic_iteratorT_node_t", "generic_iterator< node > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::GenericIteratorNode", 0};
@@ -23181,8 +35496,8 @@ static swig_type_info _swigt__p_paragraph = {"_p_paragraph", "paragraph *", 0, 0
 static swig_type_info _swigt__p_parse_tree = {"_p_parse_tree", "parse_tree *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::parse_tree", 0};
 static swig_type_info _swigt__p_phonetics = {"_p_phonetics", "phonetics *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::phonetics", 0};
 static swig_type_info _swigt__p_preorder_iterator = {"_p_preorder_iterator", "preorder_iterator *", 0, 0, (void*)0, 0};
-static swig_type_info _swigt__p_preorder_iteratorT_depnode_t = {"_p_preorder_iteratorT_depnode_t", "preorder_iterator< depnode > *|tree< depnode >::preorder_iterator *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::PreorderIteratorDepnode", 0};
-static swig_type_info _swigt__p_preorder_iteratorT_node_t = {"_p_preorder_iteratorT_node_t", "preorder_iterator< node > *|tree< node >::preorder_iterator *|parse_tree::iterator *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::PreorderIteratorNode", 0};
+static swig_type_info _swigt__p_preorder_iteratorT_depnode_t = {"_p_preorder_iteratorT_depnode_t", "preorder_iterator< depnode > *|tree< depnode >::iterator *|tree< depnode >::preorder_iterator *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::PreorderIteratorDepnode", 0};
+static swig_type_info _swigt__p_preorder_iteratorT_node_t = {"_p_preorder_iteratorT_node_t", "preorder_iterator< node > *|tree< node >::iterator *|tree< node >::preorder_iterator *|parse_tree::iterator *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::PreorderIteratorNode", 0};
 static swig_type_info _swigt__p_relax_tagger = {"_p_relax_tagger", "relax_tagger *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::relax_tagger", 0};
 static swig_type_info _swigt__p_semanticDB = {"_p_semanticDB", "semanticDB *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::semanticDB", 0};
 static swig_type_info _swigt__p_sense_info = {"_p_sense_info", "sense_info *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::sense_info", 0};
@@ -23214,6 +35529,10 @@ static swig_type_info _swigt__p_tokenizer = {"_p_tokenizer", "tokenizer *", 0, 0
 static swig_type_info _swigt__p_traces = {"_p_traces", "traces *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::traces", 0};
 static swig_type_info _swigt__p_treeT_depnode_t = {"_p_treeT_depnode_t", "tree< depnode > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::TreeDepnode", 0};
 static swig_type_info _swigt__p_treeT_node_t = {"_p_treeT_node_t", "tree< node > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::TreeNode", 0};
+static swig_type_info _swigt__p_tree_iteratorT_depnode_treeT_depnode_t_const_t = {"_p_tree_iteratorT_depnode_treeT_depnode_t_const_t", "tree_iterator< depnode,tree< depnode > const > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::TreeIteratorConstDepnode", 0};
+static swig_type_info _swigt__p_tree_iteratorT_depnode_treeT_depnode_t_t = {"_p_tree_iteratorT_depnode_treeT_depnode_t_t", "tree_iterator< depnode,tree< depnode > > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::TreeIteratorDepnode", 0};
+static swig_type_info _swigt__p_tree_iteratorT_node_treeT_node_t_const_t = {"_p_tree_iteratorT_node_treeT_node_t_const_t", "tree_iterator< node,tree< node > const > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::TreeIteratorConstNode", 0};
+static swig_type_info _swigt__p_tree_iteratorT_node_treeT_node_t_t = {"_p_tree_iteratorT_node_treeT_node_t_t", "tree_iterator< node,tree< node > > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::TreeIteratorNode", 0};
 static swig_type_info _swigt__p_ukb_wrap = {"_p_ukb_wrap", "ukb_wrap *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::ukb_wrap", 0};
 static swig_type_info _swigt__p_unsigned_long = {"_p_unsigned_long", "unsigned long *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_util = {"_p_util", "util *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::util", 0};
@@ -23226,10 +35545,20 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_boost__u32regex,
   &_swigt__p_char,
   &_swigt__p_chart_parser,
+  &_swigt__p_const_iterator,
+  &_swigt__p_const_preorder_iterator,
+  &_swigt__p_const_preorder_iteratorT_depnode_t,
+  &_swigt__p_const_preorder_iteratorT_node_t,
+  &_swigt__p_const_sibling_iterator,
+  &_swigt__p_const_sibling_iteratorT_depnode_t,
+  &_swigt__p_const_sibling_iteratorT_node_t,
   &_swigt__p_dep_tree,
   &_swigt__p_dep_txala,
   &_swigt__p_depnode,
   &_swigt__p_document,
+  &_swigt__p_generic_const_iterator,
+  &_swigt__p_generic_const_iteratorT_depnode_t,
+  &_swigt__p_generic_const_iteratorT_node_t,
   &_swigt__p_generic_iterator,
   &_swigt__p_generic_iteratorT_depnode_t,
   &_swigt__p_generic_iteratorT_node_t,
@@ -23276,6 +35605,10 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_traces,
   &_swigt__p_treeT_depnode_t,
   &_swigt__p_treeT_node_t,
+  &_swigt__p_tree_iteratorT_depnode_treeT_depnode_t_const_t,
+  &_swigt__p_tree_iteratorT_depnode_treeT_depnode_t_t,
+  &_swigt__p_tree_iteratorT_node_treeT_node_t_const_t,
+  &_swigt__p_tree_iteratorT_node_treeT_node_t_t,
   &_swigt__p_ukb_wrap,
   &_swigt__p_unsigned_long,
   &_swigt__p_util,
@@ -23288,10 +35621,20 @@ static swig_cast_info _swigc__p_analysis[] = {  {&_swigt__p_analysis, 0, 0, 0},{
 static swig_cast_info _swigc__p_boost__u32regex[] = {  {&_swigt__p_boost__u32regex, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_chart_parser[] = {  {&_swigt__p_chart_parser, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_const_iterator[] = {  {&_swigt__p_const_iterator, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_const_preorder_iterator[] = {  {&_swigt__p_const_preorder_iterator, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_const_preorder_iteratorT_depnode_t[] = {  {&_swigt__p_const_preorder_iteratorT_depnode_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_const_preorder_iteratorT_node_t[] = {  {&_swigt__p_const_preorder_iteratorT_node_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_const_sibling_iterator[] = {  {&_swigt__p_const_sibling_iterator, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_const_sibling_iteratorT_depnode_t[] = {  {&_swigt__p_const_sibling_iteratorT_depnode_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_const_sibling_iteratorT_node_t[] = {  {&_swigt__p_const_sibling_iteratorT_node_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_dep_tree[] = {  {&_swigt__p_dep_tree, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_dep_txala[] = {  {&_swigt__p_dep_txala, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_depnode[] = {  {&_swigt__p_depnode, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_document[] = {  {&_swigt__p_document, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_generic_const_iterator[] = {  {&_swigt__p_generic_const_iterator, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_generic_const_iteratorT_depnode_t[] = {  {&_swigt__p_generic_const_iteratorT_depnode_t, 0, 0, 0},  {&_swigt__p_const_preorder_iteratorT_depnode_t, _p_const_preorder_iteratorT_depnode_tTo_p_generic_const_iteratorT_depnode_t, 0, 0},  {&_swigt__p_const_sibling_iteratorT_depnode_t, _p_const_sibling_iteratorT_depnode_tTo_p_generic_const_iteratorT_depnode_t, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_generic_const_iteratorT_node_t[] = {  {&_swigt__p_generic_const_iteratorT_node_t, 0, 0, 0},  {&_swigt__p_const_preorder_iteratorT_node_t, _p_const_preorder_iteratorT_node_tTo_p_generic_const_iteratorT_node_t, 0, 0},  {&_swigt__p_const_sibling_iteratorT_node_t, _p_const_sibling_iteratorT_node_tTo_p_generic_const_iteratorT_node_t, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_generic_iterator[] = {  {&_swigt__p_generic_iterator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_generic_iteratorT_depnode_t[] = {  {&_swigt__p_generic_iteratorT_depnode_t, 0, 0, 0},  {&_swigt__p_preorder_iteratorT_depnode_t, _p_preorder_iteratorT_depnode_tTo_p_generic_iteratorT_depnode_t, 0, 0},  {&_swigt__p_sibling_iteratorT_depnode_t, _p_sibling_iteratorT_depnode_tTo_p_generic_iteratorT_depnode_t, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_generic_iteratorT_node_t[] = {  {&_swigt__p_generic_iteratorT_node_t, 0, 0, 0},  {&_swigt__p_preorder_iteratorT_node_t, _p_preorder_iteratorT_node_tTo_p_generic_iteratorT_node_t, 0, 0},  {&_swigt__p_sibling_iteratorT_node_t, _p_sibling_iteratorT_node_tTo_p_generic_iteratorT_node_t, 0, 0},{0, 0, 0, 0}};
@@ -23338,6 +35681,10 @@ static swig_cast_info _swigc__p_tokenizer[] = {  {&_swigt__p_tokenizer, 0, 0, 0}
 static swig_cast_info _swigc__p_traces[] = {  {&_swigt__p_traces, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_treeT_depnode_t[] = {  {&_swigt__p_dep_tree, _p_dep_treeTo_p_treeT_depnode_t, 0, 0},  {&_swigt__p_treeT_depnode_t, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_treeT_node_t[] = {  {&_swigt__p_parse_tree, _p_parse_treeTo_p_treeT_node_t, 0, 0},  {&_swigt__p_treeT_node_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_tree_iteratorT_depnode_treeT_depnode_t_const_t[] = {  {&_swigt__p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0, 0, 0},  {&_swigt__p_generic_const_iteratorT_depnode_t, _p_generic_const_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0, 0},  {&_swigt__p_const_preorder_iteratorT_depnode_t, _p_const_preorder_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0, 0},  {&_swigt__p_const_sibling_iteratorT_depnode_t, _p_const_sibling_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_tree_iteratorT_depnode_treeT_depnode_t_t[] = {  {&_swigt__p_tree_iteratorT_depnode_treeT_depnode_t_t, 0, 0, 0},  {&_swigt__p_generic_iteratorT_depnode_t, _p_generic_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0, 0},  {&_swigt__p_preorder_iteratorT_depnode_t, _p_preorder_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0, 0},  {&_swigt__p_sibling_iteratorT_depnode_t, _p_sibling_iteratorT_depnode_tTo_p_tree_iteratorT_depnode_treeT_depnode_t_t, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_tree_iteratorT_node_treeT_node_t_const_t[] = {  {&_swigt__p_generic_const_iteratorT_node_t, _p_generic_const_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_const_t, 0, 0},  {&_swigt__p_const_preorder_iteratorT_node_t, _p_const_preorder_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_const_t, 0, 0},  {&_swigt__p_const_sibling_iteratorT_node_t, _p_const_sibling_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_const_t, 0, 0},  {&_swigt__p_tree_iteratorT_node_treeT_node_t_const_t, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_tree_iteratorT_node_treeT_node_t_t[] = {  {&_swigt__p_tree_iteratorT_node_treeT_node_t_t, 0, 0, 0},  {&_swigt__p_generic_iteratorT_node_t, _p_generic_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_t, 0, 0},  {&_swigt__p_preorder_iteratorT_node_t, _p_preorder_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_t, 0, 0},  {&_swigt__p_sibling_iteratorT_node_t, _p_sibling_iteratorT_node_tTo_p_tree_iteratorT_node_treeT_node_t_t, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ukb_wrap[] = {  {&_swigt__p_ukb_wrap, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_unsigned_long[] = {  {&_swigt__p_unsigned_long, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_util[] = {  {&_swigt__p_util, 0, 0, 0},{0, 0, 0, 0}};
@@ -23350,10 +35697,20 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_boost__u32regex,
   _swigc__p_char,
   _swigc__p_chart_parser,
+  _swigc__p_const_iterator,
+  _swigc__p_const_preorder_iterator,
+  _swigc__p_const_preorder_iteratorT_depnode_t,
+  _swigc__p_const_preorder_iteratorT_node_t,
+  _swigc__p_const_sibling_iterator,
+  _swigc__p_const_sibling_iteratorT_depnode_t,
+  _swigc__p_const_sibling_iteratorT_node_t,
   _swigc__p_dep_tree,
   _swigc__p_dep_txala,
   _swigc__p_depnode,
   _swigc__p_document,
+  _swigc__p_generic_const_iterator,
+  _swigc__p_generic_const_iteratorT_depnode_t,
+  _swigc__p_generic_const_iteratorT_node_t,
   _swigc__p_generic_iterator,
   _swigc__p_generic_iteratorT_depnode_t,
   _swigc__p_generic_iteratorT_node_t,
@@ -23400,6 +35757,10 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_traces,
   _swigc__p_treeT_depnode_t,
   _swigc__p_treeT_node_t,
+  _swigc__p_tree_iteratorT_depnode_treeT_depnode_t_const_t,
+  _swigc__p_tree_iteratorT_depnode_treeT_depnode_t_t,
+  _swigc__p_tree_iteratorT_node_treeT_node_t_const_t,
+  _swigc__p_tree_iteratorT_node_treeT_node_t_t,
   _swigc__p_ukb_wrap,
   _swigc__p_unsigned_long,
   _swigc__p_util,
@@ -23498,16 +35859,52 @@ static swig_command_info swig_commands[] = {
 {"Lingua::FreeLing3::Bindingsc::VectorListString_get", _wrap_VectorListString_get},
 {"Lingua::FreeLing3::Bindingsc::VectorListString_set", _wrap_VectorListString_set},
 {"Lingua::FreeLing3::Bindingsc::delete_VectorListString", _wrap_delete_VectorListString},
+{"Lingua::FreeLing3::Bindingsc::new_TreeIteratorNode", _wrap_new_TreeIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::delete_TreeIteratorNode", _wrap_delete_TreeIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode___ref__", _wrap_TreeIteratorNode___ref__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode___deref__", _wrap_TreeIteratorNode___deref__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode___eq__", _wrap_TreeIteratorNode___eq__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode___ne__", _wrap_TreeIteratorNode___ne__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_info_get", _wrap_TreeIteratorNode_info_get},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_num_children", _wrap_TreeIteratorNode_num_children},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_nth_child", _wrap_TreeIteratorNode_nth_child},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_get_parent", _wrap_TreeIteratorNode_get_parent},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_nth_child_ref", _wrap_TreeIteratorNode_nth_child_ref},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_empty", _wrap_TreeIteratorNode_empty},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_sibling_begin", _wrap_TreeIteratorNode_sibling_begin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_sibling_end", _wrap_TreeIteratorNode_sibling_end},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_sibling_rbegin", _wrap_TreeIteratorNode_sibling_rbegin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_sibling_rend", _wrap_TreeIteratorNode_sibling_rend},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_begin", _wrap_TreeIteratorNode_begin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorNode_end", _wrap_TreeIteratorNode_end},
+{"Lingua::FreeLing3::Bindingsc::new_TreeIteratorConstNode", _wrap_new_TreeIteratorConstNode},
+{"Lingua::FreeLing3::Bindingsc::delete_TreeIteratorConstNode", _wrap_delete_TreeIteratorConstNode},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode___ref__", _wrap_TreeIteratorConstNode___ref__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode___deref__", _wrap_TreeIteratorConstNode___deref__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode___eq__", _wrap_TreeIteratorConstNode___eq__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode___ne__", _wrap_TreeIteratorConstNode___ne__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_info_get", _wrap_TreeIteratorConstNode_info_get},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_num_children", _wrap_TreeIteratorConstNode_num_children},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_nth_child", _wrap_TreeIteratorConstNode_nth_child},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_get_parent", _wrap_TreeIteratorConstNode_get_parent},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_nth_child_ref", _wrap_TreeIteratorConstNode_nth_child_ref},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_empty", _wrap_TreeIteratorConstNode_empty},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_sibling_begin", _wrap_TreeIteratorConstNode_sibling_begin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_sibling_end", _wrap_TreeIteratorConstNode_sibling_end},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_sibling_rbegin", _wrap_TreeIteratorConstNode_sibling_rbegin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_sibling_rend", _wrap_TreeIteratorConstNode_sibling_rend},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_begin", _wrap_TreeIteratorConstNode_begin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstNode_end", _wrap_TreeIteratorConstNode_end},
 {"Lingua::FreeLing3::Bindingsc::new_GenericIteratorNode", _wrap_new_GenericIteratorNode},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode___ref__", _wrap_GenericIteratorNode___ref__},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode___deref__", _wrap_GenericIteratorNode___deref__},
-{"Lingua::FreeLing3::Bindingsc::GenericIteratorNode___eq__", _wrap_GenericIteratorNode___eq__},
-{"Lingua::FreeLing3::Bindingsc::GenericIteratorNode___ne__", _wrap_GenericIteratorNode___ne__},
 {"Lingua::FreeLing3::Bindingsc::delete_GenericIteratorNode", _wrap_delete_GenericIteratorNode},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_info_set", _wrap_GenericIteratorNode_info_set},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_info_get", _wrap_GenericIteratorNode_info_get},
+{"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_operator_assignment", _wrap_GenericIteratorNode_operator_assignment},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_num_children", _wrap_GenericIteratorNode_num_children},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_nth_child", _wrap_GenericIteratorNode_nth_child},
+{"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_get_parent", _wrap_GenericIteratorNode_get_parent},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_nth_child_ref", _wrap_GenericIteratorNode_nth_child_ref},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_get_info", _wrap_GenericIteratorNode_get_info},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_append_child", _wrap_GenericIteratorNode_append_child},
@@ -23516,30 +35913,74 @@ static swig_command_info swig_commands[] = {
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_empty", _wrap_GenericIteratorNode_empty},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_sibling_begin", _wrap_GenericIteratorNode_sibling_begin},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_sibling_end", _wrap_GenericIteratorNode_sibling_end},
+{"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_sibling_rbegin", _wrap_GenericIteratorNode_sibling_rbegin},
+{"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_sibling_rend", _wrap_GenericIteratorNode_sibling_rend},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_begin", _wrap_GenericIteratorNode_begin},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorNode_end", _wrap_GenericIteratorNode_end},
+{"Lingua::FreeLing3::Bindingsc::new_GenericConstIteratorNode", _wrap_new_GenericConstIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::delete_GenericConstIteratorNode", _wrap_delete_GenericConstIteratorNode},
 {"Lingua::FreeLing3::Bindingsc::new_PreorderIteratorNode", _wrap_new_PreorderIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::delete_PreorderIteratorNode", _wrap_delete_PreorderIteratorNode},
 {"Lingua::FreeLing3::Bindingsc::PreorderIteratorNode___plusplus__", _wrap_PreorderIteratorNode___plusplus__},
 {"Lingua::FreeLing3::Bindingsc::PreorderIteratorNode___minmin__", _wrap_PreorderIteratorNode___minmin__},
-{"Lingua::FreeLing3::Bindingsc::PreorderIteratorNode___iadd__", _wrap_PreorderIteratorNode___iadd__},
-{"Lingua::FreeLing3::Bindingsc::PreorderIteratorNode___isub__", _wrap_PreorderIteratorNode___isub__},
-{"Lingua::FreeLing3::Bindingsc::delete_PreorderIteratorNode", _wrap_delete_PreorderIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::new_ConstPreorderIteratorNode", _wrap_new_ConstPreorderIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::delete_ConstPreorderIteratorNode", _wrap_delete_ConstPreorderIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::ConstPreorderIteratorNode___plusplus__", _wrap_ConstPreorderIteratorNode___plusplus__},
+{"Lingua::FreeLing3::Bindingsc::ConstPreorderIteratorNode___minmin__", _wrap_ConstPreorderIteratorNode___minmin__},
 {"Lingua::FreeLing3::Bindingsc::new_SiblingIteratorNode", _wrap_new_SiblingIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::delete_SiblingIteratorNode", _wrap_delete_SiblingIteratorNode},
 {"Lingua::FreeLing3::Bindingsc::SiblingIteratorNode___plusplus__", _wrap_SiblingIteratorNode___plusplus__},
 {"Lingua::FreeLing3::Bindingsc::SiblingIteratorNode___minmin__", _wrap_SiblingIteratorNode___minmin__},
-{"Lingua::FreeLing3::Bindingsc::SiblingIteratorNode___iadd__", _wrap_SiblingIteratorNode___iadd__},
-{"Lingua::FreeLing3::Bindingsc::SiblingIteratorNode___isub__", _wrap_SiblingIteratorNode___isub__},
-{"Lingua::FreeLing3::Bindingsc::delete_SiblingIteratorNode", _wrap_delete_SiblingIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::new_ConstSiblingIteratorNode", _wrap_new_ConstSiblingIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::delete_ConstSiblingIteratorNode", _wrap_delete_ConstSiblingIteratorNode},
+{"Lingua::FreeLing3::Bindingsc::ConstSiblingIteratorNode___plusplus__", _wrap_ConstSiblingIteratorNode___plusplus__},
+{"Lingua::FreeLing3::Bindingsc::ConstSiblingIteratorNode___minmin__", _wrap_ConstSiblingIteratorNode___minmin__},
+{"Lingua::FreeLing3::Bindingsc::new_TreeIteratorDepnode", _wrap_new_TreeIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::delete_TreeIteratorDepnode", _wrap_delete_TreeIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode___ref__", _wrap_TreeIteratorDepnode___ref__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode___deref__", _wrap_TreeIteratorDepnode___deref__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode___eq__", _wrap_TreeIteratorDepnode___eq__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode___ne__", _wrap_TreeIteratorDepnode___ne__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_info_get", _wrap_TreeIteratorDepnode_info_get},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_num_children", _wrap_TreeIteratorDepnode_num_children},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_nth_child", _wrap_TreeIteratorDepnode_nth_child},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_get_parent", _wrap_TreeIteratorDepnode_get_parent},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_nth_child_ref", _wrap_TreeIteratorDepnode_nth_child_ref},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_empty", _wrap_TreeIteratorDepnode_empty},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_sibling_begin", _wrap_TreeIteratorDepnode_sibling_begin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_sibling_end", _wrap_TreeIteratorDepnode_sibling_end},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_sibling_rbegin", _wrap_TreeIteratorDepnode_sibling_rbegin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_sibling_rend", _wrap_TreeIteratorDepnode_sibling_rend},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_begin", _wrap_TreeIteratorDepnode_begin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorDepnode_end", _wrap_TreeIteratorDepnode_end},
+{"Lingua::FreeLing3::Bindingsc::new_TreeIteratorConstDepnode", _wrap_new_TreeIteratorConstDepnode},
+{"Lingua::FreeLing3::Bindingsc::delete_TreeIteratorConstDepnode", _wrap_delete_TreeIteratorConstDepnode},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode___ref__", _wrap_TreeIteratorConstDepnode___ref__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode___deref__", _wrap_TreeIteratorConstDepnode___deref__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode___eq__", _wrap_TreeIteratorConstDepnode___eq__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode___ne__", _wrap_TreeIteratorConstDepnode___ne__},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_info_get", _wrap_TreeIteratorConstDepnode_info_get},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_num_children", _wrap_TreeIteratorConstDepnode_num_children},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_nth_child", _wrap_TreeIteratorConstDepnode_nth_child},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_get_parent", _wrap_TreeIteratorConstDepnode_get_parent},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_nth_child_ref", _wrap_TreeIteratorConstDepnode_nth_child_ref},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_empty", _wrap_TreeIteratorConstDepnode_empty},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_sibling_begin", _wrap_TreeIteratorConstDepnode_sibling_begin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_sibling_end", _wrap_TreeIteratorConstDepnode_sibling_end},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_sibling_rbegin", _wrap_TreeIteratorConstDepnode_sibling_rbegin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_sibling_rend", _wrap_TreeIteratorConstDepnode_sibling_rend},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_begin", _wrap_TreeIteratorConstDepnode_begin},
+{"Lingua::FreeLing3::Bindingsc::TreeIteratorConstDepnode_end", _wrap_TreeIteratorConstDepnode_end},
 {"Lingua::FreeLing3::Bindingsc::new_GenericIteratorDepnode", _wrap_new_GenericIteratorDepnode},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode___ref__", _wrap_GenericIteratorDepnode___ref__},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode___deref__", _wrap_GenericIteratorDepnode___deref__},
-{"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode___eq__", _wrap_GenericIteratorDepnode___eq__},
-{"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode___ne__", _wrap_GenericIteratorDepnode___ne__},
 {"Lingua::FreeLing3::Bindingsc::delete_GenericIteratorDepnode", _wrap_delete_GenericIteratorDepnode},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_info_set", _wrap_GenericIteratorDepnode_info_set},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_info_get", _wrap_GenericIteratorDepnode_info_get},
+{"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_operator_assignment", _wrap_GenericIteratorDepnode_operator_assignment},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_num_children", _wrap_GenericIteratorDepnode_num_children},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_nth_child", _wrap_GenericIteratorDepnode_nth_child},
+{"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_get_parent", _wrap_GenericIteratorDepnode_get_parent},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_nth_child_ref", _wrap_GenericIteratorDepnode_nth_child_ref},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_get_info", _wrap_GenericIteratorDepnode_get_info},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_append_child", _wrap_GenericIteratorDepnode_append_child},
@@ -23548,26 +35989,36 @@ static swig_command_info swig_commands[] = {
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_empty", _wrap_GenericIteratorDepnode_empty},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_sibling_begin", _wrap_GenericIteratorDepnode_sibling_begin},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_sibling_end", _wrap_GenericIteratorDepnode_sibling_end},
+{"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_sibling_rbegin", _wrap_GenericIteratorDepnode_sibling_rbegin},
+{"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_sibling_rend", _wrap_GenericIteratorDepnode_sibling_rend},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_begin", _wrap_GenericIteratorDepnode_begin},
 {"Lingua::FreeLing3::Bindingsc::GenericIteratorDepnode_end", _wrap_GenericIteratorDepnode_end},
+{"Lingua::FreeLing3::Bindingsc::new_GenericConstIteratorDepnode", _wrap_new_GenericConstIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::delete_GenericConstIteratorDepnode", _wrap_delete_GenericConstIteratorDepnode},
 {"Lingua::FreeLing3::Bindingsc::new_PreorderIteratorDepnode", _wrap_new_PreorderIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::delete_PreorderIteratorDepnode", _wrap_delete_PreorderIteratorDepnode},
 {"Lingua::FreeLing3::Bindingsc::PreorderIteratorDepnode___plusplus__", _wrap_PreorderIteratorDepnode___plusplus__},
 {"Lingua::FreeLing3::Bindingsc::PreorderIteratorDepnode___minmin__", _wrap_PreorderIteratorDepnode___minmin__},
-{"Lingua::FreeLing3::Bindingsc::PreorderIteratorDepnode___iadd__", _wrap_PreorderIteratorDepnode___iadd__},
-{"Lingua::FreeLing3::Bindingsc::PreorderIteratorDepnode___isub__", _wrap_PreorderIteratorDepnode___isub__},
-{"Lingua::FreeLing3::Bindingsc::delete_PreorderIteratorDepnode", _wrap_delete_PreorderIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::new_ConstPreorderIteratorDepnode", _wrap_new_ConstPreorderIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::delete_ConstPreorderIteratorDepnode", _wrap_delete_ConstPreorderIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::ConstPreorderIteratorDepnode___plusplus__", _wrap_ConstPreorderIteratorDepnode___plusplus__},
+{"Lingua::FreeLing3::Bindingsc::ConstPreorderIteratorDepnode___minmin__", _wrap_ConstPreorderIteratorDepnode___minmin__},
 {"Lingua::FreeLing3::Bindingsc::new_SiblingIteratorDepnode", _wrap_new_SiblingIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::delete_SiblingIteratorDepnode", _wrap_delete_SiblingIteratorDepnode},
 {"Lingua::FreeLing3::Bindingsc::SiblingIteratorDepnode___plusplus__", _wrap_SiblingIteratorDepnode___plusplus__},
 {"Lingua::FreeLing3::Bindingsc::SiblingIteratorDepnode___minmin__", _wrap_SiblingIteratorDepnode___minmin__},
-{"Lingua::FreeLing3::Bindingsc::SiblingIteratorDepnode___iadd__", _wrap_SiblingIteratorDepnode___iadd__},
-{"Lingua::FreeLing3::Bindingsc::SiblingIteratorDepnode___isub__", _wrap_SiblingIteratorDepnode___isub__},
-{"Lingua::FreeLing3::Bindingsc::delete_SiblingIteratorDepnode", _wrap_delete_SiblingIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::new_ConstSiblingIteratorDepnode", _wrap_new_ConstSiblingIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::delete_ConstSiblingIteratorDepnode", _wrap_delete_ConstSiblingIteratorDepnode},
+{"Lingua::FreeLing3::Bindingsc::ConstSiblingIteratorDepnode___plusplus__", _wrap_ConstSiblingIteratorDepnode___plusplus__},
+{"Lingua::FreeLing3::Bindingsc::ConstSiblingIteratorDepnode___minmin__", _wrap_ConstSiblingIteratorDepnode___minmin__},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_info_set", _wrap_TreeNode_info_set},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_info_get", _wrap_TreeNode_info_get},
 {"Lingua::FreeLing3::Bindingsc::new_TreeNode", _wrap_new_TreeNode},
 {"Lingua::FreeLing3::Bindingsc::delete_TreeNode", _wrap_delete_TreeNode},
+{"Lingua::FreeLing3::Bindingsc::TreeNode_operator_assignment", _wrap_TreeNode_operator_assignment},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_num_children", _wrap_TreeNode_num_children},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_nth_child", _wrap_TreeNode_nth_child},
+{"Lingua::FreeLing3::Bindingsc::TreeNode_get_parent", _wrap_TreeNode_get_parent},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_nth_child_ref", _wrap_TreeNode_nth_child_ref},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_get_info", _wrap_TreeNode_get_info},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_append_child", _wrap_TreeNode_append_child},
@@ -23576,14 +36027,18 @@ static swig_command_info swig_commands[] = {
 {"Lingua::FreeLing3::Bindingsc::TreeNode_empty", _wrap_TreeNode_empty},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_sibling_begin", _wrap_TreeNode_sibling_begin},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_sibling_end", _wrap_TreeNode_sibling_end},
+{"Lingua::FreeLing3::Bindingsc::TreeNode_sibling_rbegin", _wrap_TreeNode_sibling_rbegin},
+{"Lingua::FreeLing3::Bindingsc::TreeNode_sibling_rend", _wrap_TreeNode_sibling_rend},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_begin", _wrap_TreeNode_begin},
 {"Lingua::FreeLing3::Bindingsc::TreeNode_end", _wrap_TreeNode_end},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_info_set", _wrap_TreeDepnode_info_set},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_info_get", _wrap_TreeDepnode_info_get},
 {"Lingua::FreeLing3::Bindingsc::new_TreeDepnode", _wrap_new_TreeDepnode},
 {"Lingua::FreeLing3::Bindingsc::delete_TreeDepnode", _wrap_delete_TreeDepnode},
+{"Lingua::FreeLing3::Bindingsc::TreeDepnode_operator_assignment", _wrap_TreeDepnode_operator_assignment},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_num_children", _wrap_TreeDepnode_num_children},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_nth_child", _wrap_TreeDepnode_nth_child},
+{"Lingua::FreeLing3::Bindingsc::TreeDepnode_get_parent", _wrap_TreeDepnode_get_parent},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_nth_child_ref", _wrap_TreeDepnode_nth_child_ref},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_get_info", _wrap_TreeDepnode_get_info},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_append_child", _wrap_TreeDepnode_append_child},
@@ -23592,6 +36047,8 @@ static swig_command_info swig_commands[] = {
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_empty", _wrap_TreeDepnode_empty},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_sibling_begin", _wrap_TreeDepnode_sibling_begin},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_sibling_end", _wrap_TreeDepnode_sibling_end},
+{"Lingua::FreeLing3::Bindingsc::TreeDepnode_sibling_rbegin", _wrap_TreeDepnode_sibling_rbegin},
+{"Lingua::FreeLing3::Bindingsc::TreeDepnode_sibling_rend", _wrap_TreeDepnode_sibling_rend},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_begin", _wrap_TreeDepnode_begin},
 {"Lingua::FreeLing3::Bindingsc::TreeDepnode_end", _wrap_TreeDepnode_end},
 {"Lingua::FreeLing3::Bindingsc::analysis_user_set", _wrap_analysis_user_set},
@@ -23617,6 +36074,9 @@ static swig_command_info swig_commands[] = {
 {"Lingua::FreeLing3::Bindingsc::analysis_get_senses_string", _wrap_analysis_get_senses_string},
 {"Lingua::FreeLing3::Bindingsc::analysis___lt__", _wrap_analysis___lt__},
 {"Lingua::FreeLing3::Bindingsc::analysis___eq__", _wrap_analysis___eq__},
+{"Lingua::FreeLing3::Bindingsc::analysis_is_selected", _wrap_analysis_is_selected},
+{"Lingua::FreeLing3::Bindingsc::analysis_mark_selected", _wrap_analysis_mark_selected},
+{"Lingua::FreeLing3::Bindingsc::analysis_unmark_selected", _wrap_analysis_unmark_selected},
 {"Lingua::FreeLing3::Bindingsc::delete_analysis", _wrap_delete_analysis},
 {"Lingua::FreeLing3::Bindingsc::word_user_set", _wrap_word_user_set},
 {"Lingua::FreeLing3::Bindingsc::word_user_get", _wrap_word_user_get},
@@ -24131,12 +36591,22 @@ XS(SWIG_init) {
   SWIG_TypeClientData(SWIGTYPE_p_std__listT_int_t, (void*) "Lingua::FreeLing3::Bindings::ListInt");
   SWIG_TypeClientData(SWIGTYPE_p_std__vectorT_std__listT_int_t_t, (void*) "Lingua::FreeLing3::Bindings::VectorListInt");
   SWIG_TypeClientData(SWIGTYPE_p_std__vectorT_std__listT_std__wstring_t_t, (void*) "Lingua::FreeLing3::Bindings::VectorListString");
+  SWIG_TypeClientData(SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_t, (void*) "Lingua::FreeLing3::Bindings::TreeIteratorNode");
+  SWIG_TypeClientData(SWIGTYPE_p_tree_iteratorT_node_treeT_node_t_const_t, (void*) "Lingua::FreeLing3::Bindings::TreeIteratorConstNode");
   SWIG_TypeClientData(SWIGTYPE_p_generic_iteratorT_node_t, (void*) "Lingua::FreeLing3::Bindings::GenericIteratorNode");
+  SWIG_TypeClientData(SWIGTYPE_p_generic_const_iteratorT_node_t, (void*) "Lingua::FreeLing3::Bindings::GenericConstIteratorNode");
   SWIG_TypeClientData(SWIGTYPE_p_preorder_iteratorT_node_t, (void*) "Lingua::FreeLing3::Bindings::PreorderIteratorNode");
+  SWIG_TypeClientData(SWIGTYPE_p_const_preorder_iteratorT_node_t, (void*) "Lingua::FreeLing3::Bindings::ConstPreorderIteratorNode");
   SWIG_TypeClientData(SWIGTYPE_p_sibling_iteratorT_node_t, (void*) "Lingua::FreeLing3::Bindings::SiblingIteratorNode");
+  SWIG_TypeClientData(SWIGTYPE_p_const_sibling_iteratorT_node_t, (void*) "Lingua::FreeLing3::Bindings::ConstSiblingIteratorNode");
+  SWIG_TypeClientData(SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_t, (void*) "Lingua::FreeLing3::Bindings::TreeIteratorDepnode");
+  SWIG_TypeClientData(SWIGTYPE_p_tree_iteratorT_depnode_treeT_depnode_t_const_t, (void*) "Lingua::FreeLing3::Bindings::TreeIteratorConstDepnode");
   SWIG_TypeClientData(SWIGTYPE_p_generic_iteratorT_depnode_t, (void*) "Lingua::FreeLing3::Bindings::GenericIteratorDepnode");
+  SWIG_TypeClientData(SWIGTYPE_p_generic_const_iteratorT_depnode_t, (void*) "Lingua::FreeLing3::Bindings::GenericConstIteratorDepnode");
   SWIG_TypeClientData(SWIGTYPE_p_preorder_iteratorT_depnode_t, (void*) "Lingua::FreeLing3::Bindings::PreorderIteratorDepnode");
+  SWIG_TypeClientData(SWIGTYPE_p_const_preorder_iteratorT_depnode_t, (void*) "Lingua::FreeLing3::Bindings::ConstPreorderIteratorDepnode");
   SWIG_TypeClientData(SWIGTYPE_p_sibling_iteratorT_depnode_t, (void*) "Lingua::FreeLing3::Bindings::SiblingIteratorDepnode");
+  SWIG_TypeClientData(SWIGTYPE_p_const_sibling_iteratorT_depnode_t, (void*) "Lingua::FreeLing3::Bindings::ConstSiblingIteratorDepnode");
   SWIG_TypeClientData(SWIGTYPE_p_treeT_node_t, (void*) "Lingua::FreeLing3::Bindings::TreeNode");
   SWIG_TypeClientData(SWIGTYPE_p_treeT_depnode_t, (void*) "Lingua::FreeLing3::Bindings::TreeDepnode");
   SWIG_TypeClientData(SWIGTYPE_p_analysis, (void*) "Lingua::FreeLing3::Bindings::analysis");

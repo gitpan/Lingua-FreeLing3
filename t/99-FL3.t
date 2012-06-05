@@ -2,8 +2,8 @@
 
 use strict;
 use warnings;
-
-use Test::More tests => 46;
+use utf8;
+use Test::More tests => 57;
 
 use FL3 'es';
 ok 1 => 'Loaded ok';
@@ -104,3 +104,20 @@ $more_sentences = hmm('ru')->tag($more_sentences);
 ok $more_sentences => 'HMM(ru) returns something';
 isa_ok $more_sentences, 'ARRAY' => 'HMM(ru) result';
 isa_ok $more_sentences->[0], 'Lingua::FreeLing3::Sentence' => 'HMM(ru) result first element';
+
+my $ww = word("cavalo");
+ok $ww => "We have a word";
+isa_ok $ww => 'Lingua::FreeLing3::Word';
+is $ww->form, "cavalo";
+
+my ($w1, $w2) = word("olá", "mundo");
+ok $w1;
+ok $w2;
+isa_ok $w1 => "Lingua::FreeLing3::Word";
+isa_ok $w2 => "Lingua::FreeLing3::Word";
+is $w1->form, "olá";
+is $w2->form, "mundo";
+
+my $s = sentence($ww,$w1,$w2);
+ok $s;
+isa_ok $s => "Lingua::FreeLing3::Sentence";

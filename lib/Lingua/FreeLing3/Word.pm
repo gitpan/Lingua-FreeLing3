@@ -144,7 +144,7 @@ sub analysis {
     for (@$analysis_list) {
         $_ = Lingua::FreeLing3::Word::Analysis->_new_from_binding($_);
         if (defined($ops{FeatureStructure})) {
-            $_ = $_->to_hash;
+            $_ = $_->as_hash;
         }
     }
     return $analysis_list;
@@ -194,16 +194,29 @@ sub is_multiword { $_[0]->SUPER::is_multiword }
 =head2 C<get_mw_words>
 
 For a multiword word, this method returns an array of its constituent
-words.
+words in array context. In scalar context returns the multiword as a
+string (words concatenated by a whitespace).
+
+Returns undef if word is not a multiword.
 
 =cut
 
 sub get_mw_words {
-    return undef unless $_[0]->is_multiword;
-    map {
-        $_->ACQUIRE();
-        Lingua::FreeLing3::Word->_new_from_binding($_)
-      } @{ $_[0]->SUPER::get_words_mw };
+    my $self = shift;
+    return undef unless $self->is_multiword;
+
+    if (wantarray) {
+        return map {
+            $_->ACQUIRE();
+            Lingua::FreeLing3::Word->_new_from_binding($_)
+          } @{ $self->SUPER::get_words_mw };
+    } else {
+        return join(" ", map {
+            my $w = $_->get_form();
+            utf8::decode($w);
+            $w
+        } @{ $self->SUPER::get_words_mw })
+    }
 }
 
 # =head2 C<in_dict>

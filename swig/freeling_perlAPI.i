@@ -57,14 +57,14 @@
   $1 = wtemp;
 }
 
-
 %typemap(out)  const std::wstring & {
   std::string temp;
   temp = util::wstring2string($1);
   $result = sv_2mortal(newSVpv(temp.c_str(), 0));
   argvi++;
   SvUTF8_on ($result);
-}
+} 
+
 
 %typemap(out) std::wstring = const std::wstring &;
 
@@ -88,39 +88,86 @@
 
 ############### MORFO #####################
 
-// forward declarations
+// predeclarations
 template <class T> class tree;
+
+template <class T> class generic_iterator;
+template <class T> class generic_const_iterator;
+
 template <class T> class preorder_iterator;
+template <class T> class const_preorder_iterator;
+template <class T> class sibling_iterator;
+template <class T> class const_sibling_iterator;
+
+/// Generic iterator, to derive all the others
+template<class T, class N>
+class tree_iterator {
+ public: 
+  tree_iterator();
+  tree_iterator(tree<T> *);
+  tree_iterator(const tree_iterator<T,N> &);
+  ~tree_iterator();
+
+  const tree<T>& operator*() const;
+  const tree<T>* operator->() const;
+  bool operator==(const tree_iterator<T,N> &) const;
+  bool operator!=(const tree_iterator<T,N> &) const;
+};
 
 template<class T>
-class generic_iterator  {
- protected:
-  tree<T> *pnode;
+class generic_iterator : public tree_iterator<T,tree<T> > {
+ friend class generic_const_iterator<T>;
  public:
   generic_iterator();
-  generic_iterator(const generic_iterator<T> &);
   generic_iterator(tree<T> *);
+  generic_iterator(const generic_iterator<T> &);
   tree<T>& operator*() const;
   tree<T>* operator->() const;
-  bool operator==(const generic_iterator &) const;
-  bool operator!=(const generic_iterator &) const;
+  ~generic_iterator();
+};
+
+template<class T>
+class generic_const_iterator : public tree_iterator<T,const tree<T> >  {
+ public:
+  generic_const_iterator();
+  generic_const_iterator(const generic_iterator<T> &);
+  generic_const_iterator(const generic_const_iterator<T> &);
+  generic_const_iterator(tree<T> *);
+  ~generic_const_iterator();
 };
 
 
-/// traverse all children of the same node
+/// sibling iterator: traverse all children of the same node
+
 template<class T>
 class sibling_iterator : public generic_iterator<T> {
-  friend class preorder_iterator<T>;
  public:
   sibling_iterator();
   sibling_iterator(const sibling_iterator<T> &);
   sibling_iterator(tree<T> *);
+  ~sibling_iterator();
 
   sibling_iterator& operator++();
   sibling_iterator& operator--();
-  sibling_iterator& operator+=(unsigned int);
-  sibling_iterator& operator-=(unsigned int);
+  sibling_iterator operator++(int);
+  sibling_iterator operator--(int);
 };
+
+template<class T>
+class const_sibling_iterator : public generic_const_iterator<T> {
+ public:
+  const_sibling_iterator();
+  const_sibling_iterator(const const_sibling_iterator<T> &);
+  const_sibling_iterator(const sibling_iterator<T> &);
+  const_sibling_iterator(tree<T> *);
+  ~const_sibling_iterator();
+
+  const_sibling_iterator& operator++();
+  const_sibling_iterator& operator--();
+  const_sibling_iterator operator++(int);
+  const_sibling_iterator operator--(int);
+};
+
 
 /// traverse the tree in preorder (parent first, then children)
 template<class T>
@@ -129,61 +176,105 @@ class preorder_iterator : public generic_iterator<T> {
   preorder_iterator();
   preorder_iterator(const preorder_iterator<T> &);
   preorder_iterator(tree<T> *);
-  preorder_iterator(sibling_iterator<T> &);
+  preorder_iterator(const sibling_iterator<T> &);
+  ~preorder_iterator();
 
   preorder_iterator& operator++();
   preorder_iterator& operator--();
-  preorder_iterator& operator+=(unsigned int);
-  preorder_iterator& operator-=(unsigned int);
+  preorder_iterator operator++(int);
+  preorder_iterator operator--(int);
+};
+
+template<class T>
+class const_preorder_iterator : public generic_const_iterator<T> {
+ public:
+  const_preorder_iterator();
+  const_preorder_iterator(tree<T> *);
+  const_preorder_iterator(const const_preorder_iterator<T> &);
+  const_preorder_iterator(const preorder_iterator<T> &);
+  const_preorder_iterator(const const_sibling_iterator<T> &);
+  const_preorder_iterator(const sibling_iterator<T> &);
+  ~const_preorder_iterator();
+  
+  const_preorder_iterator& operator++();
+  const_preorder_iterator& operator--();
+  const_preorder_iterator operator++(int);
+  const_preorder_iterator operator--(int);
 };
 
 
-template <class T> class tree {
+%rename(operator_assignment) operator=;
+
+template <class T> 
+class tree { 
   friend class preorder_iterator<T>;
+  friend class const_preorder_iterator<T>;
   friend class sibling_iterator<T>;
+  friend class const_sibling_iterator<T>;
+
  public:
   T info;
   typedef class generic_iterator<T> generic_iterator;
+  typedef class generic_const_iterator<T> generic_const_iterator;
   typedef class preorder_iterator<T> preorder_iterator;
-  //  class const_preorder_iterator;
+  typedef class const_preorder_iterator<T> const_preorder_iterator;
   typedef class sibling_iterator<T> sibling_iterator;
-  // class const_sibling_iterator;
+  typedef class const_sibling_iterator<T> const_sibling_iterator;
   typedef preorder_iterator iterator;
+  typedef const_preorder_iterator const_iterator;
 
   tree();
   tree(const T&);
   tree(const tree<T>&);
-  tree(const preorder_iterator&);
+  tree(const typename tree<T>::preorder_iterator&);
   ~tree();
-  ##tree<T>& operator=(const tree<T>&);
+  tree<T>& operator=(const tree<T>&);
 
   unsigned int num_children() const;
   sibling_iterator nth_child(unsigned int) const;
-  tree<T>& nth_child_ref(unsigned int) const;
+  iterator get_parent() const;
+  tree<T> & nth_child_ref(unsigned int) const;
   T& get_info();
   void append_child(const tree<T> &);
-  void hang_child(tree<T> &);
+  void hang_child(tree<T> &, bool=true);
   void clear();
   bool empty() const;
 
   sibling_iterator sibling_begin();
-  sibling_iterator sibling_end() const;
+  const_sibling_iterator sibling_begin() const;
+  sibling_iterator sibling_end();
+  const_sibling_iterator sibling_end() const;
+  sibling_iterator sibling_rbegin();
+  const_sibling_iterator sibling_rbegin() const;
+  sibling_iterator sibling_rend();
+  const_sibling_iterator sibling_rend() const;
 
   preorder_iterator begin();
-  preorder_iterator end() const;
+  const_preorder_iterator begin() const;
+  preorder_iterator end();
+  const_preorder_iterator end() const;
 };
 
+%template(TreeIteratorNode) tree_iterator<node,tree<node> >;
+%template(TreeIteratorConstNode) tree_iterator<node,const tree<node> >;
 %template(GenericIteratorNode) generic_iterator<node>;
+%template(GenericConstIteratorNode) generic_const_iterator<node>;
 %template(PreorderIteratorNode) preorder_iterator<node>;
+%template(ConstPreorderIteratorNode) const_preorder_iterator<node>;
 %template(SiblingIteratorNode) sibling_iterator<node>;
+%template(ConstSiblingIteratorNode) const_sibling_iterator<node>;
 
+%template(TreeIteratorDepnode) tree_iterator<depnode,tree<depnode> >;
+%template(TreeIteratorConstDepnode) tree_iterator<depnode,const tree<depnode> >;
 %template(GenericIteratorDepnode) generic_iterator<depnode>;
+%template(GenericConstIteratorDepnode) generic_const_iterator<depnode>;
 %template(PreorderIteratorDepnode) preorder_iterator<depnode>;
+%template(ConstPreorderIteratorDepnode) const_preorder_iterator<depnode>;
 %template(SiblingIteratorDepnode) sibling_iterator<depnode>;
+%template(ConstSiblingIteratorDepnode) const_sibling_iterator<depnode>;
 
 %template(TreeNode) tree<node>;
 %template(TreeDepnode) tree<depnode>;
-%rename(operator_assignment) operator=;
 
 
 class analysis {
@@ -224,6 +315,13 @@ class analysis {
       bool operator<(const analysis &) const;
       /// Comparison (to please MSVC)
       bool operator==(const analysis &) const;
+
+      // find out whether the analysis is selected in the tagger k-th best sequence
+      bool is_selected(int k=0) const;
+      // mark this analysis as selected in k-th best sequence
+      void mark_selected(int k=0);
+      // unmark this analysis as selected in k-th best sequence
+      void unmark_selected(int k=0);
 };
 
 
@@ -267,36 +365,36 @@ class word : public std::list<analysis> {
       /// Get word form, lowercased.
       std::wstring get_lc_form() const;
       /// Get an iterator to the first selected analysis
-      word::iterator selected_begin();
+      word::iterator selected_begin(int k=0);
       /// Get an iterator to the first selected analysis
-      word::const_iterator selected_begin() const;
+      word::const_iterator selected_begin(int k=0) const;
       /// Get an iterator to the end of selected analysis list
-      word::iterator selected_end();
+      word::iterator selected_end(int k=0);
       /// Get an iterator to the end of selected analysis list
-      word::const_iterator selected_end() const;
+      word::const_iterator selected_end(int k=0) const;
       /// Get an iterator to the first unselected analysis
-      word::iterator unselected_begin();
+      word::iterator unselected_begin(int k=0);
       /// Get an iterator to the first unselected analysis
-      word::const_iterator unselected_begin() const;
+      word::const_iterator unselected_begin(int k=0) const;
       /// Get an iterator to the end of unselected analysis list
-      word::iterator unselected_end();
+      word::iterator unselected_end(int k=0);
       /// Get an iterator to the end of unselected analysis list
-      word::const_iterator unselected_end() const;
+      word::const_iterator unselected_end(int k=0) const;
       /// get lemma for the selected analysis in list
-      std::wstring get_lemma() const;
+      std::wstring get_lemma(int k=0) const;
       /// get tag for the selected analysis
-      std::wstring get_tag() const;
+      std::wstring get_tag(int k=0) const;
       /// get tag (short version) for the selected analysis, assuming eagles tagset
-      std::wstring get_short_tag() const;
+      std::wstring get_short_tag(int k=0) const;
       /// get tag (short version) for the selected analysis
-      std::wstring get_short_tag(const std::wstring &) const;
+      std::wstring get_short_tag(const std::wstring &,int k=0) const;
 
       /// get sense list for the selected analysis
-      std::list<std::pair<std::wstring,double> > get_senses() const;
+      std::list<std::pair<std::wstring,double> > get_senses(int k=0) const;
       // useful for java API
-      std::wstring get_senses_string() const;
+      std::wstring get_senses_string(int k=0) const;
       /// set sense list for the selected analysis
-      void set_senses(const std::list<std::pair<std::wstring,double> > &);
+      void set_senses(const std::list<std::pair<std::wstring,double> > &,int k=0);
 
       /// get token span.
       unsigned long get_span_start() const;
@@ -343,13 +441,13 @@ class word : public std::list<analysis> {
       /// get number of analysis in current list
       int get_n_analysis() const;
       /// empty the list of selected analysis
-      void unselect_all_analysis();
+      void unselect_all_analysis(int k=0);
       /// mark all analysisi as selected
-      void select_all_analysis();
+      void select_all_analysis(int k=0);
       /// add the given analysis to selected list.
-      void select_analysis(word::iterator);
+      void select_analysis(word::iterator, int k=0);
       /// remove the given analysis from selected list.
-      void unselect_analysis(word::iterator);
+      void unselect_analysis(word::iterator, int k=0);
       /// get list of analysis (useful for perl API)
       std::list<analysis> get_analysis() const;
       /// get begin iterator to analysis list (useful for perl/java API)
@@ -438,8 +536,8 @@ class dep_tree :  public tree<depnode> {
 class sentence : public std::list<word> {
  public:
   sentence();
-  sentence(const std::list< word >&);
-  
+  sentence(const std::list<word>&); 
+
   void set_parse_tree(const parse_tree &);
   parse_tree & get_parse_tree(void);
   bool is_parsed() const;  
@@ -573,8 +671,8 @@ class maco {
 /*------------------------------------------------------------------------*/
 class hmm_tagger {
    public:
-       /// Constructor
-       hmm_tagger(const std::wstring &, const std::wstring &, bool, unsigned int);
+      /// Constructor
+      hmm_tagger(const std::wstring &, const std::wstring &, bool, unsigned int, unsigned int kb=1);
 
       /// analyze sentences
       void analyze(std::list<sentence> &);
@@ -641,14 +739,10 @@ class chart_parser {
 
 
 /*------------------------------------------------------------------------*/
-class dep_txala : public dependency_parser {
+class dep_txala {
  public:   
    dep_txala(const std::wstring &, const std::wstring &);
 
-  /// analyze given sentences
-  void analyze(sentence &);
-  /// analyze given sentences
-  void analyze(std::list<sentence> &);
   /// analyze sentence, return analyzed copy
   sentence analyze(const sentence &);
   /// analyze sentences, return analyzed copy

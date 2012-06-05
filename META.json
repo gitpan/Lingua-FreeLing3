@@ -24,7 +24,6 @@
          "requires" : {
             "ExtUtils::Mkbootstrap" : "0",
             "ExtUtils::PkgConfig" : "1.12",
-            "File::Which" : "0",
             "Module::Build" : "0.36"
          }
       },
@@ -43,9 +42,33 @@
       },
       "Lingua::FreeLing3" : {
          "file" : "lib/Lingua/FreeLing3.pm",
-         "version" : "0.01_06"
+         "version" : "0.01_07"
       },
       "Lingua::FreeLing3::Bindings" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::ConstPreorderIteratorDepnode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::ConstPreorderIteratorNode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::ConstSiblingIteratorDepnode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::ConstSiblingIteratorNode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::GenericConstIteratorDepnode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::GenericConstIteratorNode" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
@@ -98,6 +121,22 @@
          "version" : 0
       },
       "Lingua::FreeLing3::Bindings::TreeDepnode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::TreeIteratorConstDepnode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::TreeIteratorConstNode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::TreeIteratorDepnode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::TreeIteratorNode" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
@@ -296,5 +335,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.01_06"
+   "version" : "0.01_07"
 }
