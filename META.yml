@@ -3,14 +3,15 @@ abstract: 'a library for language analysis with FreeLing3.'
 author:
   - 'Alberto SimÃµes <ambs@cpan.org>'
 build_requires:
-  ExtUtils::CBuilder: 0
+  ExtUtils::CBuilder: 0.280205
   Test::Warn: 0
 configure_requires:
+  ExtUtils::CBuilder: 0.280205
   ExtUtils::Mkbootstrap: 0
   ExtUtils::PkgConfig: 1.12
   Module::Build: 0.36
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -22,7 +23,7 @@ provides:
     version: 0.01
   Lingua::FreeLing3:
     file: lib/Lingua/FreeLing3.pm
-    version: 0.01_07
+    version: 0.01
   Lingua::FreeLing3::Bindings:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
@@ -68,10 +69,16 @@ provides:
   Lingua::FreeLing3::Bindings::ListWord:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
+  Lingua::FreeLing3::Bindings::PairDoubleString:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
   Lingua::FreeLing3::Bindings::PreorderIteratorDepnode:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::PreorderIteratorNode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::RE_map:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::SiblingIteratorDepnode:
@@ -83,16 +90,16 @@ provides:
   Lingua::FreeLing3::Bindings::TreeDepnode:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
-  Lingua::FreeLing3::Bindings::TreeIteratorConstDepnode:
-    file: lib/Lingua/FreeLing3/Bindings.pm
-    version: 0
-  Lingua::FreeLing3::Bindings::TreeIteratorConstNode:
-    file: lib/Lingua/FreeLing3/Bindings.pm
-    version: 0
   Lingua::FreeLing3::Bindings::TreeIteratorDepnode:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
+  Lingua::FreeLing3::Bindings::TreeIteratorDepnodeConst:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
   Lingua::FreeLing3::Bindings::TreeIteratorNode:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::TreeIteratorNodeConst:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::TreeNode:
@@ -104,6 +111,12 @@ provides:
   Lingua::FreeLing3::Bindings::VectorListString:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
+  Lingua::FreeLing3::Bindings::VectorPairDoubleString:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::VectorString:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
   Lingua::FreeLing3::Bindings::VectorWord:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
@@ -111,6 +124,9 @@ provides:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::chart_parser:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::dates:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::dep_tree:
@@ -122,10 +138,19 @@ provides:
   Lingua::FreeLing3::Bindings::depnode:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
+  Lingua::FreeLing3::Bindings::dictionary:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
   Lingua::FreeLing3::Bindings::document:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::hmm_tagger:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::lang_ident:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::locutions:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::maco:
@@ -137,7 +162,13 @@ provides:
   Lingua::FreeLing3::Bindings::nec:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
+  Lingua::FreeLing3::Bindings::ner:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
   Lingua::FreeLing3::Bindings::node:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::numbers:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::paragraph:
@@ -147,6 +178,15 @@ provides:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::phonetics:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::probabilities:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::punts:
+    file: lib/Lingua/FreeLing3/Bindings.pm
+    version: 0
+  Lingua::FreeLing3::Bindings::quantities:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
   Lingua::FreeLing3::Bindings::relax_tagger:
@@ -242,4 +282,4 @@ requires:
   Try::Tiny: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01_07
+version: 0.01

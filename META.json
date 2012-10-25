@@ -4,7 +4,7 @@
       "Alberto SimÃµes <ambs@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -16,12 +16,13 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "ExtUtils::CBuilder" : "0",
+            "ExtUtils::CBuilder" : "0.280205",
             "Test::Warn" : "0"
          }
       },
       "configure" : {
          "requires" : {
+            "ExtUtils::CBuilder" : "0.280205",
             "ExtUtils::Mkbootstrap" : "0",
             "ExtUtils::PkgConfig" : "1.12",
             "Module::Build" : "0.36"
@@ -42,7 +43,7 @@
       },
       "Lingua::FreeLing3" : {
          "file" : "lib/Lingua/FreeLing3.pm",
-         "version" : "0.01_07"
+         "version" : "0.01"
       },
       "Lingua::FreeLing3::Bindings" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
@@ -104,11 +105,19 @@
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
+      "Lingua::FreeLing3::Bindings::PairDoubleString" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
       "Lingua::FreeLing3::Bindings::PreorderIteratorDepnode" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
       "Lingua::FreeLing3::Bindings::PreorderIteratorNode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::RE_map" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
@@ -124,19 +133,19 @@
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
-      "Lingua::FreeLing3::Bindings::TreeIteratorConstDepnode" : {
-         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
-         "version" : 0
-      },
-      "Lingua::FreeLing3::Bindings::TreeIteratorConstNode" : {
-         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
-         "version" : 0
-      },
       "Lingua::FreeLing3::Bindings::TreeIteratorDepnode" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
+      "Lingua::FreeLing3::Bindings::TreeIteratorDepnodeConst" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
       "Lingua::FreeLing3::Bindings::TreeIteratorNode" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::TreeIteratorNodeConst" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
@@ -152,6 +161,14 @@
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
+      "Lingua::FreeLing3::Bindings::VectorPairDoubleString" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::VectorString" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
       "Lingua::FreeLing3::Bindings::VectorWord" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
@@ -161,6 +178,10 @@
          "version" : 0
       },
       "Lingua::FreeLing3::Bindings::chart_parser" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::dates" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
@@ -176,11 +197,23 @@
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
+      "Lingua::FreeLing3::Bindings::dictionary" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
       "Lingua::FreeLing3::Bindings::document" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
       "Lingua::FreeLing3::Bindings::hmm_tagger" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::lang_ident" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::locutions" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
@@ -196,7 +229,15 @@
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
+      "Lingua::FreeLing3::Bindings::ner" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
       "Lingua::FreeLing3::Bindings::node" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::numbers" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
@@ -209,6 +250,18 @@
          "version" : 0
       },
       "Lingua::FreeLing3::Bindings::phonetics" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::probabilities" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::punts" : {
+         "file" : "lib/Lingua/FreeLing3/Bindings.pm",
+         "version" : 0
+      },
+      "Lingua::FreeLing3::Bindings::quantities" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
          "version" : 0
       },
@@ -329,11 +382,11 @@
          "version" : "0.02"
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "license" : [
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.01_07"
+   "version" : "0.01"
 }

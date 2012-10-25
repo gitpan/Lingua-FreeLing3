@@ -19,9 +19,11 @@ my $builder = MyBuilder->new
                             'ExtUtils::PkgConfig'   => '1.12',
                             'Module::Build'         => '0.36',
                             'ExtUtils::Mkbootstrap' => '0',
+                            'ExtUtils::CBuilder' => '0.280205',
                            },
    build_requires       => {
                             'Test::Warn' => '0',
+                            'ExtUtils::CBuilder' => '0.280205',
                            },
    requires             => {
                             'Try::Tiny' => '0',

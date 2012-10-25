@@ -76,7 +76,7 @@ set, and it will return a reference to a list of strings.
 sub tokenize {
     my ($self, $string, %opts) = @_;
 
-    return undef unless $string;
+    return [] unless $string;
 
     my $result = $self->SUPER::tokenize($string);
     return [] unless $result;
