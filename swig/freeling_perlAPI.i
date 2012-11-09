@@ -79,11 +79,11 @@
 //
 ////////////////////////////////////////////////////////////////
 
-
 %include std_list.i
 %include std_vector.i
 %include std_map.i
 %include std_pair.i
+
 
 %template(VectorWord) std::vector<word>;
 %template(ListWord) std::list<word>;
@@ -99,6 +99,25 @@
 
 %template(PairDoubleString) std::pair<double,std::wstring >;
 %template(VectorPairDoubleString) std::vector<std::pair<double,std::wstring> >;
+
+#ifdef FL_API_PERL
+%typemap(out) std::list< std::wstring > {
+    std::list<std::wstring>::const_iterator i;
+    unsigned int j;
+    int len = (& $1)->size();
+    SV **svs = new SV*[len];
+    for (i=(& $1)->begin(), j=0; i!=(& $1)->end(); i++, j++) {
+        std::string ptr = util::wstring2string(*i);
+        svs[j] = sv_2mortal(newSVpv(ptr.c_str(), 0));
+        SvUTF8_on(svs[j]); 
+    }
+    AV *myav = av_make(len, svs);
+    delete[] svs;
+    $result = newRV_noinc((SV*) myav);
+    sv_2mortal($result);
+    argvi++;
+ }
+#endif
 
 #ifdef FL_API_PYTHON
 %include std_set.i

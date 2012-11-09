@@ -30999,13 +30999,12 @@ XS(_wrap_document_get_coref_nodes) {
     {
       std::list<std::wstring>::const_iterator i;
       unsigned int j;
-      int len = (&result)->size();
+      int len = (& result)->size();
       SV **svs = new SV*[len];
-      for (i=(&result)->begin(), j=0; i!=(&result)->end(); i++, j++) {
-        std::wstring* ptr = new std::wstring(*i);
-        svs[j] = sv_newmortal();
-        SWIG_MakePtr(svs[j], (void*) ptr, 
-          SWIGTYPE_p_std__wstring, SWIG_SHADOW|0);
+      for (i=(& result)->begin(), j=0; i!=(& result)->end(); i++, j++) {
+        std::string ptr = util::wstring2string(*i);
+        svs[j] = sv_2mortal(newSVpv(ptr.c_str(), 0));
+        SvUTF8_on(svs[j]); 
       }
       AV *myav = av_make(len, svs);
       delete[] svs;
@@ -35848,13 +35847,12 @@ XS(_wrap_dictionary_get_forms) {
     {
       std::list<std::wstring>::const_iterator i;
       unsigned int j;
-      int len = (&result)->size();
+      int len = (& result)->size();
       SV **svs = new SV*[len];
-      for (i=(&result)->begin(), j=0; i!=(&result)->end(); i++, j++) {
-        std::wstring* ptr = new std::wstring(*i);
-        svs[j] = sv_newmortal();
-        SWIG_MakePtr(svs[j], (void*) ptr, 
-          SWIGTYPE_p_std__wstring, SWIG_SHADOW|0);
+      for (i=(& result)->begin(), j=0; i!=(& result)->end(); i++, j++) {
+        std::string ptr = util::wstring2string(*i);
+        svs[j] = sv_2mortal(newSVpv(ptr.c_str(), 0));
+        SvUTF8_on(svs[j]); 
       }
       AV *myav = av_make(len, svs);
       delete[] svs;
@@ -40562,13 +40560,12 @@ XS(_wrap_semanticDB_get_sense_words) {
     {
       std::list<std::wstring>::const_iterator i;
       unsigned int j;
-      int len = (&result)->size();
+      int len = (& result)->size();
       SV **svs = new SV*[len];
-      for (i=(&result)->begin(), j=0; i!=(&result)->end(); i++, j++) {
-        std::wstring* ptr = new std::wstring(*i);
-        svs[j] = sv_newmortal();
-        SWIG_MakePtr(svs[j], (void*) ptr, 
-          SWIGTYPE_p_std__wstring, SWIG_SHADOW|0);
+      for (i=(& result)->begin(), j=0; i!=(& result)->end(); i++, j++) {
+        std::string ptr = util::wstring2string(*i);
+        svs[j] = sv_2mortal(newSVpv(ptr.c_str(), 0));
+        SvUTF8_on(svs[j]); 
       }
       AV *myav = av_make(len, svs);
       delete[] svs;
@@ -40629,13 +40626,12 @@ XS(_wrap_semanticDB_get_word_senses) {
     {
       std::list<std::wstring>::const_iterator i;
       unsigned int j;
-      int len = (&result)->size();
+      int len = (& result)->size();
       SV **svs = new SV*[len];
-      for (i=(&result)->begin(), j=0; i!=(&result)->end(); i++, j++) {
-        std::wstring* ptr = new std::wstring(*i);
-        svs[j] = sv_newmortal();
-        SWIG_MakePtr(svs[j], (void*) ptr, 
-          SWIGTYPE_p_std__wstring, SWIG_SHADOW|0);
+      for (i=(& result)->begin(), j=0; i!=(& result)->end(); i++, j++) {
+        std::string ptr = util::wstring2string(*i);
+        svs[j] = sv_2mortal(newSVpv(ptr.c_str(), 0));
+        SvUTF8_on(svs[j]); 
       }
       AV *myav = av_make(len, svs);
       delete[] svs;
@@ -41124,13 +41120,12 @@ XS(_wrap_util_wstring2list) {
     {
       std::list<std::wstring>::const_iterator i;
       unsigned int j;
-      int len = (&result)->size();
+      int len = (& result)->size();
       SV **svs = new SV*[len];
-      for (i=(&result)->begin(), j=0; i!=(&result)->end(); i++, j++) {
-        std::wstring* ptr = new std::wstring(*i);
-        svs[j] = sv_newmortal();
-        SWIG_MakePtr(svs[j], (void*) ptr, 
-          SWIGTYPE_p_std__wstring, SWIG_SHADOW|0);
+      for (i=(& result)->begin(), j=0; i!=(& result)->end(); i++, j++) {
+        std::string ptr = util::wstring2string(*i);
+        svs[j] = sv_2mortal(newSVpv(ptr.c_str(), 0));
+        SvUTF8_on(svs[j]); 
       }
       AV *myav = av_make(len, svs);
       delete[] svs;

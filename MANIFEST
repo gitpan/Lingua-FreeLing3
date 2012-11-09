@@ -29,6 +29,9 @@ t/10-relaxtagger.t
 t/11-chartparser.t
 t/12-deptxala.t
 t/13-nec.t
+t/14-eagles.t
+t/15-dictionary.t
+t/99-FL3.t
 
 lib/Lingua/FreeLing3.pm
 lib/Lingua/FreeLing3/NEC.pm
@@ -42,6 +45,7 @@ lib/Lingua/FreeLing3/Paragraph.pm
 lib/Lingua/FreeLing3/HMMTagger.pm
 lib/Lingua/FreeLing3/Tokenizer.pm
 lib/Lingua/FreeLing3/ParseTree.pm
+lib/Lingua/FreeLing3/Dictionary.pm
 lib/Lingua/FreeLing3/ChartParser.pm
 lib/Lingua/FreeLing3/RelaxTagger.pm
 lib/Lingua/FreeLing3/MorphAnalyzer.pm
@@ -53,11 +57,10 @@ META.json
 
 
 lib/FL3.pm
-t/99-FL3.t
+
 
 
 
 lib/Lingua/FreeLing3/DepTree.pm
 lib/Lingua/FreeLing3/EAGLES.pm
 lib/Lingua/FreeLing3/Config.pm
-t/14-eagles.t

@@ -1,5 +1,8 @@
 Revision history for Lingua-FreeLing3
 
+0.02    Fri Nov  9 16:02:38 WET 2012
+        - Added Dictionary interface
+
 0.01    Thu Oct 25 18:33:43 WEST 2012
         - Released for official FreeLing 3.0 release.
         - There is no guarantee backward support to FL3 beta versions.

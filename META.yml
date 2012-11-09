@@ -23,7 +23,7 @@ provides:
     version: 0.01
   Lingua::FreeLing3:
     file: lib/Lingua/FreeLing3.pm
-    version: 0.01
+    version: 0.02
   Lingua::FreeLing3::Bindings:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
@@ -237,6 +237,9 @@ provides:
   Lingua::FreeLing3::DepTxala:
     file: lib/Lingua/FreeLing3/DepTxala.pm
     version: 0.01
+  Lingua::FreeLing3::Dictionary:
+    file: lib/Lingua/FreeLing3/Dictionary.pm
+    version: 0.01
   Lingua::FreeLing3::Document:
     file: lib/Lingua/FreeLing3/Document.pm
     version: 0.01
@@ -282,4 +285,4 @@ requires:
   Try::Tiny: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.02
