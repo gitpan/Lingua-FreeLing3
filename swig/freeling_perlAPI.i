@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////
 //
 //    FreeLing - Open Source Language Analyzers
-//
+ //
 //    Copyright (C) 2004   TALP Research Center
 //                         Universitat Politecnica de Catalunya
 //
@@ -42,40 +42,10 @@
  using namespace std;
 %}
 
-#%include "std_string.i"
-
-### Typemaps ###
-
-%typemap(in) const std::wstring & (std::wstring wtemp)  {
-  std::string aux (SvPV($input, PL_na));
-  wtemp = util::string2wstring(aux);
-  $1 = &wtemp;
-}
-
-%typemap(in) std::wstring (std::wstring wtemp) {
-  std::string aux (SvPV($input, PL_na));
-  wtemp = util::string2wstring(aux);
-  $1 = wtemp;
-}
-
-%typemap(out)  const std::wstring & {
-  std::string temp;
-  temp = util::wstring2string($1);
-  $result = sv_2mortal(newSVpv(temp.c_str(), 0));
-  argvi++;
-  SvUTF8_on ($result);
-} 
-
-
-%typemap(out) std::wstring = const std::wstring &;
-
-%typemap(typecheck) const std::wstring & = char *;
-
-#define FL_API_PERL
 ////////////////////////////////////////////////////////////////
 //
-//  freeling.i
-//  This is the SWIG input file, used to generate java/perl/python APIs.
+//  templates.i
+//  This is a SWIG input file, used to generate java/perl/python APIs.
 //
 ////////////////////////////////////////////////////////////////
 
@@ -100,29 +70,63 @@
 %template(PairDoubleString) std::pair<double,std::wstring >;
 %template(VectorPairDoubleString) std::vector<std::pair<double,std::wstring> >;
 
-#ifdef FL_API_PERL
-%typemap(out) std::list< std::wstring > {
-    std::list<std::wstring>::const_iterator i;
-    unsigned int j;
-    int len = (& $1)->size();
-    SV **svs = new SV*[len];
-    for (i=(& $1)->begin(), j=0; i!=(& $1)->end(); i++, j++) {
-        std::string ptr = util::wstring2string(*i);
-        svs[j] = sv_2mortal(newSVpv(ptr.c_str(), 0));
-        SvUTF8_on(svs[j]); 
-    }
-    AV *myav = av_make(len, svs);
-    delete[] svs;
-    $result = newRV_noinc((SV*) myav);
-    sv_2mortal($result);
-    argvi++;
- }
-#endif
+%template(PairStringString) std::pair<std::wstring,std::wstring >;
+%template(VectorPairStringString) std::vector<std::pair<std::wstring,std::wstring> >;
 
-#ifdef FL_API_PYTHON
-%include std_set.i
-%template(SetString) std::set<std::wstring>;
-#endif
+
+
+### Typemaps ###
+
+%typemap(in) const std::wstring & (std::wstring wtemp)  {
+  std::string aux (SvPV($input, PL_na));
+  wtemp = util::string2wstring(aux);
+  $1 = &wtemp;
+}
+
+%typemap(in) std::wstring (std::wstring wtemp) {
+  std::string aux (SvPV($input, PL_na));
+  wtemp = util::string2wstring(aux);
+  $1 = wtemp;
+}
+
+%typemap(out) const std::wstring & {
+  std::string temp;
+  temp = util::wstring2string($1);
+  $result = sv_2mortal(newSVpv(temp.c_str(), 0));
+  argvi++;
+  SvUTF8_on ($result);
+} 
+
+%typemap(out) std::list< std::wstring > {
+  std::list<std::wstring>::const_iterator i;
+  unsigned int j;
+  int len = (& $1)->size();
+  SV **svs = new SV*[len];
+  for (i=(& $1)->begin(), j=0; i!=(& $1)->end(); i++, j++) {
+    std::string ptr = util::wstring2string(*i);
+    svs[j] = sv_2mortal(newSVpv(ptr.c_str(), 0));
+    SvUTF8_on(svs[j]);
+  }
+  AV *myav = av_make(len, svs);
+  delete[] svs;
+  $result = newRV_noinc((SV*) myav);
+  sv_2mortal($result);
+  argvi++;
+}
+
+%typemap(out) std::wstring = const std::wstring &;
+
+%typemap(typecheck) const std::wstring & = char *;
+
+#define FL_API_PERL
+
+////////////////////////////////////////////////////////////////
+//
+//  freeling.i
+//  This is the SWIG input file, used to generate java/perl/python APIs.
+//
+////////////////////////////////////////////////////////////////
+ 
 
 %rename(operator_assignment) operator=;
 
@@ -990,7 +994,7 @@ class probabilities {
 class hmm_tagger {
  public:
   /// Constructor
-  hmm_tagger(const std::wstring &, const std::wstring &, bool, unsigned int, unsigned int kb=1);
+  hmm_tagger(const std::wstring &, bool, unsigned int, unsigned int kb=1);
   ~hmm_tagger();
   
   #ifndef FL_API_JAVA
@@ -1202,6 +1206,33 @@ class semanticDB {
   sense_info get_sense_info(const std::wstring &) const;
 };
 
+
+////////////////////////////////////////////////////////////////
+/// EAGLES tagset handler
+////////////////////////////////////////////////////////////////
+
+class tagset {
+
+  public:
+    /// constructor: load a map file
+    tagset(const std::wstring &f);
+    /// destructor
+    ~tagset();
+
+    /// get short version of given tag
+    std::wstring get_short_tag(const std::wstring &tag) const;
+    /// get list of <feature,value> pairs with morphological information
+    std::list<std::pair<std::wstring,std::wstring> > get_msf_features(const std::wstring &tag) const;
+    /// get list <feature,value> pairs with morphological information,
+    ///  in a string format
+    std::wstring get_msf_string(const std::wstring &tag) const;
+};
+
+
+////////////////////////////////////////////////////////////////
+/// Utilities
+////////////////////////////////////////////////////////////////
+
 class util {
  public:
   /// Init the locale of the program, to properly handle unicode
@@ -1217,9 +1248,11 @@ class util {
   static std::wstring vector2wstring(const std::vector<std::wstring> &, const std::wstring &);
   static std::wstring list2wstring(const std::list<std::wstring> &, const std::wstring &);
   static std::wstring pairlist2wstring(const std::list<std::pair<std::wstring, double> > &, const std::wstring &, const std::wstring &);
+  static std::wstring pairlist2wstring(const std::list<std::pair<std::wstring, std::wstring> > &, const std::wstring &, const std::wstring &);
   static std::list<std::wstring> wstring2list(const std::wstring &, const std::wstring &);
   static std::vector<std::wstring> wstring2vector(const std::wstring &, const std::wstring &);
 };
+
 
 
 %perlcode %{

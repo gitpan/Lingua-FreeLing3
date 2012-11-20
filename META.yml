@@ -3,9 +3,11 @@ abstract: 'a library for language analysis with FreeLing3.'
 author:
   - 'Alberto SimÃµes <ambs@cpan.org>'
 build_requires:
+  Config::AutoConf: 0.20
   ExtUtils::CBuilder: 0.280205
   Test::Warn: 0
 configure_requires:
+  Config::AutoConf: 0.20
   ExtUtils::CBuilder: 0.280205
   ExtUtils::Mkbootstrap: 0
   ExtUtils::PkgConfig: 1.12
@@ -23,7 +25,7 @@ provides:
     version: 0.01
   Lingua::FreeLing3:
     file: lib/Lingua/FreeLing3.pm
-    version: 0.02
+    version: 0.03
   Lingua::FreeLing3::Bindings:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
@@ -285,4 +287,4 @@ requires:
   Try::Tiny: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.02
+version: 0.03

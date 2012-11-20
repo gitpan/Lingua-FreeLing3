@@ -1684,12 +1684,12 @@ void SwigSvFromString(SV* sv, const std::string& s) {
 #include <stdexcept>
 
 
+#include <utility>
+
+
 #include <map>
 #include <algorithm>
 #include <stdexcept>
-
-
-#include <utility>
 
 
 #include <limits.h>

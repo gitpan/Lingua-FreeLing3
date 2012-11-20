@@ -16,12 +16,14 @@ my $builder = MyBuilder->new
    needs_compiler       => 1,
    recursive_test_files => 1,
    configure_requires   => {
+                            'Config::AutoConf'      => '0.20',
                             'ExtUtils::PkgConfig'   => '1.12',
                             'Module::Build'         => '0.36',
                             'ExtUtils::Mkbootstrap' => '0',
                             'ExtUtils::CBuilder' => '0.280205',
                            },
    build_requires       => {
+                            'Config::AutoConf'      => '0.20',
                             'Test::Warn' => '0',
                             'ExtUtils::CBuilder' => '0.280205',
                            },
