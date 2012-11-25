@@ -1,5 +1,8 @@
 Revision history for Lingua-FreeLing3
 
+0.04    Sun Nov 25 15:07:43 WET 2012
+        - ExtUtils::PkgConfig is dying when it shouldn't.
+
 0.03    Tue Nov 20 14:52:21 WET 2012
         - Added Config::AutoConf dependency that was missing.
 

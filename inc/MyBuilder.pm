@@ -80,9 +80,9 @@ sub ACTION_create_objects {
 
 sub detect_freeling {
     my $builder = shift;
-    my %freeling = ExtUtils::PkgConfig->find('freeling');
+    my %freeling = eval { ExtUtils::PkgConfig->find('freeling') };
 
-    carp "Can't find FreeLing 3 .pc file." and exit 0 unless %freeling;
+    carp "Can't find FreeLing 3 .pc file." and exit 0 unless exists $freeling{libs};
 
     my $datadir = ExtUtils::PkgConfig->variable('freeling' => 'DataDir');
 

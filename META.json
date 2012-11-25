@@ -45,7 +45,7 @@
       },
       "Lingua::FreeLing3" : {
          "file" : "lib/Lingua/FreeLing3.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Lingua::FreeLing3::Bindings" : {
          "file" : "lib/Lingua/FreeLing3/Bindings.pm",
@@ -394,5 +394,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.03"
+   "version" : "0.04"
 }

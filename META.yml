@@ -25,7 +25,7 @@ provides:
     version: 0.01
   Lingua::FreeLing3:
     file: lib/Lingua/FreeLing3.pm
-    version: 0.03
+    version: 0.04
   Lingua::FreeLing3::Bindings:
     file: lib/Lingua/FreeLing3/Bindings.pm
     version: 0
@@ -287,4 +287,4 @@ requires:
   Try::Tiny: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.03
+version: 0.04
