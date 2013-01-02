@@ -1,5 +1,9 @@
 Revision history for Lingua-FreeLing3
 
+0.05    Wed Jan  2 21:20:10 WET 2013
+        - Better documentation on FL3 synopsis;
+        - Fixed bug when dumping parse tree;
+
 0.04    Sun Nov 25 15:07:43 WET 2012
         - ExtUtils::PkgConfig is dying when it shouldn't.
 

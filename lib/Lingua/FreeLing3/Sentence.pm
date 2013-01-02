@@ -127,11 +127,11 @@ sub to_text {
 
 =head2 C<is_parsed>
 
-Checks if the sentence has been parsed by a dependency parser.
+Checks if the sentence has been parsed by a parser.
 
 =cut
 
-sub is_parsed { $_[0]->SUPER::is_parsed() }
+# sub is_parsed { $_[0]->SUPER::is_parsed() }
 
 =head2 C<parse_tree>
 
@@ -140,7 +140,9 @@ Returns the current parse tree, if there is any.
 =cut
 
 sub parse_tree {
-    Lingua::FreeLing3::ParseTree->_new_from_binding($_[0]->SUPER::get_parse_tree());
+    my $pt = $_[0]->SUPER::get_parse_tree();
+    # $pt -> ACQUIRE();
+    Lingua::FreeLing3::ParseTree->_new_from_binding($pt);
 }
 
 =head2 C<is_dep_parsed>

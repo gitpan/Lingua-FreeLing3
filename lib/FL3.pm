@@ -47,7 +47,7 @@ my %map = (
 our @EXPORT = (qw(set_language release_language word sentence),
                map { $map{$_}{method_name} } keys %map);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 our $selected_language = undef;
 our $tools_cache = {};
@@ -62,20 +62,30 @@ FL3 - A shortcut module for Lingua::FreeLing3.
 
   use FL3 'en';
 
+  # This is the usual workflow:
+
+  # 1. tokenize your text
   $tokens = tokenizer->tokenize($text);
   $atomos = tokenizer('pt')->tokenize($texto);
 
+  # 2. divide tokens in groups: sentences
   $sentences = splitter->split($tokens);
   $frases = splitter('pt')->split($atomos);
 
+  # 3. use a morphologic analyzer to tag words
   $sentences = morph->analyze($sentences);
   $frases = morph('pt')->analyze($frases);
 
+  # 4. use HMM or RELAX tagger to disambiguate
   $sentences = hmm->analyze($sentences);
   $frases = relax('pt')->tag($sentences);
 
+  # 5. use chart parser to parse tree
   $sentences = chart->parse($sentences);
-  $ptree = $sentences->[0]->parse_tree;)
+  $ptree = $sentences->[0]->parse_tree;
+
+
+  # other utility methods
 
   $word = word("cavalo");
   @words = word("cavalo", "alado");

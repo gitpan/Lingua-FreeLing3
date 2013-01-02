@@ -11,7 +11,7 @@ use Lingua::FreeLing3::ConfigData;
 use Lingua::FreeLing3::Bindings;
 use File::Spec::Functions 'catfile';
 
-our $VERSION = "0.04";
+our $VERSION = "0.05";
 
 BEGIN {
     Lingua::FreeLing3::Bindings::util::init_locale('default');
