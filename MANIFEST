@@ -7,7 +7,6 @@ META.yml
 
 inc/MyBuilder.pm
 
-swig/FreeLing_wrap.cxx
 swig/freeling_perlAPI.i
 swig/README
 
@@ -38,7 +37,6 @@ lib/Lingua/FreeLing3/NEC.pm
 lib/Lingua/FreeLing3/Word.pm
 lib/Lingua/FreeLing3/Splitter.pm
 lib/Lingua/FreeLing3/Sentence.pm
-lib/Lingua/FreeLing3/Bindings.pm
 lib/Lingua/FreeLing3/Document.pm
 lib/Lingua/FreeLing3/DepTxala.pm
 lib/Lingua/FreeLing3/Paragraph.pm
@@ -54,13 +52,14 @@ lib/Lingua/FreeLing3/Word/Analysis.pm
 
 META.json
 
-
-
 lib/FL3.pm
-
-
 
 
 lib/Lingua/FreeLing3/DepTree.pm
 lib/Lingua/FreeLing3/EAGLES.pm
 lib/Lingua/FreeLing3/Config.pm
+
+swig/Bindings-3.0.pm
+swig/Bindings-3.1.pm
+swig/freeling-3.0.cxx
+swig/freeling-3.1.cxx

@@ -47,7 +47,7 @@ my %map = (
 our @EXPORT = (qw(set_language release_language word sentence),
                map { $map{$_}{method_name} } keys %map);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 our $selected_language = undef;
 our $tools_cache = {};

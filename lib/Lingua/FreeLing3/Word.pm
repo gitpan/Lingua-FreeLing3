@@ -24,7 +24,6 @@ our $VERSION = "0.03";
 # *selected_end = *Lingua::FreeLing3::Bindingsc::word_selected_end;
 # *unselected_begin = *Lingua::FreeLing3::Bindingsc::word_unselected_begin;
 # *unselected_end = *Lingua::FreeLing3::Bindingsc::word_unselected_end;
-# *get_short_tag = *Lingua::FreeLing3::Bindingsc::word_get_short_tag;
 # *get_senses_string = *Lingua::FreeLing3::Bindingsc::word_get_senses_string;
 # *get_span_start = *Lingua::FreeLing3::Bindingsc::word_get_span_start;
 # *get_span_finish = *Lingua::FreeLing3::Bindingsc::word_get_span_finish;

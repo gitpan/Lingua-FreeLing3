@@ -9,10 +9,11 @@ use File::Spec::Functions 'catfile';
 use Lingua::FreeLing3::Bindings;
 use Lingua::FreeLing3::Sentence;
 use Lingua::FreeLing3::Config;
+use Lingua::FreeLing3::ConfigData;
 
 use parent -norequire, 'Lingua::FreeLing3::Bindings::hmm_tagger';
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 
 =encoding UTF-8
@@ -60,6 +61,14 @@ ambiguous. FORCE_TAGGER: force selection immediately after tagging,
 and before retokenization. FORCE_RETOK: force selection after
 retokenization.
 
+=item C<KBest> (integer)
+
+This option, only available with FreeLing 3.1, states how many best
+tag sequences the tagger must try to compute. If not specified, this
+parameter defaults to 1. Since a sentence may have less possible tag
+sequences than the given k value, the results may contain a number of
+sequences smaller than k.
+
 =back
 
 =cut
@@ -88,7 +97,15 @@ sub new {
                                                      FORCE_RETOK  => 2,
                                                     }, $ft);
 
-    my $self = $class->SUPER::new($lang, $file, $retok, $amb);
+    my $kbest = $ops{KBest} || 1;
+
+    my $self;
+
+    if (Lingua::FreeLing3::ConfigData->config("fl_minor") == 0) {
+        $self = $class->SUPER::new($lang, $file, $retok, $amb);
+    } else {
+        $self = $class->SUPER::new($file, $retok, $amb, $kbest);
+    }
 
     return bless $self => $class
 }
@@ -144,6 +161,6 @@ Jorge Cunha Mendes E<lt>jorgecunhamendes@gmail.comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2011 by Projecto Natura
+Copyright (C) 2011-2013 by Projecto Natura
 
 =cut

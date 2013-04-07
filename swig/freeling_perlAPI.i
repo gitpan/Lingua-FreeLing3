@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////
 //
 //    FreeLing - Open Source Language Analyzers
- //
+//
 //    Copyright (C) 2004   TALP Research Center
 //                         Universitat Politecnica de Catalunya
 //
@@ -49,17 +49,19 @@
 //
 ////////////////////////////////////////////////////////////////
 
-%include std_list.i
-%include std_vector.i
+
+
+%include "swig_backups/std_list.i"
+%include "swig_backups/std_vector.i"
 %include std_map.i
 %include std_pair.i
 
 
-%template(VectorWord) std::vector<word>;
-%template(ListWord) std::list<word>;
-%template(ListAnalysis) std::list<analysis>;
-%template(ListSentence) std::list<sentence>;
-%template(ListParagraph) std::list<paragraph>;
+%template(VectorWord) std::vector<freeling::word>;
+%template(ListWord) std::list<freeling::word>;
+%template(ListAnalysis) std::list<freeling::analysis>;
+%template(ListSentence) std::list<freeling::sentence>;
+%template(ListParagraph) std::list<freeling::paragraph>;
 
 %template(ListString) std::list<std::wstring>;
 %template(ListInt) std::list<int>;
@@ -79,19 +81,19 @@
 
 %typemap(in) const std::wstring & (std::wstring wtemp)  {
   std::string aux (SvPV($input, PL_na));
-  wtemp = util::string2wstring(aux);
+  wtemp = freeling::util::string2wstring(aux);
   $1 = &wtemp;
 }
 
 %typemap(in) std::wstring (std::wstring wtemp) {
   std::string aux (SvPV($input, PL_na));
-  wtemp = util::string2wstring(aux);
+  wtemp = freeling::util::string2wstring(aux);
   $1 = wtemp;
 }
 
 %typemap(out) const std::wstring & {
   std::string temp;
-  temp = util::wstring2string($1);
+  temp = freeling::util::wstring2string($1);
   $result = sv_2mortal(newSVpv(temp.c_str(), 0));
   argvi++;
   SvUTF8_on ($result);
@@ -103,7 +105,7 @@
   int len = (& $1)->size();
   SV **svs = new SV*[len];
   for (i=(& $1)->begin(), j=0; i!=(& $1)->end(); i++, j++) {
-    std::string ptr = util::wstring2string(*i);
+    std::string ptr = freeling::util::wstring2string(*i);
     svs[j] = sv_2mortal(newSVpv(ptr.c_str(), 0));
     SvUTF8_on(svs[j]);
   }
@@ -132,442 +134,445 @@
 
 ///////////////  FREELING LANGUAGE DATA CLASSES /////////////
 
-// predeclarations
-template <class T> class tree;
+namespace freeling {
+    // predeclarations
+    template <class T> class tree;
 
-template <class T> class generic_iterator;
-template <class T> class preorder_iterator;
-template <class T> class sibling_iterator;
+    template <class T> class generic_iterator;
+    template <class T> class preorder_iterator;
+    template <class T> class sibling_iterator;
 
-template <class T> class generic_const_iterator;
-template <class T> class const_preorder_iterator;
-template <class T> class const_sibling_iterator;
+    template <class T> class generic_const_iterator;
+    template <class T> class const_preorder_iterator;
+    template <class T> class const_sibling_iterator;
 
-/// Generic iterator, to derive all the others
-template<class T, class N>
-class tree_iterator {
- protected:
-  N *pnode;
- public: 
-  tree_iterator();
-  tree_iterator(tree<T> *);
-  tree_iterator(const tree_iterator<T,N> &);
-  ~tree_iterator();
+    /// Generic iterator, to derive all the others
+    template<class T, class N>
+    class tree_iterator {
+    protected:
+        N *pnode;
+    public: 
+        tree_iterator();
+        tree_iterator(tree<T> *);
+        tree_iterator(const tree_iterator<T,N> &);
+        ~tree_iterator();
 
-  const tree<T>& operator*() const;
-  const tree<T>* operator->() const;
-  bool operator==(const tree_iterator<T,N> &) const;
-  bool operator!=(const tree_iterator<T,N> &) const;
-};
+        const tree<T>& operator*() const;
+        const tree<T>* operator->() const;
+        bool operator==(const tree_iterator<T,N> &) const;
+        bool operator!=(const tree_iterator<T,N> &) const;
+    };
 
-template<class T>
-class generic_iterator : public tree_iterator<T,tree<T> > {
- friend class generic_const_iterator<T>;
- public:
-  generic_iterator();
-  generic_iterator(tree<T> *);
-  generic_iterator(const generic_iterator<T> &);
-  tree<T>& operator*() const;
-  tree<T>* operator->() const;
-  ~generic_iterator();
-};
+    template<class T>
+    class generic_iterator : public tree_iterator<T,tree<T> > {
+        friend class generic_const_iterator<T>;
+    public:
+        generic_iterator();
+        generic_iterator(tree<T> *);
+        generic_iterator(const generic_iterator<T> &);
+        tree<T>& operator*() const;
+        tree<T>* operator->() const;
+        ~generic_iterator();
+    };
 
-/// sibling iterator: traverse all children of the same node
+    /// sibling iterator: traverse all children of the same node
 
-template<class T>
-class sibling_iterator : public generic_iterator<T> {
- public:
-  sibling_iterator();
-  sibling_iterator(const sibling_iterator<T> &);
-  sibling_iterator(tree<T> *);
-  ~sibling_iterator();
+    template<class T>
+    class sibling_iterator : public generic_iterator<T> {
+    public:
+        sibling_iterator();
+        sibling_iterator(const sibling_iterator<T> &);
+        sibling_iterator(tree<T> *);
+        ~sibling_iterator();
 
-  #ifndef FL_API_PYTHON
-  sibling_iterator& operator++();
-  sibling_iterator& operator--();
-  sibling_iterator operator++(int);
-  sibling_iterator operator--(int);
-  #endif
-};
+#ifndef FL_API_PYTHON
+        sibling_iterator& operator++();
+        sibling_iterator& operator--();
+        sibling_iterator operator++(int);
+        sibling_iterator operator--(int);
+#endif
+    };
 
-/// traverse the tree in preorder (parent first, then children)
-template<class T>
-class preorder_iterator : public generic_iterator<T> {
- public:
-  preorder_iterator();
-  preorder_iterator(const preorder_iterator<T> &);
-  preorder_iterator(tree<T> *);
-  preorder_iterator(const sibling_iterator<T> &);
-  ~preorder_iterator();
 
-  #ifndef FL_API_PYTHON
-  preorder_iterator& operator++();
-  preorder_iterator& operator--();
-  preorder_iterator operator++(int);
-  preorder_iterator operator--(int);
-  #endif
-};
+    /// traverse the tree in preorder (parent first, then children)
+    template<class T>
+    class preorder_iterator : public generic_iterator<T> {
+    public:
+        preorder_iterator();
+        preorder_iterator(const preorder_iterator<T> &);
+        preorder_iterator(tree<T> *);
+        preorder_iterator(const sibling_iterator<T> &);
+        ~preorder_iterator();
+
+#ifndef FL_API_PYTHON
+        preorder_iterator& operator++();
+        preorder_iterator& operator--();
+        preorder_iterator operator++(int);
+        preorder_iterator operator--(int);
+#endif
+    };
+
 
 #ifndef FL_API_JAVA
-template<class T>
-class generic_const_iterator : public tree_iterator<T,const tree<T> >  {
- public:
-  generic_const_iterator();
-  generic_const_iterator(const generic_iterator<T> &);
-  generic_const_iterator(const generic_const_iterator<T> &);
-  generic_const_iterator(const tree<T> *);
-  ~generic_const_iterator();
-};
+    template<class T>
+    class generic_const_iterator : public tree_iterator<T,const tree<T> >  {
+    public:
+        generic_const_iterator();
+        generic_const_iterator(const generic_iterator<T> &);
+        generic_const_iterator(const generic_const_iterator<T> &);
+        generic_const_iterator(const tree<T> *);
+        ~generic_const_iterator();
+    };
 
-template<class T>
-class const_sibling_iterator : public generic_const_iterator<T> {
- public:
-  const_sibling_iterator();
-  const_sibling_iterator(const const_sibling_iterator<T> &);
-  const_sibling_iterator(const sibling_iterator<T> &);
-  const_sibling_iterator(tree<T> *);
-  ~const_sibling_iterator();
 
-  #ifndef FL_API_PYTHON
-  const_sibling_iterator& operator++();
-  const_sibling_iterator& operator--();
-  const_sibling_iterator operator++(int);
-  const_sibling_iterator operator--(int);
-  #endif
-};
+    template<class T>
+    class const_sibling_iterator : public generic_const_iterator<T> {
+    public:
+        const_sibling_iterator();
+        const_sibling_iterator(const const_sibling_iterator<T> &);
+        const_sibling_iterator(const sibling_iterator<T> &);
+        const_sibling_iterator(tree<T> *);
+        ~const_sibling_iterator();
 
-template<class T>
-class const_preorder_iterator : public generic_const_iterator<T> {
- public:
-  const_preorder_iterator();
-  const_preorder_iterator(tree<T> *);
-  const_preorder_iterator(const const_preorder_iterator<T> &);
-  const_preorder_iterator(const preorder_iterator<T> &);
-  const_preorder_iterator(const const_sibling_iterator<T> &);
-  const_preorder_iterator(const sibling_iterator<T> &);
-  ~const_preorder_iterator();
-  
-  #ifndef FL_API_PYTHON
-  const_preorder_iterator& operator++();
-  const_preorder_iterator& operator--();
-  const_preorder_iterator operator++(int);
-  const_preorder_iterator operator--(int);
-  #endif
-};
+#ifndef FL_API_PYTHON
+        const_sibling_iterator& operator++();
+        const_sibling_iterator& operator--();
+        const_sibling_iterator operator++(int);
+        const_sibling_iterator operator--(int);
 #endif
+    };
+
+
+
+    template<class T>
+    class const_preorder_iterator : public generic_const_iterator<T> {
+    public:
+        const_preorder_iterator();
+        const_preorder_iterator(tree<T> *);
+        const_preorder_iterator(const const_preorder_iterator<T> &);
+        const_preorder_iterator(const preorder_iterator<T> &);
+        const_preorder_iterator(const const_sibling_iterator<T> &);
+        const_preorder_iterator(const sibling_iterator<T> &);
+        ~const_preorder_iterator();
+  
+#ifndef FL_API_PYTHON
+        const_preorder_iterator& operator++();
+        const_preorder_iterator& operator--();
+        const_preorder_iterator operator++(int);
+        const_preorder_iterator operator--(int);
+#endif
+    };
+#endif
+
 
 template <class T> 
 class tree { 
-  friend class preorder_iterator<T>;
-  friend class sibling_iterator<T>;
-
-  #ifndef FL_API_JAVA
-  friend class const_preorder_iterator<T>;
-  friend class const_sibling_iterator<T>;
-  #endif
-
- public:
-  T info;
-  typedef class preorder_iterator<T> preorder_iterator;
-  typedef class sibling_iterator<T> sibling_iterator;
-  typedef preorder_iterator iterator;
-  #ifndef FL_API_JAVA
-  typedef class const_preorder_iterator<T> const_preorder_iterator;
-  typedef class const_sibling_iterator<T> const_sibling_iterator;
-  typedef const_preorder_iterator const_iterator;
-  #endif
-
-  tree();
-  tree(const T&);
-  tree(const tree<T>&);
-  tree(const typename tree<T>::preorder_iterator&);
-  ~tree();
-  tree<T>& operator=(const tree<T>&);
-
-  unsigned int num_children() const;
-  sibling_iterator nth_child(unsigned int) const;
-  iterator get_parent() const;
-  tree<T> & nth_child_ref(unsigned int) const;
-  T& get_info();
-  void append_child(const tree<T> &);
-  void hang_child(tree<T> &, bool=true);
-  void clear();
-  bool empty() const;
-
-  sibling_iterator sibling_begin();
-  sibling_iterator sibling_end();
-  sibling_iterator sibling_rbegin();
-  sibling_iterator sibling_rend();
-  preorder_iterator begin();
-  preorder_iterator end();
-
-  #ifndef FL_API_JAVA
-  const_sibling_iterator sibling_begin() const;
-  const_sibling_iterator sibling_end() const;
-  const_sibling_iterator sibling_rbegin() const;
-  const_sibling_iterator sibling_rend() const;
-  const_preorder_iterator begin() const;
-  const_preorder_iterator end() const;
-  #endif
-};
- 
-
-%template(TreeIteratorNode) tree_iterator<node,tree<node> >;
-%template(GenericIteratorNode) generic_iterator<node>;
-%template(PreorderIteratorNode) preorder_iterator<node>;
-%template(SiblingIteratorNode) sibling_iterator<node>;
-
-%template(TreeIteratorDepnode) tree_iterator<depnode,tree<depnode> >;
-%template(GenericIteratorDepnode) generic_iterator<depnode>;
-%template(PreorderIteratorDepnode) preorder_iterator<depnode>;
-%template(SiblingIteratorDepnode) sibling_iterator<depnode>;
+    friend class preorder_iterator<T>;
+    friend class sibling_iterator<T>;
 
 #ifndef FL_API_JAVA
-%template(TreeIteratorNodeConst) tree_iterator<node,tree<node> const>;
-%template(GenericConstIteratorNode) generic_const_iterator<node>;
-%template(ConstPreorderIteratorNode) const_preorder_iterator<node>;
-%template(ConstSiblingIteratorNode) const_sibling_iterator<node>;
-
-%template(TreeIteratorDepnodeConst) tree_iterator<depnode,tree<depnode> const>;
-%template(GenericConstIteratorDepnode) generic_const_iterator<depnode>;
-%template(ConstPreorderIteratorDepnode) const_preorder_iterator<depnode>;
-%template(ConstSiblingIteratorDepnode) const_sibling_iterator<depnode>;
+    friend class const_preorder_iterator<T>;
+    friend class const_sibling_iterator<T>;
 #endif
 
-%template(TreeNode) tree<node>;
-%template(TreeDepnode) tree<depnode>;
+public:
+    T info;
+    typedef class preorder_iterator<T> preorder_iterator;
+    typedef class sibling_iterator<T> sibling_iterator;
+    typedef preorder_iterator iterator;
+#ifndef FL_API_JAVA
+    typedef class const_preorder_iterator<T> const_preorder_iterator;
+    typedef class const_sibling_iterator<T> const_sibling_iterator;
+    typedef const_preorder_iterator const_iterator;
+#endif
+
+    tree();
+    tree(const T&);
+    tree(const tree<T>&);
+    tree(const typename tree<T>::preorder_iterator&);
+    ~tree();
+    tree<T>& operator=(const tree<T>&);
+
+    unsigned int num_children() const;
+    sibling_iterator nth_child(unsigned int) const;
+    iterator get_parent() const;
+    tree<T> & nth_child_ref(unsigned int) const;
+    T& get_info();
+    void append_child(const tree<T> &);
+    void hang_child(tree<T> &, bool=true);
+    void clear();
+    bool empty() const;
+
+    sibling_iterator sibling_begin();
+    sibling_iterator sibling_end();
+    sibling_iterator sibling_rbegin();
+    sibling_iterator sibling_rend();
+    preorder_iterator begin();
+    preorder_iterator end();
+
+#ifndef FL_API_JAVA
+    const_sibling_iterator sibling_begin() const;
+    const_sibling_iterator sibling_end() const;
+    const_sibling_iterator sibling_rbegin() const;
+    const_sibling_iterator sibling_rend() const;
+    const_preorder_iterator begin() const;
+    const_preorder_iterator end() const;
+#endif
+};
+ 
+%template(TreeIteratorNode) tree_iterator<freeling::node,tree<freeling::node> >;
+%template(GenericIteratorNode) generic_iterator<freeling::node>;
+%template(PreorderIteratorNode) preorder_iterator<freeling::node>;
+%template(SiblingIteratorNode) sibling_iterator<freeling::node>;
+
+%template(TreeIteratorDepnode) tree_iterator<freeling::depnode,tree<freeling::depnode> >;
+%template(GenericIteratorDepnode) generic_iterator<freeling::depnode>;
+%template(PreorderIteratorDepnode) preorder_iterator<freeling::depnode>;
+%template(SiblingIteratorDepnode) sibling_iterator<freeling::depnode>;
+
+#ifndef FL_API_JAVA
+%template(TreeIteratorNodeConst) tree_iterator<freeling::node,tree<freeling::node> const>;
+%template(GenericConstIteratorNode) generic_const_iterator<freeling::node>;
+%template(ConstPreorderIteratorNode) const_preorder_iterator<freeling::node>;
+%template(ConstSiblingIteratorNode) const_sibling_iterator<freeling::node>;
+
+%template(TreeIteratorDepnodeConst) tree_iterator<freeling::depnode,tree<freeling::depnode> const>;
+%template(GenericConstIteratorDepnode) generic_const_iterator<freeling::depnode>;
+%template(ConstPreorderIteratorDepnode) const_preorder_iterator<freeling::depnode>;
+%template(ConstSiblingIteratorDepnode) const_sibling_iterator<freeling::depnode>;
+#endif
+
+%template(TreeNode) tree<freeling::node>;
+%template(TreeDepnode) tree<freeling::depnode>;
 
 
-class analysis {
-   public:
-      /// user-managed data, we just store it.
-      std::vector<std::wstring> user;
+    class analysis {
+    public:
+        /// user-managed data, we just store it.
+        std::vector<std::wstring> user;
 
-      /// constructor
-      analysis();
-      /// constructor
-      analysis(const std::wstring &, const std::wstring &);
-      /// assignment
-      analysis& operator=(const analysis&);
-      ~analysis();
+        /// constructor
+        analysis();
+        /// constructor
+        analysis(const std::wstring &, const std::wstring &);
+        /// assignment
+        analysis& operator=(const analysis&);
+        ~analysis();
 
-      void set_lemma(const std::wstring &);
-      void set_tag(const std::wstring &);
-      void set_prob(double);
-      void set_distance(double);
-      void set_retokenizable(const std::list<word> &);
+        void set_lemma(const std::wstring &);
+        void set_tag(const std::wstring &);
+        void set_prob(double);
+        void set_distance(double);
+        void set_retokenizable(const std::list<freeling::word> &);
 
-      bool has_prob() const;
-      bool has_distance() const;
-      std::wstring get_lemma() const;
-      std::wstring get_tag() const;
-      std::wstring get_short_tag() const;
-      std::wstring get_short_tag(const std::wstring &) const;
-      double get_prob() const;
-      double get_distance() const;
-      bool is_retokenizable() const;
-      std::list<word> get_retokenizable() const;
+        bool has_prob() const;
+        bool has_distance() const;
+        std::wstring get_lemma() const;
+        std::wstring get_tag() const;
+        double get_prob() const;
+        double get_distance() const;
+        bool is_retokenizable() const;
+        std::list<freeling::word> get_retokenizable() const;
 
-      std::list<std::pair<std::wstring,double> > get_senses() const;
-      void set_senses(const std::list<std::pair<std::wstring,double> > &);
-      // useful for java API
-      std::wstring get_senses_string() const;
+        std::list<std::pair<std::wstring,double> > get_senses() const;
+        void set_senses(const std::list<std::pair<std::wstring,double> > &);
+        // useful for java API
+        std::wstring get_senses_string() const;
 
-      /// Comparison to sort analysis by *decreasing* probability
-      bool operator<(const analysis &) const;
-      /// Comparison (to please MSVC)
-      bool operator==(const analysis &) const;
+        /// Comparison to sort analysis by *decreasing* probability
+        bool operator<(const analysis &) const;
+        /// Comparison (to please MSVC)
+        bool operator==(const analysis &) const;
 
-      // find out whether the analysis is selected in the tagger k-th best sequence
-      bool is_selected(int k=0) const;
-      // mark this analysis as selected in k-th best sequence
-      void mark_selected(int k=0);
-      // unmark this analysis as selected in k-th best sequence
-      void unmark_selected(int k=0);
+        // find out whether the analysis is selected in the tagger k-th best sequence
+        bool is_selected(int k=0) const;
+        // mark this analysis as selected in k-th best sequence
+        void mark_selected(int k=0);
+        // unmark this analysis as selected in k-th best sequence
+        void unmark_selected(int k=0);
+    };
+
+
+    ////////////////////////////////////////////////////////////////
+    ///   Class word stores all info related to a word: 
+    ///  form, list of analysis, list of tokens (if multiword).
+    ////////////////////////////////////////////////////////////////
+
+    class word : public std::list<freeling::analysis> {
+    public:
+        /// user-managed data, we just store it.
+        std::vector<std::wstring> user;
+
+        /// constructor
+        word();
+        /// constructor
+        word(const std::wstring &);
+        /// constructor
+        word(const std::wstring &, const std::list<freeling::word> &);
+        /// constructor
+        word(const std::wstring &, const std::list<freeling::analysis> &,
+             const std::list<freeling::word> &);
+        /// Copy constructor
+        word(const word &);
+        /// assignment
+        word& operator=(const word&);
+
+        ~word();
+
+        /// copy analysis from another word
+        void copy_analysis(const word &);
+        /// Get the number of selected analysis
+        int get_n_selected() const;
+        /// get the number of unselected analysis
+        int get_n_unselected() const;
+        /// true iff the word is a multiword compound
+        bool is_multiword() const;
+        /// get number of words in compound
+        int get_n_words_mw() const;
+        /// get word objects that compound the multiword
+        std::list<freeling::word> get_words_mw() const;
+        /// get word form
+        std::wstring get_form() const;
+        /// Get word form, lowercased.
+        std::wstring get_lc_form() const;
+        /// Get an iterator to the first selected analysis
+        word::iterator selected_begin(int k=0);
+        /// Get an iterator to the end of selected analysis list
+        word::iterator selected_end(int k=0);
+        /// Get an iterator to the first unselected analysis
+        word::iterator unselected_begin(int k=0);
+        /// Get an iterator to the end of unselected analysis list
+        word::iterator unselected_end(int k=0);
+        
+#ifndef FL_API_JAVA
+        /// Get an iterator to the first selected analysis
+        word::const_iterator selected_begin(int k=0) const;
+        /// Get an iterator to the end of selected analysis list
+        word::const_iterator selected_end(int k=0) const;
+        /// Get an iterator to the first unselected analysis
+        word::const_iterator unselected_begin(int k=0) const;
+        /// Get an iterator to the end of unselected analysis list
+        word::const_iterator unselected_end(int k=0) const;
+#endif
+
+        /// get lemma for the selected analysis in list
+        std::wstring get_lemma(int k=0) const;
+        /// get tag for the selected analysis
+        std::wstring get_tag(int k=0) const;
+
+        /// get sense list for the selected analysis
+        std::list<std::pair<std::wstring,double> > get_senses(int k=0) const;
+        // useful for java API
+        std::wstring get_senses_string(int k=0) const;
+        /// set sense list for the selected analysis
+        void set_senses(const std::list<std::pair<std::wstring,double> > &,int k=0);
+
+        /// get token span.
+        unsigned long get_span_start() const;
+        unsigned long get_span_finish() const;
+
+        /// get in_dict
+        bool found_in_dict() const;
+        /// set in_dict
+        void set_found_in_dict(bool);
+        /// check if there is any retokenizable analysis
+        bool has_retokenizable() const;
+        /// mark word as having definitive analysis
+        void lock_analysis();
+        /// check if word is marked as having definitive analysis
+        bool is_locked() const;
+
+        /// add an alternative to the alternatives list
+        void add_alternative(const word &, double);
+        /// replace alternatives list with list given
+        void set_alternatives(const std::list<std::pair<freeling::word,double> > &);
+        /// find out if the speller checked alternatives
+        bool has_alternatives() const;
+        /// get alternatives list
+        std::list<std::pair<freeling::word,double> > get_alternatives() const;
+        /// get alternatives begin iterator
+        std::list<std::pair<freeling::word,double> >::iterator alternatives_begin();
+        /// get alternatives end iterator
+        std::list<std::pair<freeling::word,double> >::iterator alternatives_end();
+
+        /// add one analysis to current analysis list  (no duplicate check!)
+        void add_analysis(const analysis &);
+        /// set analysis list to one single analysis, overwriting current values
+        void set_analysis(const analysis &);
+        /// set analysis list, overwriting current values
+        void set_analysis(const std::list<freeling::analysis> &);
+        /// set word form
+        void set_form(const std::wstring &);
+        /// set token span
+        void set_span(unsigned long, unsigned long);
+
+        /// look for an analysis with a tag matching given regexp
+        bool find_tag_match(boost::u32regex &);
+
+        /// get number of analysis in current list
+        int get_n_analysis() const;
+        /// empty the list of selected analysis
+        void unselect_all_analysis(int k=0);
+        /// mark all analysisi as selected
+        void select_all_analysis(int k=0);
+        /// add the given analysis to selected list.
+        void select_analysis(word::iterator, int k=0);
+        /// remove the given analysis from selected list.
+        void unselect_analysis(word::iterator, int k=0);
+        /// get list of analysis (useful for perl API)
+        std::list<freeling::analysis> get_analysis() const;
+        /// get begin iterator to analysis list (useful for perl/java API)
+        word::iterator analysis_begin();
+        /// get end iterator to analysis list (useful for perl/java API)
+        word::iterator analysis_end();
+#ifndef FL_API_JAVA
+        /// get begin iterator to analysis list (useful for perl/java API)
+        word::const_iterator analysis_begin() const;
+        /// get end iterator to analysis list (useful for perl/java API)
+        word::const_iterator analysis_end() const;
+#endif
+    };
+
+
+
+    ////////////////////////////////////////////////////////////////
+    ///   Class parse tree is used to store the results of parsing
+    ///  Each node in the tree is either a label (intermediate node)
+    ///  or a word (leaf node)
+    ////////////////////////////////////////////////////////////////
+
+    class node {
+    public:
+        /// constructors
+        node();
+        node(const std::wstring &);
+        ~node();
+
+        /// get node identifier
+        std::wstring get_node_id() const;
+        /// set node identifier
+        void set_node_id(const std::wstring &);
+        /// get node label
+        std::wstring get_label() const;
+        /// get node word
+        word get_word() const;
+        /// set node label
+        void set_label(const std::wstring &);
+        /// set node word
+        void set_word(word &);
+        /// find out whether node is a head
+        bool is_head() const;
+        /// set whether node is a head
+        void set_head(const bool);
+        /// find out whether node is a chunk
+        bool is_chunk() const;
+        /// set position of the chunk in the sentence
+        void set_chunk(const int);
+        /// get position of the chunk in the sentence
+        int  get_chunk_ord() const;
 };
 
-
-////////////////////////////////////////////////////////////////
-///   Class word stores all info related to a word: 
-///  form, list of analysis, list of tokens (if multiword).
-////////////////////////////////////////////////////////////////
-
-class word : public std::list<analysis> {
-   public:
-      /// user-managed data, we just store it.
-      std::vector<std::wstring> user;
-
-      /// constructor
-      word();
-      /// constructor
-      word(const std::wstring &);
-      /// constructor
-      word(const std::wstring &, const std::list<word> &);
-      /// constructor
-      word(const std::wstring &, const std::list<analysis> &, const std::list<word> &);
-      /// Copy constructor
-      word(const word &);
-      /// assignment
-      word& operator=(const word&);
-
-      ~word();
-
-      /// copy analysis from another word
-      void copy_analysis(const word &);
-      /// Get the number of selected analysis
-      int get_n_selected() const;
-      /// get the number of unselected analysis
-      int get_n_unselected() const;
-      /// true iff the word is a multiword compound
-      bool is_multiword() const;
-      /// get number of words in compound
-      int get_n_words_mw() const;
-      /// get word objects that compound the multiword
-      std::list<word> get_words_mw() const;
-      /// get word form
-      std::wstring get_form() const;
-      /// Get word form, lowercased.
-      std::wstring get_lc_form() const;
-      /// Get an iterator to the first selected analysis
-      word::iterator selected_begin(int k=0);
-      /// Get an iterator to the end of selected analysis list
-      word::iterator selected_end(int k=0);
-      /// Get an iterator to the first unselected analysis
-      word::iterator unselected_begin(int k=0);
-      /// Get an iterator to the end of unselected analysis list
-      word::iterator unselected_end(int k=0);
-
-      #ifndef FL_API_JAVA
-      /// Get an iterator to the first selected analysis
-      word::const_iterator selected_begin(int k=0) const;
-      /// Get an iterator to the end of selected analysis list
-      word::const_iterator selected_end(int k=0) const;
-      /// Get an iterator to the first unselected analysis
-      word::const_iterator unselected_begin(int k=0) const;
-      /// Get an iterator to the end of unselected analysis list
-      word::const_iterator unselected_end(int k=0) const;
-      #endif
-
-      /// get lemma for the selected analysis in list
-      std::wstring get_lemma(int k=0) const;
-      /// get tag for the selected analysis
-      std::wstring get_tag(int k=0) const;
-      /// get tag (short version) for the selected analysis, assuming eagles tagset
-      std::wstring get_short_tag(int k=0) const;
-      /// get tag (short version) for the selected analysis
-      std::wstring get_short_tag(const std::wstring &,int k=0) const;
-
-      /// get sense list for the selected analysis
-      std::list<std::pair<std::wstring,double> > get_senses(int k=0) const;
-      // useful for java API
-      std::wstring get_senses_string(int k=0) const;
-      /// set sense list for the selected analysis
-      void set_senses(const std::list<std::pair<std::wstring,double> > &,int k=0);
-
-      /// get token span.
-      unsigned long get_span_start() const;
-      unsigned long get_span_finish() const;
-
-      /// get in_dict
-      bool found_in_dict() const;
-      /// set in_dict
-      void set_found_in_dict(bool);
-      /// check if there is any retokenizable analysis
-      bool has_retokenizable() const;
-      /// mark word as having definitive analysis
-      void lock_analysis();
-      /// check if word is marked as having definitive analysis
-      bool is_locked() const;
-
-      /// add an alternative to the alternatives list
-      void add_alternative(const word &, double);
-      /// replace alternatives list with list given
-      void set_alternatives(const std::list<std::pair<word,double> > &);
-      /// find out if the speller checked alternatives
-      bool has_alternatives() const;
-      /// get alternatives list
-      std::list<std::pair<word,double> > get_alternatives() const;
-      /// get alternatives begin iterator
-      std::list<std::pair<word,double> >::iterator alternatives_begin();
-      /// get alternatives end iterator
-      std::list<std::pair<word,double> >::iterator alternatives_end();
-
-      /// add one analysis to current analysis list  (no duplicate check!)
-      void add_analysis(const analysis &);
-      /// set analysis list to one single analysis, overwriting current values
-      void set_analysis(const analysis &);
-      /// set analysis list, overwriting current values
-      void set_analysis(const std::list<analysis> &);
-      /// set word form
-      void set_form(const std::wstring &);
-      /// set token span
-      void set_span(unsigned long, unsigned long);
-
-      /// look for an analysis with a tag matching given regexp
-      bool find_tag_match(boost::u32regex &);
-
-      /// get number of analysis in current list
-      int get_n_analysis() const;
-      /// empty the list of selected analysis
-      void unselect_all_analysis(int k=0);
-      /// mark all analysisi as selected
-      void select_all_analysis(int k=0);
-      /// add the given analysis to selected list.
-      void select_analysis(word::iterator, int k=0);
-      /// remove the given analysis from selected list.
-      void unselect_analysis(word::iterator, int k=0);
-      /// get list of analysis (useful for perl API)
-      std::list<analysis> get_analysis() const;
-      /// get begin iterator to analysis list (useful for perl/java API)
-      word::iterator analysis_begin();
-      /// get end iterator to analysis list (useful for perl/java API)
-      word::iterator analysis_end();
-      #ifndef FL_API_JAVA
-      /// get begin iterator to analysis list (useful for perl/java API)
-      word::const_iterator analysis_begin() const;
-      /// get end iterator to analysis list (useful for perl/java API)
-      word::const_iterator analysis_end() const;
-      #endif
-};
-
-////////////////////////////////////////////////////////////////
-///   Class parse tree is used to store the results of parsing
-///  Each node in the tree is either a label (intermediate node)
-///  or a word (leaf node)
-////////////////////////////////////////////////////////////////
-
-class node {
-  public:
-    /// constructors
-    node();
-    node(const std::wstring &);
-    ~node();
-
-    /// get node identifier
-    std::wstring get_node_id() const;
-    /// set node identifier
-    void set_node_id(const std::wstring &);
-    /// get node label
-    std::wstring get_label() const;
-    /// get node word
-    word get_word() const;
-    /// set node label
-    void set_label(const std::wstring &);
-    /// set node word
-    void set_word(word &);
-    /// find out whether node is a head
-    bool is_head() const;
-    /// set whether node is a head
-    void set_head(const bool);
-    /// find out whether node is a chunk
-    bool is_chunk() const;
-    /// set position of the chunk in the sentence
-    void set_chunk(const int);
-    /// get position of the chunk in the sentence
-    int  get_chunk_ord() const;
-};
-
-class parse_tree : public tree<node> {
+class parse_tree : public tree<freeling::node> {
   public:
     parse_tree();
     parse_tree(const node &);
@@ -588,7 +593,7 @@ class depnode : public node {
 
     void set_link(const parse_tree::iterator);
     parse_tree::iterator get_link(void);
-    tree<node>& get_link_ref(void);
+    tree<freeling::node>& get_link_ref(void);
     void set_label(const std::wstring &);
 };
 
@@ -596,7 +601,7 @@ class depnode : public node {
 /// class dep_tree stores a dependency tree
 ////////////////////////////////////////////////////////////////
 
-class dep_tree :  public tree<depnode> {
+class dep_tree :  public tree<freeling::depnode> {
   public:
     dep_tree();
     dep_tree(const depnode &);
@@ -609,10 +614,10 @@ class dep_tree :  public tree<depnode> {
 /// It may include a parse tree.
 ////////////////////////////////////////////////////////////////
 
-class sentence : public std::list<word> {
+class sentence : public std::list<freeling::word> {
  public:
   sentence();
-  sentence(const std::list<word>&);
+  sentence(const std::list<freeling::word>&);
   /// Copy constructor
   sentence(const sentence &);
   /// assignment
@@ -632,7 +637,7 @@ class sentence : public std::list<word> {
   bool is_dep_parsed() const;
 
   /// get word list (useful for perl API)
-  std::vector<word> get_words() const;
+  std::vector<freeling::word> get_words() const;
   /// get iterators to word list (useful for perl/java API)
   sentence::iterator words_begin(void);
   sentence::iterator words_end(void);
@@ -648,14 +653,14 @@ class sentence : public std::list<word> {
 ///  has validated it as a paragraph.
 ////////////////////////////////////////////////////////////////
 
-class paragraph : public std::list<sentence> {};
+class paragraph : public std::list<freeling::sentence> {};
 
 ////////////////////////////////////////////////////////////////
 ///   Class document is a list of paragraphs. It may have additional 
 ///  information (such as title)
 ////////////////////////////////////////////////////////////////
 
-class document : public std::list<paragraph> {
+class document : public std::list<freeling::paragraph> {
  public:
     document();
     ~document();
@@ -688,13 +693,16 @@ class lang_ident {
       lang_ident (const std::wstring &);
       ~lang_ident();
 
-      /// Identify language, return most likely language for given text
-      std::wstring identify_language(const std::wstring &, const std::set<std::wstring> &) const;
+      /// Identify language, return most likely language for given text,
+      /// consider only languages in given set (empty --> all available languages)
+      std::wstring identify_language(const std::wstring &, 
+      				     const std::set<std::wstring> &ls=std::set<std::wstring>()) const;
       /// Identify language, return list of pairs<probability,language> 
-      /// sorted by decreasing probability.
+      /// sorted by decreasing probability. Consider only languages
+      /// in given set (empty --> all available languages).
       void rank_languages(std::vector<std::pair<double,std::wstring> > &, 
-			  const std::wstring &, 
-			  const std::set<std::wstring> &) const;
+      			  const std::wstring &, 
+      			  const std::set<std::wstring> &ls=std::set<std::wstring>()) const;
 };
 
 
@@ -706,9 +714,9 @@ class tokenizer {
        ~tokenizer();
 
        /// tokenize wstring with default options
-       std::list<word> tokenize(const std::wstring &);
+       std::list<freeling::word> tokenize(const std::wstring &);
        /// tokenize wstring with default options, tracking offset in given int param.
-       std::list<word> tokenize(const std::wstring &, unsigned long &);
+       std::list<freeling::word> tokenize(const std::wstring &, unsigned long &);
 };
 
 /*------------------------------------------------------------------------*/
@@ -719,7 +727,7 @@ class splitter {
       ~splitter();
 
       /// split sentences with default options
-      std::list<sentence> split(const std::list<word> &, bool);
+      std::list<freeling::sentence> split(const std::list<freeling::word> &, bool);
 };
 
 
@@ -780,12 +788,12 @@ class maco {
       /// analyze sentence
       sentence analyze(const sentence &);
       /// analyze sentences
-      std::list<sentence> analyze(const std::list<sentence> &);
+      std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
       #else
       /// analyze sentence
       void analyze(sentence &);
       /// analyze sentences
-      void analyze(std::list<sentence> &);
+      void analyze(std::list<freeling::sentence> &);
       #endif
 };
 
@@ -802,12 +810,12 @@ class RE_map {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -822,12 +830,12 @@ class numbers {
     /// analyze sentence
     sentence analyze(const sentence &);
     /// analyze sentences
-    std::list<sentence> analyze(const std::list<sentence> &);
+    std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
     #else
     /// analyze sentence
     void analyze(sentence &);
     /// analyze sentences
-    void analyze(std::list<sentence> &);
+    void analyze(std::list<freeling::sentence> &);
     #endif
 };
 
@@ -843,12 +851,12 @@ class punts {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -864,12 +872,12 @@ class dates {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };  
 
@@ -882,10 +890,10 @@ class dictionary {
   ~dictionary();
 
   /// Get dictionary entry for a given form, add to given list.
-  void search_form(const std::wstring &, std::list<analysis> &);
+  void search_form(const std::wstring &, std::list<freeling::analysis> &);
   /// Fills the analysis list of a word, checking for suffixes and contractions.
   /// Returns true iff the form is a contraction.
-  bool annotate_word(word &, std::list<word> &);
+  bool annotate_word(word &, std::list<freeling::word> &);
   /// Get possible forms for a lemma+pos
   std::list<std::wstring> get_forms(const std::wstring &, const std::wstring &) const;
 
@@ -893,12 +901,12 @@ class dictionary {
   /// analyze sentence, return analyzed copy
   sentence analyze(const sentence &);
   /// analyze sentences, return analyzed copy
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze given sentence
   void analyze(sentence &);
   /// analyze given sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -914,12 +922,12 @@ class locutions {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -935,12 +943,12 @@ class ner {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -956,12 +964,12 @@ class quantities {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -969,7 +977,7 @@ class quantities {
 class probabilities {
  public:
   /// Constructor (language, config file, threshold)
-  probabilities(const std::wstring &, const std::wstring &, double);
+  probabilities(const std::wstring &, double);
   ~probabilities();
 
   /// Assign probabilities for each analysis of given word
@@ -981,12 +989,12 @@ class probabilities {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -1001,12 +1009,12 @@ class hmm_tagger {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -1022,12 +1030,12 @@ class relax_tagger {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -1045,12 +1053,12 @@ class phonetics {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -1066,12 +1074,12 @@ class nec {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -1090,12 +1098,12 @@ class chart_parser {
    /// analyze sentence
    sentence analyze(const sentence &);
    /// analyze sentences
-   std::list<sentence> analyze(const std::list<sentence> &);
+   std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
    #else
    /// analyze sentence
    void analyze(sentence &);
    /// analyze sentences
-   void analyze(std::list<sentence> &);
+   void analyze(std::list<freeling::sentence> &);
    #endif
 };
 
@@ -1110,12 +1118,12 @@ class dep_txala {
    /// analyze sentence
    sentence analyze(const sentence &);
    /// analyze sentences
-   std::list<sentence> analyze(const std::list<sentence> &);
+   std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
    #else
    /// analyze sentence
    void analyze(sentence &);
    /// analyze sentences, return analyzed copy
-   void analyze(std::list<sentence> &);
+   void analyze(std::list<freeling::sentence> &);
    #endif
 };
 
@@ -1133,12 +1141,12 @@ class senses {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -1155,12 +1163,12 @@ class ukb_wrap {
   /// analyze sentence
   sentence analyze(const sentence &);
   /// analyze sentences
-  std::list<sentence> analyze(const std::list<sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
   #else
   /// analyze sentence
   void analyze(sentence &);
   /// analyze sentences
-  void analyze(std::list<sentence> &);
+  void analyze(std::list<freeling::sentence> &);
   #endif
 };
 
@@ -1253,6 +1261,8 @@ class util {
   static std::vector<std::wstring> wstring2vector(const std::wstring &, const std::wstring &);
 };
 
+}
+
 
 
 %perlcode %{
@@ -1292,7 +1302,7 @@ Lluís Padró
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2011-2012 by Projecto Natura
+Copyright (C) 2011-2013 by Projecto Natura
 
 =cut
 

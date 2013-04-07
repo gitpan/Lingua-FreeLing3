@@ -140,9 +140,9 @@ Returns the current parse tree, if there is any.
 =cut
 
 sub parse_tree {
-    my $pt = $_[0]->SUPER::get_parse_tree();
-    # $pt -> ACQUIRE();
-    Lingua::FreeLing3::ParseTree->_new_from_binding($pt);
+    return undef unless $_[0]->is_parsed;
+
+    Lingua::FreeLing3::ParseTree->_new_from_binding($_[0]->SUPER::get_parse_tree());
 }
 
 =head2 C<is_dep_parsed>
@@ -162,6 +162,7 @@ Returns the current dependency tree, if there is any.
 =cut
 
 sub dep_tree {
+    return undef unless $_[0]->is_dep_parsed;
     Lingua::FreeLing3::DepTree->_new_from_binding($_[0]->SUPER::get_dep_tree());
 }
 

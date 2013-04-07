@@ -1,5 +1,10 @@
 Revision history for Lingua-FreeLing3
 
+0.06    Sun Apr  7 14:55:08 WEST 2013
+        ::Sentence.pm
+        - return trees only if they were computed.
+        - support freeling 3.1
+
 0.05    Wed Jan  2 21:20:10 WET 2013
         - Better documentation on FL3 synopsis;
         - Fixed bug when dumping parse tree;

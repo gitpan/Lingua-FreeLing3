@@ -86,11 +86,18 @@ sub detect_freeling {
 
     my $datadir = ExtUtils::PkgConfig->variable('freeling' => 'DataDir');
 
+    $freeling{modversion} =~ /(\d+)\.(\d+)/;
+    my ($major, $minor) = ($1, $2);
+
+    $builder->notes(fl_major   => $major);
+    $builder->notes(fl_minor   => $minor);
     $builder->notes(fl_version => $freeling{modversion});
     $builder->notes(fl_cflags  => $freeling{cflags});
     $builder->notes(fl_libs    => $freeling{libs});
     $builder->notes(fl_datadir => $datadir);
 
+    $builder->config_data(fl_major   => $major);
+    $builder->config_data(fl_minor   => $minor);
     $builder->config_data(fl_version => $freeling{modversion});
     $builder->config_data(fl_cflags  => $freeling{cflags});
     $builder->config_data(fl_libs    => $freeling{libs});
