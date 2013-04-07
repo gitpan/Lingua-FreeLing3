@@ -5,7 +5,7 @@ use strict;
 use utf8;
 
 use parent 'Exporter';
-
+our $VERSION = "0.1";
 our @EXPORT = 'eagles';
 
 my $langs = _load_tags();

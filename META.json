@@ -47,14 +47,15 @@
       },
       "Lingua::FreeLing3" : {
          "file" : "lib/Lingua/FreeLing3.pm",
-         "version" : "0.06"
+         "version" : "0.07"
       },
       "Lingua::FreeLing3::ChartParser" : {
          "file" : "lib/Lingua/FreeLing3/ChartParser.pm",
          "version" : "0.01"
       },
       "Lingua::FreeLing3::Config" : {
-         "file" : "lib/Lingua/FreeLing3/Config.pm"
+         "file" : "lib/Lingua/FreeLing3/Config.pm",
+         "version" : "0.1"
       },
       "Lingua::FreeLing3::DepTree" : {
          "file" : "lib/Lingua/FreeLing3/DepTree.pm",
@@ -73,7 +74,8 @@
          "version" : "0.01"
       },
       "Lingua::FreeLing3::EAGLES" : {
-         "file" : "lib/Lingua/FreeLing3/EAGLES.pm"
+         "file" : "lib/Lingua/FreeLing3/EAGLES.pm",
+         "version" : "0.1"
       },
       "Lingua::FreeLing3::HMMTagger" : {
          "file" : "lib/Lingua/FreeLing3/HMMTagger.pm",
@@ -126,5 +128,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.06"
+   "version" : "0.07"
 }

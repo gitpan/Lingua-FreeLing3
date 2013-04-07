@@ -6,6 +6,8 @@ use File::Spec::Functions 'catfile';
 use warnings;
 use strict;
 
+our $VERSION = "0.1";
+
 sub new {
     my $class = shift;
     my $language = shift;
