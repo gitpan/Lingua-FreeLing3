@@ -2881,16 +2881,16 @@ sub ACQUIRE {
 }
 
 
-############# Class : Lingua::FreeLing3::Bindings::ukb_wrap ##############
+############# Class : Lingua::FreeLing3::Bindings::ukb ##############
 
-package Lingua::FreeLing3::Bindings::ukb_wrap;
+package Lingua::FreeLing3::Bindings::ukb;
 use vars qw(@ISA %OWNER %ITERATORS %BLESSEDMEMBERS);
 @ISA = qw( Lingua::FreeLing3::Bindings );
 %OWNER = ();
 %ITERATORS = ();
 sub new {
     my $pkg = shift;
-    my $self = Lingua::FreeLing3::Bindingsc::new_ukb_wrap(@_);
+    my $self = Lingua::FreeLing3::Bindingsc::new_ukb(@_);
     bless $self, $pkg if defined($self);
 }
 
@@ -2900,12 +2900,12 @@ sub DESTROY {
     return unless defined $self;
     delete $ITERATORS{$self};
     if (exists $OWNER{$self}) {
-        Lingua::FreeLing3::Bindingsc::delete_ukb_wrap($self);
+        Lingua::FreeLing3::Bindingsc::delete_ukb($self);
         delete $OWNER{$self};
     }
 }
 
-*analyze = *Lingua::FreeLing3::Bindingsc::ukb_wrap_analyze;
+*analyze = *Lingua::FreeLing3::Bindingsc::ukb_analyze;
 sub DISOWN {
     my $self = shift;
     my $ptr = tied(%$self);

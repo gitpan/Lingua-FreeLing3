@@ -1517,45 +1517,45 @@ SWIG_Perl_SetModule(swig_module_info *module) {
 
 /* -------- TYPES TABLE (BEGIN) -------- */
 
-#define SWIGTYPE_p_boost__u32regex swig_types[0]
-#define SWIGTYPE_p_char swig_types[1]
-#define SWIGTYPE_p_const_iterator swig_types[2]
-#define SWIGTYPE_p_const_preorder_iterator swig_types[3]
-#define SWIGTYPE_p_const_sibling_iterator swig_types[4]
-#define SWIGTYPE_p_freeling__RE_map swig_types[5]
-#define SWIGTYPE_p_freeling__analysis swig_types[6]
-#define SWIGTYPE_p_freeling__chart_parser swig_types[7]
-#define SWIGTYPE_p_freeling__const_preorder_iteratorT_freeling__depnode_t swig_types[8]
-#define SWIGTYPE_p_freeling__const_preorder_iteratorT_freeling__node_t swig_types[9]
-#define SWIGTYPE_p_freeling__const_sibling_iteratorT_freeling__depnode_t swig_types[10]
-#define SWIGTYPE_p_freeling__const_sibling_iteratorT_freeling__node_t swig_types[11]
-#define SWIGTYPE_p_freeling__dates swig_types[12]
-#define SWIGTYPE_p_freeling__dep_tree swig_types[13]
-#define SWIGTYPE_p_freeling__dep_txala swig_types[14]
-#define SWIGTYPE_p_freeling__depnode swig_types[15]
-#define SWIGTYPE_p_freeling__dictionary swig_types[16]
-#define SWIGTYPE_p_freeling__document swig_types[17]
-#define SWIGTYPE_p_freeling__generic_const_iteratorT_freeling__depnode_t swig_types[18]
-#define SWIGTYPE_p_freeling__generic_const_iteratorT_freeling__node_t swig_types[19]
-#define SWIGTYPE_p_freeling__generic_iteratorT_freeling__depnode_t swig_types[20]
-#define SWIGTYPE_p_freeling__generic_iteratorT_freeling__node_t swig_types[21]
-#define SWIGTYPE_p_freeling__hmm_tagger swig_types[22]
-#define SWIGTYPE_p_freeling__lang_ident swig_types[23]
-#define SWIGTYPE_p_freeling__locutions swig_types[24]
-#define SWIGTYPE_p_freeling__maco swig_types[25]
-#define SWIGTYPE_p_freeling__maco_options swig_types[26]
-#define SWIGTYPE_p_freeling__nec swig_types[27]
-#define SWIGTYPE_p_freeling__ner swig_types[28]
-#define SWIGTYPE_p_freeling__node swig_types[29]
-#define SWIGTYPE_p_freeling__numbers swig_types[30]
-#define SWIGTYPE_p_freeling__paragraph swig_types[31]
-#define SWIGTYPE_p_freeling__parse_tree swig_types[32]
-#define SWIGTYPE_p_freeling__phonetics swig_types[33]
-#define SWIGTYPE_p_freeling__preorder_iteratorT_freeling__depnode_t swig_types[34]
-#define SWIGTYPE_p_freeling__preorder_iteratorT_freeling__node_t swig_types[35]
-#define SWIGTYPE_p_freeling__probabilities swig_types[36]
-#define SWIGTYPE_p_freeling__punts swig_types[37]
-#define SWIGTYPE_p_freeling__quantities swig_types[38]
+#define SWIGTYPE_p_char swig_types[0]
+#define SWIGTYPE_p_const_iterator swig_types[1]
+#define SWIGTYPE_p_const_preorder_iterator swig_types[2]
+#define SWIGTYPE_p_const_sibling_iterator swig_types[3]
+#define SWIGTYPE_p_freeling__RE_map swig_types[4]
+#define SWIGTYPE_p_freeling__analysis swig_types[5]
+#define SWIGTYPE_p_freeling__chart_parser swig_types[6]
+#define SWIGTYPE_p_freeling__const_preorder_iteratorT_freeling__depnode_t swig_types[7]
+#define SWIGTYPE_p_freeling__const_preorder_iteratorT_freeling__node_t swig_types[8]
+#define SWIGTYPE_p_freeling__const_sibling_iteratorT_freeling__depnode_t swig_types[9]
+#define SWIGTYPE_p_freeling__const_sibling_iteratorT_freeling__node_t swig_types[10]
+#define SWIGTYPE_p_freeling__dates swig_types[11]
+#define SWIGTYPE_p_freeling__dep_tree swig_types[12]
+#define SWIGTYPE_p_freeling__dep_txala swig_types[13]
+#define SWIGTYPE_p_freeling__depnode swig_types[14]
+#define SWIGTYPE_p_freeling__dictionary swig_types[15]
+#define SWIGTYPE_p_freeling__document swig_types[16]
+#define SWIGTYPE_p_freeling__generic_const_iteratorT_freeling__depnode_t swig_types[17]
+#define SWIGTYPE_p_freeling__generic_const_iteratorT_freeling__node_t swig_types[18]
+#define SWIGTYPE_p_freeling__generic_iteratorT_freeling__depnode_t swig_types[19]
+#define SWIGTYPE_p_freeling__generic_iteratorT_freeling__node_t swig_types[20]
+#define SWIGTYPE_p_freeling__hmm_tagger swig_types[21]
+#define SWIGTYPE_p_freeling__lang_ident swig_types[22]
+#define SWIGTYPE_p_freeling__locutions swig_types[23]
+#define SWIGTYPE_p_freeling__maco swig_types[24]
+#define SWIGTYPE_p_freeling__maco_options swig_types[25]
+#define SWIGTYPE_p_freeling__nec swig_types[26]
+#define SWIGTYPE_p_freeling__ner swig_types[27]
+#define SWIGTYPE_p_freeling__node swig_types[28]
+#define SWIGTYPE_p_freeling__numbers swig_types[29]
+#define SWIGTYPE_p_freeling__paragraph swig_types[30]
+#define SWIGTYPE_p_freeling__parse_tree swig_types[31]
+#define SWIGTYPE_p_freeling__phonetics swig_types[32]
+#define SWIGTYPE_p_freeling__preorder_iteratorT_freeling__depnode_t swig_types[33]
+#define SWIGTYPE_p_freeling__preorder_iteratorT_freeling__node_t swig_types[34]
+#define SWIGTYPE_p_freeling__probabilities swig_types[35]
+#define SWIGTYPE_p_freeling__punts swig_types[36]
+#define SWIGTYPE_p_freeling__quantities swig_types[37]
+#define SWIGTYPE_p_freeling__regexp swig_types[38]
 #define SWIGTYPE_p_freeling__relax_tagger swig_types[39]
 #define SWIGTYPE_p_freeling__semanticDB swig_types[40]
 #define SWIGTYPE_p_freeling__sense_info swig_types[41]
@@ -1575,7 +1575,7 @@ SWIG_Perl_SetModule(swig_module_info *module) {
 #define SWIGTYPE_p_freeling__tree_iteratorT_freeling__depnode_freeling__treeT_freeling__depnode_t_t swig_types[55]
 #define SWIGTYPE_p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_const_t swig_types[56]
 #define SWIGTYPE_p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_t swig_types[57]
-#define SWIGTYPE_p_freeling__ukb_wrap swig_types[58]
+#define SWIGTYPE_p_freeling__ukb swig_types[58]
 #define SWIGTYPE_p_freeling__util swig_types[59]
 #define SWIGTYPE_p_freeling__word swig_types[60]
 #define SWIGTYPE_p_freeling__word__const_iterator swig_types[61]
@@ -28536,7 +28536,7 @@ XS(_wrap_word_set_span) {
 XS(_wrap_word_find_tag_match) {
   {
     freeling::word *arg1 = (freeling::word *) 0 ;
-    boost::u32regex *arg2 = 0 ;
+    freeling::regexp *arg2 = 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     void *argp2 = 0 ;
@@ -28546,21 +28546,21 @@ XS(_wrap_word_find_tag_match) {
     dXSARGS;
     
     if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: word_find_tag_match(self,boost::u32regex &);");
+      SWIG_croak("Usage: word_find_tag_match(self,freeling::regexp &);");
     }
     res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_freeling__word, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
       SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "word_find_tag_match" "', argument " "1"" of type '" "freeling::word *""'"); 
     }
     arg1 = reinterpret_cast< freeling::word * >(argp1);
-    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_boost__u32regex,  0 );
+    res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_freeling__regexp,  0 );
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "word_find_tag_match" "', argument " "2"" of type '" "boost::u32regex &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "word_find_tag_match" "', argument " "2"" of type '" "freeling::regexp &""'"); 
     }
     if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "word_find_tag_match" "', argument " "2"" of type '" "boost::u32regex &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "word_find_tag_match" "', argument " "2"" of type '" "freeling::regexp &""'"); 
     }
-    arg2 = reinterpret_cast< boost::u32regex * >(argp2);
+    arg2 = reinterpret_cast< freeling::regexp * >(argp2);
     result = (bool)(arg1)->find_tag_match(*arg2);
     ST(argvi) = SWIG_From_bool  SWIG_PERL_CALL_ARGS_1(static_cast< bool >(result)); argvi++ ;
     
@@ -40467,24 +40467,24 @@ XS(_wrap_senses_analyze) {
 }
 
 
-XS(_wrap_new_ukb_wrap) {
+XS(_wrap_new_ukb) {
   {
     std::wstring *arg1 = 0 ;
     std::wstring wtemp1 ;
     int argvi = 0;
-    freeling::ukb_wrap *result = 0 ;
+    freeling::ukb *result = 0 ;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: new_ukb_wrap(std::wstring const &);");
+      SWIG_croak("Usage: new_ukb(std::wstring const &);");
     }
     {
       std::string aux (SvPV(ST(0), PL_na));
       wtemp1 = freeling::util::string2wstring(aux);
       arg1 = &wtemp1;
     }
-    result = (freeling::ukb_wrap *)new freeling::ukb_wrap((std::wstring const &)*arg1);
-    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_freeling__ukb_wrap, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
+    result = (freeling::ukb *)new freeling::ukb((std::wstring const &)*arg1);
+    ST(argvi) = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_freeling__ukb, SWIG_OWNER | SWIG_SHADOW); argvi++ ;
     
     XSRETURN(argvi);
   fail:
@@ -40494,22 +40494,22 @@ XS(_wrap_new_ukb_wrap) {
 }
 
 
-XS(_wrap_delete_ukb_wrap) {
+XS(_wrap_delete_ukb) {
   {
-    freeling::ukb_wrap *arg1 = (freeling::ukb_wrap *) 0 ;
+    freeling::ukb *arg1 = (freeling::ukb *) 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
     int argvi = 0;
     dXSARGS;
     
     if ((items < 1) || (items > 1)) {
-      SWIG_croak("Usage: delete_ukb_wrap(self);");
+      SWIG_croak("Usage: delete_ukb(self);");
     }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_freeling__ukb_wrap, SWIG_POINTER_DISOWN |  0 );
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_freeling__ukb, SWIG_POINTER_DISOWN |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ukb_wrap" "', argument " "1"" of type '" "freeling::ukb_wrap *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_ukb" "', argument " "1"" of type '" "freeling::ukb *""'"); 
     }
-    arg1 = reinterpret_cast< freeling::ukb_wrap * >(argp1);
+    arg1 = reinterpret_cast< freeling::ukb * >(argp1);
     delete arg1;
     ST(argvi) = sv_newmortal();
     
@@ -40521,9 +40521,9 @@ XS(_wrap_delete_ukb_wrap) {
 }
 
 
-XS(_wrap_ukb_wrap_analyze__SWIG_0) {
+XS(_wrap_ukb_analyze__SWIG_0) {
   {
-    freeling::ukb_wrap *arg1 = (freeling::ukb_wrap *) 0 ;
+    freeling::ukb *arg1 = (freeling::ukb *) 0 ;
     freeling::sentence *arg2 = 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
@@ -40534,19 +40534,19 @@ XS(_wrap_ukb_wrap_analyze__SWIG_0) {
     dXSARGS;
     
     if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: ukb_wrap_analyze(self,freeling::sentence const &);");
+      SWIG_croak("Usage: ukb_analyze(self,freeling::sentence const &);");
     }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_freeling__ukb_wrap, 0 |  0 );
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_freeling__ukb, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ukb_wrap_analyze" "', argument " "1"" of type '" "freeling::ukb_wrap *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ukb_analyze" "', argument " "1"" of type '" "freeling::ukb *""'"); 
     }
-    arg1 = reinterpret_cast< freeling::ukb_wrap * >(argp1);
+    arg1 = reinterpret_cast< freeling::ukb * >(argp1);
     res2 = SWIG_ConvertPtr(ST(1), &argp2, SWIGTYPE_p_freeling__sentence,  0 );
     if (!SWIG_IsOK(res2)) {
-      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ukb_wrap_analyze" "', argument " "2"" of type '" "freeling::sentence const &""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "ukb_analyze" "', argument " "2"" of type '" "freeling::sentence const &""'"); 
     }
     if (!argp2) {
-      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ukb_wrap_analyze" "', argument " "2"" of type '" "freeling::sentence const &""'"); 
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "ukb_analyze" "', argument " "2"" of type '" "freeling::sentence const &""'"); 
     }
     arg2 = reinterpret_cast< freeling::sentence * >(argp2);
     result = (arg1)->analyze((freeling::sentence const &)*arg2);
@@ -40562,9 +40562,9 @@ XS(_wrap_ukb_wrap_analyze__SWIG_0) {
 }
 
 
-XS(_wrap_ukb_wrap_analyze__SWIG_1) {
+XS(_wrap_ukb_analyze__SWIG_1) {
   {
-    freeling::ukb_wrap *arg1 = (freeling::ukb_wrap *) 0 ;
+    freeling::ukb *arg1 = (freeling::ukb *) 0 ;
     std::list< freeling::sentence > *arg2 = 0 ;
     void *argp1 = 0 ;
     int res1 = 0 ;
@@ -40575,13 +40575,13 @@ XS(_wrap_ukb_wrap_analyze__SWIG_1) {
     dXSARGS;
     
     if ((items < 2) || (items > 2)) {
-      SWIG_croak("Usage: ukb_wrap_analyze(self,std::list< freeling::sentence > const &);");
+      SWIG_croak("Usage: ukb_analyze(self,std::list< freeling::sentence > const &);");
     }
-    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_freeling__ukb_wrap, 0 |  0 );
+    res1 = SWIG_ConvertPtr(ST(0), &argp1,SWIGTYPE_p_freeling__ukb, 0 |  0 );
     if (!SWIG_IsOK(res1)) {
-      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ukb_wrap_analyze" "', argument " "1"" of type '" "freeling::ukb_wrap *""'"); 
+      SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "ukb_analyze" "', argument " "1"" of type '" "freeling::ukb *""'"); 
     }
-    arg1 = reinterpret_cast< freeling::ukb_wrap * >(argp1);
+    arg1 = reinterpret_cast< freeling::ukb * >(argp1);
     {
       if (SWIG_ConvertPtr(ST(1),(void **) &v2, 
           SWIGTYPE_p_std__listT_freeling__sentence_t,1) != -1) {
@@ -40589,7 +40589,7 @@ XS(_wrap_ukb_wrap_analyze__SWIG_1) {
       } else if (SvROK(ST(1))) {
         AV *av = (AV *)SvRV(ST(1));
         if (SvTYPE(av) != SVt_PVAV)
-        SWIG_croak("Type error in argument 2 of ukb_wrap_analyze. "
+        SWIG_croak("Type error in argument 2 of ukb_analyze. "
           "Expected an array of " "freeling::sentence");
         SV **tv;
         I32 len = av_len(av) + 1;
@@ -40601,13 +40601,13 @@ XS(_wrap_ukb_wrap_analyze__SWIG_1) {
             temp2.push_back(*obj);
           } else {
             SWIG_croak("Type error in argument 2 of "
-              "ukb_wrap_analyze. "
+              "ukb_analyze. "
               "Expected an array of " "freeling::sentence");
           }
         }
         arg2 = &temp2;
       } else {
-        SWIG_croak("Type error in argument 2 of ukb_wrap_analyze. "
+        SWIG_croak("Type error in argument 2 of ukb_analyze. "
           "Expected an array of " "freeling::sentence");
       }
     }
@@ -40640,7 +40640,7 @@ XS(_wrap_ukb_wrap_analyze__SWIG_1) {
 }
 
 
-XS(_wrap_ukb_wrap_analyze) {
+XS(_wrap_ukb_analyze) {
   dXSARGS;
   
   {
@@ -40653,7 +40653,7 @@ XS(_wrap_ukb_wrap_analyze) {
       int _v = 0;
       {
         void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_freeling__ukb_wrap, 0);
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_freeling__ukb, 0);
         _v = SWIG_CheckState(res);
       }
       if (!_v) goto check_1;
@@ -40683,7 +40683,7 @@ XS(_wrap_ukb_wrap_analyze) {
       int _v = 0;
       {
         void *vptr = 0;
-        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_freeling__ukb_wrap, 0);
+        int res = SWIG_ConvertPtr(ST(0), &vptr, SWIGTYPE_p_freeling__ukb, 0);
         _v = SWIG_CheckState(res);
       }
       if (!_v) goto check_2;
@@ -40738,13 +40738,13 @@ XS(_wrap_ukb_wrap_analyze) {
   dispatch:
     switch(_index) {
     case 1:
-      PUSHMARK(MARK); SWIG_CALLXS(_wrap_ukb_wrap_analyze__SWIG_0); return;
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_ukb_analyze__SWIG_0); return;
     case 2:
-      PUSHMARK(MARK); SWIG_CALLXS(_wrap_ukb_wrap_analyze__SWIG_1); return;
+      PUSHMARK(MARK); SWIG_CALLXS(_wrap_ukb_analyze__SWIG_1); return;
     }
   }
   
-  croak("No matching function for overloaded 'ukb_wrap_analyze'");
+  croak("No matching function for overloaded 'ukb_analyze'");
   XSRETURN(0);
 }
 
@@ -42415,7 +42415,6 @@ static void *_p_freeling__const_sibling_iteratorT_freeling__depnode_tTo_p_freeli
 static void *_p_freeling__const_preorder_iteratorT_freeling__depnode_tTo_p_freeling__generic_const_iteratorT_freeling__depnode_t(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((freeling::generic_const_iterator< freeling::depnode > *)  ((freeling::const_preorder_iterator< freeling::depnode > *) x));
 }
-static swig_type_info _swigt__p_boost__u32regex = {"_p_boost__u32regex", "boost::u32regex *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_const_iterator = {"_p_const_iterator", "const_iterator *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_const_preorder_iterator = {"_p_const_preorder_iterator", "const_preorder_iterator *", 0, 0, (void*)0, 0};
@@ -42454,6 +42453,7 @@ static swig_type_info _swigt__p_freeling__preorder_iteratorT_freeling__node_t = 
 static swig_type_info _swigt__p_freeling__probabilities = {"_p_freeling__probabilities", "freeling::probabilities *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::probabilities", 0};
 static swig_type_info _swigt__p_freeling__punts = {"_p_freeling__punts", "freeling::punts *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::punts", 0};
 static swig_type_info _swigt__p_freeling__quantities = {"_p_freeling__quantities", "freeling::quantities *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::quantities", 0};
+static swig_type_info _swigt__p_freeling__regexp = {"_p_freeling__regexp", "freeling::regexp *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_freeling__relax_tagger = {"_p_freeling__relax_tagger", "freeling::relax_tagger *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::relax_tagger", 0};
 static swig_type_info _swigt__p_freeling__semanticDB = {"_p_freeling__semanticDB", "freeling::semanticDB *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::semanticDB", 0};
 static swig_type_info _swigt__p_freeling__sense_info = {"_p_freeling__sense_info", "freeling::sense_info *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::sense_info", 0};
@@ -42473,7 +42473,7 @@ static swig_type_info _swigt__p_freeling__tree_iteratorT_freeling__depnode_freel
 static swig_type_info _swigt__p_freeling__tree_iteratorT_freeling__depnode_freeling__treeT_freeling__depnode_t_t = {"_p_freeling__tree_iteratorT_freeling__depnode_freeling__treeT_freeling__depnode_t_t", "freeling::tree_iterator< freeling::depnode,freeling::tree< freeling::depnode > > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::TreeIteratorDepnode", 0};
 static swig_type_info _swigt__p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_const_t = {"_p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_const_t", "freeling::tree_iterator< freeling::node,freeling::tree< freeling::node > const > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::TreeIteratorNodeConst", 0};
 static swig_type_info _swigt__p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_t = {"_p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_t", "freeling::tree_iterator< freeling::node,freeling::tree< freeling::node > > *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::TreeIteratorNode", 0};
-static swig_type_info _swigt__p_freeling__ukb_wrap = {"_p_freeling__ukb_wrap", "freeling::ukb_wrap *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::ukb_wrap", 0};
+static swig_type_info _swigt__p_freeling__ukb = {"_p_freeling__ukb", "freeling::ukb *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::ukb", 0};
 static swig_type_info _swigt__p_freeling__util = {"_p_freeling__util", "freeling::util *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::util", 0};
 static swig_type_info _swigt__p_freeling__word = {"_p_freeling__word", "freeling::word *", 0, 0, (void*)"Lingua::FreeLing3::Bindings::word", 0};
 static swig_type_info _swigt__p_freeling__word__const_iterator = {"_p_freeling__word__const_iterator", "freeling::word::const_iterator *", 0, 0, (void*)0, 0};
@@ -42506,7 +42506,6 @@ static swig_type_info _swigt__p_std__wstring = {"_p_std__wstring", "std::wstring
 static swig_type_info _swigt__p_unsigned_long = {"_p_unsigned_long", "unsigned long *", 0, 0, (void*)0, 0};
 
 static swig_type_info *swig_type_initial[] = {
-  &_swigt__p_boost__u32regex,
   &_swigt__p_char,
   &_swigt__p_const_iterator,
   &_swigt__p_const_preorder_iterator,
@@ -42545,6 +42544,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_freeling__probabilities,
   &_swigt__p_freeling__punts,
   &_swigt__p_freeling__quantities,
+  &_swigt__p_freeling__regexp,
   &_swigt__p_freeling__relax_tagger,
   &_swigt__p_freeling__semanticDB,
   &_swigt__p_freeling__sense_info,
@@ -42564,7 +42564,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_freeling__tree_iteratorT_freeling__depnode_freeling__treeT_freeling__depnode_t_t,
   &_swigt__p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_const_t,
   &_swigt__p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_t,
-  &_swigt__p_freeling__ukb_wrap,
+  &_swigt__p_freeling__ukb,
   &_swigt__p_freeling__util,
   &_swigt__p_freeling__word,
   &_swigt__p_freeling__word__const_iterator,
@@ -42597,7 +42597,6 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_unsigned_long,
 };
 
-static swig_cast_info _swigc__p_boost__u32regex[] = {  {&_swigt__p_boost__u32regex, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_const_iterator[] = {  {&_swigt__p_const_iterator, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_const_preorder_iterator[] = {  {&_swigt__p_const_preorder_iterator, 0, 0, 0},{0, 0, 0, 0}};
@@ -42636,6 +42635,7 @@ static swig_cast_info _swigc__p_freeling__preorder_iteratorT_freeling__node_t[] 
 static swig_cast_info _swigc__p_freeling__probabilities[] = {  {&_swigt__p_freeling__probabilities, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_freeling__punts[] = {  {&_swigt__p_freeling__punts, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_freeling__quantities[] = {  {&_swigt__p_freeling__quantities, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_freeling__regexp[] = {  {&_swigt__p_freeling__regexp, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_freeling__relax_tagger[] = {  {&_swigt__p_freeling__relax_tagger, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_freeling__semanticDB[] = {  {&_swigt__p_freeling__semanticDB, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_freeling__sense_info[] = {  {&_swigt__p_freeling__sense_info, 0, 0, 0},{0, 0, 0, 0}};
@@ -42655,7 +42655,7 @@ static swig_cast_info _swigc__p_freeling__tree_iteratorT_freeling__depnode_freel
 static swig_cast_info _swigc__p_freeling__tree_iteratorT_freeling__depnode_freeling__treeT_freeling__depnode_t_t[] = {  {&_swigt__p_freeling__tree_iteratorT_freeling__depnode_freeling__treeT_freeling__depnode_t_t, 0, 0, 0},  {&_swigt__p_freeling__preorder_iteratorT_freeling__depnode_t, _p_freeling__preorder_iteratorT_freeling__depnode_tTo_p_freeling__tree_iteratorT_freeling__depnode_freeling__treeT_freeling__depnode_t_t, 0, 0},  {&_swigt__p_freeling__generic_iteratorT_freeling__depnode_t, _p_freeling__generic_iteratorT_freeling__depnode_tTo_p_freeling__tree_iteratorT_freeling__depnode_freeling__treeT_freeling__depnode_t_t, 0, 0},  {&_swigt__p_freeling__sibling_iteratorT_freeling__depnode_t, _p_freeling__sibling_iteratorT_freeling__depnode_tTo_p_freeling__tree_iteratorT_freeling__depnode_freeling__treeT_freeling__depnode_t_t, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_const_t[] = {  {&_swigt__p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_const_t, 0, 0, 0},  {&_swigt__p_freeling__generic_const_iteratorT_freeling__node_t, _p_freeling__generic_const_iteratorT_freeling__node_tTo_p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_const_t, 0, 0},  {&_swigt__p_freeling__const_sibling_iteratorT_freeling__node_t, _p_freeling__const_sibling_iteratorT_freeling__node_tTo_p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_const_t, 0, 0},  {&_swigt__p_freeling__const_preorder_iteratorT_freeling__node_t, _p_freeling__const_preorder_iteratorT_freeling__node_tTo_p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_const_t, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_t[] = {  {&_swigt__p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_t, 0, 0, 0},  {&_swigt__p_freeling__generic_iteratorT_freeling__node_t, _p_freeling__generic_iteratorT_freeling__node_tTo_p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_t, 0, 0},  {&_swigt__p_freeling__preorder_iteratorT_freeling__node_t, _p_freeling__preorder_iteratorT_freeling__node_tTo_p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_t, 0, 0},  {&_swigt__p_freeling__sibling_iteratorT_freeling__node_t, _p_freeling__sibling_iteratorT_freeling__node_tTo_p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_t, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_freeling__ukb_wrap[] = {  {&_swigt__p_freeling__ukb_wrap, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_freeling__ukb[] = {  {&_swigt__p_freeling__ukb, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_freeling__util[] = {  {&_swigt__p_freeling__util, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_freeling__word[] = {  {&_swigt__p_freeling__word, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_freeling__word__const_iterator[] = {  {&_swigt__p_freeling__word__const_iterator, 0, 0, 0},{0, 0, 0, 0}};
@@ -42688,7 +42688,6 @@ static swig_cast_info _swigc__p_std__wstring[] = {  {&_swigt__p_std__wstring, 0,
 static swig_cast_info _swigc__p_unsigned_long[] = {  {&_swigt__p_unsigned_long, 0, 0, 0},{0, 0, 0, 0}};
 
 static swig_cast_info *swig_cast_initial[] = {
-  _swigc__p_boost__u32regex,
   _swigc__p_char,
   _swigc__p_const_iterator,
   _swigc__p_const_preorder_iterator,
@@ -42727,6 +42726,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_freeling__probabilities,
   _swigc__p_freeling__punts,
   _swigc__p_freeling__quantities,
+  _swigc__p_freeling__regexp,
   _swigc__p_freeling__relax_tagger,
   _swigc__p_freeling__semanticDB,
   _swigc__p_freeling__sense_info,
@@ -42746,7 +42746,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_freeling__tree_iteratorT_freeling__depnode_freeling__treeT_freeling__depnode_t_t,
   _swigc__p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_const_t,
   _swigc__p_freeling__tree_iteratorT_freeling__node_freeling__treeT_freeling__node_t_t,
-  _swigc__p_freeling__ukb_wrap,
+  _swigc__p_freeling__ukb,
   _swigc__p_freeling__util,
   _swigc__p_freeling__word,
   _swigc__p_freeling__word__const_iterator,
@@ -43349,9 +43349,9 @@ static swig_command_info swig_commands[] = {
 {"Lingua::FreeLing3::Bindingsc::new_senses", _wrap_new_senses},
 {"Lingua::FreeLing3::Bindingsc::delete_senses", _wrap_delete_senses},
 {"Lingua::FreeLing3::Bindingsc::senses_analyze", _wrap_senses_analyze},
-{"Lingua::FreeLing3::Bindingsc::new_ukb_wrap", _wrap_new_ukb_wrap},
-{"Lingua::FreeLing3::Bindingsc::delete_ukb_wrap", _wrap_delete_ukb_wrap},
-{"Lingua::FreeLing3::Bindingsc::ukb_wrap_analyze", _wrap_ukb_wrap_analyze},
+{"Lingua::FreeLing3::Bindingsc::new_ukb", _wrap_new_ukb},
+{"Lingua::FreeLing3::Bindingsc::delete_ukb", _wrap_delete_ukb},
+{"Lingua::FreeLing3::Bindingsc::ukb_analyze", _wrap_ukb_analyze},
 {"Lingua::FreeLing3::Bindingsc::sense_info_sense_set", _wrap_sense_info_sense_set},
 {"Lingua::FreeLing3::Bindingsc::sense_info_sense_get", _wrap_sense_info_sense_get},
 {"Lingua::FreeLing3::Bindingsc::sense_info_parents_set", _wrap_sense_info_parents_set},
@@ -43750,7 +43750,7 @@ XS(SWIG_init) {
   SWIG_TypeClientData(SWIGTYPE_p_freeling__chart_parser, (void*) "Lingua::FreeLing3::Bindings::chart_parser");
   SWIG_TypeClientData(SWIGTYPE_p_freeling__dep_txala, (void*) "Lingua::FreeLing3::Bindings::dep_txala");
   SWIG_TypeClientData(SWIGTYPE_p_freeling__senses, (void*) "Lingua::FreeLing3::Bindings::senses");
-  SWIG_TypeClientData(SWIGTYPE_p_freeling__ukb_wrap, (void*) "Lingua::FreeLing3::Bindings::ukb_wrap");
+  SWIG_TypeClientData(SWIGTYPE_p_freeling__ukb, (void*) "Lingua::FreeLing3::Bindings::ukb");
   SWIG_TypeClientData(SWIGTYPE_p_freeling__sense_info, (void*) "Lingua::FreeLing3::Bindings::sense_info");
   SWIG_TypeClientData(SWIGTYPE_p_freeling__semanticDB, (void*) "Lingua::FreeLing3::Bindings::semanticDB");
   SWIG_TypeClientData(SWIGTYPE_p_freeling__tagset, (void*) "Lingua::FreeLing3::Bindings::tagset");
