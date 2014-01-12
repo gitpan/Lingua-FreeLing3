@@ -95,10 +95,6 @@ in case of failure.
 
 =item C<UserMap> (boolean)
 
-=item C<OrthographicCorrection> (boolean)
-
-=item C<CorrectorFile> (file)
-
 =item C<UserMapFile> (file)
 
 =back
@@ -113,7 +109,6 @@ my %maco_valid_option = (
                          AffixAnalysis          => 'BOOLEAN',
                          MultiwordsDetection    => 'BOOLEAN',
                          NumbersDetection       => 'BOOLEAN',
-                         OrthographicCorrection => 'BOOLEAN',
                          PunctuationDetection   => 'BOOLEAN',
                          DatesDetection         => 'BOOLEAN',
                          QuantitiesDetection    => 'BOOLEAN',
@@ -129,7 +124,6 @@ my %maco_valid_option = (
                          DictionaryFile         => 'FILE',
                          NPdataFile             => 'FILE',
                          PunctuationFile        => 'FILE',
-                         CorrectorFile          => 'FILE',
                          ProbabilityThreshold   => 'REAL',
                         );
 
@@ -190,8 +184,6 @@ sub new {
                        ProbabilityFile        => $config->config("ProbabilityFile"),
                        NERecognition          => $config->config("NERecognition"),
                        NPdataFile             => $config->config("NPDataFile"),
-                       OrthographicCorrection => $config->config("OrthographicCorrection"),
-                       CorrectorFile          => $config->config("CorrectorFile"),
                        RetokContractions      => 0,
                        ProbabilityThreshold   => $config->config("ProbabilityThreshold"),
                        DecimalPoint           => $config->config("DecimalPoint"),
@@ -229,7 +221,6 @@ sub new {
                LocutionsFile   => 'MultiwordsDetection',
                PunctuationFile => 'PunctuationDetection',
                DictionaryFile  => 'DictionarySearch',
-               CorrectorFile   => 'OrthographicCorrection',
                ProbabilityFile => 'ProbabilityAssignment',
                NPdataFile      => 'NERecognition'         );
 

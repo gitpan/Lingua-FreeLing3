@@ -50,7 +50,10 @@ my ($major, $minor) = ($builder->notes('fl_major'), $builder->notes('fl_minor'))
 printf STDERR "Configuring for FreeLing version ${version} [$major.$minor]\n";
 
 die "Versions prior to 3 not supported" if $major != 3;
-die "Minor version not supported"   unless $minor == 0 || $minor == 1;
+if ($minor < 1) {
+	die "Version 3.0 is no longer supported.\nPlease install Lingua::FreeLing3 version 0.08\n";
+}
+die "Minor version not supported"  unless $minor == 1;
 
 my @prefix = ('lib','Lingua','FreeLing3');
 copy catfile("swig","Bindings-$major.$minor.pm") => catfile(@prefix, "Bindings.pm");

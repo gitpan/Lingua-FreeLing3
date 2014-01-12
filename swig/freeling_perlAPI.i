@@ -349,6 +349,7 @@ class analysis {
       analysis& operator=(const analysis&);
       ~analysis();
 
+      void init(const std::wstring &l, const std::wstring &t);
       void set_lemma(const std::wstring &);
       void set_tag(const std::wstring &);
       void set_prob(double);
@@ -356,6 +357,7 @@ class analysis {
       void set_retokenizable(const std::list<freeling::word> &);
 
       bool has_prob() const;
+
       bool has_distance() const;
       std::wstring get_lemma() const;
       std::wstring get_tag() const;
@@ -370,11 +372,14 @@ class analysis {
       std::wstring get_senses_string() const;
 
       /// Comparison to sort analysis by *decreasing* probability
+      bool operator>(const analysis &) const;
+      /// Comparison to sort analysis by *increasing* probability
       bool operator<(const analysis &) const;
       /// Comparison (to please MSVC)
       bool operator==(const analysis &) const;
 
-      // find out whether the analysis is selected in the tagger k-th best sequence
+      // find out whether the analysis is selected in the tagger
+      // k-th best sequence
       bool is_selected(int k=0) const;
       // mark this analysis as selected in k-th best sequence
       void mark_selected(int k=0);
@@ -416,14 +421,20 @@ class word : public std::list<freeling::analysis> {
       int get_n_unselected() const;
       /// true iff the word is a multiword compound
       bool is_multiword() const;
+      /// true iff the word is a multiword marked as ambiguous
+      bool is_ambiguous_mw() const;
+      /// set mw ambiguity status
+      void set_ambiguous_mw(bool);
       /// get number of words in compound
       int get_n_words_mw() const;
       /// get word objects that compound the multiword
-      std::list<freeling::word> get_words_mw() const;
+      const std::list<freeling::word> &get_words_mw() const;
       /// get word form
       std::wstring get_form() const;
       /// Get word form, lowercased.
       std::wstring get_lc_form() const;
+      /// Get word phonetic form
+      std::wstring get_ph_form() const;
       /// Get an iterator to the first selected analysis
       word::iterator selected_begin(int k=0);
       /// Get an iterator to the end of selected analysis list
@@ -444,6 +455,8 @@ class word : public std::list<freeling::analysis> {
       word::const_iterator unselected_end(int k=0) const;
       #endif
 
+      /// Get how many kbest tags the word has
+      unsigned int num_kbest() const;
       /// get lemma for the selected analysis in list
       std::wstring get_lemma(int k=0) const;
       /// get tag for the selected analysis
@@ -472,17 +485,28 @@ class word : public std::list<freeling::analysis> {
       bool is_locked() const;
 
       /// add an alternative to the alternatives list
-      void add_alternative(const word &, double);
+      void add_alternative(const std::wstring &, int);
       /// replace alternatives list with list given
-      void set_alternatives(const std::list<std::pair<freeling::word,double> > &);
+      void set_alternatives(const std::list<std::pair<std::wstring,int> > &);
+      /// clear alternatives list
+      void clear_alternatives();
       /// find out if the speller checked alternatives
       bool has_alternatives() const;
-      /// get alternatives list
-      std::list<std::pair<freeling::word,double> > get_alternatives() const;
+      /// get alternatives list &
+      std::list<std::pair<std::wstring,int> >& get_alternatives();
       /// get alternatives begin iterator
-      std::list<std::pair<freeling::word,double> >::iterator alternatives_begin();
+      std::list<std::pair<std::wstring,int> >::iterator alternatives_begin();
       /// get alternatives end iterator
-      std::list<std::pair<freeling::word,double> >::iterator alternatives_end();
+      std::list<std::pair<std::wstring,int> >::iterator alternatives_end();
+
+      #ifndef FL_API_JAVA
+      /// get alternatives list const &
+      const std::list<std::pair<std::wstring,int> >& get_alternatives() const;
+      /// get alternatives begin iterator
+      std::list<std::pair<std::wstring,int> >::const_iterator alternatives_begin() const;
+      /// get alternatives end iterator
+      std::list<std::pair<std::wstring,int> >::const_iterator alternatives_end() const;
+      #endif
 
       /// add one analysis to current analysis list  (no duplicate check!)
       void add_analysis(const analysis &);
@@ -492,8 +516,14 @@ class word : public std::list<freeling::analysis> {
       void set_analysis(const std::list<freeling::analysis> &);
       /// set word form
       void set_form(const std::wstring &);
+      /// Set word phonetic form
+      void set_ph_form(const std::wstring &);
       /// set token span
       void set_span(unsigned long, unsigned long);
+
+      // get/set word position in sentence
+      void set_position(size_t);
+      size_t get_position() const;
 
       /// look for an analysis with a tag matching given regexp
       bool find_tag_match(freeling::regexp &);
@@ -542,7 +572,10 @@ class node {
     /// get node label
     std::wstring get_label() const;
     /// get node word
-    word get_word() const;
+    word & get_word();
+    #ifndef FL_API_JAVA
+    const word & get_word() const;
+    #endif
     /// set node label
     void set_label(const std::wstring &);
     /// set node word
@@ -559,10 +592,31 @@ class node {
     int  get_chunk_ord() const;
 };
 
+////////////////////////////////////////////////////////////////
+/// class dep_tree stores a constituent tree
+////////////////////////////////////////////////////////////////
+
 class parse_tree : public tree<freeling::node> {
   public:
     parse_tree();
+    parse_tree(parse_tree::iterator p);
     parse_tree(const node &);
+
+    /// assign an id to each node and build index
+    void build_node_index(const std::wstring &);
+    /// rebuild index maintaining node id's
+    void rebuild_node_index();
+    /// access the node with given id
+    parse_tree::iterator get_node_by_id(const std::wstring &);
+    /// access the node by word position
+    parse_tree::iterator get_node_by_pos(size_t);
+
+    #ifndef FL_API_JAVA
+    /// access the node with given id
+    parse_tree::const_iterator get_node_by_id(const std::wstring &) const;
+    /// access the node by word position
+    parse_tree::const_iterator get_node_by_pos(size_t) const;
+    #endif
 };
 
 
@@ -580,7 +634,13 @@ class depnode : public node {
 
     void set_link(const parse_tree::iterator);
     parse_tree::iterator get_link(void);
+    #ifndef FL_API_JAVA
+    parse_tree::const_iterator get_link(void) const;
+    #endif
     tree<freeling::node>& get_link_ref(void);
+
+    // explicitly inherit from node (swig not always ports 
+    // correctly class hierarchies)
     void set_label(const std::wstring &);
 };
 
@@ -592,6 +652,15 @@ class dep_tree :  public tree<freeling::depnode> {
   public:
     dep_tree();
     dep_tree(const depnode &);
+
+    /// get depnode corresponding to word in given position
+    dep_tree::iterator get_node_by_pos(size_t);
+    #ifndef FL_API_JAVA
+    /// get depnode corresponding to word in given position
+    dep_tree::const_iterator get_node_by_pos(size_t) const;
+    #endif
+    /// rebuild index maintaining words positions
+    void rebuild_node_index();
 };
 
 
@@ -610,17 +679,34 @@ class sentence : public std::list<freeling::word> {
   /// assignment
   sentence& operator=(const sentence&);
 
+  // destructor
   ~sentence();
 
   /// find out how many kbest sequences the tagger computed
   unsigned int num_kbest() const;
+  /// add a word to the sentence
+  void push_back(const word &);
+  /// rebuild word positional index
+  void rebuild_word_index();
+  // empty sentence
+  void clear(); 
 
-  void set_parse_tree(const parse_tree &);
-  parse_tree & get_parse_tree(void);
+  // get/set sentence id
+  void set_sentence_id(const std::wstring &);
+  std::wstring get_sentence_id();
+
+  void set_parse_tree(const parse_tree &, int k=0);
+  parse_tree & get_parse_tree(int k=0);
+  #ifndef FL_API_JAVA
+  const parse_tree & get_parse_tree(int k=0) const;
+  #endif
   bool is_parsed() const;  
 
-  dep_tree & get_dep_tree();
-  void set_dep_tree(const dep_tree &);
+  void set_dep_tree(const dep_tree &, int k=0);
+  dep_tree & get_dep_tree(int k=0);
+  #ifndef FL_API_JAVA
+  const dep_tree & get_dep_tree(int k=0) const;
+  #endif
   bool is_dep_parsed() const;
 
   /// get word list (useful for perl API)
@@ -652,10 +738,11 @@ class document : public std::list<freeling::paragraph> {
     document();
     ~document();
 
-    void add_positive(std::wstring, std::wstring);
-    int get_coref_group(std::wstring) const;
+    void add_positive(const std::wstring &, int);
+    void add_positive(const std::wstring &, const std::wstring &);
+    int get_coref_group(const std::wstring &) const;
     std::list<std::wstring> get_coref_nodes(int) const;
-    bool is_coref(std::wstring, std::wstring) const;
+    bool is_coref(const std::wstring &, const std::wstring &) const;
 };
 
 
@@ -677,8 +764,14 @@ class traces {
 class lang_ident {
    public:
       /// constructor
+      lang_ident();
       lang_ident (const std::wstring &);
       ~lang_ident();
+
+      void add_language(const std::wstring&);
+      /// train a model for a language, store in modelFile, and add 
+      /// it to the known languages list.
+      void train_language(const std::wstring &, const std::wstring &, const std::wstring &);
 
       /// Identify language, return most likely language for given text,
       /// consider only languages in given set (empty --> all available languages)
@@ -700,10 +793,12 @@ class tokenizer {
        tokenizer(const std::wstring &);
        ~tokenizer();
 
-       /// tokenize wstring with default options
-       std::list<freeling::word> tokenize(const std::wstring &);
-       /// tokenize wstring with default options, tracking offset in given int param.
-       std::list<freeling::word> tokenize(const std::wstring &, unsigned long &);
+       /// tokenize wstring 
+       void tokenize(const std::wstring &, std::list<word> &) const;
+       std::list<freeling::word> tokenize(const std::wstring &) const;
+       /// tokenize string, tracking offset
+       void tokenize(const std::wstring &, unsigned long &, std::list<word> &) const;
+       std::list<freeling::word> tokenize(const std::wstring &, unsigned long &) const;
 };
 
 /*------------------------------------------------------------------------*/
@@ -714,6 +809,7 @@ class splitter {
       ~splitter();
 
       /// split sentences with default options
+      void split(const std::list<word> &, bool, std::list<sentence> &ls);
       std::list<freeling::sentence> split(const std::list<freeling::word> &, bool);
 };
 
@@ -729,14 +825,13 @@ class maco_options {
          NumbersDetection, PunctuationDetection, 
          DatesDetection,   QuantitiesDetection, 
          DictionarySearch, ProbabilityAssignment,
-         OrthographicCorrection, UserMap;
-    int NERecognition;
+         UserMap, NERecognition;
 
     /// Morphological analyzer modules configuration/data files.
     std::wstring LocutionsFile, QuantitiesFile, AffixFile, 
            ProbabilityFile, DictionaryFile, 
            NPdataFile, PunctuationFile,
-           CorrectorFile, UserMapFile;
+           UserMapFile;
 
     /// module-specific parameters for number recognition
     std::wstring Decimal, Thousand;
@@ -753,10 +848,10 @@ class maco_options {
     /// Since option data members are public and can be accessed directly
     /// from C++, the following methods are not necessary, but may become
     /// convenient sometimes.
-    void set_active_modules(bool,bool,bool,bool,bool,bool,bool,bool,bool,bool,bool);
+    void set_active_modules(bool,bool,bool,bool,bool,bool,bool,bool,bool,bool,bool dummy=false);
     void set_data_files(const std::wstring &,const std::wstring &,const std::wstring &,
                         const std::wstring &,const std::wstring &,const std::wstring &,
-                        const std::wstring &,const std::wstring &, const std::wstring &);
+                        const std::wstring &,const std::wstring &, const std::wstring &dummy="");
 
     void set_nummerical_points(const std::wstring &,const std::wstring &);
     void set_threshold(double);
@@ -773,14 +868,14 @@ class maco {
 
       #ifndef FL_API_JAVA
       /// analyze sentence
-      sentence analyze(const sentence &);
+      sentence analyze(const sentence &) const;
       /// analyze sentences
-      std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+      std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
       #else
       /// analyze sentence
-      void analyze(sentence &);
+      void analyze(sentence &) const;
       /// analyze sentences
-      void analyze(std::list<freeling::sentence> &);
+      void analyze(std::list<freeling::sentence> &) const;
       #endif
 };
 
@@ -792,17 +887,20 @@ class RE_map {
   /// Constructor (config file)
   RE_map(const std::wstring &); 
   ~RE_map();
+
+  /// annotate given word
+  void annotate_word(word &) const;
  
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -815,14 +913,14 @@ class numbers {
 
     #ifndef FL_API_JAVA
     /// analyze sentence
-    sentence analyze(const sentence &);
+    sentence analyze(const sentence &) const;
     /// analyze sentences
-    std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+    std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
     #else
     /// analyze sentence
-    void analyze(sentence &);
+    void analyze(sentence &) const;
     /// analyze sentences
-    void analyze(std::list<freeling::sentence> &);
+    void analyze(std::list<freeling::sentence> &) const;
     #endif
 };
 
@@ -836,14 +934,14 @@ class punts {
 
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -857,14 +955,14 @@ class dates {
 
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };  
 
@@ -876,24 +974,32 @@ class dictionary {
   /// Destructor
   ~dictionary();
 
+  /// add analysis to dictionary entry (create entry if not there)
+  void add_analysis(const std::wstring &, const analysis &);
+  /// remove entry from dictionary
+  void remove_entry(const std::wstring &);
+
   /// Get dictionary entry for a given form, add to given list.
-  void search_form(const std::wstring &, std::list<freeling::analysis> &);
+  void search_form(const std::wstring &, std::list<freeling::analysis> &) const;
   /// Fills the analysis list of a word, checking for suffixes and contractions.
   /// Returns true iff the form is a contraction.
-  bool annotate_word(word &, std::list<freeling::word> &);
+  bool annotate_word(word &, std::list<freeling::word> &, bool override=false) const;
+  /// convenience equivalent to "annotate_word(w,dummy,true)"
+  void annotate_word(word &) const;
+
   /// Get possible forms for a lemma+pos
   std::list<std::wstring> get_forms(const std::wstring &, const std::wstring &) const;
 
   #ifndef FL_API_JAVA
   /// analyze sentence, return analyzed copy
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences, return analyzed copy
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze given sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze given sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -907,14 +1013,14 @@ class locutions {
 
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -928,14 +1034,14 @@ class ner {
 
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -949,14 +1055,14 @@ class quantities {
 
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -968,20 +1074,20 @@ class probabilities {
   ~probabilities();
 
   /// Assign probabilities for each analysis of given word
-  void annotate_word(word &);
+  void annotate_word(word &) const;
   /// Turn guesser on/of
   void set_activate_guesser(bool);
 
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -992,16 +1098,20 @@ class hmm_tagger {
   hmm_tagger(const std::wstring &, bool, unsigned int, unsigned int kb=1);
   ~hmm_tagger();
   
+  /// Given an *annotated* sentence, compute (log) probability of k-th best
+  /// sequence according to HMM parameters.
+  double SequenceProb_log(const sentence &, int k=0) const;
+
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -1015,16 +1125,42 @@ class relax_tagger {
 
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
+
+/*------------------------------------------------------------------------*/
+  class alternatives {
+
+  public:
+    /// Constructor
+    alternatives(const std::wstring &);
+    /// Destructor
+    ~alternatives();
+
+    /// direct access to results of underlying automata
+    void get_similar_words(const std::wstring &, std::list<std::pair<std::wstring,int> > &) const;
+
+    #ifndef FL_API_JAVA
+    /// analyze sentence
+    sentence analyze(const sentence &) const;
+    /// analyze sentences
+    std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
+    #else
+    /// analyze sentence
+    void analyze(sentence &) const;
+    /// analyze sentences
+    void analyze(std::list<freeling::sentence> &) const;
+    #endif
+
+  };
 
 /*------------------------------------------------------------------------*/
 class phonetics {  
@@ -1034,18 +1170,18 @@ class phonetics {
   ~phonetics();
   
   /// Returns the phonetic sound of the word
-  std::wstring get_sound(const std::wstring &);
+  std::wstring get_sound(const std::wstring &) const;
 
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -1059,14 +1195,14 @@ class nec {
   
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -1083,14 +1219,14 @@ class chart_parser {
 
    #ifndef FL_API_JAVA
    /// analyze sentence
-   sentence analyze(const sentence &);
+   sentence analyze(const sentence &) const;
    /// analyze sentences
-   std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+   std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
    #else
    /// analyze sentence
-   void analyze(sentence &);
+   void analyze(sentence &) const;
    /// analyze sentences
-   void analyze(std::list<freeling::sentence> &);
+   void analyze(std::list<freeling::sentence> &) const;
    #endif
 };
 
@@ -1103,14 +1239,14 @@ class dep_txala {
 
    #ifndef FL_API_JAVA
    /// analyze sentence
-   sentence analyze(const sentence &);
+   sentence analyze(const sentence &) const;
    /// analyze sentences
-   std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+   std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
    #else
    /// analyze sentence
-   void analyze(sentence &);
+   void analyze(sentence &) const;
    /// analyze sentences, return analyzed copy
-   void analyze(std::list<freeling::sentence> &);
+   void analyze(std::list<freeling::sentence> &) const;
    #endif
 };
 
@@ -1126,14 +1262,14 @@ class senses {
   
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -1148,14 +1284,14 @@ class ukb {
   
   #ifndef FL_API_JAVA
   /// analyze sentence
-  sentence analyze(const sentence &);
+  sentence analyze(const sentence &) const;
   /// analyze sentences
-  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &);
+  std::list<freeling::sentence> analyze(const std::list<freeling::sentence> &) const;
   #else
   /// analyze sentence
-  void analyze(sentence &);
+  void analyze(sentence &) const;
   /// analyze sentences
-  void analyze(std::list<freeling::sentence> &);
+  void analyze(std::list<freeling::sentence> &) const;
   #endif
 };
 
@@ -1202,6 +1338,8 @@ class semanticDB {
 };
 
 
+
+
 ////////////////////////////////////////////////////////////////
 /// EAGLES tagset handler
 ////////////////////////////////////////////////////////////////
@@ -1222,6 +1360,28 @@ class tagset {
     ///  in a string format
     std::wstring get_msf_string(const std::wstring &tag) const;
 };
+
+////////////////////////////////////////////////////////////////
+/// Wrapper for libfoma FSM
+
+ class foma_FSM {
+
+  public:
+    /// build automaton from text file
+    foma_FSM(const std::wstring &, const std::wstring &mcost=""); 
+    /// clear 
+    ~foma_FSM();
+
+    /// Use automata to obtain closest matches to given form, and add them to given list.
+    void get_similar_words(const std::wstring &, std::list<std::pair<std::wstring,int> > &) const;    
+    /// set maximum edit distance of desired results
+    void set_cutoff_threshold(int);
+    /// set maximum number of desired results
+    void set_num_matches(int);
+    /// Set cost for basic SED operations
+    void set_basic_operation_cost(int);
+  };
+
 
 
 ////////////////////////////////////////////////////////////////

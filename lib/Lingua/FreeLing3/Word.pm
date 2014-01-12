@@ -10,7 +10,7 @@ use Lingua::FreeLing3::Word::Analysis;
 
 use parent -norequire, 'Lingua::FreeLing3::Bindings::word';
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 # XXX - Missing
 # *add_analysis = *Lingua::FreeLing3::Bindingsc::word_add_analysis;
@@ -204,17 +204,19 @@ sub get_mw_words {
     my $self = shift;
     return undef unless $self->is_multiword;
 
+    my $wl = $self->SUPER::get_words_mw->elements;
+
     if (wantarray) {
         return map {
             $_->ACQUIRE();
             Lingua::FreeLing3::Word->_new_from_binding($_)
-          } @{ $self->SUPER::get_words_mw };
+          } @$wl
     } else {
         return join(" ", map {
             my $w = $_->get_form();
             utf8::decode($w);
             $w
-        } @{ $self->SUPER::get_words_mw })
+        } @$wl)
     }
 }
 

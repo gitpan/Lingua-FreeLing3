@@ -4,7 +4,7 @@
       "Alberto SimÃµes <ambs@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4005, CPAN::Meta::Converter version 2.131490",
+   "generated_by" : "Module::Build version 0.4203",
    "license" : [
       "perl_5"
    ],
@@ -47,7 +47,7 @@
       },
       "Lingua::FreeLing3" : {
          "file" : "lib/Lingua/FreeLing3.pm",
-         "version" : "0.08"
+         "version" : "0.09"
       },
       "Lingua::FreeLing3::ChartParser" : {
          "file" : "lib/Lingua/FreeLing3/ChartParser.pm",
@@ -115,7 +115,7 @@
       },
       "Lingua::FreeLing3::Word" : {
          "file" : "lib/Lingua/FreeLing3/Word.pm",
-         "version" : "0.03"
+         "version" : "0.04"
       },
       "Lingua::FreeLing3::Word::Analysis" : {
          "file" : "lib/Lingua/FreeLing3/Word/Analysis.pm",
@@ -128,5 +128,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.08"
+   "version" : "0.09"
 }

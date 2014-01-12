@@ -59,7 +59,8 @@ lib/Lingua/FreeLing3/DepTree.pm
 lib/Lingua/FreeLing3/EAGLES.pm
 lib/Lingua/FreeLing3/Config.pm
 
-swig/Bindings-3.0.pm
+# swig/Bindings-3.0.pm # no longer supported
+# swig/freeling-3.0.cxx # no longer supported
+
 swig/Bindings-3.1.pm
-swig/freeling-3.0.cxx
 swig/freeling-3.1.cxx

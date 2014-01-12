@@ -88,9 +88,13 @@ ok($analyzer  => "we have an analyzer");
 my $n = 0;
 $sentences = $analyzer->analyze($sentences);
 
-is $sentences->[0]->word(23)->form => 'El_Cairo';
-is $sentences->[0]->word(23)->tag  => 'NP00000';
+# print STDERR "\n\n", $sentences->[0]->to_text, "\n\n";
+
+my $wid = 24;
+
+is $sentences->[0]->word($wid)->form => 'El_Cairo';
+is $sentences->[0]->word($wid)->tag  => 'NP00000';
 
 $sentences = $nec->analyze($sentences);
-is $sentences->[0]->word(23)->tag => 'NP00G00';
+is $sentences->[0]->word($wid)->tag => 'NP00G00';
 
